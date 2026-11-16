@@ -1,0 +1,25 @@
+
+name: TIPSTER PRO V18 - Motor Testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  motor-testi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Dosyalari al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V18 motor testlerini calistir
+        run: python -m unittest -v test_gercek_tahmin_v18.py
