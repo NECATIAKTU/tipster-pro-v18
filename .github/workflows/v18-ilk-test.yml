@@ -1,0 +1,40 @@
+
+name: TIPSTER PRO V18 - Ilk Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python-kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Dosyalari al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Python dosyalarini kontrol et
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+
+          dosyalar = list(Path(".").rglob("*.py"))
+          print("Python dosyasi:", len(dosyalar))
+
+          for dosya in dosyalar:
+              ast.parse(
+                  dosya.read_text(encoding="utf-8-sig"),
+                  filename=str(dosya)
+              )
+
+          print("SOZDIZIMI TESTI BASARILI")
+          PY
