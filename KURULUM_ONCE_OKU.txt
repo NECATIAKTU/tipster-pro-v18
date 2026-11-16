@@ -1,0 +1,14 @@
+TIPSTER PRO V18 - ENZONIC ILK ASAMA / GUVENLI TEST
+
+Enzonic Python 3.11 secildi. Main File: main.py
+Bu paket, orijinal V18 kaynak kodundaki Python modullerini icerir.
+Ilk baslatmada sadece HTTP /health servisi acilir. Otomatik ESPN taramasi YAPILMAZ.
+Sunucu hazir olunca /health adresi ile Python servisinin calistigi dogrulanir.
+Daha sonra ayri adimda canli fikstur ve model veri testi yapilir.
+
+UYARI: Bu ZIP icinde eski tahminler.json, kayitlar.json, ozel raporlar,
+kimlik bilgileri veya gecmis arsivler YOKTUR. Orijinal ZIP'i saklayin.
+Tahmin motoru basarisi veya 42 ligin canli erisimi dogrulanmis degildir.
+Sunucu kuyruktan cikmadan yuklemeyin.
+
+Bu bir baslangic/test paketidir, 7/24 otomatik tahmin uretimi degildir.
