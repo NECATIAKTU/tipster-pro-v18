@@ -1,0 +1,54 @@
+name: TIPSTER PRO V18 - Fikstur Testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fikstur-testi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ESPN canli fikstur kontrolu
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          from datetime import datetime, timezone
+
+          url = (
+              "https://site.api.espn.com/apis/site/v2/sports/"
+              "soccer/eng.1/scoreboard"
+          )
+
+          print("Kontrol zamani:", datetime.now(timezone.utc).isoformat())
+          print("Lig: Ingiltere Premier League")
+
+          request = urllib.request.Request(
+              url,
+              headers={"User-Agent": "Mozilla/5.0"}
+          )
+
+          with urllib.request.urlopen(request, timeout=20) as response:
+              data = json.load(response)
+
+          events = data.get("events", [])
+          print("ESPN erisimi: BASARILI")
+          print("Donen mac sayisi:", len(events))
+
+          for event in events[:10]:
+              print(event.get("date"), "-", event.get("name"))
+
+          if not isinstance(events, list):
+              raise RuntimeError("Fikstur formati gecersiz")
+
+          print("FIKSTUR BAGLANTI TESTI TAMAMLANDI")
+          PY
