@@ -41,7 +41,7 @@ jobs:
         run: python fikstur_yeni.py
 
       - name: Gercek mac gecmisi ve V18 model tahminleri
-        run: python gercek_tahmin_v18.py --gecmis-gun 30 --cikti v18_canli_cikti.json
+        run: python gercek_tahmin_v18.py --gecmis-gun 90 --cikti v18_canli_cikti.json
 
       - name: Denetim dosyalarini sakla
         uses: actions/upload-artifact@v4
