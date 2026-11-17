@@ -32,7 +32,26 @@ function normalize(x,i){
  const id=[league,String(home||name||""),String(away||""),String(kickoff||"")].join("|").toLocaleLowerCase("tr");
  return{id,name:String(name||"Maç adı yok"),league,kickoff:String(kickoff||""),start,created,verified,risk,marketText,probabilities,selected,index:i};
 }
-function chosen(r){const m=$("market").value;if(m!=="all")return[m,r.probabilities[m]];if(r.selected)return[r.selected,r.probabilities[r.selected]];const m2=["3.5","2.5","1.5","4.5","5.5","6.5"].find(k=>r.probabilities[k]!==null);return[m2||"",m2?r.probabilities[m2]:null]}
+
+function chosen(r){
+ const m=$("market").value;
+ if(m!=="all") return [m,r.probabilities[m]];
+ if(r.selected) return [r.selected,r.probabilities[r.selected]];
+ const thresholds=[
+  ["4.5",65],
+  ["3.5",65],
+  ["2.5",65],
+  ["1.5",75]
+ ];
+ const found=thresholds.find(([line,min])=>
+  r.probabilities[line]!==null &&
+  r.probabilities[line]>=min
+ );
+ return found
+  ? [found[0],r.probabilities[found[0]]]
+  : ["",null];
+}
+
 function td(tr,value){const cell=document.createElement("td");cell.textContent=value;tr.append(cell);return cell}
 function render(){
  const query=$("search").value.trim().toLocaleLowerCase("tr"),market=$("market").value,valid=$("valid").value;
@@ -44,7 +63,9 @@ function render(){
  for(const r of S.filtered.slice(S.page*S.size,(S.page+1)*S.size)){
   const tr=document.createElement("tr"),first=td(tr,r.name);const small=document.createElement("div");small.textContent=r.league;small.className="muted";first.append(small);
   td(tr,r.start!==null?new Date(r.start).toISOString().slice(0,16).replace("T"," ") : "Tarih yok");
-  const [m,p]=chosen(r);td(tr,m?m+" ÜST":r.marketText||"Belirtilmemiş");
+  
+  const [m,p]=chosen(r);td(tr,m?m+" ÜST":"RİSKLİ");
+
   td(tr,p!==null?p.toFixed(1)+"%":"—");
   const state=document.createElement("td"),pill=document.createElement("span");pill.className="pill"+(r.risk?" review":"");pill.textContent=r.verified?"Maç öncesi kayıt":"İnceleme gerekli";state.append(pill);tr.append(state);tbody.append(tr);
  }
