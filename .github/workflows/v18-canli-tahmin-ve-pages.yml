@@ -1,15 +1,20 @@
+
 name: TIPSTER PRO V18 - Gercek Tahmin ve Pages
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 6,12,18 * * *'
+    - cron: '17 6 * * *'
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: tipster-v18-live-pages
   cancel-in-progress: false
+
 jobs:
   predict-and-publish:
     runs-on: ubuntu-latest
@@ -17,50 +22,77 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Kaynak kodu al
         uses: actions/checkout@v4
+
       - name: Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: V18 cevrimdisi testler
         run: python -m unittest -v test_gercek_tahmin_v18.py
+
       - name: ESPN guncel fikstur
         env:
           TIPSTER_FIKSTUR_GUN: '2'
         run: python fikstur_yeni.py
+
       - name: Gercek mac gecmisi ve V18 model tahminleri
         run: python gercek_tahmin_v18.py --gecmis-gun 30 --cikti v18_canli_cikti.json
-      - name: Veri dogrulama ve panel baglantisi
-        run: |
-          python - <<'PYCODE'
-          import json, pathlib
-          p=pathlib.Path('v18_canli_cikti.json')
-          d=json.loads(p.read_text(encoding='utf-8'))
-          assert isinstance(d.get('tahminler'),list)
-          assert isinstance(d.get('lig_denetimi'),dict)
-          target=pathlib.Path('docs/data.json')
-          target.parent.mkdir(exist_ok=True)
-          target.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          print('GERCEK MODEL TAHMIN SAYISI:',len(d['tahminler']))
-          print('DURUM:',d.get('durum_sayilari'))
-          print('LIG DENETIMI:',{k:v.get('durum','OK') for k,v in d['lig_denetimi'].items()})
-          PYCODE
-      - name: Denetim dosyalarini indirilebilir sakla
+
+      - name: Denetim dosyalarini sakla
         uses: actions/upload-artifact@v4
         with:
           name: v18-gercek-tahmin-denetimi
           path: |
             gelecek_maclar.json
             v18_canli_cikti.json
-          retention-days: 30
+          retention-days: 7
+
+      - name: V18 panel verisini dogrula ve hazirla
+        run: |
+          python - <<'PYCODE'
+          import json
+          from pathlib import Path
+
+          d = json.loads(Path('v18_canli_cikti.json').read_text(encoding='utf-8'))
+          if d.get('model') != 'TIPSTER PRO V18' or not isinstance(d.get('tahminler'), list):
+              raise SystemExit('V18 cikti bicimi gecersiz.')
+          print('URETILEN TAHMIN:', len(d['tahminler']))
+          print('DURUM:', d.get('durum_sayilari', {}))
+          print('LIG DENETIMI:', d.get('lig_denetimi', {}))
+          if not d['tahminler']:
+              raise SystemExit('SIFIR TAHMIN: Bos veri yayinlanmiyor.')
+          PYCODE
+
+          python v18_panel_aktar.py v18_canli_cikti.json --cikti panel_tahminler.json
+
+          python - <<'PYCODE'
+          import json
+          import shutil
+          from pathlib import Path
+
+          records = json.loads(Path('panel_tahminler.json').read_text(encoding='utf-8'))['tahminler']
+          if not records:
+              raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
+          out = Path('site')
+          out.mkdir(exist_ok=True)
+          for name in ('index.html', 'panel.css', 'panel.js', 'panel_tahminler.json'):
+              shutil.copy2(name, out / name)
+          print('PANEL ICIN GUNCEL TAHMIN:', len(records))
+          PYCODE
+
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
+
       - name: Paneli ve gercek JSON verisini yukle
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: site
+
       - name: Sayfayi yayinla
         id: deployment
         uses: actions/deploy-pages@v4
