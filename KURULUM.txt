@@ -1,0 +1,26 @@
+TIPSTER PRO V18 — GITHUB PAGES PANELİ
+
+Bu paket, orijinal tam motor ZIP’indeki index.html, panel.css ve panel.js üzerine hazırlanmıştır.
+Mevcut Python tahmin motorunda hiçbir değişiklik yapılmamıştır.
+
+1) Yerel önizleme:
+   Bu klasörde: python -m http.server 8000
+   Tarayıcıda: http://localhost:8000
+   Başlangıçta 0 tahmin görünmesi NORMALDİR; sahte güncel tahmin yoktur.
+
+2) Motorun gerçek tahmin çıktısını üret (internete bağlı Python ortamında):
+   python fikstur_yeni.py
+   python gercek_tahmin_v18.py --cikti v18_yeni_tahminler.json
+   NOT: Bu komutların çalışması ve güncel veri üretmesi henüz doğrulanmadı.
+
+3) Panel aktarımı (motorun yanında veya bu scriptin kopyalandığı ortamda):
+   python v18_panel_aktar.py v18_yeni_tahminler.json --cikti panel_tahminler.json
+   Eski çıktılar reddedilir; yalnızca başlamamış maçların önceden üretilmiş tahminleri aktarılır.
+
+4) GitHub Pages'e yayınlamak için index.html, panel.css, panel.js ve panel_tahminler.json
+   aynı klasörde olmalı. Güncellemede sadece panel_tahminler.json yenilenir.
+   GitHub Pages Python çalıştırmaz; JSON üretimi için ayrı çalışan Python ortamı gerekir.
+
+UYARI: Tahmin motoru 42 ligden canlı sonuç üretiyor diye iddia edilmez.
+Panelin 0 tahmin göstermesi motorun başarısız olduğu anlamına da gelmez.
+Orijinal ZIP ve GitHub deposu değiştirilmedi.
