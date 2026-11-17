@@ -33,24 +33,28 @@ function normalize(x,i){
  return{id,name:String(name||"Maç adı yok"),league,kickoff:String(kickoff||""),start,created,verified,risk,marketText,probabilities,selected,index:i};
 }
 
+
 function chosen(r){
- const m=$("market").value;
- if(m!=="all") return [m,r.probabilities[m]];
- if(r.selected) return [r.selected,r.probabilities[r.selected]];
- const thresholds=[
-  ["4.5",65],
-  ["3.5",65],
-  ["2.5",65],
-  ["1.5",75]
- ];
- const found=thresholds.find(([line,min])=>
-  r.probabilities[line]!==null &&
-  r.probabilities[line]>=min
- );
- return found
-  ? [found[0],r.probabilities[found[0]]]
-  : ["",null];
+  const m=$("market").value;
+  if(m!=="all") return [m,r.probabilities[m]];
+
+  const thresholds=[
+    ["4.5",65],
+    ["3.5",65],
+    ["2.5",65],
+    ["1.5",75]
+  ];
+
+  const found=thresholds.find(([line,min])=>
+    r.probabilities[line]!==null &&
+    r.probabilities[line]>=min
+  );
+
+  return found
+    ? [found[0],r.probabilities[found[0]]]
+    : ["",null];
 }
+
 
 function td(tr,value){const cell=document.createElement("td");cell.textContent=value;tr.append(cell);return cell}
 function render(){
