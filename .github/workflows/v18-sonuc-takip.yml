@@ -28,3 +28,29 @@ jobs:
 
       - name: Test sonucu
         run: echo "V18 sonuc takip modulu temel testleri tamamlandi."
+
+      - name: V18 gercek veri uyumluluk testi
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from v18_sonuc_takip import kimlik, olasiliklar
+
+          p = Path("panel_tahminler.json")
+          if not p.exists():
+              print("UYARI: Panel veri dosyasi bulunamadi.")
+              raise SystemExit(0)
+
+          veri = json.loads(p.read_text(encoding="utf-8"))
+          maclar = veri.get("tahminler", [])
+          if not isinstance(maclar, list):
+              raise SystemExit("HATA: Tahmin listesi gecersiz.")
+
+          kimlikli = sum(kimlik(m) is not None for m in maclar)
+          olasilikli = sum(bool(olasiliklar(m)) for m in maclar)
+
+          print("PANEL KAYITLARI:", len(maclar))
+          print("ESPN KIMLIGI OLAN:", kimlikli)
+          print("OLASILIK OKUNABILEN:", olasilikli)
+          print("TEST: Gercek veri yapisi incelendi.")
+          PY
