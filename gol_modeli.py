@@ -179,6 +179,8 @@ def mac_analizi(ev, dep, takimlar):
         "2.5_ust": round(poisson_ust(toplam, 2) * 100, 1),
         "3.5_ust": round(poisson_ust(toplam, 3) * 100, 1),
         "4.5_ust": round(poisson_ust(toplam, 4) * 100, 1),
+        "5.5_ust": round(poisson_ust(toplam, 5) * 100, 1),
+        "6.5_ust": round(poisson_ust(toplam, 6) * 100, 1),
     }
 
 
