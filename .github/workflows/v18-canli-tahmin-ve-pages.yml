@@ -42,7 +42,8 @@ jobs:
 
       - name: Gercek mac gecmisi ve V18 model tahminleri
         run: python gercek_tahmin_v18.py --gecmis-gun 90 --cikti v18_canli_cikti.json
-
+      - name: V18 tahminlerini arsivle
+        run: python v18_sonuc_takip.py --arsivle v18_canli_cikti.json
       - name: Denetim dosyalarini sakla
         uses: actions/upload-artifact@v4
         with:
