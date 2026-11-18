@@ -49,7 +49,10 @@ def kimlik(mac):
     mid = mac.get("id")
     if not lig or mid is None or str(mid).strip() == "":
         return None
-    return lig + "|" + str(mid)
+    mid = str(mid)
+if mid.startswith(lig + "|"):
+    return mid
+return lig + "|" + mid
 
 
 def olasiliklar(mac):
