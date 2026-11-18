@@ -98,9 +98,12 @@ def main():
             try:
                 kickoff = datetime.fromisoformat(event["date"].replace("Z", "+00:00"))
                 if not (now < kickoff < end):
+                    elenen["tarih"] += 1
                     continue
+                    
                 status = event.get("status", {}).get("type", {})
                 if status.get("completed") or status.get("state") != "pre":
+                    elenen["durum"] += 1
                     continue
                 competitors = event["competitions"][0]["competitors"]
                 home = next(x for x in competitors if x.get("homeAway") == "home")
@@ -108,6 +111,7 @@ def main():
                 home_name = home["team"].get("displayName", "").strip()
                 away_name = away["team"].get("displayName", "").strip()
                 if not home_name or not away_name:
+                    elenen["takim_bilgisi"] += 1
                     continue
                 key = f"{league}|{event['id']}"
                 if key in matches:
@@ -126,13 +130,14 @@ def main():
     output = {
         "olusturulma_utc": now.isoformat(), "aralik_bitis_utc": end.isoformat(),
         "mac_sayisi": len(records), "lig_sayilari": counts,
-        "hatalar": failed, "maclar": records,
+        "hatalar": failed, "elenen": elenen, "maclar": records,
     }
     tmp = OUTPUT + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     os.replace(tmp, OUTPUT)
     print(f"TOPLAM GELECEK MAC: {len(records)} | HATALI GUN: {len(failed)}")
+    print("ELENEN MACLAR:", elenen)
     if not records:
         print("UYARI: 0 gelecek mac. Veri kaynagi/lig kodlari kontrol edilmeli.")
     print(f"Dosya: {OUTPUT}")
