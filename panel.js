@@ -149,15 +149,34 @@ function td(tr, value) {
   return cell;
 }
 
+function aramaMetni(metin) {
+  return String(metin || "")
+    .toLowerCase()
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
 function render() {
-  const query = $("search").value.trim().toLocaleLowerCase("tr");
+  
+  const query = aramaMetni($("search").value.trim());
+
   const market = $("market").value;
   const valid = $("valid").value;
 
   S.filtered = S.records.filter(r =>
-    (r.name + " " + r.league)
-      .toLocaleLowerCase("tr")
-      .includes(query) &&
+    
+    
+    
+    aramaMetni(r.name + " " + r.league + " " + (r.league.startsWith("Ingiltere") ? "İngiltere England English" : r.league.startsWith("Turkiye") ? "Türkiye Turkey Turkish" : r.league.startsWith("Iskocya") ? "İskoçya Scotland Scottish" : "")).includes(query) &&
+
+
+
+      
+      
     (market === "all" || r.probabilities[market] !== null) &&
     (valid === "all" || (valid === "pre" ? r.verified : !r.verified))
   );
