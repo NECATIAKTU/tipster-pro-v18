@@ -142,6 +142,33 @@ function chosen(r) {
   return available[0];
 }
 
+function topTahminler(adet) {
+  const simdi = Date.now();
+
+  return S.records
+    .filter(r =>
+      r.verified &&
+      r.start !== null &&
+      r.start > simdi
+    )
+    .map(r => {
+      const secim = LINES
+        .map(line => ({
+          market: line,
+          probability: r.probabilities[line]
+        }))
+        .filter(x => x.probability !== null)
+        .sort((a, b) => b.probability - a.probability)[0];
+
+      return secim ? { ...r, topSecim: secim } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) =>
+      b.topSecim.probability - a.topSecim.probability
+    )
+    .slice(0, adet);
+}
+
 function td(tr, value) {
   const cell = document.createElement("td");
   cell.textContent = value;
