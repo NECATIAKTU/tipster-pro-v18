@@ -84,6 +84,11 @@ def main():
     
     matches = {}
     failed = []
+    elenen = {
+    "tarih": 0,
+    "durum": 0,
+    "takim_bilgisi": 0
+}
     counts = {}
     for league, label in LIGLER.items():
         events, errors = getir(league, now, end)
