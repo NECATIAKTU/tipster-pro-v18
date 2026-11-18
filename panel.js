@@ -384,4 +384,52 @@ $("next").addEventListener("click", () => {
   }
 });
 
+for (const [id, adet] of [["top5", 5], ["top10", 10], ["top20", 20]]) {
+  $(id).addEventListener("click", () => {
+    const liste = topTahminler(adet);
+    const secilenler = new Set(liste.map(r => r.id));
+
+    $("search").value = "";
+    $("market").value = "all";
+    $("valid").value = "pre";
+    $("sort").value = "prob";
+
+    S.page = 0;
+    render();
+
+    S.filtered = liste.filter(r => secilenler.has(r.id));
+    S.page = 0;
+    S.size = 40;
+
+    const tbody = $("rows");
+    tbody.replaceChildren();
+
+    for (const r of S.filtered) {
+      const tr = document.createElement("tr");
+      td(tr, r.name);
+      td(tr, new Date(r.start).toISOString().slice(0, 16).replace("T", " "));
+
+      for (const line of LINES) {
+        const p = r.probabilities[line];
+        td(tr, p === null ? "—" : p.toFixed(1) + "%");
+      }
+
+      td(tr, "Maç öncesi kayıt");
+      tbody.append(tr);
+    }
+
+    $("notice").textContent =
+      "TOP " + adet + ": " + liste.length +
+      " maç. Başlamamış ve doğrulanmış kayıtlar, model yüzdesine göre sıralandı.";
+    $("page").textContent = "1 / 1";
+    $("prev").disabled = true;
+    $("next").disabled = true;
+  });
+}
+
+$("topall").addEventListener("click", () => {
+  S.page = 0;
+  render();
+});
+
 load();
