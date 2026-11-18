@@ -1,0 +1,30 @@
+
+name: TIPSTER PRO V18 - Sonuc Takip Testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sonuc-takip-testi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 hazirla
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sonuc takip kodunu kontrol et
+        run: python -m py_compile v18_sonuc_takip.py
+
+      - name: Sonuc takip modulu yardim testi
+        run: python v18_sonuc_takip.py --help
+
+      - name: Test sonucu
+        run: echo "V18 sonuc takip modulu temel testleri tamamlandi."
