@@ -37,7 +37,7 @@ jobs:
 
       - name: ESPN guncel fikstur
         env:
-          TIPSTER_FIKSTUR_GUN: '2'
+          TIPSTER_FIKSTUR_GUN: '7'
         run: python fikstur_yeni.py
 
       - name: Gercek mac gecmisi ve V18 model tahminleri
