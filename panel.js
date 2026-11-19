@@ -294,12 +294,7 @@ function render() {
     small.className = "muted";
     first.append(small);
 
-    td(
-      tr,
-      r.start !== null
-        ? new Date(r.start).toISOString().slice(0, 16).replace("T", " ")
-        : "Tarih yok"
-    );
+    
 
     for (const line of LINES) {
       const value = r.probabilities[line];
@@ -325,6 +320,12 @@ if (final && !final.risk && final.line) {
 
 finalTd.append(finalLabel);
 tr.append(finalTd);
+    td(
+      tr,
+      r.start !== null
+        ? new Date(r.start).toISOString().slice(0, 16).replace("T", " ")
+        : "Tarih yok"
+    );
     for (const line of LINES) {
       const value = r.probabilities[line];
       const cell = td(
