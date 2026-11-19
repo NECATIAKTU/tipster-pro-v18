@@ -296,14 +296,7 @@ function render() {
 
     
 
-    for (const line of LINES) {
-      const value = r.probabilities[line];
-      const cell = td(
-        tr,
-        value !== null ? value.toFixed(1) + "%" : "—"
-      );
-      if (value !== null) cell.className = "probability";
-    }
+    
 const final = finalChoice(r);
 const finalTd = document.createElement("td");
 const finalLabel = document.createElement("span");
