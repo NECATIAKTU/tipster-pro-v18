@@ -200,6 +200,7 @@ function chosen(r) {
   return available[0];
 }
 
+
 function topTahminler(adet) {
   const simdi = Date.now();
 
@@ -209,23 +210,22 @@ function topTahminler(adet) {
       r.start !== null &&
       r.start > simdi
     )
-    .map(r => {
-      const secim = LINES
-        .map(line => ({
-          market: line,
-          probability: r.probabilities[line]
-        }))
-        .filter(x => x.probability !== null)
-        .sort((a, b) => b.probability - a.probability)[0];
-
-      return secim ? { ...r, topSecim: secim } : null;
-    })
-    .filter(Boolean)
+    .map(r => ({
+      ...r,
+      topSecim: finalChoice(r)
+    }))
+    .filter(r =>
+      r.topSecim &&
+      !r.topSecim.risk &&
+      r.topSecim.line &&
+      Number.isFinite(r.topSecim.probability)
+    )
     .sort((a, b) =>
       b.topSecim.probability - a.topSecim.probability
     )
     .slice(0, adet);
 }
+
 
 function td(tr, value) {
   const cell = document.createElement("td");
@@ -480,13 +480,17 @@ for (const [id, adet] of [["top5", 5], ["top10", 10], ["top20", 20]]) {
     for (const r of S.filtered) {
       const tr = document.createElement("tr");
       td(tr, r.name);
-      td(tr, new Date(r.start).toISOString().slice(0, 16).replace("T", " "));
+      
 
-      for (const line of LINES) {
-        const p = r.probabilities[line];
-        td(tr, p === null ? "—" : p.toFixed(1) + "%");
-      }
+      const final = r.topSecim;
 
+const cell = td(
+  tr,
+  final.market + " ÜST"
+);
+cell.style.color = "#22c55e";
+cell.style.fontWeight = "bold";
+td(tr, new Date(r.start).toISOString().slice(0, 16).replace("T", " "));
       td(tr, "Maç öncesi kayıt");
       tbody.append(tr);
     }
