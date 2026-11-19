@@ -85,7 +85,7 @@ jobs:
               raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
           out = Path('site')
           out.mkdir(exist_ok=True)
-          for name in ('index.html', 'panel.css', 'panel.js', 'panel_tahminler.json'):
+          for name in ('index.html', 'panel.css', 'panel.js', 'panel_tahminler.json', 'v18_dogrulanan_sonuclar.json'):
               shutil.copy2(name, out / name)
           print('PANEL ICIN GUNCEL TAHMIN:', len(records))
           PYCODE
