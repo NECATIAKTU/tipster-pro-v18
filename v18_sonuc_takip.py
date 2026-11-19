@@ -180,7 +180,7 @@ def espn_sonuclari(arsiv):
                     continue
 
                 event_id = str(event["id"])
-mid = event_id if event_id.startswith(str(lig) + "|") else str(lig) + "|" + event_id
+                mid = event_id if event_id.startswith(str(lig) + "|") else str(lig) + "|" + event_id
                 sonuclar[mid] = {
                     "ev_gol": ev_gol,
                     "dep_gol": dep_gol,
