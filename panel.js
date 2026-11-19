@@ -494,7 +494,7 @@ for (const [id, adet] of [["top5", 5], ["top10", 10], ["top20", 20]]) {
 
 const cell = td(
   tr,
-  final.market + " ÜST"
+  final.line + " ÜST"
 );
 cell.style.color = "#22c55e";
 cell.style.fontWeight = "bold";
