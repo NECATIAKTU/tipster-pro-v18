@@ -130,27 +130,59 @@ function normalize(x, i) {
 }
 function lockedRecord(r) {
   const match = resultRecords.find(x =>
-    x.kimlik === r.leagueCode + "|" + r.sourceId
+    x.kimlik === r.sourceId || x.kimlik === r.leagueCode + "|" + r.sourceId
   );
   return match || null;
 }
 
-function finalChoice(r) {
-  const record = lockedRecord(r);
-  if (!record || !r.verified) return null;
 
-  const choice = String(record.kilitli_secim || "");
+function finalChoice(r) {
+  if (!r.verified) return null;
+
+  const record = lockedRecord(r);
+  const choice = String(record?.kilitli_secim || "");
+
+  if (choice === "RISKLI") {
+    return { risk: true, locked: true };
+  }
+
   const match = /^([1-6]\.5) UST$/.exec(choice);
 
-  if (!match) return null;
+  if (match) {
+    const line = match[1];
+    const probability =
+      pct(record?.olasiliklar?.[line + "_ust"]) ??
+      r.probabilities[line];
 
-  const line = match[1];
-  const probability = Number(record.olasiliklar?.[line + "_ust"]);
+    if (probability !== null && Number.isFinite(probability)) {
+      return { line, probability, locked: true };
+    }
+  }
 
-  if (!Number.isFinite(probability)) return null;
+  const thresholds = {
+    "1.5": 75,
+    "2.5": 65,
+    "3.5": 65,
+    "4.5": 65,
+    "5.5": 65,
+    "6.5": 65
+  };
 
-  return { line, probability };
+  for (const line of [...LINES].reverse()) {
+    const probability = r.probabilities[line];
+
+    if (
+      probability !== null &&
+      Number.isFinite(probability) &&
+      probability >= thresholds[line]
+    ) {
+      return { line, probability, locked: false };
+    }
+  }
+
+  return { risk: true, locked: false };
 }
+
 function chosen(r) {
   const market = $("market").value;
 
@@ -281,7 +313,7 @@ const final = finalChoice(r);
 const finalTd = document.createElement("td");
 const finalLabel = document.createElement("span");
 
-if (final) {
+if (final && !final.risk && final.line) {
   finalLabel.textContent =
     final.line + " ÜST — %" + final.probability.toFixed(1);
   finalLabel.style.color = "#22c55e";
