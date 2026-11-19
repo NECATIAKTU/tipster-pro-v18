@@ -26,6 +26,23 @@
 <article><span>İnceleme gerekli</span><strong id="flagged">—</strong></article>
 </section>
   
+<section class="panel" aria-label="Dogrulanmis sonuclar">
+<h2>Gerçek maç sonuçları</h2>
+<p class="muted">Yalnızca maçtan önce kilitlenmiş açık ÜST seçimleri başarı hesabına girer. Eski seçim yapılmamış maçlar sayılmaz.</p>
+<div class="result-summary" aria-label="Dogru ve yanlis tahmin ozeti">
+<span>✅ Doğru: <strong id="wins">—</strong></span>
+<span>❌ Yanlış: <strong id="losses">—</strong></span>
+<span>Başarı: <strong id="winrate">—</strong></span>
+<span>Skoru doğrulanan maç: <strong id="finished">—</strong></span>
+<span>⏳ Bekleyen: <strong id="pending">—</strong></span>
+<span>Seçimsiz / PAS: <strong id="ungraded">—</strong></span>
+</div>
+<div class="result-periods"><span>Bugün: <strong id="todayrate">—</strong></span><span>Son 7 gün: <strong id="weekrate">—</strong></span><span>Son 30 gün: <strong id="monthrate">—</strong></span></div>
+<p class="muted">Günlük ve haftalık başarı oranları yalnızca o dönem oynanmış ve maç öncesinde seçimi kilitlenmiş tahminlerden hesaplanır (UTC).</p>
+<p class="muted" id="result-note">Sonuç dosyası yükleniyor…</p>
+<div class="result-controls"><label for="result-filter">Sonuç filtresi</label><select id="result-filter" aria-label="Sonuçları filtrele"><option value="all">Tümü</option><option value="DOGRU">✅ Doğru</option><option value="YANLIS">❌ Yanlış</option><option value="BEKLIYOR">⏳ Bekleyen</option><option value="DEGERLENDIRILMEDI">Seçimsiz / PAS</option></select></div>
+<div class="scroll"><table><thead><tr><th>Maç</th><th>Başlangıç UTC</th><th>Kilitli seçim</th><th>Skor</th><th>Değerlendirme</th></tr></thead><tbody id="result-rows"></tbody></table></div>
+</section>
 <section class="panel" aria-label="En güvenilen tahminler">
   <h2>Öne çıkan tahminler</h2>
   <div class="actions">

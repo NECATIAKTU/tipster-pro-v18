@@ -4,7 +4,7 @@ import unittest
 from datetime import timezone
 from pathlib import Path
 
-SPEC = importlib.util.spec_from_file_location('birlesik', Path(__file__).resolve().parents[1] / 'tipster_birlesik_rapor.py')
+SPEC = importlib.util.spec_from_file_location('birlesik', Path(__file__).resolve().with_name('tipster_birlesik_rapor.py'))
 mod = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(mod)
 

@@ -1,0 +1,12 @@
+TIPSTER PRO V18 NIHAI GUNCELLEME - GUNDE IKI KEZ
+
+Bu paket, mevcut GitHub deposu ICIN 12 degisiklik dosyasi icerir.
+ARSIV ve mevcut tahmin motoru pakette YOKTUR: eski kayitlari silmez.
+ZIP dosyasini GitHub deposuna oldugu gibi yuklemeyin.
+GitHub repo KOKUNE: 10 gorunur dosyayi yukleyin (index.html, panel.css, panel.js, .py/.json/.md).
+.github/workflows/ altindaki 2 yml dosyasini ayni alt dizinde mevcut dosyalari DEGISTIREREK koyun.
+Mevcut main dalindaki guncel dosyalari okumadan ustune yazmayin.
+GUNCEL SAATLER: GitHub Actions UTC 09:17 ve 21:17, gunde toplam 2 kez.
+ONCE test workflowunu calistirin. Ardindan ana workflowu tek sefer elle baslatin, loglari ve paneli dogrulayin.
+Ilk gercek skorlar ve panel yayini canli Actions sonucuna kadar dogrulanamaz.
+GitHub connector yazma izni 403 veriyor, dolayisiyla model bu dosyalari uzaktan guncelleyemedi.

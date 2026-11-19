@@ -1,0 +1,13 @@
+{
+  "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+  "otomatik_secim_aktif": true,
+  "esikler": {
+    "1.5": 75.0,
+    "2.5": 65.0,
+    "3.5": 65.0,
+    "4.5": 65.0,
+    "5.5": 65.0,
+    "6.5": 65.0
+  },
+  "aciklama": "DENEYSEL otomatik secim kurali. Dogrulanmis kazanma olasiligi degildir. Degisiklikler yalnizca yeni tahminlere uygulanir; onceki kilitler korunur."
+}

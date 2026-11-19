@@ -433,3 +433,86 @@ $("topall").addEventListener("click", () => {
 });
 
 load();
+
+
+// Result report is separate from model probabilities. Historical unselected
+// matches must never contribute to the realized win/loss rate.
+let resultRecords = [];
+function resultRate(records) {
+  const graded = records.filter(r => r.tahmin_sonucu === "DOGRU" || r.tahmin_sonucu === "YANLIS");
+  if (!graded.length) return "Henüz yok";
+  const wins = graded.filter(r => r.tahmin_sonucu === "DOGRU").length;
+  return (100 * wins / graded.length).toFixed(1) + "% (" + graded.length + ")";
+}
+function resultRender() {
+  const body = $("result-rows");
+  const filter = $("result-filter").value;
+  const rows = resultRecords.filter(r => {
+    if (filter === "all") return true;
+    if (filter === "BEKLIYOR") return r.durum !== "DOGRULANDI";
+    if (filter === "DEGERLENDIRILMEDI") return r.durum === "DOGRULANDI" && !r.tahmin_sonucu;
+    return r.tahmin_sonucu === filter;
+  }).sort((a, b) => (dateNum(b.mac?.tarih) ?? 0) - (dateNum(a.mac?.tarih) ?? 0));
+  body.replaceChildren();
+  for (const r of rows.slice(0, 120)) {
+    const tr = document.createElement("tr");
+    const m = r.mac || {};
+    td(tr, [m.ev_sahibi || "?", m.deplasman || "?"].join(" - "));
+    td(tr, String(m.tarih || "").slice(0, 16).replace("T", " "));
+    td(tr, r.kilitli_secim ? r.kilitli_secim.replace(" UST", " ÜST") : "Önceden seçim yok");
+    td(tr, r.sonuc?.skor || "—");
+    const status = r.tahmin_sonucu === "DOGRU" ? "✅ DOĞRU"
+      : r.tahmin_sonucu === "YANLIS" ? "❌ YANLIŞ"
+      : r.durum === "DOGRULANDI" ? "— (hesaba dahil değil)" : "⏳ BEKLİYOR";
+    const cell = td(tr, status);
+    cell.className = r.tahmin_sonucu === "DOGRU" ? "result-ok"
+      : r.tahmin_sonucu === "YANLIS" ? "result-bad" : "result-pending";
+    body.append(tr);
+  }
+  if (!rows.length) {
+    const tr = document.createElement("tr");
+    const cell = td(tr, "Bu filtrede kayıt bulunamadı.");
+    cell.colSpan = 5;
+    body.append(tr);
+  }
+  $("result-note").textContent = rows.length + " kayıt eşleşti; en yeni 120 kayıt gösteriliyor. Başarı yalnızca önceden kilitlenmiş seçimlerden hesaplanır.";
+}
+async function loadResults() {
+  const note = $("result-note");
+  try {
+    const response = await fetch("./v18_dogrulanan_sonuclar.json", {cache:"no-store"});
+    if (!response.ok) throw Error("HTTP " + response.status);
+    const data = await response.json();
+    if (!Array.isArray(data.kayitlar)) throw Error("Geçersiz sonuç dosyası");
+    resultRecords = data.kayitlar.filter(r => r && typeof r === "object" && !Array.isArray(r));
+    const completed = resultRecords.filter(r => r.durum === "DOGRULANDI" && r.sonuc);
+    const wins = completed.filter(r => r.tahmin_sonucu === "DOGRU").length;
+    const losses = completed.filter(r => r.tahmin_sonucu === "YANLIS").length;
+    $("wins").textContent = wins;
+    $("losses").textContent = losses;
+    $("finished").textContent = completed.length;
+    $("pending").textContent = resultRecords.length - completed.length;
+    $("ungraded").textContent = completed.length - wins - losses;
+    $("winrate").textContent = resultRate(completed);
+    const now = Date.now();
+    const beginningToday = Math.floor(now / 86400000) * 86400000;
+    function periodSince(start) {
+      return resultRate(completed.filter(r => {
+        const t = dateNum(r.mac?.tarih);
+        return t !== null && t >= start && t <= now;
+      }));
+    }
+    $("todayrate").textContent = periodSince(beginningToday);
+    $("weekrate").textContent = periodSince(now - 7 * 86400000);
+    $("monthrate").textContent = periodSince(now - 30 * 86400000);
+    resultRender();
+  } catch (err) {
+    resultRecords = [];
+    note.textContent = "Sonuç raporu henüz yayımlanmadı veya okunamadı. Model tahminleri başarı sonucu sayılmaz.";
+    for (const id of ["wins","losses","finished","pending","ungraded","winrate","todayrate","weekrate","monthrate"]) $(id).textContent = "—";
+    $("result-rows").replaceChildren();
+  }
+}
+$("result-filter").addEventListener("change", resultRender);
+$("refresh").addEventListener("click", loadResults);
+loadResults();
