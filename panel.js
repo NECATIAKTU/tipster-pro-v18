@@ -277,7 +277,22 @@ function render() {
       );
       if (value !== null) cell.className = "probability";
     }
+const final = finalChoice(r);
+const finalTd = document.createElement("td");
+const finalLabel = document.createElement("span");
 
+if (final) {
+  finalLabel.textContent =
+    final.line + " ÜST — %" + final.probability.toFixed(1);
+  finalLabel.style.color = "#22c55e";
+  finalLabel.style.fontWeight = "bold";
+} else {
+  finalLabel.textContent = "RİSKLİ";
+  finalLabel.style.color = "#94a3b8";
+}
+
+finalTd.append(finalLabel);
+tr.append(finalTd);
     const state = document.createElement("td");
     const pill = document.createElement("span");
 
