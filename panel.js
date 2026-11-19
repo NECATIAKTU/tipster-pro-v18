@@ -547,6 +547,7 @@ async function loadResults() {
     $("weekrate").textContent = periodSince(now - 7 * 86400000);
     $("monthrate").textContent = periodSince(now - 30 * 86400000);
     resultRender();
+    render();
   } catch (err) {
     resultRecords = [];
     note.textContent = "Sonuç raporu henüz yayımlanmadı veya okunamadı. Model tahminleri başarı sonucu sayılmaz.";
