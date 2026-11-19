@@ -325,6 +325,14 @@ if (final && !final.risk && final.line) {
 
 finalTd.append(finalLabel);
 tr.append(finalTd);
+    for (const line of LINES) {
+      const value = r.probabilities[line];
+      const cell = td(
+        tr,
+        value !== null ? value.toFixed(1) + "%" : "—"
+      );
+      if (value !== null) cell.className = "probability";
+    }
     const state = document.createElement("td");
     const pill = document.createElement("span");
 
