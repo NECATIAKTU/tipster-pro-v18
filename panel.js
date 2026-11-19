@@ -123,10 +123,34 @@ function normalize(x, i) {
     marketText,
     probabilities,
     selected,
-    index: i
+    index: i,
+    sourceId: String(keys(x, ["id"]) || ""),
+    leagueCode: String(keys(x, ["lig_kodu"]) || "")
   };
 }
+function lockedRecord(r) {
+  const match = resultRecords.find(x =>
+    x.kimlik === r.leagueCode + "|" + r.sourceId
+  );
+  return match || null;
+}
 
+function finalChoice(r) {
+  const record = lockedRecord(r);
+  if (!record || !r.verified) return null;
+
+  const choice = String(record.kilitli_secim || "");
+  const match = /^([1-6]\.5) UST$/.exec(choice);
+
+  if (!match) return null;
+
+  const line = match[1];
+  const probability = Number(record.olasiliklar?.[line + "_ust"]);
+
+  if (!Number.isFinite(probability)) return null;
+
+  return { line, probability };
+}
 function chosen(r) {
   const market = $("market").value;
 
