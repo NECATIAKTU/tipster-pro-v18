@@ -11653,5 +11653,52 @@
       "5.5_ust": 5.5,
       "6.5_ust": 2.0
     }
+  },
+  {
+    "kimlik": "col.1|401934705",
+    "mac": {
+      "id": "col.1|401934705",
+      "tarih": "2026-11-26T01:30:00+00:00",
+      "lig_kodu": "col.1",
+      "lig": "Kolombiya Primera A",
+      "ev_sahibi": "Atlético Nacional",
+      "deplasman": "Independiente Medellín",
+      "istatistik_ev": "Atlético Nacional",
+      "istatistik_deplasman": "Independiente Medellín",
+      "tahmin": {
+        "beklenen_gol": 2.87,
+        "1.5_ust": 78.1,
+        "2.5_ust": 54.8,
+        "3.5_ust": 32.4,
+        "4.5_ust": 16.4,
+        "5.5_ust": 7.2,
+        "6.5_ust": 2.8
+      },
+      "hesaplama_zamani_utc": "2026-11-19T05:45:42.522061+00:00",
+      "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+      "gecmis_gun": 90,
+      "kaynak_mac_sayisi": 157
+    },
+    "kilit_zamani_utc": "2026-11-19T05:51:35.351651+00:00",
+    "durum": "BEKLIYOR",
+    "sonuc": null,
+    "olasiliklar": {
+      "1.5_ust": 78.1,
+      "2.5_ust": 54.8,
+      "3.5_ust": 32.4,
+      "4.5_ust": 16.4,
+      "5.5_ust": 7.2,
+      "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
+    }
   }
 ]
