@@ -9,7 +9,9 @@ const S = {
   filtered: [],
   page: 0,
   size: 40,
-  source: ""
+  source: "",
+  topLimit: null,
+  onlyFinal: false
 };
 
 const keys = (o, ks) => {
