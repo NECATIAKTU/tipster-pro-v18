@@ -121,12 +121,42 @@ def arsivle(source, now=None):
     if not isinstance(archive, list):
         raise ValueError('Arsiv JSON listesi olmali')
     existing = {r.get('kimlik') for r in archive if isinstance(r, dict)}
-    added = skipped = 0
+    added = skipped = updated = 0
     for match in data['tahminler']:
         id_ = kimlik(match)
-        if not id_ or id_ in existing:
-            skipped += 1
-            continue
+        if not id_:
+    skipped += 1
+    continue
+
+if id_ in existing:
+    record = next(
+        (r for r in archive if r.get('kimlik') == id_),
+        None
+    )
+    start = utc(record['mac'].get('tarih')) if record else None
+    created = utc(record['mac'].get('hesaplama_zamani_utc')) if record else None
+
+    if (
+        record
+        and 'kilitli_secim' not in record
+        and record.get('durum') == 'BEKLIYOR'
+        and start
+        and created
+        and created < start
+        and now < start
+    ):
+        probabilities = record.get('olasiliklar') or olasiliklar(record['mac'])
+        choice = kilitli_secim_uret(probabilities, cfg)
+
+        if choice is not None:
+            updated += 1
+            record['kilitli_secim'] = choice
+            record['kilit_zamani_utc'] = now.isoformat()
+            record['secim_politikasi'] = cfg['secim_politikasi']
+            record['secim_esikleri'] = dict(cfg['esikler'])
+
+    skipped += 1
+    continue
         start, created = utc(match.get('tarih')), utc(match.get('hesaplama_zamani_utc'))
         if not start or not created or not (created <= now < start):
             skipped += 1
@@ -144,7 +174,7 @@ def arsivle(source, now=None):
         archive.append(record)
         existing.add(id_)
         added += 1
-    if added:
+    if added or updated:
         yaz(ARSIV, archive)
     print(f'ARSIV: toplam={len(archive)} yeni={added} atlanan={skipped}')
     return added
