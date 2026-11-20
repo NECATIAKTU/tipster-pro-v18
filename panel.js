@@ -596,3 +596,24 @@ async function loadResults() {
 $("result-filter").addEventListener("change", resultRender);
 $("refresh").addEventListener("click", loadResults);
 loadResults();
+async function aslanModuYukle() {
+  const alan = document.getElementById("aslan-durum");
+  if (!alan) return;
+
+  try {
+    const cevap = await fetch(
+      "aslan_modu_test_sonuclari.json?t=" + Date.now(),
+      { cache: "no-store" }
+    );
+    if (!cevap.ok) throw new Error("Sonuç dosyası yok");
+
+    const veri = await cevap.json();
+    alan.textContent = JSON.stringify(veri, null, 2);
+    alan.style.whiteSpace = "pre-wrap";
+  } catch (hata) {
+    alan.textContent =
+      "ASLAN MODU V1: Test sonuçları henüz yayınlanmadı.";
+  }
+}
+
+aslanModuYukle();
