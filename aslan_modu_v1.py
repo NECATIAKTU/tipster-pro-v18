@@ -1,60 +1,155 @@
-"""ASLAN MODU V1 - V18'e dokunmadan bağımsız gol fırsatı raporu.
-Kullanım: python aslan_modu_v1.py --girdi v18_canli_cikti.json --cikti aslan_modu_rapor.json
-Sadece okur; V18 dosyalarını, arşivini, eşiklerini veya panelini değiştirmez.
-"""
-import argparse
-import json
-import math
-from datetime import datetime, timezone
-from pathlib import Path
 
-LINES = ('6.5', '5.5', '4.5', '3.5', '2.5', '1.5')
+name: TIPSTER PRO V18 - Gercek Tahmin ve Pages
 
-def inspect(match):
-    raw = match.get('tahmin') or {}
-    probs = {}
-    for line in LINES:
-        value = raw.get(f'{line}_ust')
-        if isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and 0 <= value <= 100:
-            probs[line] = float(value)
-    if not probs:
-        return {'durum': 'VERI_YOK', 'gerekce': 'Gecerli gol olasiligi bulunamadi'}
-    # Önce yüksek çizgileri inceler; hiçbir çizgiyi sessizce elemez.
-    ranked = [{'cizgi': f'{line} UST', 'model_yuzdesi': probs[line]} for line in LINES if line in probs]
-    # En yüksek çizgi için en az %50: keşif etiketi, bahis önerisi değil.
-    discoveries = [r for r in ranked if r['model_yuzdesi'] >= 50]
-    strongest = discoveries[0] if discoveries else ranked[-1]
-    return {'durum': 'KESIF_ADAYI' if discoveries else 'INCELEME',
-            'en_yuksek_uygun_cizgi': strongest,
-            'tum_cizgiler': ranked,
-            'not': 'Yuzdeler V18 model ciktisidir; dogrulanmis basari veya bahis tavsiyesi degildir.'}
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *'
 
-def build(data):
-    matches = data.get('tahminler')
-    if not isinstance(matches, list):
-        raise ValueError('V18 tahminler listesi bulunamadi')
-    items = []
-    for m in matches:
-        if not isinstance(m, dict):
-            continue
-        items.append({'id': m.get('id'), 'tarih': m.get('tarih'), 'lig': m.get('lig'),
-                      'ev_sahibi': m.get('ev_sahibi'), 'deplasman': m.get('deplasman'),
-                      'analiz': inspect(m)})
-    return {'modul': 'ASLAN MODU V1 - BAGIMSIZ KESIF',
-            'olusturulma_utc': datetime.now(timezone.utc).isoformat(),
-            'kaynak_model': data.get('model'), 'mac_sayisi': len(items), 'maclar': items}
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument('--girdi', required=True)
-    p.add_argument('--cikti', default='aslan_modu_rapor.json')
-    args = p.parse_args()
-    source, target = Path(args.girdi), Path(args.cikti)
-    if source.resolve() == target.resolve() or target.exists():
-        raise ValueError('Kaynak dosya korunuyor; mevcut cikti ustune yazilmaz')
-    report = build(json.loads(source.read_text(encoding='utf-8')))
-    target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print('ASLAN MODU:', report['mac_sayisi'], 'mac analiz edildi; V18 degistirilmedi')
+concurrency:
+  group: tipster-v18-live-pages
+  cancel-in-progress: false
 
-if __name__ == '__main__':
-    main()
+jobs:
+  predict-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V18 cevrimdisi testler
+        run: python -m unittest -v test_gercek_tahmin_v18.py
+
+      - name: ESPN guncel fikstur
+        env:
+          TIPSTER_FIKSTUR_GUN: '7'
+        run: python fikstur_yeni.py
+
+      - name: Gercek mac gecmisi ve V18 model tahminleri
+        run: python gercek_tahmin_v18.py --gecmis-gun 90 --cikti v18_canli_cikti.json
+
+      - name: V18 tahminlerini arsivle
+        run: python v18_sonuc_takip.py --arsivle v18_canli_cikti.json
+
+      - name: V18 gercek mac sonuclarini kontrol et
+        run: python v18_sonuc_takip.py --kontrol
+
+      - name: Denetim dosyalarini sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: v18-gercek-tahmin-denetimi
+          path: |
+            gelecek_maclar.json
+            v18_canli_cikti.json
+          retention-days: 7
+
+      # ASLAN MODU: V18 motorunu veya tahmin dosyalarini degistirmez.
+      - name: ASLAN MODU V1 bagimsiz test
+        id: aslan_tests
+        continue-on-error: true
+        run: python -m unittest -v test_aslan_modu_v1
+
+      - name: ASLAN MODU test sonucunu kaydet
+        if: always()
+        env:
+          ASLAN_TEST_STATUS: ${{ steps.aslan_tests.outcome }}
+        run: |
+          python - <<'PYCODE'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          durum = os.environ.get('ASLAN_TEST_STATUS', 'unknown')
+          rapor = {
+              'modul': 'ASLAN MODU V1',
+              'tarih_utc': datetime.now(timezone.utc).isoformat(),
+              'durum': durum,
+              'aciklama': 'ASLAN MODU bagimsiz test durumu: ' + durum,
+          }
+          Path('aslan_modu_test_sonuclari.json').write_text(
+              json.dumps(rapor, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          print('ASLAN MODU TEST DURUMU:', durum)
+          PYCODE
+
+      - name: V18 panel verisini dogrula ve hazirla
+        run: |
+          python - <<'PYCODE'
+          import json
+          from pathlib import Path
+
+          d = json.loads(Path('v18_canli_cikti.json').read_text(encoding='utf-8'))
+          if d.get('model') != 'TIPSTER PRO V18' or not isinstance(d.get('tahminler'), list):
+              raise SystemExit('V18 cikti bicimi gecersiz.')
+          print('URETILEN TAHMIN:', len(d['tahminler']))
+          print('DURUM:', d.get('durum_sayilari', {}))
+          print('LIG DENETIMI:', d.get('lig_denetimi', {}))
+          if not d['tahminler']:
+              raise SystemExit('SIFIR TAHMIN: Bos veri yayinlanmiyor.')
+          PYCODE
+
+          python v18_panel_aktar.py v18_canli_cikti.json --cikti panel_tahminler.json
+
+          python - <<'PYCODE'
+          import json
+          import shutil
+          from pathlib import Path
+
+          records = json.loads(Path('panel_tahminler.json').read_text(encoding='utf-8'))['tahminler']
+          if not records:
+              raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
+          out = Path('site')
+          out.mkdir(exist_ok=True)
+          for name in (
+              'index.html',
+              'panel.css',
+              'panel.js',
+              'panel_tahminler.json',
+              'v18_dogrulanan_sonuclar.json',
+              'aslan_modu_test_sonuclari.json',
+          ):
+              shutil.copy2(name, out / name)
+          print('PANEL ICIN GUNCEL TAHMIN:', len(records))
+          PYCODE
+
+      - name: V18 tahmin ve sonuc arsivini kalici kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v18_tahmin_arsivi.json
+          if [ -f v18_dogrulanan_sonuclar.json ]; then
+            git add v18_dogrulanan_sonuclar.json
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "V18 tahmin ve sonuc arsivini guncelle"
+            git push
+          fi
+
+      - name: GitHub Pages hazirla
+        uses: actions/configure-pages@v5
+
+      - name: Paneli ve gercek JSON verisini yukle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Sayfayi yayinla
+        id: deployment
+        uses: actions/deploy-pages@v4
