@@ -53,7 +53,6 @@ def kimlik(match):
     event = str(match.get('id') or '').strip()
     if not league or not event:
         return None
-    # ESPN fixture ID can be either 401... or league|401...
     if '|' in event:
         prefix, suffix = event.split('|', 1)
         if prefix != league or not suffix or '|' in suffix:
@@ -122,50 +121,56 @@ def arsivle(source, now=None):
         raise ValueError('Arsiv JSON listesi olmali')
     existing = {r.get('kimlik') for r in archive if isinstance(r, dict)}
     added = skipped = updated = 0
+
     for match in data['tahminler']:
         id_ = kimlik(match)
         if not id_:
-    skipped += 1
-    continue
+            skipped += 1
+            continue
 
-if id_ in existing:
-    record = next(
-        (r for r in archive if r.get('kimlik') == id_),
-        None
-    )
-    start = utc(record['mac'].get('tarih')) if record else None
-    created = utc(record['mac'].get('hesaplama_zamani_utc')) if record else None
+        if id_ in existing:
+            record = next(
+                (r for r in archive if isinstance(r, dict) and r.get('kimlik') == id_),
+                None,
+            )
+            start = utc(record['mac'].get('tarih')) if record and isinstance(record.get('mac'), dict) else None
+            created = utc(record['mac'].get('hesaplama_zamani_utc')) if record and isinstance(record.get('mac'), dict) else None
 
-    if (
-        record
-        and 'kilitli_secim' not in record
-        and record.get('durum') == 'BEKLIYOR'
-        and start
-        and created
-        and created < start
-        and now < start
-    ):
-        probabilities = record.get('olasiliklar') or olasiliklar(record['mac'])
-        choice = kilitli_secim_uret(probabilities, cfg)
+            if (
+                record
+                and 'kilitli_secim' not in record
+                and record.get('durum') == 'BEKLIYOR'
+                and start
+                and created
+                and created < start
+                and now < start
+            ):
+                probabilities = record.get('olasiliklar') or olasiliklar(record['mac'])
+                choice = kilitli_secim_uret(probabilities, cfg)
+                if choice is not None:
+                    record['kilitli_secim'] = choice
+                    record['kilit_zamani_utc'] = now.isoformat()
+                    record['secim_politikasi'] = cfg['secim_politikasi']
+                    record['secim_esikleri'] = dict(cfg['esikler'])
+                    updated += 1
+            skipped += 1
+            continue
 
-        if choice is not None:
-            updated += 1
-            record['kilitli_secim'] = choice
-            record['kilit_zamani_utc'] = now.isoformat()
-            record['secim_politikasi'] = cfg['secim_politikasi']
-            record['secim_esikleri'] = dict(cfg['esikler'])
-
-    skipped += 1
-    continue
-        start, created = utc(match.get('tarih')), utc(match.get('hesaplama_zamani_utc'))
+        start = utc(match.get('tarih'))
+        created = utc(match.get('hesaplama_zamani_utc'))
         if not start or not created or not (created <= now < start):
             skipped += 1
             continue
+
         probabilities = olasiliklar(match)
         choice = kilitli_secim_uret(probabilities, cfg)
         record = {
-            'kimlik': id_, 'mac': dict(match), 'kilit_zamani_utc': now.isoformat(),
-            'durum': 'BEKLIYOR', 'sonuc': None, 'olasiliklar': probabilities,
+            'kimlik': id_,
+            'mac': dict(match),
+            'kilit_zamani_utc': now.isoformat(),
+            'durum': 'BEKLIYOR',
+            'sonuc': None,
+            'olasiliklar': probabilities,
         }
         if choice is not None:
             record['kilitli_secim'] = choice
@@ -174,9 +179,10 @@ if id_ in existing:
         archive.append(record)
         existing.add(id_)
         added += 1
+
     if added or updated:
         yaz(ARSIV, archive)
-    print(f'ARSIV: toplam={len(archive)} yeni={added} atlanan={skipped}')
+    print(f'ARSIV: toplam={len(archive)} yeni={added} guncellenen={updated} atlanan={skipped}')
     return added
 
 
@@ -191,7 +197,6 @@ def _completed_event(event):
         competitors = event['competitions'][0]['competitors']
         home = next(c for c in competitors if c.get('homeAway') == 'home')
         away = next(c for c in competitors if c.get('homeAway') == 'away')
-        # No penalty shootout or interim scores: ESPN's full-time competitor score.
         hs, as_ = int(home['score']), int(away['score'])
         if min(hs, as_) < 0:
             return None
@@ -231,7 +236,6 @@ def espn_sonuclari(archive, fetch=None, now=None):
                 if parsed is None:
                     continue
                 event_id, score = parsed
-                # An ESPN ID must be scoped to one league; never join by team names.
                 if '|' in event_id:
                     prefix, suffix = event_id.split('|', 1)
                     if prefix != league or not suffix or '|' in suffix:
@@ -282,7 +286,6 @@ def kontrol(fetch=None, now=None):
         previous = record.get('sonuc') if record.get('durum') == 'DOGRULANDI' else None
         fresh = found.get(key)
         if isinstance(previous, dict) and isinstance(previous.get('toplam_gol'), int):
-            # Preserve prior verified score; contradictory upstream corrections must be reviewed.
             if fresh is not None and fresh.get('skor') != previous.get('skor'):
                 record['skor_uyarisi'] = 'ESPN_SKOR_DEGISTI_KONTROL_ET'
             score = previous
@@ -312,7 +315,6 @@ def kontrol(fetch=None, now=None):
         else:
             record.pop('tahmin_sonucu', None)
         output.append(record)
-    # Keep source archive stable if no change; avoid false commits on every scheduled run.
     if output != archive:
         yaz(ARSIV, output)
     wins = sum(x.get('tahmin_sonucu') == 'DOGRU' for x in output)
@@ -349,3 +351,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
