@@ -43,3 +43,10 @@ jobs:
               encoding="utf-8"
           )
           PY
+      - name: ASLAN MODU test raporunu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aslan-modu-test-raporu
+          path: aslan_modu_test_sonuclari.json
+          if-no-files-found: error
