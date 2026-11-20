@@ -20,3 +20,22 @@ jobs:
 
       - name: ASLAN MODU testlerini calistir
         run: python -m unittest -v test_aslan_modu_v1
+      - name: ASLAN MODU test raporunu oluştur
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          rapor = {
+              "modul": "ASLAN MODU V1",
+              "tarih_utc": datetime.now(timezone.utc).isoformat(),
+              "durum": "TEST_SONUCU_BEKLENIYOR",
+              "aciklama": "Test sonucu henüz rapora aktarılmadı."
+          }
+          Path("aslan_modu_test_sonuclari.json").write_text(
+              json.dumps(rapor, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
+          PY
