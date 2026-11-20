@@ -88,6 +88,10 @@ jobs:
           print('ASLAN MODU TEST DURUMU:', durum)
           PYCODE
 
+      - name: ASLAN MODU gercek mac kesif raporunu olustur
+        run: python aslan_modu_v1.py --girdi v18_canli_cikti.json --cikti aslan_modu_rapor.json
+
+
       - name: V18 panel verisini dogrula ve hazirla
         run: |
           python - <<'PYCODE'
@@ -123,6 +127,7 @@ jobs:
               'panel_tahminler.json',
               'v18_dogrulanan_sonuclar.json',
               'aslan_modu_test_sonuclari.json',
+              'aslan_modu_rapor.json',
           ):
               shutil.copy2(name, out / name)
           print('PANEL ICIN GUNCEL TAHMIN:', len(records))
