@@ -56,7 +56,10 @@ jobs:
             gelecek_maclar.json
             v18_canli_cikti.json
           retention-days: 7
-
+      - name: ASLAN MODU V1 bagimsiz test
+        continue-on-error: true
+        run: |
+          python -m unittest -v test_aslan_modu
       - name: V18 panel verisini dogrula ve hazirla
         run: |
           python - <<'PYCODE'
