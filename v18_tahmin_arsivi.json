@@ -24,7 +24,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -34,6 +34,16 @@
       "4.5_ust": 11.5,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -61,7 +71,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -71,6 +81,16 @@
       "4.5_ust": 6.6,
       "5.5_ust": 2.2,
       "6.5_ust": 0.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -98,7 +118,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -108,6 +128,16 @@
       "4.5_ust": 4.5,
       "5.5_ust": 1.4,
       "6.5_ust": 0.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -135,7 +165,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -145,6 +175,16 @@
       "4.5_ust": 11.5,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -172,7 +212,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -182,6 +222,16 @@
       "4.5_ust": 7.1,
       "5.5_ust": 2.4,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -209,7 +259,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -219,6 +269,16 @@
       "4.5_ust": 11.5,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -246,7 +306,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -256,6 +316,16 @@
       "4.5_ust": 8.1,
       "5.5_ust": 2.9,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -283,7 +353,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 165
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -293,6 +363,16 @@
       "4.5_ust": 14.1,
       "5.5_ust": 5.9,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -320,7 +400,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -330,6 +410,16 @@
       "4.5_ust": 37.1,
       "5.5_ust": 21.5,
       "6.5_ust": 11.1
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -357,7 +447,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -367,6 +457,16 @@
       "4.5_ust": 25.4,
       "5.5_ust": 12.8,
       "6.5_ust": 5.7
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -394,7 +494,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -404,6 +504,16 @@
       "4.5_ust": 24.4,
       "5.5_ust": 12.1,
       "6.5_ust": 5.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -431,7 +541,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -441,6 +551,16 @@
       "4.5_ust": 23.3,
       "5.5_ust": 11.4,
       "6.5_ust": 5.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -468,7 +588,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -478,6 +598,16 @@
       "4.5_ust": 23.3,
       "5.5_ust": 11.4,
       "6.5_ust": 5.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -505,7 +635,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 54
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -515,6 +645,16 @@
       "4.5_ust": 27.5,
       "5.5_ust": 14.2,
       "6.5_ust": 6.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -542,7 +682,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -552,6 +692,16 @@
       "4.5_ust": 36.0,
       "5.5_ust": 20.6,
       "6.5_ust": 10.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -579,7 +729,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -589,6 +739,16 @@
       "4.5_ust": 34.9,
       "5.5_ust": 19.8,
       "6.5_ust": 9.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -616,7 +776,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -626,6 +786,16 @@
       "4.5_ust": 20.4,
       "5.5_ust": 9.6,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -653,7 +823,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -663,6 +833,16 @@
       "4.5_ust": 19.4,
       "5.5_ust": 9.0,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -690,7 +870,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -700,6 +880,16 @@
       "4.5_ust": 30.6,
       "5.5_ust": 16.5,
       "6.5_ust": 7.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -727,7 +917,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -737,6 +927,16 @@
       "4.5_ust": 17.5,
       "5.5_ust": 7.8,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -764,7 +964,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -774,6 +974,16 @@
       "4.5_ust": 16.6,
       "5.5_ust": 7.3,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -801,7 +1011,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -811,6 +1021,16 @@
       "4.5_ust": 10.2,
       "5.5_ust": 3.8,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -838,7 +1058,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -848,6 +1068,16 @@
       "4.5_ust": 14.0,
       "5.5_ust": 5.9,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -876,8 +1106,15 @@
       "kaynak_mac_sayisi": 117
     },
     "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
-    "durum": "BEKLIYOR",
-    "sonuc": null,
+    "durum": "DOGRULANDI",
+    "sonuc": {
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3,
+      "skor": "2-1",
+      "durum": "TAMAMLANDI",
+      "kaynak": "ESPN"
+    },
     "olasiliklar": {
       "1.5_ust": 77.8,
       "2.5_ust": 54.4,
@@ -885,6 +1122,33 @@
       "4.5_ust": 16.1,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "sonuc_dogrulama_zamani_utc": "2026-11-20T00:47:16.830555+00:00",
+    "cizgi_sonuclari": {
+      "1.5_ust": {
+        "model_yuzdesi": 77.8,
+        "gerceklesti": true
+      },
+      "2.5_ust": {
+        "model_yuzdesi": 54.4,
+        "gerceklesti": true
+      },
+      "3.5_ust": {
+        "model_yuzdesi": 32.1,
+        "gerceklesti": false
+      },
+      "4.5_ust": {
+        "model_yuzdesi": 16.1,
+        "gerceklesti": false
+      },
+      "5.5_ust": {
+        "model_yuzdesi": 7.0,
+        "gerceklesti": false
+      },
+      "6.5_ust": {
+        "model_yuzdesi": 2.7,
+        "gerceklesti": false
+      }
     }
   },
   {
@@ -913,8 +1177,15 @@
       "kaynak_mac_sayisi": 117
     },
     "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
-    "durum": "BEKLIYOR",
-    "sonuc": null,
+    "durum": "DOGRULANDI",
+    "sonuc": {
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3,
+      "skor": "2-1",
+      "durum": "TAMAMLANDI",
+      "kaynak": "ESPN"
+    },
     "olasiliklar": {
       "1.5_ust": 75.8,
       "2.5_ust": 51.6,
@@ -922,6 +1193,33 @@
       "4.5_ust": 14.3,
       "5.5_ust": 6.0,
       "6.5_ust": 2.2
+    },
+    "sonuc_dogrulama_zamani_utc": "2026-11-20T00:47:16.830555+00:00",
+    "cizgi_sonuclari": {
+      "1.5_ust": {
+        "model_yuzdesi": 75.8,
+        "gerceklesti": true
+      },
+      "2.5_ust": {
+        "model_yuzdesi": 51.6,
+        "gerceklesti": true
+      },
+      "3.5_ust": {
+        "model_yuzdesi": 29.4,
+        "gerceklesti": false
+      },
+      "4.5_ust": {
+        "model_yuzdesi": 14.3,
+        "gerceklesti": false
+      },
+      "5.5_ust": {
+        "model_yuzdesi": 6.0,
+        "gerceklesti": false
+      },
+      "6.5_ust": {
+        "model_yuzdesi": 2.2,
+        "gerceklesti": false
+      }
     }
   },
   {
@@ -986,7 +1284,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -996,6 +1294,16 @@
       "4.5_ust": 14.1,
       "5.5_ust": 5.9,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1023,7 +1331,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1033,6 +1341,16 @@
       "4.5_ust": 18.6,
       "5.5_ust": 8.5,
       "6.5_ust": 3.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1060,7 +1378,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1070,6 +1388,16 @@
       "4.5_ust": 21.8,
       "5.5_ust": 10.4,
       "6.5_ust": 4.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1097,7 +1425,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1107,6 +1435,16 @@
       "4.5_ust": 24.1,
       "5.5_ust": 11.9,
       "6.5_ust": 5.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1134,7 +1472,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1144,6 +1482,16 @@
       "4.5_ust": 12.7,
       "5.5_ust": 5.1,
       "6.5_ust": 1.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1171,7 +1519,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1181,6 +1529,16 @@
       "4.5_ust": 17.8,
       "5.5_ust": 8.0,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1208,7 +1566,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1218,6 +1576,16 @@
       "4.5_ust": 12.8,
       "5.5_ust": 5.2,
       "6.5_ust": 1.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1245,7 +1613,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1255,6 +1623,16 @@
       "4.5_ust": 8.3,
       "5.5_ust": 3.0,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1282,7 +1660,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1292,6 +1670,16 @@
       "4.5_ust": 11.7,
       "5.5_ust": 4.6,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1319,7 +1707,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1329,6 +1717,16 @@
       "4.5_ust": 12.2,
       "5.5_ust": 4.9,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1356,7 +1754,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 117
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1366,6 +1764,16 @@
       "4.5_ust": 10.2,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1393,7 +1801,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1403,6 +1811,16 @@
       "4.5_ust": 11.7,
       "5.5_ust": 4.6,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1430,7 +1848,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1440,6 +1858,16 @@
       "4.5_ust": 9.6,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1467,7 +1895,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1477,6 +1905,16 @@
       "4.5_ust": 8.5,
       "5.5_ust": 3.1,
       "6.5_ust": 1.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1504,7 +1942,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1514,6 +1952,16 @@
       "4.5_ust": 10.8,
       "5.5_ust": 4.2,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1541,7 +1989,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1551,6 +1999,16 @@
       "4.5_ust": 10.7,
       "5.5_ust": 4.1,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1578,7 +2036,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1588,6 +2046,16 @@
       "4.5_ust": 7.5,
       "5.5_ust": 2.6,
       "6.5_ust": 0.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1615,7 +2083,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 157
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1625,6 +2093,16 @@
       "4.5_ust": 7.1,
       "5.5_ust": 2.4,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1652,7 +2130,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1662,6 +2140,16 @@
       "4.5_ust": 21.2,
       "5.5_ust": 10.1,
       "6.5_ust": 4.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1689,7 +2177,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1699,6 +2187,16 @@
       "4.5_ust": 27.5,
       "5.5_ust": 14.2,
       "6.5_ust": 6.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1726,7 +2224,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1736,6 +2234,16 @@
       "4.5_ust": 20.2,
       "5.5_ust": 9.4,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1763,7 +2271,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1773,6 +2281,16 @@
       "4.5_ust": 27.5,
       "5.5_ust": 14.2,
       "6.5_ust": 6.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1800,7 +2318,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1810,6 +2328,16 @@
       "4.5_ust": 20.0,
       "5.5_ust": 9.3,
       "6.5_ust": 3.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1837,7 +2365,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 62
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1847,6 +2375,16 @@
       "4.5_ust": 24.4,
       "5.5_ust": 12.2,
       "6.5_ust": 5.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1874,7 +2412,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1884,6 +2422,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1911,7 +2459,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1921,6 +2469,16 @@
       "4.5_ust": 12.3,
       "5.5_ust": 4.9,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1948,7 +2506,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1958,6 +2516,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -1985,7 +2553,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -1995,6 +2563,16 @@
       "4.5_ust": 13.0,
       "5.5_ust": 5.3,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2022,7 +2600,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2032,6 +2610,16 @@
       "4.5_ust": 21.1,
       "5.5_ust": 10.0,
       "6.5_ust": 4.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2059,7 +2647,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2069,6 +2657,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2096,7 +2694,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2106,6 +2704,16 @@
       "4.5_ust": 10.2,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2133,7 +2741,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2143,6 +2751,16 @@
       "4.5_ust": 14.5,
       "5.5_ust": 6.1,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2170,7 +2788,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2180,6 +2798,16 @@
       "4.5_ust": 16.0,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2207,7 +2835,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 100
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2217,6 +2845,16 @@
       "4.5_ust": 10.2,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2244,7 +2882,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2254,6 +2892,16 @@
       "4.5_ust": 19.7,
       "5.5_ust": 9.1,
       "6.5_ust": 3.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2281,7 +2929,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2291,6 +2939,16 @@
       "4.5_ust": 32.2,
       "5.5_ust": 17.7,
       "6.5_ust": 8.6
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2318,7 +2976,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2328,6 +2986,16 @@
       "4.5_ust": 17.3,
       "5.5_ust": 7.7,
       "6.5_ust": 3.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2355,7 +3023,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2365,6 +3033,16 @@
       "4.5_ust": 16.1,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2392,7 +3070,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2402,6 +3080,16 @@
       "4.5_ust": 12.9,
       "5.5_ust": 5.2,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2429,7 +3117,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2439,6 +3127,16 @@
       "4.5_ust": 18.5,
       "5.5_ust": 8.4,
       "6.5_ust": 3.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2466,7 +3164,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2476,6 +3174,16 @@
       "4.5_ust": 12.4,
       "5.5_ust": 5.0,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2503,7 +3211,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2513,6 +3221,16 @@
       "4.5_ust": 16.7,
       "5.5_ust": 7.4,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2540,7 +3258,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2550,6 +3268,16 @@
       "4.5_ust": 11.9,
       "5.5_ust": 4.7,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2577,7 +3305,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2587,6 +3315,16 @@
       "4.5_ust": 26.1,
       "5.5_ust": 13.3,
       "6.5_ust": 6.0
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2614,7 +3352,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2624,6 +3362,16 @@
       "4.5_ust": 12.4,
       "5.5_ust": 5.0,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2651,7 +3399,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2661,6 +3409,16 @@
       "4.5_ust": 22.2,
       "5.5_ust": 10.7,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2688,7 +3446,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2698,6 +3456,16 @@
       "4.5_ust": 12.9,
       "5.5_ust": 5.2,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2725,7 +3493,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2735,6 +3503,16 @@
       "4.5_ust": 23.5,
       "5.5_ust": 11.5,
       "6.5_ust": 5.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2762,7 +3540,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2772,6 +3550,16 @@
       "4.5_ust": 11.4,
       "5.5_ust": 4.4,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2799,7 +3587,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2809,6 +3597,16 @@
       "4.5_ust": 17.9,
       "5.5_ust": 8.0,
       "6.5_ust": 3.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2836,7 +3634,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2846,6 +3644,16 @@
       "4.5_ust": 22.8,
       "5.5_ust": 11.1,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2873,7 +3681,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2883,6 +3691,16 @@
       "4.5_ust": 22.2,
       "5.5_ust": 10.7,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2910,7 +3728,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2920,6 +3738,16 @@
       "4.5_ust": 16.7,
       "5.5_ust": 7.4,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2947,7 +3775,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2957,6 +3785,16 @@
       "4.5_ust": 16.7,
       "5.5_ust": 7.4,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -2984,7 +3822,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -2994,6 +3832,16 @@
       "4.5_ust": 16.7,
       "5.5_ust": 7.4,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3021,7 +3869,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3031,6 +3879,16 @@
       "4.5_ust": 22.8,
       "5.5_ust": 11.1,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3058,7 +3916,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3068,6 +3926,16 @@
       "4.5_ust": 12.9,
       "5.5_ust": 5.2,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3095,7 +3963,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 168
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3105,6 +3973,16 @@
       "4.5_ust": 20.3,
       "5.5_ust": 9.5,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3132,7 +4010,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3142,6 +4020,16 @@
       "4.5_ust": 17.8,
       "5.5_ust": 8.0,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3169,7 +4057,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3179,6 +4067,16 @@
       "4.5_ust": 13.0,
       "5.5_ust": 5.3,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3206,7 +4104,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3216,6 +4114,16 @@
       "4.5_ust": 21.9,
       "5.5_ust": 10.5,
       "6.5_ust": 4.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3243,7 +4151,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3253,6 +4161,16 @@
       "4.5_ust": 5.8,
       "5.5_ust": 1.9,
       "6.5_ust": 0.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3280,7 +4198,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3290,6 +4208,16 @@
       "4.5_ust": 21.7,
       "5.5_ust": 10.4,
       "6.5_ust": 4.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3317,7 +4245,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3327,6 +4255,16 @@
       "4.5_ust": 16.0,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3354,7 +4292,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3364,6 +4302,16 @@
       "4.5_ust": 19.3,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3391,7 +4339,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3401,6 +4349,16 @@
       "4.5_ust": 8.7,
       "5.5_ust": 3.1,
       "6.5_ust": 1.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3428,7 +4386,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3438,6 +4396,16 @@
       "4.5_ust": 22.4,
       "5.5_ust": 10.9,
       "6.5_ust": 4.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3465,7 +4433,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3475,6 +4443,16 @@
       "4.5_ust": 9.7,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3502,7 +4480,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3512,6 +4490,16 @@
       "4.5_ust": 17.8,
       "5.5_ust": 8.0,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3539,7 +4527,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3549,6 +4537,16 @@
       "4.5_ust": 14.1,
       "5.5_ust": 5.9,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3576,7 +4574,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3586,6 +4584,16 @@
       "4.5_ust": 21.3,
       "5.5_ust": 10.2,
       "6.5_ust": 4.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3613,7 +4621,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3623,6 +4631,16 @@
       "4.5_ust": 7.1,
       "5.5_ust": 2.4,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3650,7 +4668,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3660,6 +4678,16 @@
       "4.5_ust": 29.8,
       "5.5_ust": 15.9,
       "6.5_ust": 7.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3687,7 +4715,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 150
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3697,6 +4725,16 @@
       "4.5_ust": 14.2,
       "5.5_ust": 5.9,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3724,7 +4762,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3734,6 +4772,16 @@
       "4.5_ust": 13.4,
       "5.5_ust": 5.5,
       "6.5_ust": 2.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3761,7 +4809,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3771,6 +4819,16 @@
       "4.5_ust": 13.4,
       "5.5_ust": 5.5,
       "6.5_ust": 2.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3798,7 +4856,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3808,6 +4866,16 @@
       "4.5_ust": 16.1,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3835,7 +4903,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3845,6 +4913,16 @@
       "4.5_ust": 17.1,
       "5.5_ust": 7.6,
       "6.5_ust": 2.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3872,7 +4950,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3882,6 +4960,16 @@
       "4.5_ust": 17.9,
       "5.5_ust": 8.0,
       "6.5_ust": 3.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3909,7 +4997,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3919,6 +5007,16 @@
       "4.5_ust": 19.7,
       "5.5_ust": 9.1,
       "6.5_ust": 3.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3946,7 +5044,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3956,6 +5054,16 @@
       "4.5_ust": 15.0,
       "5.5_ust": 6.4,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -3983,7 +5091,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -3993,6 +5101,16 @@
       "4.5_ust": 21.6,
       "5.5_ust": 10.3,
       "6.5_ust": 4.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4020,7 +5138,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4030,6 +5148,16 @@
       "4.5_ust": 8.1,
       "5.5_ust": 2.8,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4057,7 +5185,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4067,6 +5195,16 @@
       "4.5_ust": 4.9,
       "5.5_ust": 1.5,
       "6.5_ust": 0.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4094,7 +5232,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4104,6 +5242,16 @@
       "4.5_ust": 9.2,
       "5.5_ust": 3.4,
       "6.5_ust": 1.1
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4131,7 +5279,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4141,6 +5289,16 @@
       "4.5_ust": 13.9,
       "5.5_ust": 5.8,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4168,7 +5326,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4178,6 +5336,16 @@
       "4.5_ust": 22.8,
       "5.5_ust": 11.1,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4205,7 +5373,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 162
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4215,6 +5383,16 @@
       "4.5_ust": 5.0,
       "5.5_ust": 1.6,
       "6.5_ust": 0.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4242,7 +5420,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4252,6 +5430,16 @@
       "4.5_ust": 35.8,
       "5.5_ust": 20.5,
       "6.5_ust": 10.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4279,7 +5467,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4289,6 +5477,16 @@
       "4.5_ust": 23.7,
       "5.5_ust": 11.7,
       "6.5_ust": 5.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4316,7 +5514,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4326,6 +5524,16 @@
       "4.5_ust": 22.9,
       "5.5_ust": 11.2,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4353,7 +5561,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4363,6 +5571,16 @@
       "4.5_ust": 18.7,
       "5.5_ust": 8.5,
       "6.5_ust": 3.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4390,7 +5608,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4400,6 +5618,16 @@
       "4.5_ust": 22.0,
       "5.5_ust": 10.6,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4427,7 +5655,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4437,6 +5665,16 @@
       "4.5_ust": 17.4,
       "5.5_ust": 7.8,
       "6.5_ust": 3.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4464,7 +5702,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4474,6 +5712,16 @@
       "4.5_ust": 17.3,
       "5.5_ust": 7.7,
       "6.5_ust": 3.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4501,7 +5749,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4511,6 +5759,16 @@
       "4.5_ust": 13.7,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4538,7 +5796,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4548,6 +5806,16 @@
       "4.5_ust": 17.4,
       "5.5_ust": 7.7,
       "6.5_ust": 3.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4575,7 +5843,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4585,6 +5853,16 @@
       "4.5_ust": 16.8,
       "5.5_ust": 7.4,
       "6.5_ust": 2.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4612,7 +5890,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4622,6 +5900,16 @@
       "4.5_ust": 25.0,
       "5.5_ust": 12.5,
       "6.5_ust": 5.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4649,7 +5937,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4659,6 +5947,16 @@
       "4.5_ust": 26.7,
       "5.5_ust": 13.7,
       "6.5_ust": 6.2
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4686,7 +5984,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4696,6 +5994,16 @@
       "4.5_ust": 19.0,
       "5.5_ust": 8.7,
       "6.5_ust": 3.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4723,7 +6031,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4733,6 +6041,16 @@
       "4.5_ust": 13.2,
       "5.5_ust": 5.4,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4760,7 +6078,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4770,6 +6088,16 @@
       "4.5_ust": 20.2,
       "5.5_ust": 9.4,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4797,7 +6125,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4807,6 +6135,16 @@
       "4.5_ust": 21.4,
       "5.5_ust": 10.2,
       "6.5_ust": 4.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4834,7 +6172,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4844,6 +6182,16 @@
       "4.5_ust": 27.2,
       "5.5_ust": 14.1,
       "6.5_ust": 6.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4871,7 +6219,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4881,6 +6229,16 @@
       "4.5_ust": 23.1,
       "5.5_ust": 11.3,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4908,7 +6266,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4918,6 +6276,16 @@
       "4.5_ust": 31.8,
       "5.5_ust": 17.3,
       "6.5_ust": 8.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4945,7 +6313,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4955,6 +6323,16 @@
       "4.5_ust": 21.6,
       "5.5_ust": 10.3,
       "6.5_ust": 4.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -4982,7 +6360,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -4992,6 +6370,16 @@
       "4.5_ust": 23.2,
       "5.5_ust": 11.4,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5019,7 +6407,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5029,6 +6417,16 @@
       "4.5_ust": 20.8,
       "5.5_ust": 9.8,
       "6.5_ust": 4.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5056,7 +6454,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5066,6 +6464,16 @@
       "4.5_ust": 13.7,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5093,7 +6501,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 176
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5103,6 +6511,16 @@
       "4.5_ust": 21.9,
       "5.5_ust": 10.5,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5130,7 +6548,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5140,6 +6558,16 @@
       "4.5_ust": 8.1,
       "5.5_ust": 2.9,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5167,7 +6595,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5177,6 +6605,16 @@
       "4.5_ust": 11.9,
       "5.5_ust": 4.7,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5204,7 +6642,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5214,6 +6652,16 @@
       "4.5_ust": 16.6,
       "5.5_ust": 7.3,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5241,7 +6689,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5251,6 +6699,16 @@
       "4.5_ust": 17.8,
       "5.5_ust": 8.0,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5278,7 +6736,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5288,6 +6746,16 @@
       "4.5_ust": 11.4,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5315,7 +6783,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5325,6 +6793,16 @@
       "4.5_ust": 33.5,
       "5.5_ust": 18.7,
       "6.5_ust": 9.2
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5352,7 +6830,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5362,6 +6840,16 @@
       "4.5_ust": 30.6,
       "5.5_ust": 16.5,
       "6.5_ust": 7.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5389,7 +6877,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5399,6 +6887,16 @@
       "4.5_ust": 15.6,
       "5.5_ust": 6.7,
       "6.5_ust": 2.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5426,7 +6924,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5436,6 +6934,16 @@
       "4.5_ust": 10.3,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5463,7 +6971,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 112
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5473,6 +6981,16 @@
       "4.5_ust": 18.5,
       "5.5_ust": 8.4,
       "6.5_ust": 3.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5500,7 +7018,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5510,6 +7028,16 @@
       "4.5_ust": 16.6,
       "5.5_ust": 7.3,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5537,7 +7065,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5547,6 +7075,16 @@
       "4.5_ust": 9.8,
       "5.5_ust": 3.7,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5574,7 +7112,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5584,6 +7122,16 @@
       "4.5_ust": 17.2,
       "5.5_ust": 7.6,
       "6.5_ust": 3.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5611,7 +7159,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5621,6 +7169,16 @@
       "4.5_ust": 9.1,
       "5.5_ust": 3.3,
       "6.5_ust": 1.1
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5648,7 +7206,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5658,6 +7216,16 @@
       "4.5_ust": 8.8,
       "5.5_ust": 3.2,
       "6.5_ust": 1.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5685,7 +7253,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5695,6 +7263,16 @@
       "4.5_ust": 21.8,
       "5.5_ust": 10.5,
       "6.5_ust": 4.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5722,7 +7300,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5732,6 +7310,16 @@
       "4.5_ust": 14.2,
       "5.5_ust": 5.9,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5759,7 +7347,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5769,6 +7357,16 @@
       "4.5_ust": 14.0,
       "5.5_ust": 5.8,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5796,7 +7394,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5806,6 +7404,16 @@
       "4.5_ust": 23.9,
       "5.5_ust": 11.8,
       "6.5_ust": 5.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5833,7 +7441,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5843,6 +7451,16 @@
       "4.5_ust": 11.9,
       "5.5_ust": 4.7,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5870,7 +7488,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 140
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5880,6 +7498,16 @@
       "4.5_ust": 13.6,
       "5.5_ust": 5.6,
       "6.5_ust": 2.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5907,7 +7535,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5917,6 +7545,16 @@
       "4.5_ust": 14.5,
       "5.5_ust": 6.1,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5944,7 +7582,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5954,6 +7592,16 @@
       "4.5_ust": 17.6,
       "5.5_ust": 7.9,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -5981,7 +7629,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -5991,6 +7639,16 @@
       "4.5_ust": 19.3,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6018,7 +7676,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6028,6 +7686,16 @@
       "4.5_ust": 19.3,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6055,7 +7723,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6065,6 +7733,16 @@
       "4.5_ust": 7.8,
       "5.5_ust": 2.7,
       "6.5_ust": 0.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6092,7 +7770,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6102,6 +7780,16 @@
       "4.5_ust": 27.5,
       "5.5_ust": 14.2,
       "6.5_ust": 6.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6129,7 +7817,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6139,6 +7827,16 @@
       "4.5_ust": 14.5,
       "5.5_ust": 6.1,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6166,7 +7864,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6176,6 +7874,16 @@
       "4.5_ust": 17.6,
       "5.5_ust": 7.9,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6203,7 +7911,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6213,6 +7921,16 @@
       "4.5_ust": 24.7,
       "5.5_ust": 12.3,
       "6.5_ust": 5.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6240,7 +7958,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6250,6 +7968,16 @@
       "4.5_ust": 11.6,
       "5.5_ust": 4.5,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6277,7 +8005,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6287,6 +8015,16 @@
       "4.5_ust": 20.2,
       "5.5_ust": 9.4,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6314,7 +8052,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6324,6 +8062,16 @@
       "4.5_ust": 21.9,
       "5.5_ust": 10.5,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6351,7 +8099,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6361,6 +8109,16 @@
       "4.5_ust": 13.0,
       "5.5_ust": 5.3,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6388,7 +8146,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6398,6 +8156,16 @@
       "4.5_ust": 16.0,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6425,7 +8193,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6435,6 +8203,16 @@
       "4.5_ust": 13.7,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6462,7 +8240,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6472,6 +8250,16 @@
       "4.5_ust": 20.2,
       "5.5_ust": 9.4,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6499,7 +8287,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6509,6 +8297,16 @@
       "4.5_ust": 16.0,
       "5.5_ust": 7.0,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6536,7 +8334,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6546,6 +8344,16 @@
       "4.5_ust": 6.2,
       "5.5_ust": 2.0,
       "6.5_ust": 0.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6573,7 +8381,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6583,6 +8391,16 @@
       "4.5_ust": 26.4,
       "5.5_ust": 13.5,
       "6.5_ust": 6.1
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6610,7 +8428,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6620,6 +8438,16 @@
       "4.5_ust": 32.8,
       "5.5_ust": 18.1,
       "6.5_ust": 8.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6647,7 +8475,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6657,6 +8485,16 @@
       "4.5_ust": 20.4,
       "5.5_ust": 9.6,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6684,7 +8522,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6694,6 +8532,16 @@
       "4.5_ust": 24.4,
       "5.5_ust": 12.1,
       "6.5_ust": 5.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6721,7 +8569,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6731,6 +8579,16 @@
       "4.5_ust": 32.8,
       "5.5_ust": 18.1,
       "6.5_ust": 8.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6758,7 +8616,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6768,6 +8626,16 @@
       "4.5_ust": 29.6,
       "5.5_ust": 15.7,
       "6.5_ust": 7.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6795,7 +8663,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6805,6 +8673,16 @@
       "4.5_ust": 11.6,
       "5.5_ust": 4.6,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6832,7 +8710,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6842,6 +8720,16 @@
       "4.5_ust": 42.5,
       "5.5_ust": 26.0,
       "6.5_ust": 14.2
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6869,7 +8757,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6879,6 +8767,16 @@
       "4.5_ust": 26.4,
       "5.5_ust": 13.5,
       "6.5_ust": 6.1
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6906,7 +8804,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6916,6 +8814,16 @@
       "4.5_ust": 21.3,
       "5.5_ust": 10.2,
       "6.5_ust": 4.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6943,7 +8851,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6953,6 +8861,16 @@
       "4.5_ust": 16.6,
       "5.5_ust": 7.3,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -6980,7 +8898,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -6990,6 +8908,16 @@
       "4.5_ust": 20.4,
       "5.5_ust": 9.6,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7017,7 +8945,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7027,6 +8955,16 @@
       "4.5_ust": 14.0,
       "5.5_ust": 5.9,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7054,7 +8992,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7064,6 +9002,16 @@
       "4.5_ust": 22.3,
       "5.5_ust": 10.8,
       "6.5_ust": 4.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7091,7 +9039,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7101,6 +9049,16 @@
       "4.5_ust": 10.9,
       "5.5_ust": 4.2,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7128,7 +9086,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7138,6 +9096,16 @@
       "4.5_ust": 23.3,
       "5.5_ust": 11.4,
       "6.5_ust": 5.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7165,7 +9133,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7175,6 +9143,16 @@
       "4.5_ust": 13.2,
       "5.5_ust": 5.4,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7202,7 +9180,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 81
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7212,6 +9190,16 @@
       "4.5_ust": 22.3,
       "5.5_ust": 10.8,
       "6.5_ust": 4.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7239,7 +9227,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7249,6 +9237,16 @@
       "4.5_ust": 23.9,
       "5.5_ust": 11.8,
       "6.5_ust": 5.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7276,7 +9274,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7286,6 +9284,16 @@
       "4.5_ust": 5.4,
       "5.5_ust": 1.7,
       "6.5_ust": 0.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7313,7 +9321,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7323,6 +9331,16 @@
       "4.5_ust": 13.7,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7350,7 +9368,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7360,6 +9378,16 @@
       "4.5_ust": 13.0,
       "5.5_ust": 5.3,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7387,7 +9415,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7397,6 +9425,16 @@
       "4.5_ust": 8.4,
       "5.5_ust": 3.0,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7424,7 +9462,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7434,6 +9472,16 @@
       "4.5_ust": 20.2,
       "5.5_ust": 9.4,
       "6.5_ust": 3.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7461,7 +9509,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 69
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7471,6 +9519,16 @@
       "4.5_ust": 18.5,
       "5.5_ust": 8.4,
       "6.5_ust": 3.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7498,7 +9556,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7508,6 +9566,16 @@
       "4.5_ust": 9.7,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7535,7 +9603,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7545,6 +9613,16 @@
       "4.5_ust": 20.0,
       "5.5_ust": 9.3,
       "6.5_ust": 3.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7572,7 +9650,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7582,6 +9660,16 @@
       "4.5_ust": 19.2,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7609,7 +9697,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7619,6 +9707,16 @@
       "4.5_ust": 17.0,
       "5.5_ust": 7.5,
       "6.5_ust": 2.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7646,7 +9744,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7656,6 +9754,16 @@
       "4.5_ust": 11.5,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7683,7 +9791,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7693,6 +9801,16 @@
       "4.5_ust": 19.2,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7720,7 +9838,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7730,6 +9848,16 @@
       "4.5_ust": 23.2,
       "5.5_ust": 11.4,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7757,7 +9885,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7767,6 +9895,16 @@
       "4.5_ust": 25.8,
       "5.5_ust": 13.1,
       "6.5_ust": 5.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7794,7 +9932,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7804,6 +9942,16 @@
       "4.5_ust": 28.3,
       "5.5_ust": 14.8,
       "6.5_ust": 6.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7831,7 +9979,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7841,6 +9989,16 @@
       "4.5_ust": 33.6,
       "5.5_ust": 18.7,
       "6.5_ust": 9.3
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7868,7 +10026,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7878,6 +10036,16 @@
       "4.5_ust": 12.8,
       "5.5_ust": 5.2,
       "6.5_ust": 1.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7905,7 +10073,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7915,6 +10083,16 @@
       "4.5_ust": 15.5,
       "5.5_ust": 6.7,
       "6.5_ust": 2.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7942,7 +10120,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7952,6 +10130,16 @@
       "4.5_ust": 7.1,
       "5.5_ust": 2.4,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -7979,7 +10167,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -7989,6 +10177,16 @@
       "4.5_ust": 9.7,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8016,7 +10214,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8026,6 +10224,16 @@
       "4.5_ust": 10.9,
       "5.5_ust": 4.2,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8053,7 +10261,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8063,6 +10271,16 @@
       "4.5_ust": 8.6,
       "5.5_ust": 3.1,
       "6.5_ust": 1.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8090,7 +10308,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8100,6 +10318,16 @@
       "4.5_ust": 23.2,
       "5.5_ust": 11.4,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8127,7 +10355,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8137,6 +10365,16 @@
       "4.5_ust": 20.0,
       "5.5_ust": 9.3,
       "6.5_ust": 3.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8164,7 +10402,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8174,6 +10412,16 @@
       "4.5_ust": 9.7,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8201,7 +10449,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8211,6 +10459,16 @@
       "4.5_ust": 10.3,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8238,7 +10496,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8248,6 +10506,16 @@
       "4.5_ust": 12.1,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8275,7 +10543,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8285,6 +10553,16 @@
       "4.5_ust": 12.1,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8312,7 +10590,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8322,6 +10600,16 @@
       "4.5_ust": 8.1,
       "5.5_ust": 2.9,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8349,7 +10637,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8359,6 +10647,16 @@
       "4.5_ust": 16.2,
       "5.5_ust": 7.1,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8386,7 +10684,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8396,6 +10694,16 @@
       "4.5_ust": 14.8,
       "5.5_ust": 6.3,
       "6.5_ust": 2.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8423,7 +10731,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8433,6 +10741,16 @@
       "4.5_ust": 12.1,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8460,7 +10778,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8470,6 +10788,16 @@
       "4.5_ust": 9.7,
       "5.5_ust": 3.6,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8497,7 +10825,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8507,6 +10835,16 @@
       "4.5_ust": 10.9,
       "5.5_ust": 4.2,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8534,7 +10872,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8544,6 +10882,16 @@
       "4.5_ust": 10.3,
       "5.5_ust": 3.9,
       "6.5_ust": 1.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8571,7 +10919,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 110
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8581,6 +10929,16 @@
       "4.5_ust": 19.2,
       "5.5_ust": 8.9,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8608,7 +10966,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8618,6 +10976,16 @@
       "4.5_ust": 19.9,
       "5.5_ust": 9.3,
       "6.5_ust": 3.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8645,7 +11013,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8655,6 +11023,16 @@
       "4.5_ust": 22.1,
       "5.5_ust": 10.6,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8682,7 +11060,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8692,6 +11070,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8719,7 +11107,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8729,6 +11117,16 @@
       "4.5_ust": 20.6,
       "5.5_ust": 9.7,
       "6.5_ust": 4.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8756,7 +11154,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8766,6 +11164,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8793,7 +11201,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8803,6 +11211,16 @@
       "4.5_ust": 12.0,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8830,7 +11248,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8840,6 +11258,16 @@
       "4.5_ust": 12.0,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8867,7 +11295,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8877,6 +11305,16 @@
       "4.5_ust": 14.5,
       "5.5_ust": 6.1,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8904,7 +11342,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8914,6 +11352,16 @@
       "4.5_ust": 25.1,
       "5.5_ust": 12.6,
       "6.5_ust": 5.6
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8941,7 +11389,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8951,6 +11399,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -8978,7 +11436,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -8988,6 +11446,16 @@
       "4.5_ust": 12.6,
       "5.5_ust": 5.1,
       "6.5_ust": 1.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9015,7 +11483,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9025,6 +11493,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9052,7 +11530,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9062,6 +11540,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9089,7 +11577,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9099,6 +11587,16 @@
       "4.5_ust": 15.1,
       "5.5_ust": 6.4,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9126,7 +11624,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9136,6 +11634,16 @@
       "4.5_ust": 11.4,
       "5.5_ust": 4.5,
       "6.5_ust": 1.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9163,7 +11671,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9173,6 +11681,16 @@
       "4.5_ust": 25.1,
       "5.5_ust": 12.6,
       "6.5_ust": 5.6
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9200,7 +11718,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 120
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9210,6 +11728,16 @@
       "4.5_ust": 20.6,
       "5.5_ust": 9.7,
       "6.5_ust": 4.0
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9237,7 +11765,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9247,6 +11775,16 @@
       "4.5_ust": 12.0,
       "5.5_ust": 4.8,
       "6.5_ust": 1.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9274,7 +11812,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9284,6 +11822,16 @@
       "4.5_ust": 22.8,
       "5.5_ust": 11.1,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9311,7 +11859,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9321,6 +11869,16 @@
       "4.5_ust": 17.8,
       "5.5_ust": 8.0,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9348,7 +11906,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9358,6 +11916,16 @@
       "4.5_ust": 27.5,
       "5.5_ust": 14.2,
       "6.5_ust": 6.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9385,7 +11953,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9395,6 +11963,16 @@
       "4.5_ust": 15.1,
       "5.5_ust": 6.4,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9422,7 +12000,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9432,6 +12010,16 @@
       "4.5_ust": 19.2,
       "5.5_ust": 8.8,
       "6.5_ust": 3.6
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9459,7 +12047,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9469,6 +12057,16 @@
       "4.5_ust": 22.8,
       "5.5_ust": 11.1,
       "6.5_ust": 4.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9496,7 +12094,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9506,6 +12104,16 @@
       "4.5_ust": 25.9,
       "5.5_ust": 13.2,
       "6.5_ust": 5.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9533,7 +12141,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 108
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9543,6 +12151,16 @@
       "4.5_ust": 13.8,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9570,7 +12188,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9580,6 +12198,16 @@
       "4.5_ust": 38.1,
       "5.5_ust": 22.3,
       "6.5_ust": 11.6
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9607,7 +12235,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9617,6 +12245,16 @@
       "4.5_ust": 47.7,
       "5.5_ust": 30.6,
       "6.5_ust": 17.5
+    },
+    "kilitli_secim": "3.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9644,7 +12282,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9654,6 +12292,16 @@
       "4.5_ust": 43.0,
       "5.5_ust": 26.3,
       "6.5_ust": 14.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9681,7 +12329,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9691,6 +12339,16 @@
       "4.5_ust": 41.0,
       "5.5_ust": 24.7,
       "6.5_ust": 13.3
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9718,7 +12376,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9728,6 +12386,16 @@
       "4.5_ust": 24.7,
       "5.5_ust": 12.3,
       "6.5_ust": 5.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9755,7 +12423,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9765,6 +12433,16 @@
       "4.5_ust": 35.2,
       "5.5_ust": 19.9,
       "6.5_ust": 10.1
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9792,7 +12470,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9802,6 +12480,16 @@
       "4.5_ust": 32.2,
       "5.5_ust": 17.7,
       "6.5_ust": 8.6
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9829,7 +12517,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9839,6 +12527,16 @@
       "4.5_ust": 35.2,
       "5.5_ust": 19.9,
       "6.5_ust": 10.1
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9866,7 +12564,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9876,6 +12574,16 @@
       "4.5_ust": 31.3,
       "5.5_ust": 17.0,
       "6.5_ust": 8.2
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9903,7 +12611,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9913,6 +12621,16 @@
       "4.5_ust": 46.8,
       "5.5_ust": 29.7,
       "6.5_ust": 16.9
+    },
+    "kilitli_secim": "3.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9940,7 +12658,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9950,6 +12668,16 @@
       "4.5_ust": 32.8,
       "5.5_ust": 18.1,
       "6.5_ust": 8.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -9977,7 +12705,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -9987,6 +12715,16 @@
       "4.5_ust": 33.9,
       "5.5_ust": 18.9,
       "6.5_ust": 9.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10014,7 +12752,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10024,6 +12762,16 @@
       "4.5_ust": 24.4,
       "5.5_ust": 12.1,
       "6.5_ust": 5.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10051,7 +12799,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10061,6 +12809,16 @@
       "4.5_ust": 40.4,
       "5.5_ust": 24.1,
       "6.5_ust": 12.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10088,7 +12846,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10098,6 +12856,16 @@
       "4.5_ust": 25.4,
       "5.5_ust": 12.8,
       "6.5_ust": 5.7
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10125,7 +12893,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10135,6 +12903,16 @@
       "4.5_ust": 36.0,
       "5.5_ust": 20.6,
       "6.5_ust": 10.5
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10162,7 +12940,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 72
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10172,6 +12950,16 @@
       "4.5_ust": 25.4,
       "5.5_ust": 12.8,
       "6.5_ust": 5.7
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10199,7 +12987,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 49
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10209,6 +12997,16 @@
       "4.5_ust": 3.9,
       "5.5_ust": 1.1,
       "6.5_ust": 0.3
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10236,7 +13034,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 49
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10246,6 +13044,16 @@
       "4.5_ust": 5.3,
       "5.5_ust": 1.7,
       "6.5_ust": 0.5
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10273,7 +13081,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10283,6 +13091,16 @@
       "4.5_ust": 15.5,
       "5.5_ust": 6.7,
       "6.5_ust": 2.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10310,7 +13128,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10320,6 +13138,16 @@
       "4.5_ust": 14.8,
       "5.5_ust": 6.3,
       "6.5_ust": 2.3
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10347,7 +13175,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10357,6 +13185,16 @@
       "4.5_ust": 13.7,
       "5.5_ust": 5.7,
       "6.5_ust": 2.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10384,7 +13222,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10394,6 +13232,16 @@
       "4.5_ust": 11.8,
       "5.5_ust": 4.7,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10421,7 +13269,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10431,6 +13279,16 @@
       "4.5_ust": 28.4,
       "5.5_ust": 14.9,
       "6.5_ust": 6.9
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10458,7 +13316,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10468,6 +13326,16 @@
       "4.5_ust": 14.5,
       "5.5_ust": 6.1,
       "6.5_ust": 2.2
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10495,7 +13363,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10505,6 +13373,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10532,7 +13410,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10542,6 +13420,16 @@
       "4.5_ust": 10.9,
       "5.5_ust": 4.2,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10569,7 +13457,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10579,6 +13467,16 @@
       "4.5_ust": 16.4,
       "5.5_ust": 7.2,
       "6.5_ust": 2.7
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10606,7 +13504,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10616,6 +13514,16 @@
       "4.5_ust": 10.7,
       "5.5_ust": 4.1,
       "6.5_ust": 1.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10643,7 +13551,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10653,6 +13561,16 @@
       "4.5_ust": 9.8,
       "5.5_ust": 3.7,
       "6.5_ust": 1.2
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10680,7 +13598,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10690,6 +13608,16 @@
       "4.5_ust": 7.2,
       "5.5_ust": 2.5,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10717,7 +13645,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 63
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10727,6 +13655,16 @@
       "4.5_ust": 6.4,
       "5.5_ust": 2.1,
       "6.5_ust": 0.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10754,7 +13692,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10764,6 +13702,16 @@
       "4.5_ust": 23.2,
       "5.5_ust": 11.4,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10791,7 +13739,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10801,6 +13749,16 @@
       "4.5_ust": 4.8,
       "5.5_ust": 1.5,
       "6.5_ust": 0.4
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10828,7 +13786,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10838,6 +13796,16 @@
       "4.5_ust": 7.1,
       "5.5_ust": 2.4,
       "6.5_ust": 0.7
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10865,7 +13833,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10875,6 +13843,16 @@
       "4.5_ust": 13.4,
       "5.5_ust": 5.5,
       "6.5_ust": 2.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10902,7 +13880,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10912,6 +13890,16 @@
       "4.5_ust": 8.3,
       "5.5_ust": 3.0,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10939,7 +13927,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10949,6 +13937,16 @@
       "4.5_ust": 12.8,
       "5.5_ust": 5.2,
       "6.5_ust": 1.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -10976,7 +13974,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -10986,6 +13984,16 @@
       "4.5_ust": 8.1,
       "5.5_ust": 2.9,
       "6.5_ust": 0.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11013,7 +14021,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 89
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11023,6 +14031,16 @@
       "4.5_ust": 7.5,
       "5.5_ust": 2.6,
       "6.5_ust": 0.8
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11050,7 +14068,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11060,6 +14078,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11087,7 +14115,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11097,6 +14125,16 @@
       "4.5_ust": 25.6,
       "5.5_ust": 12.9,
       "6.5_ust": 5.8
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11124,7 +14162,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11134,6 +14172,16 @@
       "4.5_ust": 26.5,
       "5.5_ust": 13.6,
       "6.5_ust": 6.2
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11161,7 +14209,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11171,6 +14219,16 @@
       "4.5_ust": 15.2,
       "5.5_ust": 6.5,
       "6.5_ust": 2.4
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11198,7 +14256,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11208,6 +14266,16 @@
       "4.5_ust": 17.6,
       "5.5_ust": 7.9,
       "6.5_ust": 3.1
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11235,7 +14303,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11245,6 +14313,16 @@
       "4.5_ust": 11.6,
       "5.5_ust": 4.5,
       "6.5_ust": 1.6
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11272,7 +14350,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11282,6 +14360,16 @@
       "4.5_ust": 13.0,
       "5.5_ust": 5.3,
       "6.5_ust": 1.9
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11309,7 +14397,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11319,6 +14407,16 @@
       "4.5_ust": 21.9,
       "5.5_ust": 10.5,
       "6.5_ust": 4.5
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11346,7 +14444,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 90
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11356,6 +14454,16 @@
       "4.5_ust": 29.4,
       "5.5_ust": 15.6,
       "6.5_ust": 7.3
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11457,7 +14565,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11467,6 +14575,16 @@
       "4.5_ust": 26.1,
       "5.5_ust": 13.3,
       "6.5_ust": 6.0
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11494,7 +14612,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11504,6 +14622,16 @@
       "4.5_ust": 26.1,
       "5.5_ust": 13.3,
       "6.5_ust": 6.0
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11531,7 +14659,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11541,6 +14669,16 @@
       "4.5_ust": 30.9,
       "5.5_ust": 16.7,
       "6.5_ust": 8.0
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11568,7 +14706,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11578,6 +14716,16 @@
       "4.5_ust": 31.7,
       "5.5_ust": 17.3,
       "6.5_ust": 8.4
+    },
+    "kilitli_secim": "2.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11605,7 +14753,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11615,6 +14763,16 @@
       "4.5_ust": 23.3,
       "5.5_ust": 11.4,
       "6.5_ust": 4.9
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11642,7 +14800,7 @@
       "gecmis_gun": 90,
       "kaynak_mac_sayisi": 211
     },
-    "kilit_zamani_utc": "2026-11-19T01:01:38.875065+00:00",
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
     "durum": "BEKLIYOR",
     "sonuc": null,
     "olasiliklar": {
@@ -11652,6 +14810,16 @@
       "4.5_ust": 13.4,
       "5.5_ust": 5.5,
       "6.5_ust": 2.0
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
     }
   },
   {
@@ -11689,6 +14857,100 @@
       "4.5_ust": 16.4,
       "5.5_ust": 7.2,
       "6.5_ust": 2.8
+    },
+    "kilitli_secim": "1.5 UST",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
+    }
+  },
+  {
+    "kimlik": "bra.1|401841329",
+    "mac": {
+      "id": "bra.1|401841329",
+      "tarih": "2026-11-26T23:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "lig": "Brezilya Serie A",
+      "ev_sahibi": "São Paulo",
+      "deplasman": "Remo",
+      "istatistik_ev": "São Paulo",
+      "istatistik_deplasman": "Remo",
+      "tahmin": {
+        "beklenen_gol": 2.38,
+        "1.5_ust": 68.6,
+        "2.5_ust": 42.4,
+        "3.5_ust": 21.6,
+        "4.5_ust": 9.3,
+        "5.5_ust": 3.4,
+        "6.5_ust": 1.1
+      },
+      "hesaplama_zamani_utc": "2026-11-20T00:37:15.129163+00:00",
+      "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+      "gecmis_gun": 90,
+      "kaynak_mac_sayisi": 124
+    },
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
+    "durum": "BEKLIYOR",
+    "sonuc": null,
+    "olasiliklar": {
+      "1.5_ust": 68.6,
+      "2.5_ust": 42.4,
+      "3.5_ust": 21.6,
+      "4.5_ust": 9.3,
+      "5.5_ust": 3.4,
+      "6.5_ust": 1.1
+    },
+    "kilitli_secim": "RISKLI",
+    "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+    "secim_esikleri": {
+      "1.5": 75.0,
+      "2.5": 65.0,
+      "3.5": 65.0,
+      "4.5": 65.0,
+      "5.5": 65.0,
+      "6.5": 65.0
+    }
+  },
+  {
+    "kimlik": "eng.3|401880728",
+    "mac": {
+      "id": "eng.3|401880728",
+      "tarih": "2026-11-26T20:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "lig": "Ingiltere League One",
+      "ev_sahibi": "Doncaster Rovers",
+      "deplasman": "Huddersfield Town",
+      "istatistik_ev": "Doncaster Rovers",
+      "istatistik_deplasman": "Huddersfield Town",
+      "tahmin": {
+        "beklenen_gol": 2.8,
+        "1.5_ust": 76.9,
+        "2.5_ust": 53.0,
+        "3.5_ust": 30.8,
+        "4.5_ust": 15.2,
+        "5.5_ust": 6.5,
+        "6.5_ust": 2.4
+      },
+      "hesaplama_zamani_utc": "2026-11-20T00:37:15.129163+00:00",
+      "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+      "gecmis_gun": 90,
+      "kaynak_mac_sayisi": 150
+    },
+    "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
+    "durum": "BEKLIYOR",
+    "sonuc": null,
+    "olasiliklar": {
+      "1.5_ust": 76.9,
+      "2.5_ust": 53.0,
+      "3.5_ust": 30.8,
+      "4.5_ust": 15.2,
+      "5.5_ust": 6.5,
+      "6.5_ust": 2.4
     },
     "kilitli_secim": "1.5 UST",
     "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
