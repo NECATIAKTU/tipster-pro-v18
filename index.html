@@ -95,5 +95,210 @@
 <footer>TIPSTER NECATİ • Dosya tabanlı görüntüleme • Yüzdeler model çıktısıdır; doğrulanmış başarı oranı değildir.</footer>
 </main>
 <script src="panel.js" defer></script>
+  
+<script>
+/* ASLAN MODU V1 - Gerçek maç keşif ekranı */
+window.addEventListener("DOMContentLoaded", async () => {
+  const bolum = document.getElementById("aslan-modu");
+  if (!bolum) return;
+
+  const ekran = document.createElement("div");
+  ekran.id = "aslan-kesif-ekrani";
+  bolum.appendChild(ekran);
+
+  // Panelin üstüne ASLAN MODU düğmesi ekle.
+  const dugme = document.createElement("button");
+  dugme.type = "button";
+  dugme.textContent = "🦁 ASLAN MODU";
+  dugme.onclick = () => bolum.scrollIntoView({
+    behavior: "smooth"
+  });
+
+  const ust = document.querySelector(".intro .actions");
+  if (ust) ust.appendChild(dugme);
+
+  ekran.innerHTML = `
+    <p class="muted">
+      Gerçek maç keşif raporu.
+      Yüzdeler V18 modelinden alınmıştır;
+      bağımsız tahmin başarısı değildir.
+    </p>
+
+    <p id="aslan-bilgi">Rapor yükleniyor...</p>
+
+    <div class="result-controls">
+      <label for="aslan-filtre">Filtre:</label>
+      <select id="aslan-filtre">
+        <option value="aday">Keşif adayları</option>
+        <option value="tum">Tüm maçlar</option>
+        <option value="diger">İnceleme / Veri yok</option>
+      </select>
+    </div>
+
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Maç</th>
+            <th>Tarih UTC</th>
+            <th>Gol çizgisi</th>
+            <th>Model %</th>
+            <th>Durum</th>
+          </tr>
+        </thead>
+        <tbody id="aslan-tablo"></tbody>
+      </table>
+    </div>
+
+    <div class="pagination">
+      <button type="button" class="secondary"
+        id="aslan-geri">Önceki</button>
+      <span id="aslan-sayfa">1 / 1</span>
+      <button type="button" class="secondary"
+        id="aslan-ileri">Sonraki</button>
+    </div>
+  `;
+
+  const bilgi = document.getElementById("aslan-bilgi");
+  const tablo = document.getElementById("aslan-tablo");
+  const filtre = document.getElementById("aslan-filtre");
+  const geri = document.getElementById("aslan-geri");
+  const ileri = document.getElementById("aslan-ileri");
+  const sayfaYazisi = document.getElementById("aslan-sayfa");
+
+  let maclar = [];
+  let sayfa = 0;
+  const sayfaBoyutu = 30;
+
+  function hucre(satir, deger) {
+    const td = document.createElement("td");
+    td.textContent = String(deger ?? "—");
+    satir.appendChild(td);
+  }
+
+  function goster() {
+    const liste = maclar.filter(m => {
+      const durum = m.analiz?.durum;
+      if (filtre.value === "tum") return true;
+      if (filtre.value === "aday") {
+        return durum === "KESIF_ADAYI";
+      }
+      return durum !== "KESIF_ADAYI";
+    });
+
+    const toplamSayfa = Math.max(
+      1, Math.ceil(liste.length / sayfaBoyutu)
+    );
+    sayfa = Math.min(sayfa, toplamSayfa - 1);
+    tablo.replaceChildren();
+
+    const baslangic = sayfa * sayfaBoyutu;
+    const gorunen = liste.slice(
+      baslangic, baslangic + sayfaBoyutu
+    );
+
+    for (const mac of gorunen) {
+      const analiz = mac.analiz || {};
+      const secim = analiz.en_yuksek_uygun_cizgi || {};
+      const satir = document.createElement("tr");
+
+      hucre(satir,
+        (mac.ev_sahibi || "?") + " - " +
+        (mac.deplasman || "?")
+      );
+      hucre(satir,
+        String(mac.tarih || "").slice(0, 16)
+          .replace("T", " ")
+      );
+      hucre(satir,
+        String(secim.cizgi || "—").replace("UST", "ÜST")
+      );
+
+      const yuzde = secim.model_yuzdesi;
+      hucre(satir,
+        typeof yuzde === "number"
+          ? "%" + yuzde.toFixed(1)
+          : "—"
+      );
+
+      hucre(satir,
+        analiz.durum === "KESIF_ADAYI"
+          ? "KEŞİF ADAYI"
+          : analiz.durum || "VERİ YOK"
+      );
+
+      tablo.appendChild(satir);
+    }
+
+    if (!gorunen.length) {
+      const satir = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 5;
+      td.textContent = "Bu filtrede maç bulunamadı.";
+      satir.appendChild(td);
+      tablo.appendChild(satir);
+    }
+
+    sayfaYazisi.textContent =
+      (sayfa + 1) + " / " + toplamSayfa +
+      " • " + liste.length + " maç";
+
+    geri.disabled = sayfa === 0;
+    ileri.disabled = sayfa >= toplamSayfa - 1;
+  }
+
+  filtre.onchange = () => {
+    sayfa = 0;
+    goster();
+  };
+
+  geri.onclick = () => {
+    if (sayfa > 0) {
+      sayfa--;
+      goster();
+    }
+  };
+
+  ileri.onclick = () => {
+    sayfa++;
+    goster();
+  };
+
+  try {
+    const cevap = await fetch(
+      "./aslan_modu_rapor.json?t=" + Date.now(),
+      { cache: "no-store" }
+    );
+
+    if (!cevap.ok) {
+      throw new Error("HTTP " + cevap.status);
+    }
+
+    const veri = await cevap.json();
+
+    if (!Array.isArray(veri.maclar)) {
+      throw new Error("Maç listesi bulunamadı");
+    }
+
+    maclar = veri.maclar;
+
+    const adaylar = maclar.filter(
+      m => m.analiz?.durum === "KESIF_ADAYI"
+    ).length;
+
+    bilgi.textContent =
+      "Toplam: " + maclar.length +
+      " | Keşif adayı: " + adaylar +
+      " | Diğer: " + (maclar.length - adaylar);
+
+    goster();
+
+  } catch (hata) {
+    bilgi.textContent =
+      "ASLAN raporu yüklenemedi: " + hata.message;
+  }
+});
+</script>
+
 </body>
 </html>
