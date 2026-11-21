@@ -40,14 +40,16 @@ def fetch(code, day, timeout=15):
         with urlopen(req, timeout=timeout) as response:
             data = json.load(response)
 
+    
     except HTTPError as exc:
         details = exc.read(500).decode(
             "utf-8", errors="replace"
         )
         print(
-    f"ESPN {code} HTTP {exc.code}: {details[:120]}"
-)
-       raise
+            f"ESPN {code} HTTP {exc.code}: {details[:120]}"
+        )
+        raise
+
 
     if not isinstance(data, dict):
         raise ValueError("ESPN JSON nesnesi gelmedi")
