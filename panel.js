@@ -596,24 +596,263 @@ async function loadResults() {
 $("result-filter").addEventListener("change", resultRender);
 $("refresh").addEventListener("click", loadResults);
 loadResults();
-async function aslanModuYukle() {
-  const alan = document.getElementById("aslan-durum");
-  if (!alan) return;
 
-  try {
-    const cevap = await fetch(
-      "aslan_modu_test_sonuclari.json?t=" + Date.now(),
-      { cache: "no-store" }
-    );
-    if (!cevap.ok) throw new Error("Sonuç dosyası yok");
+/* ASLAN MODU V1 - GUVEN RENKLERI VE SONUC PANELI
+   V18 tahmin motoruna dokunmaz.
+   Yalnizca ASLAN verilerini okur.
+*/
 
-    const veri = await cevap.json();
-    alan.textContent = JSON.stringify(veri, null, 2);
-    alan.style.whiteSpace = "pre-wrap";
-  } catch (hata) {
-    alan.textContent =
-      "ASLAN MODU V1: Test sonuçları henüz yayınlanmadı.";
+window.addEventListener("DOMContentLoaded", () => {
+  const bolum = document.getElementById("aslan-modu");
+  if (!bolum) return;
+
+  const eskiDurum = document.getElementById("aslan-durum");
+  if (eskiDurum) eskiDurum.remove();
+
+  const panel = document.createElement("div");
+  panel.id = "aslan-sonuc-paneli";
+
+  panel.innerHTML = `
+    <h3>🦁 ASLAN MODU — Gerçek sonuçlar</h3>
+    <p class="muted">
+      Yalnızca maç başlamadan önce kilitlenen
+      ASLAN tahminleri değerlendirilir.
+    </p>
+    <div class="result-summary">
+      <span>🟢 Güçlü tahmin: <strong id="aslan-yesil">—</strong></span>
+      <span>🟡 Orta güven: <strong id="aslan-sari">—</strong></span>
+      <span>⚪ Normal: <strong id="aslan-normal">—</strong></span>
+      <span>✅ Doğru: <strong id="aslan-dogru">—</strong></span>
+      <span>❌ Yanlış: <strong id="aslan-yanlis">—</strong></span>
+      <span>⏳ Bekleyen: <strong id="aslan-bekleyen">—</strong></span>
+      <span>Başarı: <strong id="aslan-basari">—</strong></span>
+    </div>
+    <p class="muted" id="aslan-sonuc-bilgi">
+      ASLAN sonuçları yükleniyor...
+    </p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Maç</th>
+            <th>Kilitli tahmin</th>
+            <th>Güven</th>
+            <th>Skor</th>
+            <th>Sonuç</th>
+          </tr>
+        </thead>
+        <tbody id="aslan-sonuc-satirlari"></tbody>
+      </table>
+    </div>
+  `;
+
+  // Mevcut ASLAN kesif tablosundan once goster.
+  const kesifEkrani =
+    document.getElementById("aslan-kesif-ekrani");
+
+  if (kesifEkrani) {
+    bolum.insertBefore(panel, kesifEkrani);
+  } else {
+    bolum.appendChild(panel);
   }
-}
 
-aslanModuYukle();
+  const el = id => document.getElementById(id);
+
+  function guvenRengi(yuzde) {
+    if (yuzde >= 80) return "#22c55e";
+    if (yuzde >= 70) return "#facc15";
+    return "";
+  }
+
+  function kesifRenkleriniUygula() {
+    const tablo = el("aslan-tablo");
+    if (!tablo) return;
+
+    for (const satir of tablo.rows) {
+      const hucreler = satir.cells;
+      if (hucreler.length !== 5) continue;
+
+      const yuzde = Number(
+        hucreler[3].textContent
+          .replace("%", "")
+          .replace(",", ".")
+          .trim()
+      );
+
+      if (!Number.isFinite(yuzde)) continue;
+
+      const renk = guvenRengi(yuzde);
+
+      for (const index of [2, 3]) {
+        hucreler[index].style.color = renk;
+        hucreler[index].style.fontWeight =
+          renk ? "700" : "";
+      }
+
+      hucreler[4].textContent =
+        yuzde >= 80 ? "🟢 GÜÇLÜ KEŞİF"
+        : yuzde >= 70 ? "🟡 ORTA GÜVEN"
+        : "KEŞİF ADAYI";
+    }
+  }
+
+  // Filtre ve sayfa degisince renkleri koru.
+  const gozlem = new MutationObserver(
+    () => kesifRenkleriniUygula()
+  );
+
+  const kesifTablosu = el("aslan-tablo");
+  if (kesifTablosu) {
+    gozlem.observe(kesifTablosu, {
+      childList: true
+    });
+    kesifRenkleriniUygula();
+  }
+
+  function hucreEkle(satir, metin) {
+    const td = satir.insertCell();
+    td.textContent = String(metin ?? "—");
+    return td;
+  }
+
+  async function aslanSonuclariniYukle() {
+    try {
+      const cevap = await fetch(
+        "./aslan_dogrulanan_sonuclar.json?t=" +
+        Date.now(),
+        { cache: "no-store" }
+      );
+
+      if (!cevap.ok) {
+        throw new Error("HTTP " + cevap.status);
+      }
+
+      const veri = await cevap.json();
+
+      if (!Array.isArray(veri.kayitlar)) {
+        throw new Error("Geçersiz ASLAN sonuç dosyası");
+      }
+
+      const kayitlar = veri.kayitlar;
+
+      const say = durum =>
+        kayitlar.filter(
+          k => k.guven_sinifi === durum
+        ).length;
+
+      const dogru = kayitlar.filter(
+        k => k.durum === "DOGRULANDI" &&
+             k.tahmin_sonucu === "DOGRU"
+      ).length;
+
+      const yanlis = kayitlar.filter(
+        k => k.durum === "DOGRULANDI" &&
+             k.tahmin_sonucu === "YANLIS"
+      ).length;
+
+      const bekleyen = kayitlar.filter(
+        k => k.durum === "BEKLIYOR"
+      ).length;
+
+      const degerlendirilen = dogru + yanlis;
+
+      el("aslan-yesil").textContent = say("YESIL");
+      el("aslan-sari").textContent = say("SARI");
+      el("aslan-normal").textContent = say("NORMAL");
+      el("aslan-dogru").textContent = dogru;
+      el("aslan-yanlis").textContent = yanlis;
+      el("aslan-bekleyen").textContent = bekleyen;
+
+      el("aslan-basari").textContent =
+        degerlendirilen
+          ? (100 * dogru / degerlendirilen)
+              .toFixed(1) + "%"
+          : "Henüz yok";
+
+      el("aslan-sonuc-bilgi").textContent =
+        "Kilitli tahmin: " + kayitlar.length +
+        " | Değerlendirilen: " + degerlendirilen +
+        " | Başarı yalnızca gerçek sonuçlardan hesaplanır.";
+
+      const tablo = el("aslan-sonuc-satirlari");
+      tablo.replaceChildren();
+
+      const sirali = [...kayitlar].sort(
+        (a, b) => String(b.tarih || "")
+          .localeCompare(String(a.tarih || ""))
+      );
+
+      for (const k of sirali.slice(0, 120)) {
+        const satir = tablo.insertRow();
+
+        hucreEkle(
+          satir,
+          (k.ev_sahibi || "?") + " - " +
+          (k.deplasman || "?")
+        );
+
+        hucreEkle(
+          satir,
+          String(k.tahmin || "—")
+            .replace(" UST", " ÜST")
+        );
+
+        const guven =
+          k.guven_sinifi === "YESIL"
+            ? "🟢 YEŞİL"
+          : k.guven_sinifi === "SARI"
+            ? "🟡 SARI"
+          : "NORMAL";
+
+        const guvenHucresi =
+          hucreEkle(satir, guven);
+
+        const renk = guvenRengi(
+          Number(k.model_yuzdesi)
+        );
+
+        guvenHucresi.style.color = renk;
+        guvenHucresi.style.fontWeight =
+          renk ? "700" : "";
+
+        hucreEkle(satir, k.skor || "—");
+
+        const sonuc =
+          k.durum === "DOGRULANDI" &&
+          k.tahmin_sonucu === "DOGRU"
+            ? "✅ DOĞRU"
+          : k.durum === "DOGRULANDI" &&
+            k.tahmin_sonucu === "YANLIS"
+            ? "❌ YANLIŞ"
+          : k.durum === "INCELEME"
+            ? "İNCELEME"
+          : "⏳ BEKLİYOR";
+
+        const sonucHucresi =
+          hucreEkle(satir, sonuc);
+
+        if (sonuc === "✅ DOĞRU") {
+          sonucHucresi.style.color = "#22c55e";
+        } else if (sonuc === "❌ YANLIŞ") {
+          sonucHucresi.style.color = "#ef4444";
+        }
+      }
+
+      if (!sirali.length) {
+        const satir = tablo.insertRow();
+        const td = satir.insertCell();
+        td.colSpan = 5;
+        td.textContent =
+          "Henüz kilitlenmiş ASLAN tahmini yok.";
+      }
+
+    } catch (hata) {
+      el("aslan-sonuc-bilgi").textContent =
+        "ASLAN sonuç dosyası henüz okunamadı: " +
+        hata.message;
+    }
+  }
+
+  aslanSonuclariniYukle();
+});
+
