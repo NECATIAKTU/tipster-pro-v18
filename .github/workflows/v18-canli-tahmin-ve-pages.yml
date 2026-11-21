@@ -153,7 +153,7 @@ jobs:
             git commit -m "V18 tahmin ve sonuc arsivini guncelle"
 
             git fetch origin main
-            git rebase origin/main
+            git -c rebase.autoStash=true rebase origin/main
 
             git push origin HEAD:main
           fi
