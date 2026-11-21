@@ -95,7 +95,10 @@ jobs:
         run: |
           rm -f aslan_modu_rapor.json
           python aslan_modu_v1.py --girdi v18_canli_cikti.json --cikti aslan_modu_rapor.json
-
+      - name: ASLAN MODU tahminlerini kilitle ve sonuclari kontrol et
+        run: |
+          python aslan_sonuc_takip.py --kilitle
+          python aslan_sonuc_takip.py --kontrol
       - name: V18 guclendirme V1 bagimsiz test
         continue-on-error: true
         run: python -m unittest -v test_v18_guclendirme_v1.py
