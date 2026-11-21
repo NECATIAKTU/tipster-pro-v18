@@ -689,10 +689,7 @@ window.addEventListener("DOMContentLoaded", () => {
           renk ? "700" : "";
       }
 
-      hucreler[4].textContent =
-        yuzde >= 80 ? "🟢 GÜÇLÜ KEŞİF"
-        : yuzde >= 70 ? "🟡 ORTA GÜVEN"
-        : "KEŞİF ADAYI";
+        hucreler[4].textContent = "—";
     }
   }
 
