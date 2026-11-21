@@ -1,0 +1,45 @@
+
+name: V18 - Bagimsiz Model Karsilastirma
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  model-karsilastirma:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Kaynak kodunu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Guclendirme testleri
+        run: python -m unittest -v test_v18_guclendirme_v1.py
+
+      - name: Karsilastirma testleri
+        run: python -m unittest -v test_v18_model_karsilastirma.py
+
+      - name: Gercek mac model karsilastirmasi
+        run: |
+          python v18_model_karsilastirma.py \
+            --arsiv v18_tahmin_arsivi.json \
+            --cikti v18_guclendirme_karsilastirma.json \
+            --gun 45 \
+            --adet 10
+
+      - name: Karsilastirma raporunu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v18-model-karsilastirma-raporu
+          path: v18_guclendirme_karsilastirma.json
+          if-no-files-found: warn
+          retention-days: 30
