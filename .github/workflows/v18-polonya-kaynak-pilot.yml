@@ -1,0 +1,46 @@
+
+name: V18 Polonya Kaynak Pilot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  polonya-kaynak-testi:
+    name: Polonya Veri Kaynagi Kontrolu
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Kaynak kodlarini al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Pilot dosyalarini kontrol et
+        run: |
+          test -f polonya_kaynak_pilot.py
+          test -f test_polonya_kaynak_pilot.py
+
+      - name: Python testlerini calistir
+        run: |
+          python -m unittest -v test_polonya_kaynak_pilot.py
+
+      - name: Polonya veri kaynagini test et
+        run: |
+          python polonya_kaynak_pilot.py \
+            --cikti polonya_pilot_raporu
+
+      - name: Test raporunu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v18-polonya-pilot-raporu
+          path: polonya_pilot_raporu/
+          if-no-files-found: warn
+          retention-days: 14
