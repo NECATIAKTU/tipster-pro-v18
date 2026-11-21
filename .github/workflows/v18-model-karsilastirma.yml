@@ -33,7 +33,7 @@ jobs:
             --arsiv v18_tahmin_arsivi.json \
             --cikti v18_guclendirme_karsilastirma.json \
             --gun 45 \
-            --adet 10
+            --adet 30
 
       - name: Karsilastirma raporunu sakla
         if: always()
