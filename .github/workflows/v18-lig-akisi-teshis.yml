@@ -1,0 +1,48 @@
+
+name: V18 Lig Akisi Teshisi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lig-teshisi:
+    name: 42 Lig Kontrolu
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kaynak kodlarini al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Teshis dosyalarini kontrol et
+        run: |
+          test -f lig_akisi_teshis.py
+          test -f test_lig_akisi_teshis.py
+          test -f fikstur_yeni.py
+
+      - name: Teshis testlerini calistir
+        run: |
+          python -m unittest -v test_lig_akisi_teshis.py
+
+      - name: Lig akis raporunu olustur
+        run: |
+          python lig_akisi_teshis.py \
+            --klasor . \
+            --cikti lig_teshis_ciktilari
+
+      - name: Raporlari sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v18-lig-teshis-raporu
+          path: lig_teshis_ciktilari/
+          if-no-files-found: warn
+          retention-days: 14
