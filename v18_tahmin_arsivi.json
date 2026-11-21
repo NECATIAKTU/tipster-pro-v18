@@ -1871,8 +1871,15 @@
       "kaynak_mac_sayisi": 157
     },
     "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-    "durum": "BEKLIYOR",
-    "sonuc": null,
+    "durum": "DOGRULANDI",
+    "sonuc": {
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1,
+      "skor": "1-0",
+      "durum": "TAMAMLANDI",
+      "kaynak": "ESPN"
+    },
     "olasiliklar": {
       "1.5_ust": 72.5,
       "2.5_ust": 47.2,
@@ -1890,6 +1897,33 @@
       "4.5": 65.0,
       "5.5": 65.0,
       "6.5": 65.0
+    },
+    "sonuc_dogrulama_zamani_utc": "2026-11-21T00:59:02.053093+00:00",
+    "cizgi_sonuclari": {
+      "1.5_ust": {
+        "model_yuzdesi": 72.5,
+        "gerceklesti": false
+      },
+      "2.5_ust": {
+        "model_yuzdesi": 47.2,
+        "gerceklesti": false
+      },
+      "3.5_ust": {
+        "model_yuzdesi": 25.6,
+        "gerceklesti": false
+      },
+      "4.5_ust": {
+        "model_yuzdesi": 11.7,
+        "gerceklesti": false
+      },
+      "5.5_ust": {
+        "model_yuzdesi": 4.6,
+        "gerceklesti": false
+      },
+      "6.5_ust": {
+        "model_yuzdesi": 1.6,
+        "gerceklesti": false
+      }
     }
   },
   {
