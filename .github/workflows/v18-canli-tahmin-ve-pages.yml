@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Kaynak kodu al
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Python 3.11
         uses: actions/setup-python@v5
@@ -49,16 +51,19 @@ jobs:
       - name: V18 gercek mac sonuclarini kontrol et
         run: python v18_sonuc_takip.py --kontrol
 
-      - name: Denetim dosyalarini sakla
+      - name: Denetim ve kurtarma dosyalarini sakla
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v18-gercek-tahmin-denetimi
+          name: v18-denetim-${{ github.run_id }}
           path: |
             gelecek_maclar.json
             v18_canli_cikti.json
-          retention-days: 7
+            v18_tahmin_arsivi.json
+            v18_dogrulanan_sonuclar.json
+          if-no-files-found: warn
+          retention-days: 30
 
-      # Bagimsiz ASLAN testi: V18 tahmin motorunu degistirmez.
       - name: ASLAN MODU V1 bagimsiz test
         id: aslan_tests
         continue-on-error: true
@@ -73,7 +78,6 @@ jobs:
           import os
           from datetime import datetime, timezone
           from pathlib import Path
-
           durum = os.environ.get('ASLAN_TEST_STATUS', 'unknown')
           rapor = {
               'modul': 'ASLAN MODU V1',
@@ -82,27 +86,25 @@ jobs:
               'aciklama': 'ASLAN MODU bagimsiz test durumu: ' + durum,
           }
           Path('aslan_modu_test_sonuclari.json').write_text(
-              json.dumps(rapor, ensure_ascii=False, indent=2) + '\n',
-              encoding='utf-8',
+              json.dumps(rapor, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
           )
           print('ASLAN MODU TEST DURUMU:', durum)
           PYCODE
 
       - name: ASLAN MODU gercek mac kesif raporunu olustur
-        run: python aslan_modu_v1.py --girdi v18_canli_cikti.json --cikti aslan_modu_rapor.json
-
+        run: |
+          rm -f aslan_modu_rapor.json
+          python aslan_modu_v1.py --girdi v18_canli_cikti.json --cikti aslan_modu_rapor.json
 
       - name: V18 guclendirme V1 bagimsiz test
         continue-on-error: true
         run: python -m unittest -v test_v18_guclendirme_v1.py
-
 
       - name: V18 panel verisini dogrula ve hazirla
         run: |
           python - <<'PYCODE'
           import json
           from pathlib import Path
-
           d = json.loads(Path('v18_canli_cikti.json').read_text(encoding='utf-8'))
           if d.get('model') != 'TIPSTER PRO V18' or not isinstance(d.get('tahminler'), list):
               raise SystemExit('V18 cikti bicimi gecersiz.')
@@ -112,52 +114,135 @@ jobs:
           if not d['tahminler']:
               raise SystemExit('SIFIR TAHMIN: Bos veri yayinlanmiyor.')
           PYCODE
-
           python v18_panel_aktar.py v18_canli_cikti.json --cikti panel_tahminler.json
-
           python - <<'PYCODE'
           import json
           import shutil
           from pathlib import Path
-
           records = json.loads(Path('panel_tahminler.json').read_text(encoding='utf-8'))['tahminler']
           if not records:
               raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
           out = Path('site')
           out.mkdir(exist_ok=True)
           for name in (
-              'index.html',
-              'panel.css',
-              'panel.js',
-              'panel_tahminler.json',
-              'v18_dogrulanan_sonuclar.json',
-              'aslan_modu_test_sonuclari.json',
+              'index.html', 'panel.css', 'panel.js', 'panel_tahminler.json',
+              'v18_dogrulanan_sonuclar.json', 'aslan_modu_test_sonuclari.json',
               'aslan_modu_rapor.json',
           ):
               shutil.copy2(name, out / name)
           print('PANEL ICIN GUNCEL TAHMIN:', len(records))
           PYCODE
 
-      
-      - name: V18 tahmin ve sonuc arsivini kalici kaydet
+      - name: V18 arsivini cakismasiz birlestir ve kalici kaydet
+        id: archive_save
+        continue-on-error: true
+        env:
+          GIT_TERMINAL_PROMPT: '0'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add v18_tahmin_arsivi.json
-          if [ -f v18_dogrulanan_sonuclar.json ]; then
-            git add v18_dogrulanan_sonuclar.json
-          fi
-
-          if ! git diff --cached --quiet; then
-            git commit -m "V18 tahmin ve sonuc arsivini guncelle"
-
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdir -p "$RUNNER_TEMP/v18-save"
+          cp v18_tahmin_arsivi.json "$RUNNER_TEMP/v18-save/local-archive.json"
+          cp v18_dogrulanan_sonuclar.json "$RUNNER_TEMP/v18-save/local-results.json"
+          for attempt in 1 2 3 4 5; do
+            echo "ARSIV KAYIT DENEMESI: $attempt"
             git fetch origin main
-            git -c rebase.autoStash=true rebase origin/main
+            git worktree add --detach "$RUNNER_TEMP/v18-worktree" origin/main
+            python - "$RUNNER_TEMP/v18-save/local-archive.json" "$RUNNER_TEMP/v18-worktree" <<'PYCODE'
+          import json
+          import sys
+          from pathlib import Path
 
-            git push origin HEAD:main
-          fi
-
+          source = Path(sys.argv[1])
+          destination = Path(sys.argv[2]) / 'v18_tahmin_arsivi.json'
+          local = json.loads(source.read_text(encoding='utf-8'))
+          remote = json.loads(destination.read_text(encoding='utf-8')) if destination.exists() else []
+          if not isinstance(local, list) or not isinstance(remote, list):
+              raise SystemExit('Arsiv listesi gecersiz; kayit durduruldu')
+          merged = {}
+          order = []
+          for record in remote:
+              if not isinstance(record, dict) or not record.get('kimlik'):
+                  raise SystemExit('Uzak arsivde gecersiz kayit')
+              key = record['kimlik']
+              if key in merged:
+                  raise SystemExit('Uzak arsivde tekrar eden kimlik: ' + str(key))
+              merged[key] = record
+              order.append(key)
+          for record in local:
+              if not isinstance(record, dict) or not record.get('kimlik'):
+                  raise SystemExit('Yerel arsivde gecersiz kayit')
+              key = record['kimlik']
+              if key not in merged:
+                  merged[key] = record
+                  order.append(key)
+                  continue
+              old = merged[key]
+              new = dict(old)
+              # Existing remote lock is authoritative: never rewrite historical pick.
+              for field in ('kilitli_secim', 'kilit_zamani_utc', 'secim_politikasi', 'secim_esikleri'):
+                  if field not in new and field in record:
+                      new[field] = record[field]
+              # A verified score is never downgraded to pending.
+              old_done = old.get('durum') == 'DOGRULANDI' and isinstance(old.get('sonuc'), dict)
+              local_done = record.get('durum') == 'DOGRULANDI' and isinstance(record.get('sonuc'), dict)
+              lock_conflict = (
+                  old.get('kilitli_secim') is not None
+                  and record.get('kilitli_secim') is not None
+                  and old['kilitli_secim'] != record['kilitli_secim']
+              )
+              if lock_conflict:
+                  new['secim_cakisma_uyarisi'] = 'KILITLI_SECIM_FARKLI_MANUEL_KONTROL'
+              if local_done and not old_done and not lock_conflict:
+                  for field in ('durum', 'sonuc', 'sonuc_dogrulama_zamani_utc', 'cizgi_sonuclari', 'tahmin_sonucu'):
+                      if field in record:
+                          new[field] = record[field]
+              elif local_done and old_done and old['sonuc'].get('skor') != record['sonuc'].get('skor'):
+                  new['skor_uyarisi'] = 'ESPN_SKOR_CELISKISI_KONTROL_ET'
+              if 'skor_uyarisi' in record:
+                  new['skor_uyarisi'] = record['skor_uyarisi']
+              merged[key] = new
+          output = [merged[key] for key in order]
+          destination.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          # Rebuild results from merged archive, not stale local summary.
+          from datetime import datetime, timezone
+          wins = sum(x.get('tahmin_sonucu') == 'DOGRU' for x in output)
+          losses = sum(x.get('tahmin_sonucu') == 'YANLIS' for x in output)
+          confirmed = sum(x.get('durum') == 'DOGRULANDI' for x in output)
+          summary = {
+              'model': 'TIPSTER PRO V18',
+              'olusturulma_utc': datetime.now(timezone.utc).isoformat(),
+              'toplam_arsiv': len(output), 'dogrulanan_mac': confirmed,
+              'bekleyen_mac': len(output) - confirmed,
+              'degerlendirilen_tahmin': wins + losses,
+              'dogru': wins, 'yanlis': losses,
+              'basari_yuzdesi': round(100 * wins / (wins + losses), 2) if wins + losses else None,
+              'not': 'Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.',
+              'kayitlar': output,
+          }
+          (destination.parent / 'v18_dogrulanan_sonuclar.json').write_text(
+              json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          print('BIRLESEN ARSIV:', len(output), 'DOGRULANAN:', confirmed)
+          PYCODE
+            git -C "$RUNNER_TEMP/v18-worktree" add v18_tahmin_arsivi.json v18_dogrulanan_sonuclar.json
+            if git -C "$RUNNER_TEMP/v18-worktree" diff --cached --quiet; then
+              echo 'ARSIV DEGISECEK KAYIT YOK'
+              git worktree remove --force "$RUNNER_TEMP/v18-worktree"
+              exit 0
+            fi
+            git -C "$RUNNER_TEMP/v18-worktree" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'V18 tahmin ve sonuc arsivini guncelle'
+            if git -C "$RUNNER_TEMP/v18-worktree" push origin HEAD:main; then
+              echo 'ARSIV BASARIYLA KAYDEDILDI'
+              git worktree remove --force "$RUNNER_TEMP/v18-worktree"
+              exit 0
+            fi
+            git worktree remove --force "$RUNNER_TEMP/v18-worktree"
+            sleep 3
+          done
+          echo 'UYARI: Arsiv push basarisiz; kurtarma dosyalari artifact icinde saklandi.'
+          exit 1
 
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
