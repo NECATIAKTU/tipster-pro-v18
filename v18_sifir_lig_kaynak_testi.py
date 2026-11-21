@@ -21,14 +21,44 @@ BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/{}/scoreboard'
 DEFAULT_CODES = ('sui.1','tur.2','irl.1','chn.1','sco.2','sco.3','pol.1','pol.2')
 
 
+
 def fetch(code, day, timeout=15):
-    url = BASE.format(code) + '?' + urlencode({'dates': day.strftime('%Y%m%d'), 'limit': 500})
-    req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (TIPSTER-V18-Lig-Teshis/1.0)'})
-    with urlopen(req, timeout=timeout) as response:
-        data = json.load(response)
-    if not isinstance(data, dict) or not isinstance(data.get('events'), list):
-        raise ValueError('ESPN events listesi gelmedi')
-    return data['events']
+    url = BASE.format(code) + "?" + urlencode({
+        "dates": day.strftime("%Y%m%d"),
+        "limit": 500
+    })
+
+    req = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json"
+        }
+    )
+
+    try:
+        with urlopen(req, timeout=timeout) as response:
+            data = json.load(response)
+
+    except HTTPError as exc:
+        details = exc.read(500).decode(
+            "utf-8", errors="replace"
+        )
+        print(
+    f"ESPN {code} HTTP {exc.code}: {details[:120]}"
+)
+       raise
+
+    if not isinstance(data, dict):
+        raise ValueError("ESPN JSON nesnesi gelmedi")
+
+    if not isinstance(data.get("events"), list):
+        raise ValueError(
+            "ESPN events listesi gelmedi"
+        )
+
+    return data["events"]
+
 
 
 def audit(code, now, days, fetcher=fetch):
