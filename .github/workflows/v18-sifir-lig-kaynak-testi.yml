@@ -1,0 +1,46 @@
+
+name: V18 Sifir Lig Kaynak Testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kaynak-testi:
+    name: ESPN Lig Kaynak Kontrolu
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Kaynak kodlarini al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dosyalari kontrol et
+        run: |
+          test -f v18_sifir_lig_kaynak_testi.py
+          test -f test_v18_sifir_lig_kaynak_testi.py
+
+      - name: Python testlerini calistir
+        run: |
+          python -m unittest -v test_v18_sifir_lig_kaynak_testi.py
+
+      - name: ESPN kaynaklarini incele
+        run: |
+          python v18_sifir_lig_kaynak_testi.py \
+            --cikti sifir_lig_raporu
+
+      - name: Raporu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v18-sifir-lig-kaynak-raporu
+          path: sifir_lig_raporu/
+          if-no-files-found: warn
+          retention-days: 14
