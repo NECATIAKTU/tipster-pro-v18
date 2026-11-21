@@ -789,29 +789,23 @@ window.addEventListener("DOMContentLoaded", () => {
           (k.deplasman || "?")
         );
 
-        hucreEkle(
+        
+        const yuzde = Number(k.model_yuzdesi);
+        const gecerli = Number.isFinite(yuzde) &&
+          yuzde >= 0 && yuzde <= 100;
+
+        const tahminHucresi = hucreEkle(
           satir,
-          String(k.tahmin || "—")
-            .replace(" UST", " ÜST")
+          String(k.tahmin || "—").replace(" UST", " ÜST") +
+          (gecerli ? " — %" + yuzde.toFixed(1) : "")
         );
 
-        const guven =
-          k.guven_sinifi === "YESIL"
-            ? "🟢 YEŞİL"
-          : k.guven_sinifi === "SARI"
-            ? "🟡 SARI"
-          : "NORMAL";
+        const renk = gecerli ? guvenRengi(yuzde) : "";
 
-        const guvenHucresi =
-          hucreEkle(satir, guven);
+        tahminHucresi.style.color = renk;
+        tahminHucresi.style.fontWeight =
+          renk ? "700" : "400";
 
-        const renk = guvenRengi(
-          Number(k.model_yuzdesi)
-        );
-
-        guvenHucresi.style.color = renk;
-        guvenHucresi.style.fontWeight =
-          renk ? "700" : "";
 
         hucreEkle(satir, k.skor || "—");
 
@@ -839,7 +833,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!sirali.length) {
         const satir = tablo.insertRow();
         const td = satir.insertCell();
-        td.colSpan = 5;
+        td.colSpan = 4;
         td.textContent =
           "Henüz kilitlenmiş ASLAN tahmini yok.";
       }
