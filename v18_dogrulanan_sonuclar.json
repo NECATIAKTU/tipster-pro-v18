@@ -1,13 +1,13 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-21T15:16:56.020112+00:00",
-  "toplam_arsiv": 415,
-  "dogrulanan_mac": 60,
-  "bekleyen_mac": 355,
-  "degerlendirilen_tahmin": 39,
-  "dogru": 25,
-  "yanlis": 14,
-  "basari_yuzdesi": 64.1,
+  "olusturulma_utc": "2026-11-21T15:54:06.503401+00:00",
+  "toplam_arsiv": 421,
+  "dogrulanan_mac": 62,
+  "bekleyen_mac": 359,
+  "degerlendirilen_tahmin": 41,
+  "dogru": 26,
+  "yanlis": 15,
+  "basari_yuzdesi": 63.41,
   "not": "Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.",
   "kayitlar": [
     {
@@ -10862,8 +10862,15 @@
         "kaynak_mac_sayisi": 110
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 3,
+        "dep_gol": 0,
+        "toplam_gol": 3,
+        "skor": "3-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 81.4,
         "2.5_ust": 59.7,
@@ -10881,7 +10888,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T15:53:54.793477+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 81.4,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 59.7,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 37.3,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 20.0,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 9.3,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 3.8,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "ita.1|401874967",
@@ -15542,8 +15577,15 @@
         "kaynak_mac_sayisi": 89
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 0,
+        "dep_gol": 0,
+        "toplam_gol": 0,
+        "skor": "0-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 83.8,
         "2.5_ust": 63.5,
@@ -15561,7 +15603,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T15:53:54.793477+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 83.8,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 63.5,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 41.4,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 23.2,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 11.4,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 4.9,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "swe.1|401842886",
@@ -21534,6 +21604,288 @@
         "6.5_ust": 2.2
       },
       "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "esp.1|401882790",
+      "mac": {
+        "id": "esp.1|401882790",
+        "tarih": "2026-11-28T15:15:00+00:00",
+        "lig_kodu": "esp.1",
+        "lig": "Ispanya La Liga",
+        "ev_sahibi": "Málaga",
+        "deplasman": "Athletic Club",
+        "istatistik_ev": "Málaga",
+        "istatistik_deplasman": "Athletic Club",
+        "tahmin": {
+          "beklenen_gol": 2.41,
+          "1.5_ust": 69.4,
+          "2.5_ust": 43.3,
+          "3.5_ust": 22.3,
+          "4.5_ust": 9.7,
+          "5.5_ust": 3.6,
+          "6.5_ust": 1.2
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 109
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 69.4,
+        "2.5_ust": 43.3,
+        "3.5_ust": 22.3,
+        "4.5_ust": 9.7,
+        "5.5_ust": 3.6,
+        "6.5_ust": 1.2
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "esp.2|401882297",
+      "mac": {
+        "id": "esp.2|401882297",
+        "tarih": "2026-11-28T15:15:00+00:00",
+        "lig_kodu": "esp.2",
+        "lig": "Ispanya La Liga 2",
+        "ev_sahibi": "Albacete",
+        "deplasman": "Tenerife",
+        "istatistik_ev": "Albacete",
+        "istatistik_deplasman": "Tenerife",
+        "tahmin": {
+          "beklenen_gol": 2.58,
+          "1.5_ust": 72.9,
+          "2.5_ust": 47.7,
+          "3.5_ust": 26.0,
+          "4.5_ust": 12.0,
+          "5.5_ust": 4.8,
+          "6.5_ust": 1.7
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 136
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 72.9,
+        "2.5_ust": 47.7,
+        "3.5_ust": 26.0,
+        "4.5_ust": 12.0,
+        "5.5_ust": 4.8,
+        "6.5_ust": 1.7
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "esp.2|401882296",
+      "mac": {
+        "id": "esp.2|401882296",
+        "tarih": "2026-11-28T15:15:00+00:00",
+        "lig_kodu": "esp.2",
+        "lig": "Ispanya La Liga 2",
+        "ev_sahibi": "Eldense",
+        "deplasman": "Girona",
+        "istatistik_ev": "Eldense",
+        "istatistik_deplasman": "Girona",
+        "tahmin": {
+          "beklenen_gol": 2.46,
+          "1.5_ust": 70.4,
+          "2.5_ust": 44.5,
+          "3.5_ust": 23.4,
+          "4.5_ust": 10.3,
+          "5.5_ust": 3.9,
+          "6.5_ust": 1.3
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 136
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 70.4,
+        "2.5_ust": 44.5,
+        "3.5_ust": 23.4,
+        "4.5_ust": 10.3,
+        "5.5_ust": 3.9,
+        "6.5_ust": 1.3
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "ned.1|401875537",
+      "mac": {
+        "id": "ned.1|401875537",
+        "tarih": "2026-11-28T15:30:00+00:00",
+        "lig_kodu": "ned.1",
+        "lig": "Hollanda Eredivisie",
+        "ev_sahibi": "Excelsior",
+        "deplasman": "Telstar",
+        "istatistik_ev": "Excelsior",
+        "istatistik_deplasman": "Telstar",
+        "tahmin": {
+          "beklenen_gol": 3.7,
+          "1.5_ust": 88.4,
+          "2.5_ust": 71.5,
+          "3.5_ust": 50.6,
+          "4.5_ust": 31.3,
+          "5.5_ust": 17.0,
+          "6.5_ust": 8.2
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 87
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 88.4,
+        "2.5_ust": 71.5,
+        "3.5_ust": 50.6,
+        "4.5_ust": 31.3,
+        "5.5_ust": 17.0,
+        "6.5_ust": 8.2
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "por.1|401885392",
+      "mac": {
+        "id": "por.1|401885392",
+        "tarih": "2026-11-28T15:30:00+00:00",
+        "lig_kodu": "por.1",
+        "lig": "Portekiz Primeira Liga",
+        "ev_sahibi": "Arouca",
+        "deplasman": "Rio Ave",
+        "istatistik_ev": "Arouca",
+        "istatistik_deplasman": "Rio Ave",
+        "tahmin": {
+          "beklenen_gol": 2.64,
+          "1.5_ust": 74.0,
+          "2.5_ust": 49.1,
+          "3.5_ust": 27.2,
+          "4.5_ust": 12.8,
+          "5.5_ust": 5.2,
+          "6.5_ust": 1.8
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 78
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 74.0,
+        "2.5_ust": 49.1,
+        "3.5_ust": 27.2,
+        "4.5_ust": 12.8,
+        "5.5_ust": 5.2,
+        "6.5_ust": 1.8
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "por.1|401885388",
+      "mac": {
+        "id": "por.1|401885388",
+        "tarih": "2026-11-28T15:30:00+00:00",
+        "lig_kodu": "por.1",
+        "lig": "Portekiz Primeira Liga",
+        "ev_sahibi": "Moreirense",
+        "deplasman": "Santa Clara",
+        "istatistik_ev": "Moreirense",
+        "istatistik_deplasman": "Santa Clara",
+        "tahmin": {
+          "beklenen_gol": 2.33,
+          "1.5_ust": 67.7,
+          "2.5_ust": 41.3,
+          "3.5_ust": 20.7,
+          "4.5_ust": 8.8,
+          "5.5_ust": 3.2,
+          "6.5_ust": 1.0
+        },
+        "hesaplama_zamani_utc": "2026-11-21T15:45:06.316165+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 78
+      },
+      "kilit_zamani_utc": "2026-11-21T15:53:54.712093+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 67.7,
+        "2.5_ust": 41.3,
+        "3.5_ust": 20.7,
+        "4.5_ust": 8.8,
+        "5.5_ust": 3.2,
+        "6.5_ust": 1.0
+      },
+      "kilitli_secim": "RISKLI",
       "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
       "secim_esikleri": {
         "1.5": 75.0,
