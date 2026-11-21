@@ -659,10 +659,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const el = id => document.getElementById(id);
 
   function guvenRengi(yuzde) {
-    if (yuzde >= 80) return "#22c55e";
-    if (yuzde >= 70) return "#facc15";
-    return "";
-  }
+  if (yuzde >= 80) return "#22c55e";
+  if (yuzde >= 70) return "#facc15";
+  if (yuzde < 50) return "#64748b";
+  return "";
+}
 
   function kesifRenkleriniUygula() {
     const tablo = el("aslan-tablo");
