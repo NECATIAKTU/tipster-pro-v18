@@ -1,8 +1,45 @@
 
 "use strict";
 
+/*
+  TIPSTER PRO V18
+  PANEL.JS — ASLAN SONUC VE TAHMIN PANELI
+
+  - Mevcut tahmin JSON dosyalarini okur.
+  - Tahmin motoruna mudahale etmez.
+  - Kilitli tahminleri onceliklendirir.
+  - Model yuzdelerini degistirmez.
+  - ASLAN renk sistemi:
+      80 - 100   : Yesil
+      70 - 79.9  : Kahverengi
+      50 - 69.9  : Normal
+       0 - 49.9  : Gri
+  - Gercek basari oranini yalnizca
+    sonuclanmis kilitli tahminlerden hesaplar.
+*/
+
 const $ = id => document.getElementById(id);
-const LINES = ["1.5", "2.5", "3.5", "4.5", "5.5", "6.5"];
+
+const LINES = [
+  "1.5", "2.5", "3.5",
+  "4.5", "5.5", "6.5"
+];
+
+const COLORS = Object.freeze({
+  green: "#22c55e",
+  brown: "#c46a35",
+  grey: "#94a3b8",
+  red: "#ef4444"
+});
+
+const THRESHOLDS = Object.freeze({
+  "1.5": 75,
+  "2.5": 65,
+  "3.5": 65,
+  "4.5": 65,
+  "5.5": 65,
+  "6.5": 65
+});
 
 const S = {
   records: [],
@@ -14,48 +51,234 @@ const S = {
   onlyFinal: false
 };
 
-const keys = (o, ks) => {
-  if (!o || typeof o !== "object") return null;
-  for (const k of ks) {
-    if (o[k] !== undefined && o[k] !== null && o[k] !== "") {
-      return o[k];
+let resultRecords = [];
+let aslanRecords = [];
+
+/* ======================================
+   TEMEL YARDIMCI FONKSIYONLAR
+====================================== */
+
+function keys(obj, names) {
+  if (!obj || typeof obj !== "object") {
+    return null;
+  }
+
+  for (const key of names) {
+    const value = obj[key];
+
+    if (
+      value !== undefined &&
+      value !== null &&
+      value !== ""
+    ) {
+      return value;
     }
   }
+
   return null;
-};
+}
 
-const dateNum = v => {
-  const n = Date.parse(String(v || ""));
+function dateNum(value) {
+  const n = Date.parse(String(value || ""));
+
   return Number.isFinite(n) ? n : null;
-};
+}
 
-const pct = v => {
-  if (v == null || v === "") return null;
-  const n = Number(String(v).replace("%", "").replace(",", "."));
-  return Number.isFinite(n) && n >= 0 && n <= 100 ? n : null;
-};
+function pct(value) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return null;
+  }
 
-const arr = d => Array.isArray(d)
-  ? d
-  : d && typeof d === "object"
-    ? (["tahminler", "maclar", "predictions", "matches", "records", "data"]
-        .map(k => d[k]).find(Array.isArray) || [])
-    : [];
+  const n = Number(
+    String(value)
+      .replace("%", "")
+      .replace(",", ".")
+      .trim()
+  );
 
-function normalize(x, i) {
-  if (!x || typeof x !== "object" || Array.isArray(x)) return null;
+  return (
+    Number.isFinite(n) &&
+    n >= 0 &&
+    n <= 100
+  ) ? n : null;
+}
 
-  const home = keys(x, ["ev_sahibi", "ev", "home_team", "home", "takim1"]);
-  const away = keys(x, ["deplasman", "dep", "away_team", "away", "takim2"]);
-  const name = keys(x, ["mac", "maç", "match", "fixture"]) ||
-    [home, away].filter(Boolean).join(" - ");
+function arr(data) {
+  if (Array.isArray(data)) {
+    return data;
+  }
+
+  if (!data || typeof data !== "object") {
+    return [];
+  }
+
+  for (const key of [
+    "tahminler",
+    "maclar",
+    "predictions",
+    "matches",
+    "records",
+    "data"
+  ]) {
+    if (Array.isArray(data[key])) {
+      return data[key];
+    }
+  }
+
+  return [];
+}
+
+function td(row, value) {
+  const cell = document.createElement("td");
+  cell.textContent = String(value ?? "");
+  row.appendChild(cell);
+  return cell;
+}
+
+function setText(id, value) {
+  const element = $(id);
+
+  if (element) {
+    element.textContent = String(value);
+  }
+}
+
+function aramaMetni(value) {
+  return String(value || "")
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
+function tarihYaz(value) {
+  if (!value) {
+    return "Tarih yok";
+  }
+
+  const n = dateNum(value);
+
+  if (n === null) {
+    return String(value)
+      .slice(0, 16)
+      .replace("T", " ");
+  }
+
+  return new Date(n)
+    .toISOString()
+    .slice(0, 16)
+    .replace("T", " ");
+}
+
+/* ======================================
+   RENK MOTORU
+====================================== */
+
+function tahminRengi(value) {
+  const n = pct(value);
+
+  if (n === null) {
+    return "";
+  }
+
+  if (n >= 80) {
+    return COLORS.green;
+  }
+
+  if (n >= 70) {
+    return COLORS.brown;
+  }
+
+  if (n < 50) {
+    return COLORS.grey;
+  }
+
+  return "";
+}
+
+function tahminStili(cell, value) {
+  if (!cell) {
+    return;
+  }
+
+  const color = tahminRengi(value);
+
+  cell.style.color = color;
+  cell.style.fontWeight = color ? "700" : "400";
+}
+
+function tahminMetni(line, value) {
+  const probability = pct(value);
+
+  const market = String(line || "")
+    .replace(/\bUST\b/gi, "ÜST")
+    .replace(/\bOVER\b/gi, "ÜST");
+
+  if (probability === null) {
+    return market || "—";
+  }
+
+  return market + " — %" +
+    probability.toFixed(1);
+}
+
+/* ======================================
+   TAHMIN NORMALIZASYONU
+====================================== */
+
+function normalize(x, index) {
+  if (
+    !x ||
+    typeof x !== "object" ||
+    Array.isArray(x)
+  ) {
+    return null;
+  }
+
+  const home = keys(x, [
+    "ev_sahibi",
+    "ev",
+    "home_team",
+    "home",
+    "takim1"
+  ]);
+
+  const away = keys(x, [
+    "deplasman",
+    "dep",
+    "away_team",
+    "away",
+    "takim2"
+  ]);
+
+  const name = keys(x, [
+    "mac", "maç", "match", "fixture"
+  ]) || [home, away]
+    .filter(Boolean)
+    .join(" - ");
 
   const league = String(
-    keys(x, ["lig", "league", "lig_adi", "lig_kodu"]) || "Bilinmeyen lig"
+    keys(x, [
+      "lig",
+      "league",
+      "lig_adi",
+      "lig_kodu"
+    ]) || "Bilinmeyen lig"
   );
 
   const kickoff = keys(x, [
-    "tarih", "date", "kickoff", "baslama_zamani", "start_time"
+    "tarih",
+    "date",
+    "kickoff",
+    "baslama_zamani",
+    "start_time"
   ]);
 
   const made = keys(x, [
@@ -67,49 +290,89 @@ function normalize(x, i) {
   ]);
 
   const prediction = keys(x, [
-    "tahmin", "prediction", "karar", "secim", "market"
+    "tahmin",
+    "prediction",
+    "karar",
+    "secim",
+    "market"
   ]);
 
-  const probs = keys(x, ["olasiliklar", "probabilities"]) || {};
-
-  const embedded = prediction &&
+  const embedded = (
+    prediction &&
     typeof prediction === "object" &&
-    !Array.isArray(prediction) ? prediction : {};
+    !Array.isArray(prediction)
+  ) ? prediction : {};
 
-  const marketText = typeof prediction === "string" ? prediction : "";
+  const probs = keys(x, [
+    "olasiliklar",
+    "probabilities"
+  ]) || {};
+
+  const marketText = (
+    typeof prediction === "string"
+  ) ? prediction : "";
+
   const probabilities = {};
 
   for (const line of LINES) {
     const key = line + "_ust";
+
     probabilities[line] = pct(
-      keys(probs, [key, line + "_over"]) ??
-      keys(embedded, [key, line + "_over"]) ??
-      keys(x, [key, line + "_over"])
+      keys(probs, [
+        key,
+        line + "_over"
+      ]) ??
+      keys(embedded, [
+        key,
+        line + "_over"
+      ]) ??
+      keys(x, [
+        key,
+        line + "_over"
+      ])
     );
   }
 
   const general = pct(keys(x, [
-    "olasilik", "probability", "guven", "confidence", "yuzde"
+    "olasilik",
+    "probability",
+    "guven",
+    "confidence",
+    "yuzde"
   ]));
 
-  const matches = marketText.match(/([1-6][.,]5)\s*(?:ÜST|UST|OVER)/i);
-  const selected = matches ? matches[1].replace(",", ".") : null;
+  const marketMatch = marketText.match(
+    /([1-6][.,]5)\s*(?:ÜST|UST|OVER)/i
+  );
 
-  if (selected && probabilities[selected] === null) {
+  const selected = marketMatch
+    ? marketMatch[1].replace(",", ".")
+    : null;
+
+  if (
+    selected &&
+    probabilities[selected] === null
+  ) {
     probabilities[selected] = general;
   }
 
   const start = dateNum(kickoff);
   const created = dateNum(made);
-  const verified = start !== null && created !== null && created < start;
-  const risk = !verified;
+
+  const verified = (
+    start !== null &&
+    created !== null &&
+    created < start
+  );
 
   const id = [
     league,
     String(home || name || ""),
     String(away || ""),
     String(kickoff || "")
-  ].join("|").toLocaleLowerCase("tr");
+  ]
+    .join("|")
+    .toLocaleLowerCase("tr-TR");
 
   return {
     id,
@@ -119,96 +382,156 @@ function normalize(x, i) {
     start,
     created,
     verified,
-    risk,
+    risk: !verified,
     marketText,
     probabilities,
     selected,
-    index: i,
-    sourceId: String(keys(x, ["id"]) || ""),
-    leagueCode: String(keys(x, ["lig_kodu"]) || "")
+    index,
+    sourceId: String(
+      keys(x, ["id"]) || ""
+    ),
+    leagueCode: String(
+      keys(x, ["lig_kodu"]) || ""
+    )
   };
 }
+
+/* ======================================
+   KILITLI TAHMIN BULMA
+====================================== */
+
 function lockedRecord(r) {
-  const match = resultRecords.find(x =>
-    x.kimlik === r.sourceId || x.kimlik === r.leagueCode + "|" + r.sourceId
-  );
-  return match || null;
-}
-
-
-function finalChoice(r) {
-  if (!r.verified) return null;
-
-  const record = lockedRecord(r);
-  const choice = String(record?.kilitli_secim || "");
-
-  if (choice === "RISKLI") {
-    return { risk: true, locked: true };
+  if (!r.sourceId) {
+    return null;
   }
 
-  const match = /^([1-6]\.5) UST$/.exec(choice);
+  return resultRecords.find(x => {
+    const identity = String(x.kimlik || "");
+
+    return (
+      identity === r.sourceId ||
+      identity === (
+        r.leagueCode + "|" + r.sourceId
+      )
+    );
+  }) || null;
+}
+
+function finalChoice(r) {
+  if (!r.verified) {
+    return null;
+  }
+
+  const record = lockedRecord(r);
+
+  const choice = String(
+    record?.kilitli_secim || ""
+  )
+    .trim()
+    .toUpperCase()
+    .replace(/Ü/g, "U")
+    .replace(/\s+/g, " ");
+
+  if (choice === "RISKLI") {
+    return {
+      risk: true,
+      locked: true
+    };
+  }
+
+  const match = /^([1-6]\.5) UST$/
+    .exec(choice);
 
   if (match) {
     const line = match[1];
-    const probability =
-      pct(record?.olasiliklar?.[line + "_ust"]) ??
-      r.probabilities[line];
 
-    if (probability !== null && Number.isFinite(probability)) {
-      return { line, probability, locked: true };
-    }
+    const probability = pct(
+      record?.olasiliklar?.[
+        line + "_ust"
+      ]
+    ) ?? r.probabilities[line];
+
+    return {
+      line,
+      probability,
+      risk: false,
+      locked: true
+    };
   }
 
-  const thresholds = {
-    "1.5": 75,
-    "2.5": 65,
-    "3.5": 65,
-    "4.5": 65,
-    "5.5": 65,
-    "6.5": 65
-  };
+  /*
+    Kayitli secim yoksa eski panelin
+    model esiklerine dayanan oneri
+    davranisini koruyoruz.
 
-  for (const line of [...LINES].reverse()) {
-    const probability = r.probabilities[line];
+    Bu oneri kilitli tahmin sayilmaz.
+  */
+
+  for (
+    const line of [...LINES].reverse()
+  ) {
+    const probability =
+      r.probabilities[line];
 
     if (
       probability !== null &&
-      Number.isFinite(probability) &&
-      probability >= thresholds[line]
+      probability >= THRESHOLDS[line]
     ) {
-      return { line, probability, locked: false };
+      return {
+        line,
+        probability,
+        risk: false,
+        locked: false
+      };
     }
   }
 
-  return { risk: true, locked: false };
+  return {
+    risk: true,
+    locked: false
+  };
 }
 
 function chosen(r) {
-  const market = $("market").value;
+  const market = $("market")?.value || "all";
 
   if (market !== "all") {
-    return [market, r.probabilities[market]];
+    return [
+      market,
+      r.probabilities[market] ?? null
+    ];
   }
 
   const available = LINES
-    .map(line => [line, r.probabilities[line]])
+    .map(line => [
+      line,
+      r.probabilities[line]
+    ])
     .filter(item => item[1] !== null);
 
-  if (!available.length) return ["", null];
+  if (!available.length) {
+    return ["", null];
+  }
 
-  available.sort((a, b) => b[1] - a[1]);
+  available.sort(
+    (a, b) => b[1] - a[1]
+  );
+
   return available[0];
 }
 
+/* ======================================
+   TOP TAHMINLER
+====================================== */
 
 function topTahminler(adet) {
-  const simdi = Date.now();
+  const now = Date.now();
 
   return S.records
     .filter(r =>
       r.verified &&
       r.start !== null &&
-      r.start > simdi
+      r.start > now
     )
     .map(r => ({
       ...r,
@@ -218,633 +541,1141 @@ function topTahminler(adet) {
       r.topSecim &&
       !r.topSecim.risk &&
       r.topSecim.line &&
-      Number.isFinite(r.topSecim.probability)
+      r.topSecim.probability !== null &&
+      Number.isFinite(
+        r.topSecim.probability
+      )
     )
-    .sort((a, b) =>
-      b.topSecim.probability - a.topSecim.probability
+    .sort(
+      (a, b) =>
+        b.topSecim.probability -
+        a.topSecim.probability
     )
     .slice(0, adet);
 }
 
+/* ======================================
+   ANA TAHMIN TABLOSU
+====================================== */
 
-function td(tr, value) {
-  const cell = document.createElement("td");
-  cell.textContent = value;
-  tr.append(cell);
-  return cell;
-}
+function tahminSatiriOlustur(r) {
+  const tr = document.createElement("tr");
 
-function aramaMetni(metin) {
-  return String(metin || "")
-    .toLowerCase()
-    .replace(/ı/g, "i")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c");
+  const first = td(tr, r.name);
+
+  const league = document.createElement("div");
+
+  league.className = "muted";
+  league.textContent = r.league;
+
+  first.appendChild(league);
+
+  const final = finalChoice(r);
+
+  const finalCell = td(tr, "");
+
+  if (
+    final &&
+    !final.risk &&
+    final.line
+  ) {
+    finalCell.textContent = tahminMetni(
+      final.line + " ÜST",
+      final.probability
+    );
+
+    tahminStili(
+      finalCell,
+      final.probability
+    );
+
+    if (!final.locked) {
+      finalCell.title =
+        "Model önerisi; kilitli seçim değil";
+    }
+  } else {
+    finalCell.textContent = "RİSKLİ";
+    finalCell.style.color = COLORS.grey;
+  }
+
+  td(tr, tarihYaz(r.kickoff));
+
+  for (const line of LINES) {
+    const value = r.probabilities[line];
+
+    const cell = td(
+      tr,
+      value !== null
+        ? "%" + value.toFixed(1)
+        : "—"
+    );
+
+    if (value !== null) {
+      cell.className = "probability";
+    }
+  }
+
+  const state = td(tr, "");
+
+  const pill = document.createElement("span");
+
+  pill.className =
+    "pill" + (r.risk ? " review" : "");
+
+  pill.textContent = r.verified
+    ? "Maç öncesi kayıt"
+    : "İnceleme gerekli";
+
+  state.appendChild(pill);
+
+  return tr;
 }
 
 function render() {
-  
-  const query = aramaMetni($("search").value.trim());
-
-  const market = $("market").value;
-  const valid = $("valid").value;
-
-  S.filtered = S.records.filter(r =>
-    
-    
-    
-    aramaMetni(r.name + " " + r.league + " " + (r.league.startsWith("Ingiltere") ? "İngiltere England English" : r.league.startsWith("Turkiye") ? "Türkiye Turkey Turkish" : r.league.startsWith("Iskocya") ? "İskoçya Scotland Scottish" : "")).includes(query) &&
-
-
-
-      
-      
-    (market === "all" || r.probabilities[market] !== null) &&
-    (valid === "all" || (valid === "pre" ? r.verified : !r.verified))
-  );
-
-  const sort = $("sort").value;
-
-  S.filtered.sort((a, b) =>
-    sort === "prob"
-      ? (chosen(b)[1] ?? -1) - (chosen(a)[1] ?? -1)
-      : sort === "league"
-        ? a.league.localeCompare(b.league, "tr")
-        : (a.start ?? Infinity) - (b.start ?? Infinity)
-  );
-
-  const pages = Math.max(1, Math.ceil(S.filtered.length / S.size));
-  S.page = Math.min(S.page, pages - 1);
-
   const tbody = $("rows");
-  tbody.replaceChildren();
 
-  for (const r of S.filtered.slice(
-    S.page * S.size,
-    (S.page + 1) * S.size
-  )) {
-    const tr = document.createElement("tr");
-    const first = td(tr, r.name);
-
-    const small = document.createElement("div");
-    small.textContent = r.league;
-    small.className = "muted";
-    first.append(small);
-
-    
-
-    
-const final = finalChoice(r);
-const finalTd = document.createElement("td");
-const finalLabel = document.createElement("span");
-
-if (final && !final.risk && final.line) {
-  finalLabel.textContent =
-    final.line + " ÜST — %" + final.probability.toFixed(1);
-  finalLabel.style.color = "#22c55e";
-  finalLabel.style.fontWeight = "bold";
-} else {
-  finalLabel.textContent = "RİSKLİ";
-  finalLabel.style.color = "#94a3b8";
-}
-
-finalTd.append(finalLabel);
-tr.append(finalTd);
-    td(
-      tr,
-      r.start !== null
-        ? new Date(r.start).toISOString().slice(0, 16).replace("T", " ")
-        : "Tarih yok"
-    );
-    for (const line of LINES) {
-      const value = r.probabilities[line];
-      const cell = td(
-        tr,
-        value !== null ? value.toFixed(1) + "%" : "—"
-      );
-      if (value !== null) cell.className = "probability";
-    }
-    const state = document.createElement("td");
-    const pill = document.createElement("span");
-
-    pill.className = "pill" + (r.risk ? " review" : "");
-    pill.textContent = r.verified
-      ? "Maç öncesi kayıt"
-      : "İnceleme gerekli";
-
-    state.append(pill);
-    tr.append(state);
-    tbody.append(tr);
+  if (!tbody) {
+    return;
   }
 
-  $("total").textContent = S.records.length.toLocaleString("tr-TR");
-  $("unique").textContent =
-    new Set(S.records.map(r => r.id)).size.toLocaleString("tr-TR");
+  const query = aramaMetni(
+    $("search")?.value?.trim() || ""
+  );
 
-  $("pre").textContent =
-    S.records.filter(r => r.verified).length.toLocaleString("tr-TR");
+  const market = $("market")?.value || "all";
+  const valid = $("valid")?.value || "all";
+  const sort = $("sort")?.value || "date";
 
-  $("flagged").textContent =
-    S.records.filter(r => !r.verified).length.toLocaleString("tr-TR");
+  let records = S.records.filter(r => {
+    const searchText = aramaMetni(
+      r.name + " " + r.league
+    );
 
-  $("meta").textContent =
+    const marketOk = (
+      market === "all" ||
+      r.probabilities[market] !== null
+    );
+
+    const validOk = (
+      valid === "all" ||
+      (
+        valid === "pre"
+          ? r.verified
+          : !r.verified
+      )
+    );
+
+    return (
+      searchText.includes(query) &&
+      marketOk &&
+      validOk
+    );
+  });
+
+  records.sort((a, b) => {
+    if (sort === "prob") {
+      return (
+        (chosen(b)[1] ?? -1) -
+        (chosen(a)[1] ?? -1)
+      );
+    }
+
+    if (sort === "league") {
+      return a.league.localeCompare(
+        b.league,
+        "tr"
+      );
+    }
+
+    return (
+      (a.start ?? Infinity) -
+      (b.start ?? Infinity)
+    );
+  });
+
+  if (S.topLimit !== null) {
+    const top = topTahminler(S.topLimit);
+    const selected = new Set(
+      top.map(r => r.index)
+    );
+
+    records = top.filter(
+      r => selected.has(r.index)
+    );
+  }
+
+  S.filtered = records;
+
+  const pages = Math.max(
+    1,
+    Math.ceil(records.length / S.size)
+  );
+
+  S.page = Math.max(
+    0,
+    Math.min(S.page, pages - 1)
+  );
+
+  tbody.replaceChildren();
+
+  const visible = records.slice(
+    S.page * S.size,
+    (S.page + 1) * S.size
+  );
+
+  for (const r of visible) {
+    tbody.appendChild(
+      tahminSatiriOlustur(r)
+    );
+  }
+
+  setText(
+    "total",
+    S.records.length.toLocaleString("tr-TR")
+  );
+
+  setText(
+    "unique",
+    new Set(
+      S.records.map(r => r.id)
+    ).size.toLocaleString("tr-TR")
+  );
+
+  setText(
+    "pre",
+    S.records
+      .filter(r => r.verified)
+      .length.toLocaleString("tr-TR")
+  );
+
+  setText(
+    "flagged",
+    S.records
+      .filter(r => !r.verified)
+      .length.toLocaleString("tr-TR")
+  );
+
+  setText(
+    "meta",
     "Kaynak: " + S.source +
-    " • Model olasılıkları başarı oranı değildir";
+    " • Model olasılıkları başarı oranı değildir"
+  );
 
-  $("notice").textContent =
-    S.filtered.length +
-    " kayıt eşleşti. Yalnızca dosyadaki gerçek model yüzdeleri gösterilir.";
+  setText(
+    "notice",
+    S.topLimit !== null
+      ? "TOP " + S.topLimit +
+        ": " + records.length +
+        " maç gösteriliyor."
+      : records.length +
+        " kayıt eşleşti. Gerçek model yüzdeleri gösterilir."
+  );
 
-  $("page").textContent = S.page + 1 + " / " + pages;
-  $("prev").disabled = S.page === 0;
-  $("next").disabled = S.page >= pages - 1;
+  setText(
+    "page",
+    (S.page + 1) + " / " + pages
+  );
+
+  if ($("prev")) {
+    $("prev").disabled = S.page === 0;
+  }
+
+  if ($("next")) {
+    $("next").disabled =
+      S.page >= pages - 1;
+  }
 }
 
+/* ======================================
+   ANA VERI YUKLEME
+====================================== */
+
 async function load() {
-  $("status").textContent = "Dosya yükleniyor";
+  setText("status", "Dosya yükleniyor");
 
   try {
-    const response = await fetch("./panel_tahminler.json", {
-      cache: "no-store"
-    });
+    const response = await fetch(
+      "./panel_tahminler.json",
+      { cache: "no-store" }
+    );
 
-    if (!response.ok) throw Error("HTTP " + response.status);
+    if (!response.ok) {
+      throw new Error(
+        "HTTP " + response.status
+      );
+    }
 
     const data = await response.json();
-    S.records = arr(data).map(normalize).filter(Boolean);
+
+    S.records = arr(data)
+      .map(normalize)
+      .filter(Boolean);
+
     S.source = "panel_tahminler.json";
     S.page = 0;
 
     render();
 
-    $("status").textContent = S.records.length
-      ? "Dosya okundu"
-      : "Kayıt bulunamadı";
+    setText(
+      "status",
+      S.records.length
+        ? "Dosya okundu"
+        : "Kayıt bulunamadı"
+    );
 
   } catch (err) {
+    console.error(
+      "Panel veri hatası:",
+      err
+    );
+
     S.records = [];
     S.source = "yüklenemedi";
+
     render();
-    $("status").textContent = "Veri hatası";
-    $("notice").textContent = "panel_tahminler.json okunamadı.";
+
+    setText("status", "Veri hatası");
+
+    setText(
+      "notice",
+      "panel_tahminler.json okunamadı."
+    );
   }
 }
+
+/* ======================================
+   CSV DISA AKTARMA
+====================================== */
 
 function exportCsv() {
   const fields = [
     "Lig",
     "Maç",
     "Başlangıç UTC",
-    ...LINES.map(line => line + " ÜST %"),
+    "Tahmin",
+    "Model yüzdesi",
+    ...LINES.map(
+      line => line + " ÜST %"
+    ),
     "Kayıt durumu"
   ];
 
-  const lines = [
-    fields,
-    ...S.filtered.map(r => [
+  const rows = S.filtered.map(r => {
+    const final = finalChoice(r);
+
+    return [
       r.league,
       r.name,
       r.kickoff,
-      ...LINES.map(line => r.probabilities[line] ?? ""),
-      r.verified ? "Maç öncesi" : "İnceleme gerekli"
-    ])
-  ];
+      final && !final.risk
+        ? final.line + " ÜST"
+        : "RİSKLİ",
+      final && !final.risk
+        ? final.probability ?? ""
+        : "",
+      ...LINES.map(
+        line => r.probabilities[line] ?? ""
+      ),
+      r.verified
+        ? "Maç öncesi"
+        : "İnceleme gerekli"
+    ];
+  });
 
-  const csv = "\uFEFF" + lines
-    .map(line => line.map(v =>
-      '"' + String(v ?? "").replace(/"/g, '""') + '"'
-    ).join(","))
-    .join("\r\n");
+  const csv = "\uFEFF" +
+    [fields, ...rows]
+      .map(row =>
+        row.map(value =>
+          '"' +
+          String(value ?? "")
+            .replace(/"/g, '""') +
+          '"'
+        ).join(",")
+      )
+      .join("\r\n");
 
-  const url = URL.createObjectURL(
-    new Blob([csv], { type: "text/csv;charset=utf-8" })
+  const blob = new Blob(
+    [csv],
+    {
+      type: "text/csv;charset=utf-8"
+    }
   );
+
+  const url = URL.createObjectURL(blob);
 
   const a = document.createElement("a");
+
   a.href = url;
-  a.download = "tipster-pro-filtreli-tahminler.csv";
-  document.body.append(a);
+  a.download =
+    "tipster-pro-v18-tahminler.csv";
+
+  document.body.appendChild(a);
   a.click();
   a.remove();
-  URL.revokeObjectURL(url);
-}
 
-for (const id of ["search", "market", "valid", "sort"]) {
-  $(id).addEventListener(
-    id === "search" ? "input" : "change",
-    () => {
-      S.page = 0;
-      render();
-    }
+  setTimeout(
+    () => URL.revokeObjectURL(url),
+    1000
   );
 }
 
-$("refresh").addEventListener("click", load);
-$("export").addEventListener("click", exportCsv);
+/* ======================================
+   SONUC VE BASARI RAPORLARI
+====================================== */
 
-$("prev").addEventListener("click", () => {
-  if (S.page > 0) {
-    S.page--;
-    render();
-  }
-});
-
-$("next").addEventListener("click", () => {
-  if ((S.page + 1) * S.size < S.filtered.length) {
-    S.page++;
-    render();
-  }
-});
-
-for (const [id, adet] of [["top5", 5], ["top10", 10], ["top20", 20]]) {
-  $(id).addEventListener("click", () => {
-    const liste = topTahminler(adet);
-    const secilenler = new Set(liste.map(r => r.id));
-
-    $("search").value = "";
-    $("market").value = "all";
-    $("valid").value = "pre";
-    $("sort").value = "prob";
-
-    S.page = 0;
-    render();
-
-    S.filtered = liste.filter(r => secilenler.has(r.id));
-    S.page = 0;
-    S.size = 40;
-
-    const tbody = $("rows");
-    tbody.replaceChildren();
-
-    for (const r of S.filtered) {
-      const tr = document.createElement("tr");
-      td(tr, r.name);
-      
-
-      const final = r.topSecim;
-
-const cell = td(
-  tr,
-  final.line + " ÜST"
-);
-cell.style.color = "#22c55e";
-cell.style.fontWeight = "bold";
-td(tr, new Date(r.start).toISOString().slice(0, 16).replace("T", " "));
-      td(tr, "Maç öncesi kayıt");
-      tbody.append(tr);
-    }
-
-    $("notice").textContent =
-      "TOP " + adet + ": " + liste.length +
-      " maç. Başlamamış ve doğrulanmış kayıtlar, model yüzdesine göre sıralandı.";
-    $("page").textContent = "1 / 1";
-    $("prev").disabled = true;
-    $("next").disabled = true;
-  });
-}
-
-$("topall").addEventListener("click", () => {
-  S.page = 0;
-  render();
-});
-
-load();
-
-
-// Result report is separate from model probabilities. Historical unselected
-// matches must never contribute to the realized win/loss rate.
-let resultRecords = [];
 function resultRate(records) {
-  const graded = records.filter(r => r.tahmin_sonucu === "DOGRU" || r.tahmin_sonucu === "YANLIS");
-  if (!graded.length) return "Henüz yok";
-  const wins = graded.filter(r => r.tahmin_sonucu === "DOGRU").length;
-  return (100 * wins / graded.length).toFixed(1) + "% (" + graded.length + ")";
+  const graded = records.filter(
+    r =>
+      r.tahmin_sonucu === "DOGRU" ||
+      r.tahmin_sonucu === "YANLIS"
+  );
+
+  if (!graded.length) {
+    return "Henüz yok";
+  }
+
+  const wins = graded.filter(
+    r => r.tahmin_sonucu === "DOGRU"
+  ).length;
+
+  return (
+    100 * wins / graded.length
+  ).toFixed(1) +
+    "% (" + graded.length + ")";
 }
+
 function resultRender() {
   const body = $("result-rows");
-  const filter = $("result-filter").value;
-  const rows = resultRecords.filter(r => {
-    if (filter === "all") return true;
-    if (filter === "BEKLIYOR") return r.durum !== "DOGRULANDI";
-    if (filter === "DEGERLENDIRILMEDI") return r.durum === "DOGRULANDI" && !r.tahmin_sonucu;
-    return r.tahmin_sonucu === filter;
-  }).sort((a, b) => (dateNum(b.mac?.tarih) ?? 0) - (dateNum(a.mac?.tarih) ?? 0));
+
+  if (!body) {
+    return;
+  }
+
+  const filter =
+    $("result-filter")?.value || "all";
+
+  const rows = resultRecords
+    .filter(r => {
+      if (filter === "all") {
+        return true;
+      }
+
+      if (filter === "BEKLIYOR") {
+        return r.durum !== "DOGRULANDI";
+      }
+
+      if (filter === "DEGERLENDIRILMEDI") {
+        return (
+          r.durum === "DOGRULANDI" &&
+          !r.tahmin_sonucu
+        );
+      }
+
+      return r.tahmin_sonucu === filter;
+    })
+    .sort((a, b) =>
+      (dateNum(b.mac?.tarih) ?? 0) -
+      (dateNum(a.mac?.tarih) ?? 0)
+    );
+
   body.replaceChildren();
+
   for (const r of rows.slice(0, 120)) {
     const tr = document.createElement("tr");
+
     const m = r.mac || {};
-    td(tr, [m.ev_sahibi || "?", m.deplasman || "?"].join(" - "));
-    td(tr, String(m.tarih || "").slice(0, 16).replace("T", " "));
-    td(tr, r.kilitli_secim ? r.kilitli_secim.replace(" UST", " ÜST") : "Önceden seçim yok");
+
+    td(
+      tr,
+      [
+        m.ev_sahibi || "?",
+        m.deplasman || "?"
+      ].join(" - ")
+    );
+
+    td(
+      tr,
+      String(m.tarih || "")
+        .slice(0, 16)
+        .replace("T", " ")
+    );
+
+    const selection = String(
+      r.kilitli_secim || ""
+    );
+
+    td(
+      tr,
+      selection
+        ? selection
+            .replace(/ UST/g, " ÜST")
+            .replace(/RISKLI/g, "RİSKLİ")
+        : "Önceden seçim yok"
+    );
+
     td(tr, r.sonuc?.skor || "—");
-    const status = r.tahmin_sonucu === "DOGRU" ? "✅ DOĞRU"
-      : r.tahmin_sonucu === "YANLIS" ? "❌ YANLIŞ"
-      : r.durum === "DOGRULANDI" ? "— (hesaba dahil değil)" : "⏳ BEKLİYOR";
+
+    const status =
+      r.tahmin_sonucu === "DOGRU"
+        ? "✅ DOĞRU"
+      : r.tahmin_sonucu === "YANLIS"
+        ? "❌ YANLIŞ"
+      : r.durum === "DOGRULANDI"
+        ? "— (hesaba dahil değil)"
+        : "⏳ BEKLİYOR";
+
     const cell = td(tr, status);
-    cell.className = r.tahmin_sonucu === "DOGRU" ? "result-ok"
-      : r.tahmin_sonucu === "YANLIS" ? "result-bad" : "result-pending";
-    body.append(tr);
+
+    cell.className =
+      r.tahmin_sonucu === "DOGRU"
+        ? "result-ok"
+      : r.tahmin_sonucu === "YANLIS"
+        ? "result-bad"
+        : "result-pending";
+
+    body.appendChild(tr);
   }
+
   if (!rows.length) {
     const tr = document.createElement("tr");
-    const cell = td(tr, "Bu filtrede kayıt bulunamadı.");
+    const cell = td(
+      tr,
+      "Bu filtrede kayıt bulunamadı."
+    );
+
     cell.colSpan = 5;
-    body.append(tr);
+    body.appendChild(tr);
   }
-  $("result-note").textContent = rows.length + " kayıt eşleşti; en yeni 120 kayıt gösteriliyor. Başarı yalnızca önceden kilitlenmiş seçimlerden hesaplanır.";
+
+  setText(
+    "result-note",
+    rows.length +
+    " kayıt eşleşti; en yeni 120 kayıt gösteriliyor. " +
+    "Başarı yalnızca kilitli ve değerlendirilmiş seçimlerden hesaplanır."
+  );
 }
+
 async function loadResults() {
-  const note = $("result-note");
   try {
-    const response = await fetch("./v18_dogrulanan_sonuclar.json", {cache:"no-store"});
-    if (!response.ok) throw Error("HTTP " + response.status);
-    const data = await response.json();
-    if (!Array.isArray(data.kayitlar)) throw Error("Geçersiz sonuç dosyası");
-    resultRecords = data.kayitlar.filter(r => r && typeof r === "object" && !Array.isArray(r));
-    const completed = resultRecords.filter(r => r.durum === "DOGRULANDI" && r.sonuc);
-    const wins = completed.filter(r => r.tahmin_sonucu === "DOGRU").length;
-    const losses = completed.filter(r => r.tahmin_sonucu === "YANLIS").length;
-    $("wins").textContent = wins;
-    $("losses").textContent = losses;
-    $("finished").textContent = completed.length;
-    $("pending").textContent = resultRecords.length - completed.length;
-    $("ungraded").textContent = completed.length - wins - losses;
-    $("winrate").textContent = resultRate(completed);
-    const now = Date.now();
-    const beginningToday = Math.floor(now / 86400000) * 86400000;
-    function periodSince(start) {
-      return resultRate(completed.filter(r => {
-        const t = dateNum(r.mac?.tarih);
-        return t !== null && t >= start && t <= now;
-      }));
+    const response = await fetch(
+      "./v18_dogrulanan_sonuclar.json",
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "HTTP " + response.status
+      );
     }
-    $("todayrate").textContent = periodSince(beginningToday);
-    $("weekrate").textContent = periodSince(now - 7 * 86400000);
-    $("monthrate").textContent = periodSince(now - 30 * 86400000);
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.kayitlar)) {
+      throw new Error(
+        "Geçersiz sonuç dosyası"
+      );
+    }
+
+    resultRecords = data.kayitlar.filter(
+      r =>
+        r &&
+        typeof r === "object" &&
+        !Array.isArray(r)
+    );
+
+    const completed = resultRecords.filter(
+      r =>
+        r.durum === "DOGRULANDI" &&
+        r.sonuc
+    );
+
+    const wins = completed.filter(
+      r => r.tahmin_sonucu === "DOGRU"
+    ).length;
+
+    const losses = completed.filter(
+      r => r.tahmin_sonucu === "YANLIS"
+    ).length;
+
+    setText("wins", wins);
+    setText("losses", losses);
+    setText("finished", completed.length);
+
+    setText(
+      "pending",
+      resultRecords.length -
+        completed.length
+    );
+
+    setText(
+      "ungraded",
+      completed.length -
+        wins -
+        losses
+    );
+
+    setText(
+      "winrate",
+      resultRate(completed)
+    );
+
+    const now = Date.now();
+
+    const beginningToday =
+      Math.floor(now / 86400000) *
+      86400000;
+
+    function periodSince(start) {
+      return resultRate(
+        completed.filter(r => {
+          const t = dateNum(
+            r.mac?.tarih
+          );
+
+          return (
+            t !== null &&
+            t >= start &&
+            t <= now
+          );
+        })
+      );
+    }
+
+    setText(
+      "todayrate",
+      periodSince(beginningToday)
+    );
+
+    setText(
+      "weekrate",
+      periodSince(
+        now - 7 * 86400000
+      )
+    );
+
+    setText(
+      "monthrate",
+      periodSince(
+        now - 30 * 86400000
+      )
+    );
+
     resultRender();
     render();
+
   } catch (err) {
+    console.error(
+      "Sonuç dosyası hatası:",
+      err
+    );
+
     resultRecords = [];
-    note.textContent = "Sonuç raporu henüz yayımlanmadı veya okunamadı. Model tahminleri başarı sonucu sayılmaz.";
-    for (const id of ["wins","losses","finished","pending","ungraded","winrate","todayrate","weekrate","monthrate"]) $(id).textContent = "—";
-    $("result-rows").replaceChildren();
-  }
-}
-$("result-filter").addEventListener("change", resultRender);
-$("refresh").addEventListener("click", loadResults);
-loadResults();
 
-/* ASLAN MODU V1 - GUVEN RENKLERI VE SONUC PANELI
-   V18 tahmin motoruna dokunmaz.
-   Yalnizca ASLAN verilerini okur.
-*/
+    setText(
+      "result-note",
+      "Sonuç raporu henüz okunamadı."
+    );
 
-window.addEventListener("DOMContentLoaded", () => {
-  const bolum = document.getElementById("aslan-modu");
-  if (!bolum) return;
-
-  const eskiDurum = document.getElementById("aslan-durum");
-  if (eskiDurum) eskiDurum.remove();
-
-  const panel = document.createElement("div");
-  panel.id = "aslan-sonuc-paneli";
-
-  panel.innerHTML = `
-    <h3>🦁 ASLAN MODU — Gerçek sonuçlar</h3>
-    <p class="muted">
-      Yalnızca maç başlamadan önce kilitlenen
-      ASLAN tahminleri değerlendirilir.
-    </p>
-    <div class="result-summary">
-      <span>🟢 Güçlü tahmin: <strong id="aslan-yesil">—</strong></span>
-      <span>🟡 Orta güven: <strong id="aslan-sari">—</strong></span>
-      <span>⚪ Normal: <strong id="aslan-normal">—</strong></span>
-      <span>✅ Doğru: <strong id="aslan-dogru">—</strong></span>
-      <span>❌ Yanlış: <strong id="aslan-yanlis">—</strong></span>
-      <span>⏳ Bekleyen: <strong id="aslan-bekleyen">—</strong></span>
-      <span>Başarı: <strong id="aslan-basari">—</strong></span>
-    </div>
-    <p class="muted" id="aslan-sonuc-bilgi">
-      ASLAN sonuçları yükleniyor...
-    </p>
-    <div class="scroll">
-      <table>
-        <thead>
-          <tr>
-            <th>Maç</th>
-            <th>Kilitli tahmin</th>
-            <th>Güven</th>
-            <th>Skor</th>
-            <th>Sonuç</th>
-          </tr>
-        </thead>
-        <tbody id="aslan-sonuc-satirlari"></tbody>
-      </table>
-    </div>
-  `;
-
-  // Mevcut ASLAN kesif tablosundan once goster.
-  const kesifEkrani =
-    document.getElementById("aslan-kesif-ekrani");
-
-  if (kesifEkrani) {
-    bolum.insertBefore(panel, kesifEkrani);
-  } else {
-    bolum.appendChild(panel);
-  }
-
-  const el = id => document.getElementById(id);
-
-  function guvenRengi(yuzde) {
-  if (yuzde >= 80) return "#22c55e";
-  if (yuzde >= 70) return "#facc15";
-  if (yuzde < 50) return "#64748b";
-  return "";
-}
-
-  function kesifRenkleriniUygula() {
-    const tablo = el("aslan-tablo");
-    if (!tablo) return;
-
-    for (const satir of tablo.rows) {
-      const hucreler = satir.cells;
-      if (hucreler.length !== 5) continue;
-
-      const yuzde = Number(
-        hucreler[3].textContent
-          .replace("%", "")
-          .replace(",", ".")
-          .trim()
-      );
-
-      if (!Number.isFinite(yuzde)) continue;
-
-      const renk = guvenRengi(yuzde);
-
-      for (const index of [2, 3]) {
-        hucreler[index].style.color = renk;
-        hucreler[index].style.fontWeight =
-          renk ? "700" : "";
-      }
-
-        hucreler[4].textContent = "—";
+    for (const id of [
+      "wins",
+      "losses",
+      "finished",
+      "pending",
+      "ungraded",
+      "winrate",
+      "todayrate",
+      "weekrate",
+      "monthrate"
+    ]) {
+      setText(id, "—");
     }
+
+    $("result-rows")?.replaceChildren();
+    render();
+  }
+}
+
+/* ======================================
+   ASLAN MODU — SONUC PANELI
+====================================== */
+
+function aslanSonucPaneliKur() {
+  const section = $("aslan-modu");
+
+  if (!section) {
+    return;
   }
 
-  // Filtre ve sayfa degisince renkleri koru.
-  const gozlem = new MutationObserver(
-    () => kesifRenkleriniUygula()
-  );
+  $("aslan-durum")?.remove();
 
-  const kesifTablosu = el("aslan-tablo");
-  if (kesifTablosu) {
-    gozlem.observe(kesifTablosu, {
-      childList: true
-    });
-    kesifRenkleriniUygula();
-  }
+  let panel = $("aslan-sonuc-paneli");
 
-  function hucreEkle(satir, metin) {
-    const td = satir.insertCell();
-    td.textContent = String(metin ?? "—");
-    return td;
-  }
+  if (!panel) {
+    panel = document.createElement("div");
+    panel.id = "aslan-sonuc-paneli";
 
-  async function aslanSonuclariniYukle() {
-    try {
-      const cevap = await fetch(
-        "./aslan_dogrulanan_sonuclar.json?t=" +
-        Date.now(),
-        { cache: "no-store" }
+    panel.innerHTML = `
+      <h3>🦁 ASLAN MODU — Gerçek sonuçlar</h3>
+
+      <p class="muted">
+        Yalnızca maç başlamadan önce kilitlenen
+        ASLAN tahminleri değerlendirilir.
+      </p>
+
+      <div class="result-summary">
+        <span>🟢 Güçlü tahmin:
+          <strong id="aslan-yesil">—</strong>
+        </span>
+
+        <span>🟡 Orta güven:
+          <strong id="aslan-sari">—</strong>
+        </span>
+
+        <span>⚪ Normal:
+          <strong id="aslan-normal">—</strong>
+        </span>
+
+        <span>✅ Doğru:
+          <strong id="aslan-dogru">—</strong>
+        </span>
+
+        <span>❌ Yanlış:
+          <strong id="aslan-yanlis">—</strong>
+        </span>
+
+        <span>⏳ Bekleyen:
+          <strong id="aslan-bekleyen">—</strong>
+        </span>
+
+        <span>Başarı:
+          <strong id="aslan-basari">—</strong>
+        </span>
+      </div>
+
+      <p
+        class="muted"
+        id="aslan-sonuc-bilgi"
+      >
+        ASLAN sonuçları yükleniyor...
+      </p>
+
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Maç</th>
+              <th>Kilitli tahmin</th>
+              <th>Skor</th>
+              <th>Sonuç</th>
+            </tr>
+          </thead>
+
+          <tbody
+            id="aslan-sonuc-satirlari"
+          ></tbody>
+        </table>
+      </div>
+    `;
+
+    const discovery =
+      $("aslan-kesif-ekrani");
+
+    if (discovery) {
+      section.insertBefore(
+        panel,
+        discovery
       );
-
-      if (!cevap.ok) {
-        throw new Error("HTTP " + cevap.status);
-      }
-
-      const veri = await cevap.json();
-
-      if (!Array.isArray(veri.kayitlar)) {
-        throw new Error("Geçersiz ASLAN sonuç dosyası");
-      }
-
-      const kayitlar = veri.kayitlar;
-
-      const say = durum =>
-        kayitlar.filter(
-          k => k.guven_sinifi === durum
-        ).length;
-
-      const dogru = kayitlar.filter(
-        k => k.durum === "DOGRULANDI" &&
-             k.tahmin_sonucu === "DOGRU"
-      ).length;
-
-      const yanlis = kayitlar.filter(
-        k => k.durum === "DOGRULANDI" &&
-             k.tahmin_sonucu === "YANLIS"
-      ).length;
-
-      const bekleyen = kayitlar.filter(
-        k => k.durum === "BEKLIYOR"
-      ).length;
-
-      const degerlendirilen = dogru + yanlis;
-
-      el("aslan-yesil").textContent = say("YESIL");
-      el("aslan-sari").textContent = say("SARI");
-      el("aslan-normal").textContent = say("NORMAL");
-      el("aslan-dogru").textContent = dogru;
-      el("aslan-yanlis").textContent = yanlis;
-      el("aslan-bekleyen").textContent = bekleyen;
-
-      el("aslan-basari").textContent =
-        degerlendirilen
-          ? (100 * dogru / degerlendirilen)
-              .toFixed(1) + "%"
-          : "Henüz yok";
-
-      el("aslan-sonuc-bilgi").textContent =
-        "Kilitli tahmin: " + kayitlar.length +
-        " | Değerlendirilen: " + degerlendirilen +
-        " | Başarı yalnızca gerçek sonuçlardan hesaplanır.";
-
-      const tablo = el("aslan-sonuc-satirlari");
-      tablo.replaceChildren();
-
-      const sirali = [...kayitlar].sort(
-        (a, b) => String(b.tarih || "")
-          .localeCompare(String(a.tarih || ""))
-      );
-
-      for (const k of sirali.slice(0, 120)) {
-        const satir = tablo.insertRow();
-
-        hucreEkle(
-          satir,
-          (k.ev_sahibi || "?") + " - " +
-          (k.deplasman || "?")
-        );
-
-        
-        const yuzde = Number(k.model_yuzdesi);
-        const gecerli = Number.isFinite(yuzde) &&
-          yuzde >= 0 && yuzde <= 100;
-
-        const tahminHucresi = hucreEkle(
-          satir,
-          String(k.tahmin || "—").replace(" UST", " ÜST") +
-          (gecerli ? " — %" + yuzde.toFixed(1) : "")
-        );
-
-        const renk = gecerli ? guvenRengi(yuzde) : "";
-
-        tahminHucresi.style.color = renk;
-        tahminHucresi.style.fontWeight =
-          renk ? "700" : "400";
-
-
-        hucreEkle(satir, k.skor || "—");
-
-        const sonuc =
-          k.durum === "DOGRULANDI" &&
-          k.tahmin_sonucu === "DOGRU"
-            ? "✅ DOĞRU"
-          : k.durum === "DOGRULANDI" &&
-            k.tahmin_sonucu === "YANLIS"
-            ? "❌ YANLIŞ"
-          : k.durum === "INCELEME"
-            ? "İNCELEME"
-          : "⏳ BEKLİYOR";
-
-        const sonucHucresi =
-          hucreEkle(satir, sonuc);
-
-        if (sonuc === "✅ DOĞRU") {
-          sonucHucresi.style.color = "#22c55e";
-        } else if (sonuc === "❌ YANLIŞ") {
-          sonucHucresi.style.color = "#ef4444";
-        }
-      }
-
-      if (!sirali.length) {
-        const satir = tablo.insertRow();
-        const td = satir.insertCell();
-        td.colSpan = 4;
-        td.textContent =
-          "Henüz kilitlenmiş ASLAN tahmini yok.";
-      }
-
-    } catch (hata) {
-      el("aslan-sonuc-bilgi").textContent =
-        "ASLAN sonuç dosyası henüz okunamadı: " +
-        hata.message;
+    } else {
+      section.appendChild(panel);
     }
   }
 
   aslanSonuclariniYukle();
-});
+}
 
+/* ======================================
+   ASLAN KESIF RENKLERI
+====================================== */
+
+function kesifRenkleriniUygula() {
+  const table = $("aslan-tablo");
+
+  if (!table) {
+    return;
+  }
+
+  for (const row of table.rows) {
+    const cells = row.cells;
+
+    if (cells.length !== 5) {
+      continue;
+    }
+
+    const value = pct(
+      cells[3].textContent
+    );
+
+    if (value === null) {
+      continue;
+    }
+
+    for (const index of [2, 3]) {
+      tahminStili(
+        cells[index],
+        value
+      );
+    }
+  }
+}
+
+function kesifTakibiniBaslat() {
+  const table = $("aslan-tablo");
+
+  if (!table) {
+    return;
+  }
+
+  const observer = new MutationObserver(
+    () => kesifRenkleriniUygula()
+  );
+
+  observer.observe(table, {
+    childList: true,
+    subtree: true
+  });
+
+  kesifRenkleriniUygula();
+}
+
+/* ======================================
+   ASLAN GERCEK SONUCLAR
+====================================== */
+
+async function aslanSonuclariniYukle() {
+  const tbody =
+    $("aslan-sonuc-satirlari");
+
+  if (!tbody) {
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      "./aslan_dogrulanan_sonuclar.json?t=" +
+        Date.now(),
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "HTTP " + response.status
+      );
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.kayitlar)) {
+      throw new Error(
+        "Geçersiz ASLAN sonuç dosyası"
+      );
+    }
+
+    aslanRecords = data.kayitlar.filter(
+      r =>
+        r &&
+        typeof r === "object" &&
+        !Array.isArray(r)
+    );
+
+    const countClass = type =>
+      aslanRecords.filter(
+        r => r.guven_sinifi === type
+      ).length;
+
+    const graded = aslanRecords.filter(
+      r =>
+        r.durum === "DOGRULANDI" &&
+        (
+          r.tahmin_sonucu === "DOGRU" ||
+          r.tahmin_sonucu === "YANLIS"
+        )
+    );
+
+    const wins = graded.filter(
+      r => r.tahmin_sonucu === "DOGRU"
+    ).length;
+
+    const losses = graded.length - wins;
+
+    const pending = aslanRecords.filter(
+      r => r.durum === "BEKLIYOR"
+    ).length;
+
+    setText(
+      "aslan-yesil",
+      countClass("YESIL")
+    );
+
+    setText(
+      "aslan-sari",
+      countClass("SARI")
+    );
+
+    setText(
+      "aslan-normal",
+      countClass("NORMAL")
+    );
+
+    setText("aslan-dogru", wins);
+    setText("aslan-yanlis", losses);
+    setText("aslan-bekleyen", pending);
+
+    setText(
+      "aslan-basari",
+      graded.length
+        ? (
+          100 * wins / graded.length
+        ).toFixed(1) + "%"
+        : "Henüz yok"
+    );
+
+    setText(
+      "aslan-sonuc-bilgi",
+      "Kilitli tahmin: " +
+        aslanRecords.length +
+      " | Değerlendirilen: " +
+        graded.length +
+      " | Başarı yalnızca gerçek sonuçlardan hesaplanır."
+    );
+
+    const sorted = [...aslanRecords]
+      .sort((a, b) =>
+        String(
+          b.tarih || ""
+        ).localeCompare(
+          String(a.tarih || "")
+        )
+      );
+
+    tbody.replaceChildren();
+
+    for (const r of sorted.slice(0, 120)) {
+      const row = document.createElement("tr");
+
+      td(
+        row,
+        String(r.ev_sahibi || "?") +
+          " - " +
+          String(r.deplasman || "?")
+      );
+
+      const probability =
+        pct(r.model_yuzdesi);
+
+      const choice = String(
+        r.tahmin || "—"
+      )
+        .replace(/\bUST\b/gi, "ÜST")
+        .replace(/RISKLI/gi, "RİSKLİ");
+
+      const predictionCell = td(
+        row,
+        tahminMetni(
+          choice,
+          probability
+        )
+      );
+
+      if (
+        choice.toLocaleUpperCase("tr-TR")
+          .includes("RİSKLİ")
+      ) {
+        predictionCell.style.color =
+          COLORS.grey;
+
+        predictionCell.style.fontWeight =
+          "400";
+      } else {
+        tahminStili(
+          predictionCell,
+          probability
+        );
+      }
+
+      td(
+        row,
+        r.skor || "—"
+      );
+
+      let result = "⏳ BEKLİYOR";
+
+      if (
+        r.durum === "DOGRULANDI" &&
+        r.tahmin_sonucu === "DOGRU"
+      ) {
+        result = "✅ DOĞRU";
+      } else if (
+        r.durum === "DOGRULANDI" &&
+        r.tahmin_sonucu === "YANLIS"
+      ) {
+        result = "❌ YANLIŞ";
+      } else if (
+        r.durum === "INCELEME"
+      ) {
+        result = "İNCELEME";
+      }
+
+      const resultCell = td(
+        row,
+        result
+      );
+
+      if (result === "✅ DOĞRU") {
+        resultCell.style.color =
+          COLORS.green;
+      }
+
+      if (result === "❌ YANLIŞ") {
+        resultCell.style.color =
+          COLORS.red;
+      }
+
+      tbody.appendChild(row);
+    }
+
+    if (!sorted.length) {
+      const row = document.createElement("tr");
+
+      const cell = td(
+        row,
+        "Henüz kilitlenmiş ASLAN tahmini yok."
+      );
+
+      cell.colSpan = 4;
+      tbody.appendChild(row);
+    }
+
+  } catch (err) {
+    console.error(
+      "ASLAN sonuç dosyası hatası:",
+      err
+    );
+
+    setText(
+      "aslan-sonuc-bilgi",
+      "ASLAN sonuç dosyası okunamadı: " +
+        err.message
+    );
+  }
+}
+
+/* ======================================
+   KONTROLLER VE OLAYLAR
+====================================== */
+
+function bind(id, event, handler) {
+  const element = $(id);
+
+  if (element) {
+    element.addEventListener(
+      event,
+      handler
+    );
+  }
+}
+
+function filtreyiSifirla() {
+  S.page = 0;
+  S.topLimit = null;
+  render();
+}
+
+function init() {
+  for (const id of [
+    "search",
+    "market",
+    "valid",
+    "sort"
+  ]) {
+    bind(
+      id,
+      id === "search"
+        ? "input"
+        : "change",
+      filtreyiSifirla
+    );
+  }
+
+  bind("refresh", "click", () => {
+    load();
+    loadResults();
+    aslanSonuclariniYukle();
+  });
+
+  bind(
+    "export",
+    "click",
+    exportCsv
+  );
+
+  bind("prev", "click", () => {
+    if (S.page > 0) {
+      S.page--;
+      render();
+    }
+  });
+
+  bind("next", "click", () => {
+    if (
+      (S.page + 1) * S.size <
+      S.filtered.length
+    ) {
+      S.page++;
+      render();
+    }
+  });
+
+  for (const [id, amount] of [
+    ["top5", 5],
+    ["top10", 10],
+    ["top20", 20]
+  ]) {
+    bind(id, "click", () => {
+      S.topLimit = amount;
+      S.page = 0;
+      render();
+    });
+  }
+
+  bind("topall", "click", () => {
+    S.topLimit = null;
+    S.page = 0;
+    render();
+  });
+
+  bind(
+    "result-filter",
+    "change",
+    resultRender
+  );
+
+  aslanSonucPaneliKur();
+  kesifTakibiniBaslat();
+
+  load();
+  loadResults();
+}
+
+/* ======================================
+   BASLAT
+====================================== */
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    init,
+    { once: true }
+  );
+} else {
+  init();
+}
