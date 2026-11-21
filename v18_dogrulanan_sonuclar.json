@@ -1,13 +1,13 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-21T16:58:08.508767+00:00",
-  "toplam_arsiv": 426,
-  "dogrulanan_mac": 116,
-  "bekleyen_mac": 310,
-  "degerlendirilen_tahmin": 76,
-  "dogru": 51,
-  "yanlis": 25,
-  "basari_yuzdesi": 67.11,
+  "olusturulma_utc": "2026-11-21T17:56:18.210838+00:00",
+  "toplam_arsiv": 437,
+  "dogrulanan_mac": 129,
+  "bekleyen_mac": 308,
+  "degerlendirilen_tahmin": 86,
+  "dogru": 58,
+  "yanlis": 28,
+  "basari_yuzdesi": 67.44,
   "not": "Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.",
   "kayitlar": [
     {
@@ -446,8 +446,15 @@
         "kaynak_mac_sayisi": 54
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 1,
+        "toplam_gol": 3,
+        "skor": "2-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 90.8,
         "2.5_ust": 76.2,
@@ -465,7 +472,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 90.8,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 76.2,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 56.7,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 37.1,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 21.5,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 11.1,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "aut.1|401881744",
@@ -493,8 +528,15 @@
         "kaynak_mac_sayisi": 54
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 0,
+        "dep_gol": 1,
+        "toplam_gol": 1,
+        "skor": "0-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 85.2,
         "2.5_ust": 65.8,
@@ -512,7 +554,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 85.2,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 65.8,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 43.9,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 25.4,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 12.8,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 5.7,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "aut.1|401881746",
@@ -810,8 +880,15 @@
         "kaynak_mac_sayisi": 81
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 2,
+        "toplam_gol": 4,
+        "skor": "2-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 90.0,
         "2.5_ust": 74.5,
@@ -829,7 +906,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 90.0,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 74.5,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 54.5,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 34.9,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 19.8,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 9.9,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "bel.1|401878939",
@@ -2909,8 +3014,15 @@
         "kaynak_mac_sayisi": 100
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 4,
+        "toplam_gol": 5,
+        "skor": "1-4",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 74.2,
         "2.5_ust": 49.4,
@@ -2928,6 +3040,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 74.2,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 49.4,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 27.5,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 13.0,
+          "gerceklesti": true
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 5.3,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 1.9,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -3880,8 +4019,15 @@
         "kaynak_mac_sayisi": 168
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 0,
+        "toplam_gol": 1,
+        "skor": "1-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 78.4,
         "2.5_ust": 55.2,
@@ -3899,7 +4045,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 78.4,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 55.2,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 32.9,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 16.7,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 7.4,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.8,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "eng.2|401880151",
@@ -3927,8 +4101,15 @@
         "kaynak_mac_sayisi": 168
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 2,
+        "toplam_gol": 4,
+        "skor": "2-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 72.7,
         "2.5_ust": 47.4,
@@ -3946,6 +4127,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 72.7,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 47.4,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 25.8,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 11.9,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 4.7,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 1.6,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -4993,8 +5201,15 @@
         "kaynak_mac_sayisi": 150
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 2,
+        "toplam_gol": 4,
+        "skor": "2-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 60.9,
         "2.5_ust": 33.9,
@@ -5012,6 +5227,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 60.9,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 33.9,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 15.3,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 5.8,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 1.9,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 0.5,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -7283,8 +7525,15 @@
         "kaynak_mac_sayisi": 176
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 0,
+        "dep_gol": 2,
+        "toplam_gol": 2,
+        "skor": "0-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 82.9,
         "2.5_ust": 62.1,
@@ -7302,7 +7551,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 82.9,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 62.1,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 39.8,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 22.0,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 10.6,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 4.5,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "eng.5|401889196",
@@ -7658,8 +7935,15 @@
         "kaynak_mac_sayisi": 176
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 4,
+        "dep_gol": 0,
+        "toplam_gol": 4,
+        "skor": "4-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 78.5,
         "2.5_ust": 55.4,
@@ -7677,7 +7961,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 78.5,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 55.4,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 33.0,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 16.8,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 7.4,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.9,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "eng.5|401889192",
@@ -8560,8 +8872,15 @@
         "kaynak_mac_sayisi": 112
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 0,
+        "dep_gol": 1,
+        "toplam_gol": 1,
+        "skor": "0-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 78.4,
         "2.5_ust": 55.1,
@@ -8579,7 +8898,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 78.4,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 55.1,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 32.8,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 16.6,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 7.3,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.8,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "esp.1|401882797",
@@ -9099,8 +9446,15 @@
         "kaynak_mac_sayisi": 140
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 0,
+        "dep_gol": 3,
+        "toplam_gol": 3,
+        "skor": "0-3",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 78.9,
         "2.5_ust": 55.9,
@@ -9118,7 +9472,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 78.9,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 55.9,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 33.6,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 17.2,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 7.6,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 3.0,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "esp.2|401882301",
@@ -15529,8 +15911,15 @@
         "kaynak_mac_sayisi": 90
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 4,
+        "toplam_gol": 5,
+        "skor": "1-4",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 91.2,
         "2.5_ust": 76.9,
@@ -15548,7 +15937,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 91.2,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 76.9,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 57.6,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 38.1,
+          "gerceklesti": true
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 22.3,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 11.6,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "ned.1|401875544",
@@ -18105,8 +18522,15 @@
         "kaynak_mac_sayisi": 90
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 2,
+        "toplam_gol": 4,
+        "skor": "2-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 76.9,
         "2.5_ust": 53.1,
@@ -18124,7 +18548,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-21T17:56:08.418460+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 76.9,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 53.1,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 30.8,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 15.2,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 6.5,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.4,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "tur.1|401888243",
@@ -23992,6 +24444,523 @@
         "6.5_ust": 2.5
       },
       "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bel.1|401878932",
+      "mac": {
+        "id": "bel.1|401878932",
+        "tarih": "2026-11-28T17:15:00+00:00",
+        "lig_kodu": "bel.1",
+        "lig": "Belcika Pro League",
+        "ev_sahibi": "Cercle Brugge KSV",
+        "deplasman": "KV Mechelen",
+        "istatistik_ev": "Cercle Brugge KSV",
+        "istatistik_deplasman": "KV Mechelen",
+        "tahmin": {
+          "beklenen_gol": 2.79,
+          "1.5_ust": 76.7,
+          "2.5_ust": 52.8,
+          "3.5_ust": 30.5,
+          "4.5_ust": 15.0,
+          "5.5_ust": 6.4,
+          "6.5_ust": 2.4
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 78
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 76.7,
+        "2.5_ust": 52.8,
+        "3.5_ust": 30.5,
+        "4.5_ust": 15.0,
+        "5.5_ust": 6.4,
+        "6.5_ust": 2.4
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "eng.1|401878752",
+      "mac": {
+        "id": "eng.1|401878752",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "eng.1",
+        "lig": "Ingiltere Premier League",
+        "ev_sahibi": "Ipswich Town",
+        "deplasman": "Aston Villa",
+        "istatistik_ev": "Ipswich Town",
+        "istatistik_deplasman": "Aston Villa",
+        "tahmin": {
+          "beklenen_gol": 3.33,
+          "1.5_ust": 84.5,
+          "2.5_ust": 64.6,
+          "3.5_ust": 42.6,
+          "4.5_ust": 24.2,
+          "5.5_ust": 12.0,
+          "6.5_ust": 5.3
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 94
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 84.5,
+        "2.5_ust": 64.6,
+        "3.5_ust": 42.6,
+        "4.5_ust": 24.2,
+        "5.5_ust": 12.0,
+        "6.5_ust": 5.3
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "eng.5|401889169",
+      "mac": {
+        "id": "eng.5|401889169",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "eng.5",
+        "lig": "Ingiltere National League",
+        "ev_sahibi": "Hartlepool United",
+        "deplasman": "Southend United",
+        "istatistik_ev": "Hartlepool United",
+        "istatistik_deplasman": "Southend United",
+        "tahmin": {
+          "beklenen_gol": 3.6,
+          "1.5_ust": 87.4,
+          "2.5_ust": 69.7,
+          "3.5_ust": 48.4,
+          "4.5_ust": 29.3,
+          "5.5_ust": 15.6,
+          "6.5_ust": 7.3
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 165
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 87.4,
+        "2.5_ust": 69.7,
+        "3.5_ust": 48.4,
+        "4.5_ust": 29.3,
+        "5.5_ust": 15.6,
+        "6.5_ust": 7.3
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "esp.1|401882793",
+      "mac": {
+        "id": "esp.1|401882793",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "esp.1",
+        "lig": "Ispanya La Liga",
+        "ev_sahibi": "Elche",
+        "deplasman": "Atlético Madrid",
+        "istatistik_ev": "Elche",
+        "istatistik_deplasman": "Atlético Madrid",
+        "tahmin": {
+          "beklenen_gol": 2.86,
+          "1.5_ust": 78.0,
+          "2.5_ust": 54.6,
+          "3.5_ust": 32.2,
+          "4.5_ust": 16.2,
+          "5.5_ust": 7.1,
+          "6.5_ust": 2.7
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 109
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 78.0,
+        "2.5_ust": 54.6,
+        "3.5_ust": 32.2,
+        "4.5_ust": 16.2,
+        "5.5_ust": 7.1,
+        "6.5_ust": 2.7
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "esp.2|401883104",
+      "mac": {
+        "id": "esp.2|401883104",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "esp.2",
+        "lig": "Ispanya La Liga 2",
+        "ev_sahibi": "Eibar",
+        "deplasman": "Burgos",
+        "istatistik_ev": "Eibar",
+        "istatistik_deplasman": "Burgos",
+        "tahmin": {
+          "beklenen_gol": 2.61,
+          "1.5_ust": 73.4,
+          "2.5_ust": 48.3,
+          "3.5_ust": 26.5,
+          "4.5_ust": 12.3,
+          "5.5_ust": 4.9,
+          "6.5_ust": 1.7
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 136
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 73.4,
+        "2.5_ust": 48.3,
+        "3.5_ust": 26.5,
+        "4.5_ust": 12.3,
+        "5.5_ust": 4.9,
+        "6.5_ust": 1.7
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "ger.1|401884726",
+      "mac": {
+        "id": "ger.1|401884726",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "ger.1",
+        "lig": "Almanya Bundesliga",
+        "ev_sahibi": "VfB Stuttgart",
+        "deplasman": "Eintracht Frankfurt",
+        "istatistik_ev": "VfB Stuttgart",
+        "istatistik_deplasman": "Eintracht Frankfurt",
+        "tahmin": {
+          "beklenen_gol": 3.61,
+          "1.5_ust": 87.5,
+          "2.5_ust": 69.9,
+          "3.5_ust": 48.7,
+          "4.5_ust": 29.6,
+          "5.5_ust": 15.7,
+          "6.5_ust": 7.4
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 82
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 87.5,
+        "2.5_ust": 69.9,
+        "3.5_ust": 48.7,
+        "4.5_ust": 29.6,
+        "5.5_ust": 15.7,
+        "6.5_ust": 7.4
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "ita.1|401874826",
+      "mac": {
+        "id": "ita.1|401874826",
+        "tarih": "2026-11-28T17:00:00+00:00",
+        "lig_kodu": "ita.1",
+        "lig": "Italya Serie A",
+        "ev_sahibi": "Torino",
+        "deplasman": "Lazio",
+        "istatistik_ev": "Torino",
+        "istatistik_deplasman": "Lazio",
+        "tahmin": {
+          "beklenen_gol": 3.0,
+          "1.5_ust": 80.1,
+          "2.5_ust": 57.7,
+          "3.5_ust": 35.3,
+          "4.5_ust": 18.5,
+          "5.5_ust": 8.4,
+          "6.5_ust": 3.4
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 106
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 80.1,
+        "2.5_ust": 57.7,
+        "3.5_ust": 35.3,
+        "4.5_ust": 18.5,
+        "5.5_ust": 8.4,
+        "6.5_ust": 3.4
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "ned.1|401875531",
+      "mac": {
+        "id": "ned.1|401875531",
+        "tarih": "2026-11-28T17:45:00+00:00",
+        "lig_kodu": "ned.1",
+        "lig": "Hollanda Eredivisie",
+        "ev_sahibi": "PSV Eindhoven",
+        "deplasman": "Go Ahead Eagles",
+        "istatistik_ev": "PSV Eindhoven",
+        "istatistik_deplasman": "Go Ahead Eagles",
+        "tahmin": {
+          "beklenen_gol": 4.5,
+          "1.5_ust": 93.9,
+          "2.5_ust": 82.6,
+          "3.5_ust": 65.8,
+          "4.5_ust": 46.8,
+          "5.5_ust": 29.7,
+          "6.5_ust": 16.9
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 87
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 93.9,
+        "2.5_ust": 82.6,
+        "3.5_ust": 65.8,
+        "4.5_ust": 46.8,
+        "5.5_ust": 29.7,
+        "6.5_ust": 16.9
+      },
+      "kilitli_secim": "3.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "nor.1|401843497",
+      "mac": {
+        "id": "nor.1|401843497",
+        "tarih": "2026-11-28T17:00:00+00:00",
+        "lig_kodu": "nor.1",
+        "lig": "Norvec Eliteserien",
+        "ev_sahibi": "Rosenborg",
+        "deplasman": "Molde",
+        "istatistik_ev": "Rosenborg",
+        "istatistik_deplasman": "Molde",
+        "tahmin": {
+          "beklenen_gol": 4.91,
+          "1.5_ust": 95.6,
+          "2.5_ust": 86.8,
+          "3.5_ust": 72.2,
+          "4.5_ust": 54.4,
+          "5.5_ust": 36.8,
+          "6.5_ust": 22.5
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 73
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 95.6,
+        "2.5_ust": 86.8,
+        "3.5_ust": 72.2,
+        "4.5_ust": 54.4,
+        "5.5_ust": 36.8,
+        "6.5_ust": 22.5
+      },
+      "kilitli_secim": "3.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "sco.1|401878329",
+      "mac": {
+        "id": "sco.1|401878329",
+        "tarih": "2026-11-28T17:45:00+00:00",
+        "lig_kodu": "sco.1",
+        "lig": "Iskocya Premiership",
+        "ev_sahibi": "Motherwell",
+        "deplasman": "Hibernian",
+        "istatistik_ev": "Motherwell",
+        "istatistik_deplasman": "Hibernian",
+        "tahmin": {
+          "beklenen_gol": 2.8,
+          "1.5_ust": 76.9,
+          "2.5_ust": 53.1,
+          "3.5_ust": 30.8,
+          "4.5_ust": 15.2,
+          "5.5_ust": 6.5,
+          "6.5_ust": 2.4
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 62
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 76.9,
+        "2.5_ust": 53.1,
+        "3.5_ust": 30.8,
+        "4.5_ust": 15.2,
+        "5.5_ust": 6.5,
+        "6.5_ust": 2.4
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933737",
+      "mac": {
+        "id": "usa.1|401933737",
+        "tarih": "2026-11-28T17:30:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "Charlotte FC",
+        "deplasman": "Chicago Fire FC",
+        "istatistik_ev": "Charlotte FC",
+        "istatistik_deplasman": "Chicago Fire FC",
+        "tahmin": {
+          "beklenen_gol": 3.77,
+          "1.5_ust": 89.0,
+          "2.5_ust": 72.7,
+          "3.5_ust": 52.1,
+          "4.5_ust": 32.7,
+          "5.5_ust": 18.0,
+          "6.5_ust": 8.8
+        },
+        "hesaplama_zamani_utc": "2026-11-21T17:48:23.904414+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 200
+      },
+      "kilit_zamani_utc": "2026-11-21T17:56:08.337926+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 89.0,
+        "2.5_ust": 72.7,
+        "3.5_ust": 52.1,
+        "4.5_ust": 32.7,
+        "5.5_ust": 18.0,
+        "6.5_ust": 8.8
+      },
+      "kilitli_secim": "2.5 UST",
       "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
       "secim_esikleri": {
         "1.5": 75.0,
