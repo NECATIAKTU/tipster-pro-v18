@@ -1,0 +1,40 @@
+
+name: KARTAL V1 - Bagimsiz Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kartal-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kaynak kodlarini al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: KARTAL dosyalarini kontrol et
+        run: |
+          test -f kartal_v1/kartal_v1/kartal.py
+          test -f kartal_v1/kartal_v1/kartal_model.py
+          test -f kartal_v1/kartal_v1/test_kartal.py
+
+      - name: Python kodlarini denetle
+        run: |
+          python -m py_compile \
+            kartal_v1/kartal_v1/kartal.py \
+            kartal_v1/kartal_v1/kartal_model.py \
+            kartal_v1/kartal_v1/test_kartal.py
+
+      - name: KARTAL testlerini calistir
+        working-directory: kartal_v1/kartal_v1
+        run: |
+          python -m unittest -v test_kartal
