@@ -1,0 +1,34 @@
+
+name: V19 Bes Asama - Bagimsiz Test
+
+on:
+  push:
+    branches:
+      - v19-review
+    paths:
+      - 'v19_patch/**'
+      - '.github/workflows/v19-patch-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  v19-yama-testi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kodlari al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Python dosyalarini kontrol et
+        run: python -m compileall -q v19_patch
+
+      - name: V19 yama testlerini calistir
+        run: python -m unittest discover -s v19_patch/tests -p "test_patch.py" -v
