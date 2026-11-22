@@ -1,0 +1,75 @@
+
+name: V19 Performans - Veri Denetimi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  veri-denetimi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kaynak kodlarini al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V18 arsiv ve sonuc verilerini incele
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          names = [
+              "v18_tahmin_arsivi.json",
+              "v18_dogrulanan_sonuclar.json",
+          ]
+
+          for name in names:
+              path = Path(name)
+              print("\nDOSYA:", name)
+
+              if not path.is_file():
+                  print("DURUM: BULUNAMADI")
+                  continue
+
+              print("BOYUT:", path.stat().st_size, "bayt")
+
+              try:
+                  with path.open(encoding="utf-8-sig") as f:
+                      data = json.load(f)
+              except (OSError, ValueError) as exc:
+                  print("OKUMA HATASI:", str(exc))
+                  continue
+
+              print("JSON TURU:", type(data).__name__)
+
+              if isinstance(data, dict):
+                  print("UST ANAHTARLAR:", list(data)[:40])
+
+                  for key, value in data.items():
+                      if isinstance(value, list):
+                          print("LISTE:", key, len(value))
+                          if value and isinstance(value[0], dict):
+                              print("KAYIT ALANLARI:",
+                                    list(value[0])[:40])
+                      elif isinstance(value, (str, int, float, bool)):
+                          print("OZET:", key, str(value)[:100])
+
+              elif isinstance(data, list):
+                  print("KAYIT SAYISI:", len(data))
+                  if data and isinstance(data[0], dict):
+                      print("KAYIT ALANLARI:",
+                            list(data[0])[:40])
+
+          print("\nVERI DENETIMI TAMAMLANDI")
+          print("Bu islem tahmin basarisini olcmez.")
+          PY
