@@ -1,13 +1,13 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-23T18:30:39.675402+00:00",
+  "olusturulma_utc": "2026-11-23T19:01:48.584186+00:00",
   "toplam_arsiv": 550,
-  "dogrulanan_mac": 243,
-  "bekleyen_mac": 307,
-  "degerlendirilen_tahmin": 170,
-  "dogru": 117,
+  "dogrulanan_mac": 244,
+  "bekleyen_mac": 306,
+  "degerlendirilen_tahmin": 171,
+  "dogru": 118,
   "yanlis": 53,
-  "basari_yuzdesi": 68.82,
+  "basari_yuzdesi": 69.01,
   "not": "Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.",
   "kayitlar": [
     {
@@ -22542,8 +22542,15 @@
         "kaynak_mac_sayisi": 90
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 4,
+        "dep_gol": 2,
+        "toplam_gol": 6,
+        "skor": "4-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 87.4,
         "2.5_ust": 69.7,
@@ -22561,7 +22568,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T19:01:45.029728+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 87.4,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 69.7,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 48.5,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 29.4,
+          "gerceklesti": true
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 15.6,
+          "gerceklesti": true
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 7.3,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "usa.1|401933535",
