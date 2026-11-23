@@ -1,0 +1,52 @@
+name: V19 Gercek Mac Kurtarma
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gercek-kurtarma:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Kaynak kodunu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Guncel fiksturu al
+        env:
+          TIPSTER_FIKSTUR_GUN: '1'
+        run: python fikstur_yeni.py
+
+      - name: V18 tahminlerini hesapla
+        run: |
+          python gercek_tahmin_v18.py \
+            --fikstur gelecek_maclar.json \
+            --cikti v18_test_ciktisi.json \
+            --gecmis-gun 30
+
+      - name: V19 gercek mac kurtarma
+        run: |
+          python -m v19_kurtarma \
+            --fikstur gelecek_maclar.json \
+            --v18 v18_test_ciktisi.json \
+            --arsiv v18_tahmin_arsivi.json \
+            --cikti-klasor v19_gercek_rapor \
+            --gecmis-gun 30
+
+      - name: Raporlari sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v19-gercek-kurtarma-raporu
+          path: |
+            v19_gercek_rapor/
+            v18_test_ciktisi.json
+          if-no-files-found: warn
