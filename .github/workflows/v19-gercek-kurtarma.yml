@@ -2,6 +2,8 @@ name: V19 Gercek Mac Kurtarma
 
 on:
   workflow_dispatch:
+  push:
+    branches: [v19-review]
 
 permissions:
   contents: read
