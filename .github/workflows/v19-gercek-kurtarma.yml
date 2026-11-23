@@ -24,7 +24,7 @@ jobs:
 
       - name: Guncel fiksturu al
         env:
-          TIPSTER_FIKSTUR_GUN: '1'
+          TIPSTER_FIKSTUR_GUN: '7'
         run: python fikstur_yeni.py
 
       - name: V18 tahminlerini hesapla
@@ -32,7 +32,7 @@ jobs:
           python gercek_tahmin_v18.py \
             --fikstur gelecek_maclar.json \
             --cikti v18_test_ciktisi.json \
-            --gecmis-gun 30
+            --gecmis-gun 90
 
       - name: V19 gercek mac kurtarma
         run: |
@@ -41,7 +41,7 @@ jobs:
             --v18 v18_test_ciktisi.json \
             --arsiv v18_tahmin_arsivi.json \
             --cikti-klasor v19_gercek_rapor \
-            --gecmis-gun 30
+            --gecmis-gun 90
 
       - name: Raporlari sakla
         if: always()
