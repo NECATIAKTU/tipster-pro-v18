@@ -1,8 +1,14 @@
 
 name: V19 Ucretsiz Kaynak Kesif Testi
 
+
 on:
   workflow_dispatch:
+  push:
+    branches: [v19-review]
+    paths:
+      - '.github/workflows/v19-kaynak-kesif-test.yml'
+
 
 permissions:
   contents: read
