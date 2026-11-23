@@ -8,6 +8,7 @@ on:
     branches: [v19-review]
     paths:
       - '.github/workflows/v19-kaynak-kesif-test.yml'
+      - 'v19_ucretsiz_kaynak_merkezi/merkez.py'
 
 
 permissions:
