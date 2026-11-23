@@ -1,13 +1,13 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-23T00:06:04.457352+00:00",
+  "olusturulma_utc": "2026-11-23T03:51:17.400083+00:00",
   "toplam_arsiv": 545,
-  "dogrulanan_mac": 236,
-  "bekleyen_mac": 309,
-  "degerlendirilen_tahmin": 164,
-  "dogru": 114,
-  "yanlis": 50,
-  "basari_yuzdesi": 69.51,
+  "dogrulanan_mac": 242,
+  "bekleyen_mac": 303,
+  "degerlendirilen_tahmin": 169,
+  "dogru": 117,
+  "yanlis": 52,
+  "basari_yuzdesi": 69.23,
   "not": "Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.",
   "kayitlar": [
     {
@@ -441,8 +441,15 @@
         "kaynak_mac_sayisi": 165
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 1,
+        "toplam_gol": 3,
+        "skor": "2-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 72.2,
         "2.5_ust": 46.8,
@@ -460,6 +467,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 72.2,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 46.8,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 25.2,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 11.5,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 4.5,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 1.5,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -2433,8 +2467,15 @@
         "kaynak_mac_sayisi": 117
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 0,
+        "toplam_gol": 1,
+        "skor": "1-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 79.5,
         "2.5_ust": 56.7,
@@ -2452,7 +2493,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 79.5,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 56.7,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 34.3,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 17.8,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 8.0,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 3.1,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "bra.1|401841323",
@@ -18594,8 +18663,15 @@
         "kaynak_mac_sayisi": 108
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 0,
+        "toplam_gol": 1,
+        "skor": "1-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 85.5,
         "2.5_ust": 66.3,
@@ -18613,7 +18689,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 85.5,
+          "gerceklesti": false
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 66.3,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 44.5,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 25.9,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 13.2,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 5.9,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "YANLIS"
     },
     {
       "kimlik": "mex.1|401877046",
@@ -18641,8 +18745,15 @@
         "kaynak_mac_sayisi": 108
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 2,
+        "toplam_gol": 4,
+        "skor": "2-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 75.3,
         "2.5_ust": 50.8,
@@ -18660,7 +18771,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 75.3,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 50.8,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 28.8,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 13.8,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 5.7,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.1,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "ned.1|401875541",
@@ -22803,8 +22942,15 @@
         "kaynak_mac_sayisi": 211
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 2,
+        "toplam_gol": 3,
+        "skor": "1-2",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 88.6,
         "2.5_ust": 71.8,
@@ -22822,7 +22968,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 88.6,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 71.8,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 51.0,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 31.7,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 17.3,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 8.4,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "usa.1|401933728",
@@ -23167,8 +23341,15 @@
         "kaynak_mac_sayisi": 213
       },
       "kilit_zamani_utc": "2026-11-20T12:16:02.080420+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 0,
+        "toplam_gol": 2,
+        "skor": "2-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 80.7,
         "2.5_ust": 58.6,
@@ -23186,7 +23367,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-23T03:51:14.514606+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 80.7,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 58.6,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 36.2,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 19.2,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 8.8,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 3.6,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "aut.1|401881739",
