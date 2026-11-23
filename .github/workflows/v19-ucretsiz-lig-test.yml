@@ -1,0 +1,46 @@
+
+name: V19 Ucretsiz Lig Denetim Testi
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - v19-review
+    paths:
+      - 'v19_ucretsiz_ligler/**'
+      - '.github/workflows/v19-ucretsiz-lig-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  ucretsiz-lig-denetimi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Kaynak kodunu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Bagimsiz teknik testler
+        run: python -m unittest discover -s v19_ucretsiz_ligler/tests -v
+
+      - name: Ucretsiz lig kaynaklarini denetle
+        run: |
+          python v19_ucretsiz_ligler/denetim.py \
+            --gun 7 \
+            --adaylari-goster \
+            --cikti v19_ucretsiz_lig_raporu.json
+
+      - name: Raporu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v19-ucretsiz-lig-raporu
+          path: v19_ucretsiz_lig_raporu.json
+          if-no-files-found: warn
