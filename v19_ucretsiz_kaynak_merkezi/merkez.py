@@ -81,7 +81,12 @@ def run(path=CATALOG, *, token=None, max_leagues=10, fetch=None):
               'kaynak':'Football Charts - personal/research free tier',
               'ligler':[]}
     try:
-        leagues = catalog_leagues(request_json(BASE + '/leagues/', token, fetch))
+        
+        payload = request_json(BASE + '/leagues/', token, fetch)
+        output['yanit_tipi'] = type(payload).__name__
+        output['yanit_anahtarlari'] = list(payload.keys())[:20] if isinstance(payload, dict) else []
+        leagues = catalog_leagues(payload)
+
         output['kaynak_lig_sayisi'] = len(leagues)
         if not leagues:
             output['uyari'] = 'Katalog bicimi bilinmiyor veya bos: lig kodu icat edilmedi'
