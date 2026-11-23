@@ -1,0 +1,32 @@
+{
+  "metadata": {"surum": "pilot-1", "aciklama": "Ucretsiz veri kaynaklarina aday ligler; kodlar canli dogrulanmadan aktif sayilmaz."},
+  "sifir_fikstur": [
+    {"kod": "sui.1", "ad": "Isvicre Super League", "espn_kodu": "sui.1"},
+    {"kod": "tur.2", "ad": "Turkiye 1. Lig", "espn_kodu": "tur.2"},
+    {"kod": "irl.1", "ad": "Irlanda Premier Division", "espn_kodu": "irl.1"},
+    {"kod": "mex.1", "ad": "Meksika Liga MX", "espn_kodu": "mex.1"},
+    {"kod": "chn.1", "ad": "Cin Super League", "espn_kodu": "chn.1"},
+    {"kod": "sco.2", "ad": "Iskocya Championship", "espn_kodu": "sco.2", "football_data_csv": "SC1"},
+    {"kod": "sco.3", "ad": "Iskocya League One", "espn_kodu": "sco.3", "football_data_csv": "SC2"},
+    {"kod": "pol.1", "ad": "Polonya Ekstraklasa", "espn_kodu": "pol.1"},
+    {"kod": "pol.2", "ad": "Polonya 1. Lig", "espn_kodu": "pol.2"}
+  ],
+  "yeni_adaylar": [
+    {"kod": "nl.2", "ad": "Hollanda Eerste Divisie"},
+    {"kod": "de.3", "ad": "Almanya 3. Liga"},
+    {"kod": "eng.6n", "ad": "Ingiltere National League North"},
+    {"kod": "eng.6s", "ad": "Ingiltere National League South"},
+    {"kod": "tur.3", "ad": "Turkiye 2. Lig"},
+    {"kod": "ita.3", "ad": "Italya Serie C"},
+    {"kod": "fra.3", "ad": "Fransa National"},
+    {"kod": "por.2", "ad": "Portekiz Liga Portugal 2"},
+    {"kod": "esp.3", "ad": "Ispanya Primera Federacion"},
+    {"kod": "cze.1", "ad": "Cekya ust lig"},
+    {"kod": "rou.1", "ad": "Romanya ust lig"},
+    {"kod": "cro.1", "ad": "Hirvatistan ust lig"},
+    {"kod": "ser.1", "ad": "Sirbistan ust lig"},
+    {"kod": "hun.1", "ad": "Macaristan ust lig"},
+    {"kod": "fin.1", "ad": "Finlandiya ust lig"},
+    {"kod": "isl.1", "ad": "Izlanda ust lig"}
+  ]
+}
