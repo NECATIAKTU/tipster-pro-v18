@@ -1,0 +1,32 @@
+name: V19 Mac Kurtarma Testi
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - v19-review
+    paths:
+      - 'v19_kurtarma/**'
+      - '.github/workflows/v19-kurtarma-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  kurtarma-testi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kaynak kodunu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Python dosyalarini kontrol et
+        run: python -m compileall -q v19_kurtarma
+
+      - name: Kurtarma testlerini calistir
+        run: python -m unittest discover -s v19_kurtarma/tests -p "test_recovery.py" -v
