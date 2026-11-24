@@ -85,6 +85,12 @@ def run(path=CATALOG, *, token=None, max_leagues=10, fetch=None):
         payload = request_json(BASE + '/leagues/', token, fetch)
         output['yanit_tipi'] = type(payload).__name__
         output['yanit_anahtarlari'] = list(payload.keys())[:20] if isinstance(payload, dict) else []
+        
+        raw_leagues = payload.get('leagues') if isinstance(payload, dict) else None
+        output['leagues_tipi'] = type(raw_leagues).__name__
+        output['leagues_uzunluk'] = len(raw_leagues) if isinstance(raw_leagues, (list, dict)) else None
+        output['ilk_lig_anahtarlari'] = list(raw_leagues[0].keys())[:20] if isinstance(raw_leagues, list) and raw_leagues and isinstance(raw_leagues[0], dict) else []
+
         leagues = catalog_leagues(payload)
 
         output['kaynak_lig_sayisi'] = len(leagues)
