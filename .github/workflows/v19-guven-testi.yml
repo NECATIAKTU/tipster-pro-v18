@@ -1,0 +1,32 @@
+
+name: V19 Guven Denetcisi Testi
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v19-review]
+    paths:
+      - '.github/workflows/v19-guven-testi.yml'
+      - 'v19_guven_denetcisi.py'
+      - 'tests/test_v19_guven_denetcisi.py'
+
+permissions:
+  contents: read
+
+jobs:
+  guven-testi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Kodu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V19 guven testlerini calistir
+        run: |
+          python -m unittest discover -s tests -p 'test_v19_guven_denetcisi.py' -v
