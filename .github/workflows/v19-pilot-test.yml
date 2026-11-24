@@ -8,8 +8,8 @@ on:
     paths:
       - 'v19_veri_pilotu.py'
       - 'v19_gercek_tahmin_pilotu.py'
-      - 'testler/test_v19_veri_pilotu.py'
-      - 'testler/test_v19_gercek_tahmin_pilotu.py'
+      - 'tests/test_v19_veri_pilotu.py'
+      - 'tests/test_v19_gercek_tahmin_pilotu.py'
       - '.github/workflows/v19-pilot-test.yml'
 
 permissions:
@@ -32,8 +32,10 @@ jobs:
       - name: V19 pilot testlerini calistir
         run: |
           
-          cd testler
-          python -m unittest -v test_v19_veri_pilotu
-          python -m unittest -v test_v19_gercek_tahmin_pilotu
+          
+          python -m unittest discover -s tests -p 'test_v19_veri_pilotu.py' -v
+          python -m unittest discover -s tests -p 'test_v19_gercek_tahmin_pilotu.py' -v
+
+          
 
 # V19 pilot testi yeniden calistirma
