@@ -257,7 +257,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
-
+      - name: Pages paketinin hazir olmasini bekle
+        run: sleep 30
       - name: Sayfayi yayinla
         id: deployment
         uses: actions/deploy-pages@v4
