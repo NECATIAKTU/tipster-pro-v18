@@ -1,9 +1,19 @@
 name: V19 Gercek Mac Kurtarma
 
+
 on:
   workflow_dispatch:
   push:
     branches: [v19-review]
+    paths:
+      - 'fikstur_yeni.py'
+      - 'gercek_tahmin_v18.py'
+      - 'v19_kurtarma/**'
+      - '.github/workflows/v19-gercek-kurtarma.yml'
+
+  
+  
+    
 
 permissions:
   contents: read
