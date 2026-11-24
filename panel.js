@@ -387,6 +387,7 @@ function normalize(x, index) {
     probabilities,
     selected,
     index,
+    archiveChoice: x.kilitli_secim || null,
     sourceId: String(
       keys(x, ["id"]) || ""
     ),
@@ -400,32 +401,13 @@ function normalize(x, index) {
    KILITLI TAHMIN BULMA
 ====================================== */
 
-function lockedRecord(r) {
-  if (!r.sourceId) {
-    return null;
-  }
-
-  return resultRecords.find(x => {
-    const identity = String(x.kimlik || "");
-
-    return (
-      identity === r.sourceId ||
-      identity === (
-        r.leagueCode + "|" + r.sourceId
-      )
-    );
-  }) || null;
-}
-
 function finalChoice(r) {
   if (!r.verified) {
     return null;
   }
 
-  const record = lockedRecord(r);
-
   const choice = String(
-    record?.kilitli_secim || ""
+    r.archiveChoice || ""
   )
     .trim()
     .toUpperCase()
@@ -445,11 +427,7 @@ function finalChoice(r) {
   if (match) {
     const line = match[1];
 
-    const probability = pct(
-      record?.olasiliklar?.[
-        line + "_ust"
-      ]
-    ) ?? r.probabilities[line];
+    const probability = r.probabilities[line];
 
     return {
       line,
@@ -459,32 +437,6 @@ function finalChoice(r) {
     };
   }
 
-  /*
-    Kayitli secim yoksa eski panelin
-    model esiklerine dayanan oneri
-    davranisini koruyoruz.
-
-    Bu oneri kilitli tahmin sayilmaz.
-  */
-
-  for (
-    const line of [...LINES].reverse()
-  ) {
-    const probability =
-      r.probabilities[line];
-
-    if (
-      probability !== null &&
-      probability >= THRESHOLDS[line]
-    ) {
-      return {
-        line,
-        probability,
-        risk: false,
-        locked: false
-      };
-    }
-  }
 
   return {
     risk: true,
@@ -980,7 +932,7 @@ function resultRender() {
 
   body.replaceChildren();
 
-  for (const r of rows.slice(0, 120)) {
+  for (const r of rows) {
     const tr = document.createElement("tr");
 
     const m = r.mac || {};
@@ -1050,7 +1002,7 @@ function resultRender() {
   setText(
     "result-note",
     rows.length +
-    " kayıt eşleşti; en yeni 120 kayıt gösteriliyor. " +
+    " kayıt eşleşti; tüm eşleşmeler gösteriliyor. " +
     "Başarı yalnızca kilitli ve değerlendirilmiş seçimlerden hesaplanır."
   );
 }
