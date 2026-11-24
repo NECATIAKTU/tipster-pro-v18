@@ -1,0 +1,35 @@
+
+name: V19 Pilot Testi
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v19-review]
+    paths:
+      - 'v19_veri_pilotu.py'
+      - 'v19_gercek_tahmin_pilotu.py'
+      - 'testler/test_v19_veri_pilotu.py'
+      - 'testler/test_v19_gercek_tahmin_pilotu.py'
+      - '.github/workflows/v19-pilot-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  pilot-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kodlari al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V19 pilot testlerini calistir
+        run: |
+          python -m unittest discover -s testler -p 'test_v19_veri_pilotu.py' -v
+          python -m unittest discover -s testler -p 'test_v19_gercek_tahmin_pilotu.py' -v
