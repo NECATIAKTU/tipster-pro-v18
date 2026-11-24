@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 BASE = 'https://api.football-charts.com/api/v1'
 CATALOG = Path(__file__).resolve().parents[1] / 'v19_ucretsiz_ligler' / 'ligler.json'
 # Confirmed provider documentation examples, not assumptions of availability today.
-KNOWN_CODES = {'de.3': 'germany3'}
+KNOWN_CODES = {'sui.1':'swiss1', 'tur.2':'turkey2', 'irl.1':'ireland1', 'chn.1':'china', 'sco.2':'scot-champ', 'sco.3':'scot1', 'pol.1':'poland1', 'pol.2':'poland2', 'nl.2':'holland2', 'de.3':'germany3', 'eng.6n':'north', 'eng.6s':'south', 'por.2':'portugal2', 'cze.1':'czech1', 'rou.1':'romania1', 'ser.1':'serbia1', 'hun.1':'hungary1', 'fin.1':'finland1'}
 
 def normalize(s):
     s = unicodedata.normalize('NFKD', str(s).casefold())
