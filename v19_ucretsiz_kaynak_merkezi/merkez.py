@@ -42,7 +42,7 @@ def catalog_leagues(payload):
     for row in rows:
         if not isinstance(row, dict):
             continue
-        code = next((row[k] for k in ('code','slug','id','league_code') if isinstance(row.get(k),str) and row[k]), None)
+           code = next((row[k] for k in ('league','code','slug','id','league_code') if isinstance(row.get(k),str) and row[k]), None)
         title = next((row[k] for k in ('name','title','league','strLeague') if isinstance(row.get(k),str) and row[k]), None)
         if code and title:
             out[code] = title
