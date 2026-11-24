@@ -94,6 +94,7 @@ def run(path=CATALOG, *, token=None, max_leagues=10, fetch=None):
         leagues = catalog_leagues(payload)
 
         output['kaynak_lig_sayisi'] = len(leagues)
+        output['kaynak_ligleri'] = leagues
         if not leagues:
             output['uyari'] = 'Katalog bicimi bilinmiyor veya bos: lig kodu icat edilmedi'
     except (OSError, ValueError, TypeError, KeyError) as e:
