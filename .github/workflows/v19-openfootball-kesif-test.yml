@@ -1,0 +1,37 @@
+name: V19 OpenFootball Ucretsiz Kesif Testi
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v19-review]
+    paths:
+      - '.github/workflows/v19-openfootball-kesif-test.yml'
+      - 'v19_openfootball_kesif.py'
+
+permissions:
+  contents: read
+
+jobs:
+  openfootball-kesif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kaynak kodunu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ucretsiz ligleri denetle
+        run: python v19_openfootball_kesif.py
+
+      - name: Kesif raporunu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v19-openfootball-kesif-raporu
+          path: v19_openfootball_rapor.json
+          if-no-files-found: warn
