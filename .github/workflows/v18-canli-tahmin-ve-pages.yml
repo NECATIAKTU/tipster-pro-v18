@@ -1,4 +1,3 @@
-
 name: TIPSTER PRO V18 - Gercek Tahmin ve Pages
 
 on:
@@ -35,7 +34,7 @@ jobs:
           python-version: '3.11'
 
       - name: V18 cevrimdisi testler
-        run: python -m unittest -v test_gercek_tahmin_v18.py
+        run: python -m unittest -v test_gercek_tahmin_v18.py test_v18_panel_aktar.py
 
       - name: ESPN guncel fikstur
         env:
@@ -103,45 +102,8 @@ jobs:
         continue-on-error: true
         run: python -m unittest -v test_v18_guclendirme_v1.py
 
-      - name: V18 panel verisini dogrula ve hazirla
-        run: |
-          python - <<'PYCODE'
-          import json
-          from pathlib import Path
-          d = json.loads(Path('v18_canli_cikti.json').read_text(encoding='utf-8'))
-          if d.get('model') != 'TIPSTER PRO V18' or not isinstance(d.get('tahminler'), list):
-              raise SystemExit('V18 cikti bicimi gecersiz.')
-          print('URETILEN TAHMIN:', len(d['tahminler']))
-          print('DURUM:', d.get('durum_sayilari', {}))
-          print('LIG DENETIMI:', d.get('lig_denetimi', {}))
-          if not d['tahminler']:
-              raise SystemExit('SIFIR TAHMIN: Bos veri yayinlanmiyor.')
-          PYCODE
-          python v18_panel_aktar.py v18_canli_cikti.json --cikti panel_tahminler.json
-          python - <<'PYCODE'
-          import json
-          import shutil
-          from pathlib import Path
-          records = json.loads(Path('panel_tahminler.json').read_text(encoding='utf-8'))['tahminler']
-          if not records:
-              raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
-          out = Path('site')
-          out.mkdir(exist_ok=True)
-          for name in (
-              'index.html', 'panel.css', 'panel.js', 'panel_tahminler.json',
-              'v18_dogrulanan_sonuclar.json', 'aslan_modu_test_sonuclari.json',
-              'aslan_modu_rapor.json',
-              'aslan_tahmin_arsivi.json',
-              'aslan_dogrulanan_sonuclar.json',
-
-          ):
-              shutil.copy2(name, out / name)
-          print('PANEL ICIN GUNCEL TAHMIN:', len(records))
-          PYCODE
-
       - name: V18 arsivini cakismasiz birlestir ve kalici kaydet
         id: archive_save
-        continue-on-error: true
         env:
           GIT_TERMINAL_PROMPT: '0'
         run: |
@@ -235,12 +197,16 @@ jobs:
             git -C "$RUNNER_TEMP/v18-worktree" add v18_tahmin_arsivi.json v18_dogrulanan_sonuclar.json
             if git -C "$RUNNER_TEMP/v18-worktree" diff --cached --quiet; then
               echo 'ARSIV DEGISECEK KAYIT YOK'
+              cp "$RUNNER_TEMP/v18-worktree/v18_tahmin_arsivi.json" v18_tahmin_arsivi.json
+              cp "$RUNNER_TEMP/v18-worktree/v18_dogrulanan_sonuclar.json" v18_dogrulanan_sonuclar.json
               git worktree remove --force "$RUNNER_TEMP/v18-worktree"
               exit 0
             fi
             git -C "$RUNNER_TEMP/v18-worktree" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'V18 tahmin ve sonuc arsivini guncelle'
             if git -C "$RUNNER_TEMP/v18-worktree" push origin HEAD:main; then
               echo 'ARSIV BASARIYLA KAYDEDILDI'
+              cp "$RUNNER_TEMP/v18-worktree/v18_tahmin_arsivi.json" v18_tahmin_arsivi.json
+              cp "$RUNNER_TEMP/v18-worktree/v18_dogrulanan_sonuclar.json" v18_dogrulanan_sonuclar.json
               git worktree remove --force "$RUNNER_TEMP/v18-worktree"
               exit 0
             fi
@@ -249,6 +215,42 @@ jobs:
           done
           echo 'UYARI: Arsiv push basarisiz; kurtarma dosyalari artifact icinde saklandi.'
           exit 1
+
+      - name: V18 panel verisini dogrula ve hazirla
+        run: |
+          python - <<'PYCODE'
+          import json
+          from pathlib import Path
+          d = json.loads(Path('v18_canli_cikti.json').read_text(encoding='utf-8'))
+          if d.get('model') != 'TIPSTER PRO V18' or not isinstance(d.get('tahminler'), list):
+              raise SystemExit('V18 cikti bicimi gecersiz.')
+          print('URETILEN TAHMIN:', len(d['tahminler']))
+          print('DURUM:', d.get('durum_sayilari', {}))
+          print('LIG DENETIMI:', d.get('lig_denetimi', {}))
+          if not d['tahminler']:
+              raise SystemExit('SIFIR TAHMIN: Bos veri yayinlanmiyor.')
+          PYCODE
+          python v18_panel_aktar.py v18_tahmin_arsivi.json --cikti panel_tahminler.json
+          python - <<'PYCODE'
+          import json
+          import shutil
+          from pathlib import Path
+          records = json.loads(Path('panel_tahminler.json').read_text(encoding='utf-8'))['tahminler']
+          if not records:
+              raise SystemExit('GUNCEL MAC ONCESI TAHMIN YOK: Panel yayinlanmadi.')
+          out = Path('site')
+          out.mkdir(exist_ok=True)
+          for name in (
+              'index.html', 'panel.css', 'panel.js', 'panel_tahminler.json',
+              'v18_dogrulanan_sonuclar.json', 'aslan_modu_test_sonuclari.json',
+              'aslan_modu_rapor.json',
+              'aslan_tahmin_arsivi.json',
+              'aslan_dogrulanan_sonuclar.json',
+
+          ):
+              shutil.copy2(name, out / name)
+          print('PANEL ICIN GUNCEL TAHMIN:', len(records))
+          PYCODE
 
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
