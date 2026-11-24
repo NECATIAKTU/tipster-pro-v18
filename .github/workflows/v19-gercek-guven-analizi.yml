@@ -1,0 +1,45 @@
+
+name: V19 Gercek Guven Analizi
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v19-review]
+    paths:
+      - '.github/workflows/v19-gercek-guven-analizi.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  gercek-guven-analizi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Kodu al
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V18 arsivini kontrol et
+        run: |
+          test -f v18_tahmin_arsivi.json
+          test -f v19_guven_denetcisi.py
+
+      - name: Gercek gecmis analizi
+        run: |
+          python v19_guven_denetcisi.py \
+            --arsiv v18_tahmin_arsivi.json \
+            --cikti v19_guven_gercek_test.json
+
+      - name: Analiz raporunu sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v19-guven-gercek-rapor
+          path: v19_guven_gercek_test.json
+          if-no-files-found: warn
