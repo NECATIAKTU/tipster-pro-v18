@@ -1631,3 +1631,136 @@ if (document.readyState === "loading") {
 } else {
   init();
 }
+/* MERSIN LAB - BAGIMSIZ PANEL */
+
+async function mersinPanelKur() {
+  if (document.getElementById("mersin-lab-panel")) return;
+
+  const alan = document.createElement("section");
+  alan.id = "mersin-lab-panel";
+  alan.style.cssText =
+    "margin:20px 10px;padding:16px;background:#111827;color:#fff;border:1px solid #334155;border-radius:12px";
+
+  const baslik = document.createElement("h2");
+  baslik.textContent = "MERSİN LAB V15";
+  baslik.style.color = "#22c55e";
+  alan.appendChild(baslik);
+
+  const bilgi = document.createElement("p");
+  bilgi.textContent = "Deneysel istatistik analizi - Veriler yükleniyor";
+  alan.appendChild(bilgi);
+
+  document.body.appendChild(alan);
+
+  try {
+    const url =
+      "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_panel.json";
+
+    const cevap = await fetch(url, {
+      cache: "no-store"
+    });
+
+    if (!cevap.ok) throw new Error("JSON okunamadı");
+
+    const veri = await cevap.json();
+
+    const maclar = Array.isArray(veri)
+      ? veri
+      : Object.values(veri).find(x =>
+          Array.isArray(x) &&
+          x.some(m => m && m.ev_sahibi && m.deplasman)
+        );
+
+    if (!Array.isArray(maclar)) {
+      throw new Error("Maç listesi bulunamadı");
+    }
+
+    const guncel = maclar.filter(m =>
+      Date.parse(m.tarih) > Date.now()
+    );
+
+    const aktif = guncel.filter(m =>
+      m.durum === "DENEYSEL" && m.olasiliklar
+    ).length;
+
+    bilgi.textContent =
+      "DENEYSEL | Fikstür: " + guncel.length +
+      " | Aktif: " + aktif +
+      " | Yetersiz veri: " + (guncel.length - aktif);
+
+    const kaydir = document.createElement("div");
+    kaydir.style.overflowX = "auto";
+
+    const tablo = document.createElement("table");
+    tablo.style.cssText =
+      "width:100%;border-collapse:collapse;font-size:13px";
+
+    const cizgiler = [
+      "1.5", "2.5", "3.5",
+      "4.5", "5.5", "6.5"
+    ];
+
+    function satir(degerler, baslikMi = false) {
+      const tr = document.createElement("tr");
+
+      degerler.forEach(deger => {
+        const td = document.createElement(
+          baslikMi ? "th" : "td"
+        );
+
+        td.textContent = deger;
+        td.style.cssText =
+          "padding:10px;border-bottom:1px solid #334155;white-space:nowrap";
+
+        tr.appendChild(td);
+      });
+
+      tablo.appendChild(tr);
+      return tr;
+    }
+
+    satir([
+      "Lig", "Maç",
+      ...cizgiler.map(c => c + " ÜST"),
+      "Durum"
+    ], true);
+
+    for (const mac of guncel) {
+      const yuzdeler = cizgiler.map(c => {
+        const p = mac.olasiliklar?.[c];
+
+        return typeof p === "number" &&
+          Number.isFinite(p) &&
+          p >= 0 && p <= 100
+          ? "%" + p.toFixed(2)
+          : "—";
+      });
+
+      satir([
+        mac.lig || "—",
+        mac.ev_sahibi + " - " + mac.deplasman,
+        ...yuzdeler,
+        mac.durum === "DENEYSEL"
+          ? "DENEYSEL"
+          : "YETERSİZ VERİ"
+      ]);
+    }
+
+    kaydir.appendChild(tablo);
+    alan.appendChild(kaydir);
+
+  } catch (hata) {
+    bilgi.textContent =
+      "MERSİN LAB veri bağlantısı kurulamadı.";
+    console.error("MERSIN LAB:", hata);
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded", mersinPanelKur,
+    { once: true }
+  );
+} else {
+  mersinPanelKur();
+}
