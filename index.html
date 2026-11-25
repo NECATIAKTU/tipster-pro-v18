@@ -369,5 +369,74 @@ function perf(){const out=$('tp-list');const rows=past.filter(r=>['DOGRU','YANLI
 function render(){const out=$('tp-list');out.replaceChildren();$('tp-more').hidden=true;const isPerf=mode==='performance';document.querySelector('#tp-custom .tp-controls').hidden=isPerf||mode.startsWith('top');if(!ready){$('tp-note').textContent=err||'Veri yükleniyor…';return}if(isPerf){perf();return}let rows=future(),focus=null,description='';const now=new Date(),day=now.toISOString().slice(0,10);if(mode==='today')rows=rows.filter(r=>new Date(dt(r)).toISOString().slice(0,10)===day);if(mode==='week')rows=rows.filter(r=>dt(r)<now.getTime()+7*86400000);if(/^g[1-6]\.5$/.test(mode)){focus=mode.slice(1);rows=rows.filter(r=>valid(r)&&line(r)===focus);description='Yalnızca bu çizgide kilitlenmiş seçimler.'}if(mode.startsWith('top')){rows=sorted(rows.filter(r=>valid(r)&&prob(r)!==null)).slice(0,Number(mode.slice(3)));description='Güncel, değişebilen TOP listesi.'}else if(mode==='star'){rows=sorted(rows.filter(r=>valid(r)&&prob(r)!==null)).slice(0,20);description='En yüksek kilitli model yüzdesine sahip 20 aday; bağımsız model veya başarı garantisi değildir.'}else if(mode==='opp'){focus='2.5';rows=sorted(rows.filter(r=>valid(r)&&line(r)!=='2.5'&&p(r,focus)!==null),focus).slice(0,20);description='Kilitli 2.5 ÜST seçimi olmayan maçlarda en yüksek 2.5 ÜST model olasılıkları. Oran verisi yok; değer bahsi veya yeni tahmin değildir.'}else if(mode==='discover'){focus='3.5';rows=sorted(rows.filter(r=>valid(r)&&p(r,focus)!==null),focus).slice(0,30);description='V18 modelinin 3.5 ÜST olasılığına göre gol keşif görünümü. Bağımsız pilot henüz bağlı değil.'}const q=$('tp-search').value.toLocaleLowerCase('tr').trim();if(q&&!mode.startsWith('top'))rows=rows.filter(r=>(name(r)+' '+r.lig).toLocaleLowerCase('tr').includes(q));if(!mode.startsWith('top')&&!['star','opp','discover'].includes(mode))rows=$('tp-order').value==='prob'?sorted(rows,focus):[...rows].sort((a,b)=>dt(a)-dt(b));$('tp-note').textContent=`${rows.length} maç · ${description||'Orijinal kilitli seçimler ve model olasılıkları.'}`;for(const r of rows.slice(0,limit)){const card=el('article',undefined,'tp-match');card.append(el('small',`${r.lig||'—'} · ${stamp(r.tarih)}`),el('h3',name(r)),el('div',`${pick(r).replace('UST','ÜST').replace('RISKLI','RİSKLİ')||'Seçim yok'}${prob(r)===null?'':' · '+fmt(prob(r))}`,'tp-pick'));const details=el('details');details.append(el('summary','Tüm gol yüzdeleri'));const grid=el('div',undefined,'tp-probs');for(const l of lines){const item=el('span',l+' ÜST');item.append(el('b',fmt(p(r,l))));grid.append(item)}details.append(grid);card.append(details);if(focus&&line(r)!==focus)card.append(el('small',focus+' ÜST model olasılığı: '+fmt(p(r,focus))));out.append(card)}if(!rows.length)out.append(el('p','Bu bölümde güncel maç yok.','tp-note'));$('tp-more').hidden=rows.length<=limit;}
 $('tp-search').oninput=()=>{limit=30;render()};$('tp-order').onchange=()=>{limit=30;render()};$('tp-more').onclick=()=>{limit+=30;render()};async function load(){const token=++generation;try{const [a,b]=await Promise.all(['panel_tahminler.json','v18_dogrulanan_sonuclar.json'].map(async f=>{const r=await fetch('./'+f,{cache:'no-store'});if(!r.ok)throw Error(f+' HTTP '+r.status);return r.json()}));if(token!==generation)return;if(!Array.isArray(a.tahminler)||!Array.isArray(b.kayitlar))throw Error('JSON biçimi');current=a.tahminler;past=b.kayitlar;ready=true;err='';$('tp-data-status').textContent=`${future().length} güncel ulusal lig maçı · Son veri: ${stamp(a.olusturulma_utc)}`;}catch(e){if(token!==generation)return;ready=false;err='Veri okunamadı: '+e.message;$('tp-data-status').textContent=err}if(!$('tp-custom').hidden)render()}
 $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',false);load();})();
-</script></body>
+</script>
+
+<script>
+(() => {
+  const menu = document.getElementById("tp-home");
+  if (!menu) return;
+
+  const section = document.createElement("section");
+  section.className = "tp-group";
+
+  section.innerHTML = `
+    <h2>MERSİN MATEMATİK MERKEZİ</h2>
+    <div class="tp-grid">
+      <button type="button"
+        class="tp-tile opp"
+        id="mersin-open">
+        <b>💎 MERSİN LAB</b>
+        <small>Bağımsız matematik merkezi</small>
+      </button>
+    </div>
+
+    <div id="mersin-center" hidden>
+      <h2 style="margin-top:20px">
+        BAĞIMSIZ MATEMATİK MODELLERİ
+      </h2>
+      <div class="tp-grid" id="mersin-models"></div>
+      <p id="mersin-info" class="tp-note"
+         role="status"></p>
+    </div>
+  `;
+
+  menu.appendChild(section);
+
+  const models = [
+    ["PUSULA X", "İstatistiksel analiz"],
+    ["ATLAS X", "Takım güç analizi"],
+    ["RADAR X", "Piyasa matematiği"],
+    ["MATRIX X", "Olasılık analizi"],
+    ["TEMPO X", "Gol dağılımı"],
+    ["MERSİN", "Birleşik matematik"]
+  ];
+
+  const center =
+    document.getElementById("mersin-center");
+
+  document.getElementById("mersin-open")
+    .onclick = () => {
+      center.hidden = !center.hidden;
+    };
+
+  for (const [name, description] of models) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "tp-tile";
+    button.innerHTML =
+      `<b>${name}</b><small>${description}</small>`;
+
+    button.onclick = () => {
+      document.getElementById("mersin-info")
+        .textContent =
+          name + " — Bağımsız model bağlantısı hazırlanıyor.";
+    };
+
+    document.getElementById("mersin-models")
+      .appendChild(button);
+  }
+})();
+</script>
+
+</body>
 </html>
