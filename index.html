@@ -44,7 +44,8 @@
 <div class="scroll"><table><thead><tr><th>Maç</th><th>Başlangıç UTC</th><th>Kilitli seçim</th><th>Skor</th><th>Değerlendirme</th></tr></thead><tbody id="result-rows"></tbody></table></div>
 </section>
 <section class="panel" aria-label="En güvenilen tahminler">
-  <h2>Öne çıkan tahminler</h2>
+  <h2>🔄 GÜNCEL TOP LİSTELERİ</h2>
+  <p class="muted">Otomatik yenilenen tahminler</p>
   <div class="actions">
     <button type="button" id="top5" class="secondary">TOP 5</button>
     <button type="button" id="top10" class="secondary">TOP 10</button>
@@ -53,6 +54,10 @@
   </div>
 </section>
 
+<section class="panel" aria-label="Kilitli TOP arşivi">
+<h2>🔒 KİLİTLİ TOP ARŞİVİ</h2><p class="muted">Orijinal sıralamalar korunur. Yayın kayıtları ve başlangıç saatine göre oluşan liste değişimleri ayrı gösterilir. Hafta, liste oluşturulma zamanına göredir (UTC).</p>
+<div class="filters"><label>Liste <select id="top-archive-size"><option value="5">TOP 5</option><option value="10" selected>TOP 10</option><option value="20">TOP 20</option></select></label><label>Hafta <select id="top-archive-week"></select></label><label>Sürüm <select id="top-archive-version"></select></label></div>
+<p id="top-archive-summary" class="muted" role="status">Arşiv yükleniyor…</p><div class="scroll"><table><thead><tr><th>Sıra</th><th>Maç / Lig</th><th>UTC</th><th>Kilitli tahmin</th><th>Skor</th><th>Sonuç</th></tr></thead><tbody id="top-archive-rows"></tbody></table></div></section>
 <section class="panel">
 <div class="toolbar">
 <div><h2>Maç listesi</h2><p class="muted" id="meta">Kaynak okunuyor…</p></div>
@@ -95,6 +100,7 @@
 <footer>TIPSTER NECATİ • Dosya tabanlı görüntüleme • Yüzdeler model çıktısıdır; doğrulanmış başarı oranı değildir.</footer>
 </main>
 <script src="panel.js" defer></script>
+<script src="v18_top_arsiv.js" defer></script>
   
 <script>
 /* ASLAN MODU V1 - Gerçek maç keşif ekranı */
