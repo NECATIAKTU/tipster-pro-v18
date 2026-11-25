@@ -371,9 +371,31 @@ $('tp-search').oninput=()=>{limit=30;render()};$('tp-order').onchange=()=>{limit
 $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',false);load();})();
 </script>
 
+<style>
+#mersin-lab-panel {
+  display: none !important;
+}
+#mersin-center {
+  margin-top: 18px;
+}
+#mersin-center .tp-probs b {
+  font-size: 16px;
+}
+#mersin-models {
+  margin-bottom: 15px;
+}
+#mersin-list {
+  margin-top: 12px;
+}
+</style>
+
 <script>
 (() => {
-  const menu = document.getElementById("tp-home");
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const menu = $("tp-home");
+
   if (!menu) return;
 
   const section = document.createElement("section");
@@ -381,6 +403,7 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
   section.innerHTML = `
     <h2>MERSİN MATEMATİK MERKEZİ</h2>
+
     <div class="tp-grid">
       <button type="button"
         class="tp-tile opp"
@@ -391,12 +414,51 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
     </div>
 
     <div id="mersin-center" hidden>
-      <h2 style="margin-top:20px">
-        BAĞIMSIZ MATEMATİK MODELLERİ
-      </h2>
-      <div class="tp-grid" id="mersin-models"></div>
-      <p id="mersin-info" class="tp-note"
-         role="status"></p>
+
+      <h2>BAĞIMSIZ MATEMATİK MODELLERİ</h2>
+
+      <div class="tp-grid"
+        id="mersin-models"></div>
+
+      <div id="mersin-screen" hidden>
+
+        <div class="tp-controls">
+          <button type="button"
+            id="mersin-back">
+            ← Modeller
+          </button>
+
+          <button type="button"
+            class="secondary"
+            id="mersin-refresh">
+            Yenile
+          </button>
+        </div>
+
+        <h2 id="mersin-title"></h2>
+
+        <p id="mersin-info"
+          class="tp-note"
+          role="status"></p>
+
+        <div class="tp-controls">
+          <input
+            id="mersin-search"
+            type="search"
+            placeholder="Takım veya lig ara">
+        </div>
+
+        <div id="mersin-list"
+          class="tp-list"></div>
+
+        <button type="button"
+          id="mersin-more"
+          class="secondary"
+          hidden>
+          Daha fazla göster
+        </button>
+
+      </div>
     </div>
   `;
 
@@ -405,36 +467,396 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
   const models = [
     ["PUSULA X", "İstatistiksel analiz"],
     ["ATLAS X", "Takım güç analizi"],
-    ["RADAR X", "Piyasa matematiği"],
+    ["RADAR X", "Gol sapması analizi"],
     ["MATRIX X", "Olasılık analizi"],
     ["TEMPO X", "Gol dağılımı"],
     ["MERSİN", "Birleşik matematik"]
   ];
 
-  const center =
-    document.getElementById("mersin-center");
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
 
-  document.getElementById("mersin-open")
-    .onclick = () => {
-      center.hidden = !center.hidden;
-    };
+  let selected = "";
+  let rows = [];
+  let limit = 30;
+  let generation = 0;
+  let ready = false;
+
+  function node(tag, text, cls) {
+    const e = document.createElement(tag);
+
+    if (text !== undefined) {
+      e.textContent = text;
+    }
+
+    if (cls) {
+      e.className = cls;
+    }
+
+    return e;
+  }
+
+  function matchName(r) {
+    return (
+      (r.ev_sahibi || "—") +
+      " – " +
+      (r.deplasman || "—")
+    );
+  }
+
+  function normalize(text) {
+    return String(text || "")
+      .toLocaleLowerCase("tr")
+      .replace(/ı/g, "i")
+      .replace(/ğ/g, "g")
+      .replace(/ü/g, "u")
+      .replace(/ş/g, "s")
+      .replace(/ö/g, "o")
+      .replace(/ç/g, "c");
+  }
+
+  function output(r) {
+    const motors = r.motorlar || {};
+
+    if (selected === "MERSİN") {
+      return (
+        motors["MERSİN"] ??
+        motors["MERSIN"] ??
+        r.olasiliklar ??
+        null
+      );
+    }
+
+    return motors[selected] ?? null;
+  }
+
+  function probability(data, line) {
+    if (!data) return null;
+
+    const value =
+      data[line] ??
+      data[line + "_ust"] ??
+      data.olasiliklar?.[line] ??
+      data.olasiliklar?.[line + "_ust"];
+
+    if (
+      typeof value !== "number" ||
+      !Number.isFinite(value) ||
+      value < 0 ||
+      value > 100
+    ) {
+      return null;
+    }
+
+    return value;
+  }
+
+  function color(value) {
+    if (value === null) return "#94a3b8";
+    if (value >= 80) return "#22c55e";
+    if (value >= 70) return "#c46a35";
+    if (value >= 50) return "#e9f0fb";
+    return "#94a3b8";
+  }
+
+  function render() {
+    if (!ready) return;
+
+    const list = $("mersin-list");
+    list.replaceChildren();
+
+    const query = normalize(
+      $("mersin-search").value
+    ).trim();
+
+    const future = rows.filter(r =>
+      Date.parse(r.tarih) > Date.now()
+    );
+
+    const active = future.filter(r =>
+      output(r) !== null
+    ).length;
+
+    const filtered = future.filter(r =>
+      normalize(
+        matchName(r) + " " + (r.lig || "")
+      ).includes(query)
+    ).sort((a, b) =>
+      Date.parse(a.tarih) -
+      Date.parse(b.tarih)
+    );
+
+    $("mersin-info").textContent =
+      "DENEYSEL" +
+      " | Güncel maç: " + future.length +
+      " | Aktif: " + active +
+      " | Yetersiz veri: " +
+      (future.length - active) +
+      " | Gösterilen: " +
+      Math.min(limit, filtered.length) +
+      "/" + filtered.length +
+      " • Model yüzdeleri doğrulanmış " +
+      "başarı oranı değildir.";
+
+    for (const r of filtered.slice(0, limit)) {
+
+      const card = node(
+        "article",
+        undefined,
+        "tp-match"
+      );
+
+      const date = new Date(r.tarih);
+
+      card.append(
+        node(
+          "small",
+          (r.lig || "—") + " • " +
+          date.toISOString()
+            .slice(0, 16)
+            .replace("T", " ") +
+          " UTC"
+        ),
+        node("h3", matchName(r))
+      );
+
+      const data = output(r);
+
+      const grid = node(
+        "div",
+        undefined,
+        "tp-probs"
+      );
+
+      if (!data) {
+
+        card.append(
+          node(
+            "p",
+            "YETERSİZ VERİ",
+            "tp-note"
+          )
+        );
+
+      } else if (selected === "RADAR X") {
+
+        const radarFields = [
+          ["sapma", "Sapma"],
+          ["lig_ortalama", "Lig ortalaması"],
+          ["takim_ortalama", "Takım ortalaması"]
+        ];
+
+        for (const [key, title] of radarFields) {
+
+          const value = data[key];
+
+          const cell = node("span", title);
+
+          cell.append(
+            node(
+              "b",
+              Number.isFinite(value)
+                ? value.toFixed(2)
+                : "—"
+            )
+          );
+
+          grid.append(cell);
+        }
+
+        card.append(
+          grid,
+          node(
+            "small",
+            "RADAR X olasılık yüzdesi üretmez."
+          )
+        );
+
+      } else {
+
+        for (const line of lines) {
+
+          const value = probability(data, line);
+
+          const cell = node(
+            "span",
+            line + " ÜST"
+          );
+
+          const result = node(
+            "b",
+            value === null
+              ? "—"
+              : "%" + value.toFixed(2)
+          );
+
+          result.style.color = color(value);
+
+          cell.append(result);
+          grid.append(cell);
+        }
+
+        card.append(grid);
+      }
+
+      list.append(card);
+    }
+
+    if (!filtered.length) {
+      list.append(
+        node(
+          "p",
+          "Güncel maç bulunamadı.",
+          "tp-note"
+        )
+      );
+    }
+
+    $("mersin-more").hidden =
+      filtered.length <= limit;
+  }
+
+  async function load() {
+
+    const token = ++generation;
+
+    ready = false;
+
+    $("mersin-info").textContent =
+      "Model verileri yükleniyor…";
+
+    $("mersin-list").replaceChildren();
+    $("mersin-more").hidden = true;
+
+    const urls = [
+      "./mersin_panel.json",
+      "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_panel.json"
+    ];
+
+    let error;
+
+    for (const url of urls) {
+
+      try {
+
+        const response = await fetch(
+          url,
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            "HTTP " + response.status
+          );
+        }
+
+        const data = await response.json();
+
+        const records = Array.isArray(data)
+          ? data
+          : data.maclar ??
+            data.kayitlar ??
+            data.tahminler ??
+            data.fikstur;
+
+        if (!Array.isArray(records)) {
+          throw new Error(
+            "Maç listesi bulunamadı"
+          );
+        }
+
+        if (token !== generation) return;
+
+        rows = records;
+        ready = true;
+
+        render();
+        return;
+
+      } catch (e) {
+        error = e;
+      }
+    }
+
+    if (token === generation) {
+
+      $("mersin-info").textContent =
+        "MERSİN verisi okunamadı: " +
+        (error?.message || "Bilinmeyen hata");
+    }
+  }
+
+  function back() {
+
+    generation++;
+    ready = false;
+    selected = "";
+
+    $("mersin-screen").hidden = true;
+    $("mersin-models").hidden = false;
+  }
 
   for (const [name, description] of models) {
-    const button = document.createElement("button");
+
+    const button = node(
+      "button",
+      undefined,
+      "tp-tile"
+    );
+
     button.type = "button";
-    button.className = "tp-tile";
-    button.innerHTML =
-      `<b>${name}</b><small>${description}</small>`;
+
+    button.append(
+      node("b", name),
+      node("small", description)
+    );
 
     button.onclick = () => {
-      document.getElementById("mersin-info")
-        .textContent =
-          name + " — Bağımsız model bağlantısı hazırlanıyor.";
+
+      selected = name;
+      limit = 30;
+
+      $("mersin-models").hidden = true;
+      $("mersin-screen").hidden = false;
+      $("mersin-title").textContent = name;
+      $("mersin-search").value = "";
+
+      load();
     };
 
-    document.getElementById("mersin-models")
-      .appendChild(button);
+    $("mersin-models").append(button);
   }
+
+  $("mersin-open").onclick = () => {
+
+    const center = $("mersin-center");
+
+    center.hidden = !center.hidden;
+
+    if (!center.hidden) {
+      back();
+    } else {
+      generation++;
+      ready = false;
+    }
+  };
+
+  $("mersin-back").onclick = back;
+
+  $("mersin-refresh").onclick = load;
+
+  $("mersin-search").oninput = () => {
+    limit = 30;
+    render();
+  };
+
+  $("mersin-more").onclick = () => {
+    limit += 30;
+    render();
+  };
+
 })();
 </script>
 
