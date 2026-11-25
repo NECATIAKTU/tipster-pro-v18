@@ -1,0 +1,1549 @@
+{
+  "gruplar": {
+    "ALL|1.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 75.34,
+      "ortalama_model_yuzdesi": 78.26,
+      "brier": 0.19261
+    },
+    "ALL|2.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 55.48,
+      "ortalama_model_yuzdesi": 55.89,
+      "brier": 0.24844
+    },
+    "ALL|3.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 33.56,
+      "ortalama_model_yuzdesi": 34.37,
+      "brier": 0.22651
+    },
+    "ALL|4.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 16.78,
+      "ortalama_model_yuzdesi": 18.45,
+      "brier": 0.13823
+    },
+    "ALL|5.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 7.53,
+      "ortalama_model_yuzdesi": 8.77,
+      "brier": 0.06978
+    },
+    "ALL|6.5_ust": {
+      "n": 292,
+      "gerceklesen_yuzde": 2.4,
+      "ortalama_model_yuzdesi": 3.75,
+      "brier": 0.02413
+    },
+    "arg.1|1.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 85.71,
+      "ortalama_model_yuzdesi": 66.7,
+      "brier": 0.15099
+    },
+    "arg.1|2.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 85.71,
+      "ortalama_model_yuzdesi": 40.46,
+      "brier": 0.3183
+    },
+    "arg.1|3.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 57.14,
+      "ortalama_model_yuzdesi": 20.33,
+      "brier": 0.3646
+    },
+    "arg.1|4.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 14.29,
+      "ortalama_model_yuzdesi": 8.69,
+      "brier": 0.12795
+    },
+    "arg.1|5.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 14.29,
+      "ortalama_model_yuzdesi": 3.2,
+      "brier": 0.13574
+    },
+    "arg.1|6.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.01,
+      "brier": 0.00012
+    },
+    "aut.1|1.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 85.78,
+      "brier": 0.37246
+    },
+    "aut.1|2.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 66.97,
+      "brier": 0.26871
+    },
+    "aut.1|3.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 45.43,
+      "brier": 0.20923
+    },
+    "aut.1|4.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 26.83,
+      "brier": 0.07432
+    },
+    "aut.1|5.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 13.9,
+      "brier": 0.02057
+    },
+    "aut.1|6.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 6.43,
+      "brier": 0.0046
+    },
+    "bel.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 81.59,
+      "brier": 0.30052
+    },
+    "bel.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 60.74,
+      "brier": 0.23351
+    },
+    "bel.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 39.26,
+      "brier": 0.18606
+    },
+    "bel.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 22.18,
+      "brier": 0.12494
+    },
+    "bel.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 11.14,
+      "brier": 0.10695
+    },
+    "bel.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 5.01,
+      "brier": 0.00358
+    },
+    "bra.1|1.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 69.23,
+      "ortalama_model_yuzdesi": 76.16,
+      "brier": 0.22412
+    },
+    "bra.1|2.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 46.15,
+      "ortalama_model_yuzdesi": 52.35,
+      "brier": 0.23275
+    },
+    "bra.1|3.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 15.38,
+      "ortalama_model_yuzdesi": 30.42,
+      "brier": 0.14278
+    },
+    "bra.1|4.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 15.38,
+      "ortalama_model_yuzdesi": 15.17,
+      "brier": 0.12186
+    },
+    "bra.1|5.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 15.38,
+      "ortalama_model_yuzdesi": 6.58,
+      "brier": 0.13245
+    },
+    "bra.1|6.5_ust": {
+      "n": 13,
+      "gerceklesen_yuzde": 7.69,
+      "ortalama_model_yuzdesi": 2.52,
+      "brier": 0.07492
+    },
+    "col.1|1.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 70.03,
+      "brier": 0.39475
+    },
+    "col.1|2.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 44.1,
+      "brier": 0.23009
+    },
+    "col.1|3.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 23.05,
+      "brier": 0.19304
+    },
+    "col.1|4.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 10.15,
+      "brier": 0.01045
+    },
+    "col.1|5.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.88,
+      "brier": 0.00153
+    },
+    "col.1|6.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.3,
+      "brier": 0.00017
+    },
+    "den.1|1.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 83.33,
+      "ortalama_model_yuzdesi": 83.77,
+      "brier": 0.13181
+    },
+    "den.1|2.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 66.67,
+      "ortalama_model_yuzdesi": 63.55,
+      "brier": 0.21642
+    },
+    "den.1|3.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 41.5,
+      "brier": 0.22837
+    },
+    "den.1|4.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 16.67,
+      "ortalama_model_yuzdesi": 23.47,
+      "brier": 0.15609
+    },
+    "den.1|5.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 11.57,
+      "brier": 0.01382
+    },
+    "den.1|6.5_ust": {
+      "n": 6,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 5.03,
+      "brier": 0.00266
+    },
+    "eng.1|1.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 90.0,
+      "ortalama_model_yuzdesi": 75.45,
+      "brier": 0.11526
+    },
+    "eng.1|2.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 51.26,
+      "brier": 0.2586
+    },
+    "eng.1|3.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 29.29,
+      "brier": 0.29885
+    },
+    "eng.1|4.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 20.0,
+      "ortalama_model_yuzdesi": 14.29,
+      "brier": 0.15313
+    },
+    "eng.1|5.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 6.06,
+      "brier": 0.00395
+    },
+    "eng.1|6.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 2.25,
+      "brier": 0.00057
+    },
+    "eng.2|1.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 80.0,
+      "ortalama_model_yuzdesi": 79.03,
+      "brier": 0.16283
+    },
+    "eng.2|2.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 45.0,
+      "ortalama_model_yuzdesi": 56.46,
+      "brier": 0.27256
+    },
+    "eng.2|3.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 34.45,
+      "brier": 0.21432
+    },
+    "eng.2|4.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 18.12,
+      "brier": 0.03567
+    },
+    "eng.2|5.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 8.35,
+      "brier": 0.00805
+    },
+    "eng.2|6.5_ust": {
+      "n": 20,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.41,
+      "brier": 0.00146
+    },
+    "eng.3|1.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 75.0,
+      "ortalama_model_yuzdesi": 76.49,
+      "brier": 0.19651
+    },
+    "eng.3|2.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 53.23,
+      "brier": 0.30424
+    },
+    "eng.3|3.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 18.75,
+      "ortalama_model_yuzdesi": 31.65,
+      "brier": 0.20801
+    },
+    "eng.3|4.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 12.5,
+      "ortalama_model_yuzdesi": 16.29,
+      "brier": 0.12237
+    },
+    "eng.3|5.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 6.25,
+      "ortalama_model_yuzdesi": 7.37,
+      "brier": 0.05925
+    },
+    "eng.3|6.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 6.25,
+      "ortalama_model_yuzdesi": 2.96,
+      "brier": 0.05982
+    },
+    "eng.4|1.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 78.57,
+      "ortalama_model_yuzdesi": 74.04,
+      "brier": 0.20427
+    },
+    "eng.4|2.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 49.98,
+      "brier": 0.25001
+    },
+    "eng.4|3.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 21.43,
+      "ortalama_model_yuzdesi": 28.64,
+      "brier": 0.18267
+    },
+    "eng.4|4.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 21.43,
+      "ortalama_model_yuzdesi": 14.15,
+      "brier": 0.17845
+    },
+    "eng.4|5.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 7.14,
+      "ortalama_model_yuzdesi": 6.11,
+      "brier": 0.06816
+    },
+    "eng.4|6.5_ust": {
+      "n": 14,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 2.35,
+      "brier": 0.00073
+    },
+    "eng.5|1.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 85.71,
+      "ortalama_model_yuzdesi": 82.24,
+      "brier": 0.11505
+    },
+    "eng.5|2.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 66.67,
+      "ortalama_model_yuzdesi": 61.3,
+      "brier": 0.21818
+    },
+    "eng.5|3.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 38.1,
+      "ortalama_model_yuzdesi": 39.29,
+      "brier": 0.23518
+    },
+    "eng.5|4.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 19.05,
+      "ortalama_model_yuzdesi": 21.81,
+      "brier": 0.14278
+    },
+    "eng.5|5.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 4.76,
+      "ortalama_model_yuzdesi": 10.62,
+      "brier": 0.04932
+    },
+    "eng.5|6.5_ust": {
+      "n": 21,
+      "gerceklesen_yuzde": 4.76,
+      "ortalama_model_yuzdesi": 4.59,
+      "brier": 0.04545
+    },
+    "esp.1|1.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 70.0,
+      "ortalama_model_yuzdesi": 77.42,
+      "brier": 0.1999
+    },
+    "esp.1|2.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 54.56,
+      "brier": 0.24273
+    },
+    "esp.1|3.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 30.0,
+      "ortalama_model_yuzdesi": 33.02,
+      "brier": 0.16261
+    },
+    "esp.1|4.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 20.0,
+      "ortalama_model_yuzdesi": 17.43,
+      "brier": 0.1086
+    },
+    "esp.1|5.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 8.16,
+      "brier": 0.00921
+    },
+    "esp.1|6.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.42,
+      "brier": 0.0019
+    },
+    "esp.2|1.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 81.82,
+      "ortalama_model_yuzdesi": 75.35,
+      "brier": 0.13718
+    },
+    "esp.2|2.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 45.45,
+      "ortalama_model_yuzdesi": 51.3,
+      "brier": 0.2242
+    },
+    "esp.2|3.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 18.18,
+      "ortalama_model_yuzdesi": 29.56,
+      "brier": 0.16264
+    },
+    "esp.2|4.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 9.09,
+      "ortalama_model_yuzdesi": 14.63,
+      "brier": 0.0898
+    },
+    "esp.2|5.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 6.31,
+      "brier": 0.0047
+    },
+    "esp.2|6.5_ust": {
+      "n": 11,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 2.41,
+      "brier": 0.00074
+    },
+    "fra.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 77.78,
+      "ortalama_model_yuzdesi": 78.78,
+      "brier": 0.16402
+    },
+    "fra.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 44.44,
+      "ortalama_model_yuzdesi": 56.3,
+      "brier": 0.26652
+    },
+    "fra.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 44.44,
+      "ortalama_model_yuzdesi": 34.34,
+      "brier": 0.26422
+    },
+    "fra.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 18.09,
+      "brier": 0.16391
+    },
+    "fra.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 8.33,
+      "brier": 0.00798
+    },
+    "fra.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.39,
+      "brier": 0.00141
+    },
+    "fra.2|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 76.1,
+      "brier": 0.31809
+    },
+    "fra.2|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 52.46,
+      "brier": 0.2869
+    },
+    "fra.2|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 30.67,
+      "brier": 0.25197
+    },
+    "fra.2|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 15.42,
+      "brier": 0.20864
+    },
+    "fra.2|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 6.76,
+      "brier": 0.10633
+    },
+    "fra.2|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 2.66,
+      "brier": 0.00085
+    },
+    "ger.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 85.4,
+      "brier": 0.32097
+    },
+    "ger.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 44.44,
+      "ortalama_model_yuzdesi": 66.77,
+      "brier": 0.27639
+    },
+    "ger.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 44.44,
+      "ortalama_model_yuzdesi": 45.68,
+      "brier": 0.22465
+    },
+    "ger.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 27.43,
+      "brier": 0.12016
+    },
+    "ger.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 14.58,
+      "brier": 0.09535
+    },
+    "ger.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 6.93,
+      "brier": 0.00595
+    },
+    "ger.2|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 88.89,
+      "ortalama_model_yuzdesi": 79.34,
+      "brier": 0.11832
+    },
+    "ger.2|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 77.78,
+      "ortalama_model_yuzdesi": 56.86,
+      "brier": 0.20804
+    },
+    "ger.2|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 34.74,
+      "brier": 0.23057
+    },
+    "ger.2|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 18.26,
+      "brier": 0.03524
+    },
+    "ger.2|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 8.4,
+      "brier": 0.00771
+    },
+    "ger.2|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.4,
+      "brier": 0.00132
+    },
+    "gre.1|1.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 57.14,
+      "ortalama_model_yuzdesi": 74.56,
+      "brier": 0.32689
+    },
+    "gre.1|2.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 28.57,
+      "ortalama_model_yuzdesi": 50.73,
+      "brier": 0.26715
+    },
+    "gre.1|3.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 28.57,
+      "ortalama_model_yuzdesi": 29.4,
+      "brier": 0.21578
+    },
+    "gre.1|4.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 14.29,
+      "ortalama_model_yuzdesi": 14.73,
+      "brier": 0.14426
+    },
+    "gre.1|5.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 14.29,
+      "ortalama_model_yuzdesi": 6.47,
+      "brier": 0.13958
+    },
+    "gre.1|6.5_ust": {
+      "n": 7,
+      "gerceklesen_yuzde": 14.29,
+      "ortalama_model_yuzdesi": 2.56,
+      "brier": 0.14118
+    },
+    "ita.1|1.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 90.0,
+      "ortalama_model_yuzdesi": 80.88,
+      "brier": 0.09746
+    },
+    "ita.1|2.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 60.0,
+      "ortalama_model_yuzdesi": 59.46,
+      "brier": 0.21434
+    },
+    "ita.1|3.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 40.0,
+      "ortalama_model_yuzdesi": 37.67,
+      "brier": 0.24353
+    },
+    "ita.1|4.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 30.0,
+      "ortalama_model_yuzdesi": 20.75,
+      "brier": 0.20126
+    },
+    "ita.1|5.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 30.0,
+      "ortalama_model_yuzdesi": 10.07,
+      "brier": 0.23845
+    },
+    "ita.1|6.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 10.0,
+      "ortalama_model_yuzdesi": 4.36,
+      "brier": 0.08865
+    },
+    "ita.2|1.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 75.0,
+      "ortalama_model_yuzdesi": 73.01,
+      "brier": 0.18705
+    },
+    "ita.2|2.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 56.25,
+      "ortalama_model_yuzdesi": 48.18,
+      "brier": 0.24458
+    },
+    "ita.2|3.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 26.74,
+      "brier": 0.29637
+    },
+    "ita.2|4.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 12.7,
+      "brier": 0.21029
+    },
+    "ita.2|5.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 6.25,
+      "ortalama_model_yuzdesi": 5.26,
+      "brier": 0.06219
+    },
+    "ita.2|6.5_ust": {
+      "n": 16,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.93,
+      "brier": 0.00049
+    },
+    "jpn.1|1.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 77.89,
+      "brier": 0.33366
+    },
+    "jpn.1|2.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 40.0,
+      "ortalama_model_yuzdesi": 54.73,
+      "brier": 0.28174
+    },
+    "jpn.1|3.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 10.0,
+      "ortalama_model_yuzdesi": 32.68,
+      "brier": 0.15843
+    },
+    "jpn.1|4.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 16.76,
+      "brier": 0.03008
+    },
+    "jpn.1|5.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 7.5,
+      "brier": 0.00632
+    },
+    "jpn.1|6.5_ust": {
+      "n": 10,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 2.98,
+      "brier": 0.00106
+    },
+    "mex.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 66.67,
+      "ortalama_model_yuzdesi": 80.44,
+      "brier": 0.25911
+    },
+    "mex.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 58.54,
+      "brier": 0.31008
+    },
+    "mex.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 36.5,
+      "brier": 0.20509
+    },
+    "mex.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 19.66,
+      "brier": 0.10172
+    },
+    "mex.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 9.26,
+      "brier": 0.096
+    },
+    "mex.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.88,
+      "brier": 0.00176
+    },
+    "ned.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 88.89,
+      "ortalama_model_yuzdesi": 90.27,
+      "brier": 0.0955
+    },
+    "ned.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 88.89,
+      "ortalama_model_yuzdesi": 75.3,
+      "brier": 0.11136
+    },
+    "ned.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 66.67,
+      "ortalama_model_yuzdesi": 55.74,
+      "brier": 0.21555
+    },
+    "ned.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 44.44,
+      "ortalama_model_yuzdesi": 36.49,
+      "brier": 0.21735
+    },
+    "ned.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 21.19,
+      "brier": 0.11446
+    },
+    "ned.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 11.02,
+      "brier": 0.01333
+    },
+    "nor.1|1.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 87.5,
+      "ortalama_model_yuzdesi": 88.73,
+      "brier": 0.11251
+    },
+    "nor.1|2.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 75.0,
+      "ortalama_model_yuzdesi": 72.39,
+      "brier": 0.17847
+    },
+    "nor.1|3.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 62.5,
+      "ortalama_model_yuzdesi": 52.15,
+      "brier": 0.20976
+    },
+    "nor.1|4.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 37.5,
+      "ortalama_model_yuzdesi": 33.14,
+      "brier": 0.22786
+    },
+    "nor.1|5.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 18.64,
+      "brier": 0.18183
+    },
+    "nor.1|6.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 12.5,
+      "ortalama_model_yuzdesi": 9.41,
+      "brier": 0.12104
+    },
+    "rsa.1|1.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 100.0,
+      "ortalama_model_yuzdesi": 57.05,
+      "brier": 0.18502
+    },
+    "rsa.1|2.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 30.05,
+      "brier": 0.31281
+    },
+    "rsa.1|3.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 12.85,
+      "brier": 0.40272
+    },
+    "rsa.1|4.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 4.6,
+      "brier": 0.00216
+    },
+    "rsa.1|5.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.4,
+      "brier": 0.00021
+    },
+    "rsa.1|6.5_ust": {
+      "n": 2,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 0.4,
+      "brier": 2e-05
+    },
+    "sco.1|1.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 100.0,
+      "ortalama_model_yuzdesi": 76.55,
+      "brier": 0.05691
+    },
+    "sco.1|2.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 100.0,
+      "ortalama_model_yuzdesi": 52.91,
+      "brier": 0.22601
+    },
+    "sco.1|3.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 62.5,
+      "ortalama_model_yuzdesi": 30.97,
+      "brier": 0.33259
+    },
+    "sco.1|4.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 15.6,
+      "brier": 0.36041
+    },
+    "sco.1|5.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 6.89,
+      "brier": 0.20673
+    },
+    "sco.1|6.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 12.5,
+      "ortalama_model_yuzdesi": 2.68,
+      "brier": 0.10873
+    },
+    "sco.2|1.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 75.0,
+      "ortalama_model_yuzdesi": 68.97,
+      "brier": 0.24054
+    },
+    "sco.2|2.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 50.0,
+      "ortalama_model_yuzdesi": 43.25,
+      "brier": 0.27877
+    },
+    "sco.2|3.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 22.68,
+      "brier": 0.21588
+    },
+    "sco.2|4.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 25.0,
+      "ortalama_model_yuzdesi": 10.17,
+      "brier": 0.22591
+    },
+    "sco.2|5.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.98,
+      "brier": 0.00198
+    },
+    "sco.2|6.5_ust": {
+      "n": 4,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.35,
+      "brier": 0.00025
+    },
+    "swe.1|1.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 75.0,
+      "ortalama_model_yuzdesi": 69.11,
+      "brier": 0.22755
+    },
+    "swe.1|2.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 62.5,
+      "ortalama_model_yuzdesi": 43.67,
+      "brier": 0.28805
+    },
+    "swe.1|3.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 37.5,
+      "ortalama_model_yuzdesi": 23.24,
+      "brier": 0.29632
+    },
+    "swe.1|4.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 12.5,
+      "ortalama_model_yuzdesi": 10.65,
+      "brier": 0.12057
+    },
+    "swe.1|5.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 4.31,
+      "brier": 0.00274
+    },
+    "swe.1|6.5_ust": {
+      "n": 8,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 1.55,
+      "brier": 0.00043
+    },
+    "tur.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 66.67,
+      "ortalama_model_yuzdesi": 80.12,
+      "brier": 0.24016
+    },
+    "tur.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 58.2,
+      "brier": 0.26455
+    },
+    "tur.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 33.33,
+      "ortalama_model_yuzdesi": 36.26,
+      "brier": 0.23375
+    },
+    "tur.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 19.56,
+      "brier": 0.16997
+    },
+    "tur.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 9.26,
+      "brier": 0.18578
+    },
+    "tur.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 3.91,
+      "brier": 0.00192
+    },
+    "usa.1|1.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 88.89,
+      "ortalama_model_yuzdesi": 84.7,
+      "brier": 0.09767
+    },
+    "usa.1|2.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 55.56,
+      "ortalama_model_yuzdesi": 65.29,
+      "brier": 0.21535
+    },
+    "usa.1|3.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 22.22,
+      "ortalama_model_yuzdesi": 43.63,
+      "brier": 0.20695
+    },
+    "usa.1|4.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 11.11,
+      "ortalama_model_yuzdesi": 25.4,
+      "brier": 0.12702
+    },
+    "usa.1|5.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 12.99,
+      "brier": 0.01833
+    },
+    "usa.1|6.5_ust": {
+      "n": 9,
+      "gerceklesen_yuzde": 0.0,
+      "ortalama_model_yuzdesi": 5.91,
+      "brier": 0.00396
+    }
+  },
+  "yanlis_kilitli_secimler": [
+    {
+      "kimlik": "aut.1|401881744",
+      "lig": "aut.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 65.8,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "aut.1|401881745",
+      "lig": "aut.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "aut.1|401881747",
+      "lig": "aut.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 67.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "bel.1|401878937",
+      "lig": "bel.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 75.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "bel.1|401878942",
+      "lig": "bel.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 79.2,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "bel.1|401878936",
+      "lig": "bel.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 78.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "bra.1|401841327",
+      "lig": "bra.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 80.2,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "bra.1|401841321",
+      "lig": "bra.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 79.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "den.1|401874558",
+      "lig": "den.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 81.5,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.1|401878756",
+      "lig": "eng.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 76.9,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.2|401880156",
+      "lig": "eng.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 81.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.2|401880152",
+      "lig": "eng.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 78.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.2|401880150",
+      "lig": "eng.2",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 66.6,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "eng.2|401880143",
+      "lig": "eng.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.3|401880731",
+      "lig": "eng.3",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 82.8,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.3|401880737",
+      "lig": "eng.3",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 80.8,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.3|401880823",
+      "lig": "eng.3",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 70.2,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "eng.3|401880829",
+      "lig": "eng.3",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.7,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.4|401881258",
+      "lig": "eng.4",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 82.6,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.4|401881253",
+      "lig": "eng.4",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.4,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.4|401881358",
+      "lig": "eng.4",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.5,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "eng.5|401889193",
+      "lig": "eng.5",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 79.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.5|401889188",
+      "lig": "eng.5",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 82.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "eng.5|401889185",
+      "lig": "eng.5",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 71.9,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "esp.1|401882799",
+      "lig": "esp.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 78.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "esp.1|401882801",
+      "lig": "esp.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 77.3,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "fra.1|401876396",
+      "lig": "fra.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 67.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "fra.2|401876687",
+      "lig": "fra.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 81.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "fra.2|401876689",
+      "lig": "fra.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "fra.2|401876684",
+      "lig": "fra.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 81.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "fra.2|401876686",
+      "lig": "fra.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 77.7,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ger.1|401884736",
+      "lig": "ger.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 66.9,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "ger.1|401884731",
+      "lig": "ger.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 84.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ger.1|401884734",
+      "lig": "ger.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 72.7,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ger.1|401884728",
+      "lig": "ger.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 69.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ger.2|401885050",
+      "lig": "ger.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.2,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "gre.1|401896810",
+      "lig": "gre.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 84.3,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "gre.1|401896725",
+      "lig": "gre.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "gre.1|401896728",
+      "lig": "gre.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 80.1,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ita.1|401875067",
+      "lig": "ita.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 78.7,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ita.2|401899544",
+      "lig": "ita.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 81.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ita.2|401899535",
+      "lig": "ita.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 76.4,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "jpn.1|401877553",
+      "lig": "jpn.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.0,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "jpn.1|401877552",
+      "lig": "jpn.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.3,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "jpn.1|401877551",
+      "lig": "jpn.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 65.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "jpn.1|401877532",
+      "lig": "jpn.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 75.3,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "mex.1|401877052",
+      "lig": "mex.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 79.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "mex.1|401877050",
+      "lig": "mex.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 67.9,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "mex.1|401877048",
+      "lig": "mex.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "mex.1|401877047",
+      "lig": "mex.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 66.3,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "ned.1|401875542",
+      "lig": "ned.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 71.5,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "nor.1|401843489",
+      "lig": "nor.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 73.6,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "nor.1|401843484",
+      "lig": "nor.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 65.8,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "sco.2|401878519",
+      "lig": "sco.2",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 78.1,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "swe.1|401842882",
+      "lig": "swe.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 83.8,
+      "toplam_gol": 0
+    },
+    {
+      "kimlik": "tur.1|401888247",
+      "lig": "tur.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 76.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "tur.1|401888369",
+      "lig": "tur.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 66.0,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "tur.1|401888243",
+      "lig": "tur.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 79.3,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "tur.1|401888249",
+      "lig": "tur.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 82.9,
+      "toplam_gol": 1
+    },
+    {
+      "kimlik": "usa.1|401933733",
+      "lig": "usa.1",
+      "secim": "2.5_ust",
+      "model_yuzdesi": 66.6,
+      "toplam_gol": 2
+    },
+    {
+      "kimlik": "usa.1|401933731",
+      "lig": "usa.1",
+      "secim": "1.5_ust",
+      "model_yuzdesi": 82.8,
+      "toplam_gol": 1
+    }
+  ]
+}
