@@ -72,6 +72,13 @@ def getir(league, start, end):
     return events, errors
 
 
+def aktif_ligler():
+    """Ulusal ligler aktif; UEFA daha sonra opt-in olarak acilabilir."""
+    uefa = os.environ.get("TIPSTER_UEFA", "0") == "1"
+    return {code: label for code, label in LIGLER.items()
+            if uefa or not code.startswith("uefa.")}
+
+
 def main():
     now = datetime.now(timezone.utc)
     london = now.astimezone(ZoneInfo("Europe/London"))
@@ -90,7 +97,7 @@ def main():
     "takim_bilgisi": 0
 }
     counts = {}
-    for league, label in LIGLER.items():
+    for league, label in aktif_ligler().items():
         events, errors = getir(league, now, end)
         failed.extend(errors)
         added = 0
@@ -131,6 +138,7 @@ def main():
         "olusturulma_utc": now.isoformat(), "aralik_bitis_utc": end.isoformat(),
         "mac_sayisi": len(records), "lig_sayilari": counts,
         "hatalar": failed, "elenen": elenen, "maclar": records,
+        "ertelenen_ligler": sorted(set(LIGLER) - set(aktif_ligler())),
     }
     tmp = OUTPUT + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
