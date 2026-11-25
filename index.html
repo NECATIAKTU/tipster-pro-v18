@@ -7,7 +7,9 @@
 <meta name="description" content="TIPSTER NECATİ gerçek maç tahminleri paneli">
 <title>TIPSTER NECATİ | Profesyonel Panel</title>
 <link rel="stylesheet" href="panel.css">
-</head>
+<style>
+[hidden]{display:none!important}body{background:#080f1c}main{max-width:1080px;padding:20px 16px}.intro h1{font-size:clamp(27px,5vw,40px)}.intro .actions{display:none}#dashboard-stats{gap:8px;margin:18px 0;grid-template-columns:repeat(4,minmax(0,1fr))}#dashboard-stats article{padding:12px}#dashboard-stats strong{font-size:24px}#dashboard-stats span{font-size:12px}.tp-group{margin:22px 0}.tp-group h2{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#9eb4d1;margin:0 0 10px}.tp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tp-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.tp-tile{min-height:78px;text-align:left;background:#142238;border:1px solid #304764;padding:12px;display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:0;overflow-wrap:anywhere}.tp-tile b{font-size:15px}.tp-tile small{font-size:11px;color:#a5b8d1;font-weight:400}.tp-tile.goal b{font-size:22px;color:#82bfff}.tp-tile.star{border-color:#8b7137;background:#29251b}.tp-tile.opp{border-color:#346657;background:#152c2a}.tp-tile.hot{border-color:#83543b;background:#2c211d}.tp-tile.top{background:#2358c8;border-color:#487ce6;text-align:center;align-items:center}.tp-back{position:sticky;top:0;z-index:9;background:#080f1c;padding:10px 0;display:flex;gap:10px;align-items:center}.tp-back button{white-space:nowrap}.tp-back strong{font-size:16px}.tp-list{display:grid;gap:9px}.tp-match{background:#111e31;border:1px solid #2b405e;border-radius:12px;padding:12px}.tp-match h3{font-size:16px;margin:5px 0}.tp-match small{color:#a6b5ca}.tp-match .tp-pick{color:#93d5ff;font-weight:700}.tp-probs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:9px}.tp-probs span{background:#1c2d46;padding:7px;border-radius:7px;font-size:12px}.tp-probs b{display:block;color:#e9f0fb;font-size:15px}.tp-controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tp-controls input{flex:1;min-width:0}.tp-controls select{max-width:100%}.tp-note{color:#a6b5ca;font-size:13px}.tp-perf{margin:12px 0;padding:12px}.tp-perf table{min-width:480px}.tp-perf td,.tp-perf th{padding:8px}.tp-home-meta{font-size:12px;color:#a6b5ca}#tp-custom{padding:0}#dashboard-results,#dashboard-archive,#aslan-modu{padding:14px}#dashboard-archive .scroll{margin-top:12px}@media(max-width:460px){#dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.tp-tile{padding:10px;min-height:70px}.tp-tile b{font-size:14px}.tp-grid.three .tp-tile{padding:8px}.tp-grid.three .tp-tile b{font-size:15px}.tp-grid.three .goal b{font-size:22px}}
+</style></head>
 <body>
 <a class="skip" href="#main">İçeriğe geç</a>
 <header>
@@ -15,18 +17,19 @@
 <span class="status" id="status" role="status" aria-live="polite">Veri yükleniyor</span>
 </header>
 <main id="main">
-<section class="intro">
+<section class="intro" id="dashboard-intro">
 <div><p class="eyebrow">DÜNYA LİGLERİ / GOL ANALİZİ</p><h1>Tahmin kontrol merkezi</h1><p>Gerçek dosya kayıtları • Tahmin zamanı ve maç başlangıcı denetimi • UTC saatleri</p></div>
 <div class="actions"><button id="refresh">Yenile</button><button id="export" class="secondary">Filtreyi CSV indir</button></div>
 </section>
-<section class="stats" aria-label="Özet">
+<section id="dashboard-stats" class="stats" aria-label="Özet">
 <article><span>Toplam kayıt</span><strong id="total">—</strong></article>
 <article><span>Tekil maç</span><strong id="unique">—</strong></article>
 <article><span>Maç öncesi kayıt</span><strong id="pre">—</strong></article>
 <article><span>İnceleme gerekli</span><strong id="flagged">—</strong></article>
 </section>
   
-<section id="league-center" class="panel" aria-label="Ülke ve lig merkezi" style="padding:20px;margin:16px 0">
+<nav id="tp-home" aria-label="Kontrol merkezi"><p class="tp-home-meta" id="tp-data-status" role="status">Veri yükleniyor…</p><button type="button" id="tp-refresh" class="secondary">Verileri yenile</button><section class="tp-group"><h2>MAÇ MERKEZİ</h2><div class="tp-grid"><button type="button" class="tp-tile " data-tp="today"><b>Bugünün maçları</b><small>UTC gününe göre</small></button><button type="button" class="tp-tile " data-tp="week"><b>Haftalık maçlar</b><small>Önümüzdeki 7 gün</small></button><button type="button" class="tp-tile " data-tp="all"><b>Tüm maçlar</b><small>Güncel kayıtlar</small></button><button type="button" class="tp-tile " data-tp="league"><b>Ülke ve ligler</b><small>Ülke / lig seç</small></button></div></section><section class="tp-group"><h2>GOL MERKEZİ</h2><div class="tp-grid three"><button type="button" class="tp-tile goal" data-tp="g1.5"><b>1.5 ÜST</b><small>Kilitli seçim</small></button><button type="button" class="tp-tile goal" data-tp="g2.5"><b>2.5 ÜST</b><small>Kilitli seçim</small></button><button type="button" class="tp-tile goal" data-tp="g3.5"><b>3.5 ÜST</b><small>Kilitli seçim</small></button><button type="button" class="tp-tile goal" data-tp="g4.5"><b>4.5 ÜST</b><small>Kilitli seçim</small></button><button type="button" class="tp-tile goal" data-tp="g5.5"><b>5.5 ÜST</b><small>Kilitli seçim</small></button><button type="button" class="tp-tile goal" data-tp="g6.5"><b>6.5 ÜST</b><small>Kilitli seçim</small></button></div></section><section class="tp-group"><h2>ÖZEL TAHMİN MERKEZİ</h2><div class="tp-grid"><button type="button" class="tp-tile star" data-tp="star"><b>★ Yıldız tahminler</b><small>En yüksek model yüzdeleri</small></button><button type="button" class="tp-tile opp" data-tp="opp"><b>⚡ Fırsat tahminleri</b><small>Alternatif gol adayları</small></button><button type="button" class="tp-tile hot" data-tp="discover"><b>Gol keşif</b><small>3.5–6.5 model analizi</small></button><button type="button" class="tp-tile " data-tp="aslan"><b>ASLAN MODU</b><small>Mevcut bağımsız bölüm</small></button></div></section><section class="tp-group"><h2>TOP LİSTELERİ</h2><div class="tp-grid three"><button type="button" class="tp-tile top" data-tp="top5"><b>TOP 5</b><small>Güncel</small></button><button type="button" class="tp-tile top" data-tp="top10"><b>TOP 10</b><small>Güncel</small></button><button type="button" class="tp-tile top" data-tp="top20"><b>TOP 20</b><small>Güncel</small></button></div></section><section class="tp-group"><h2>ARŞİV VE PERFORMANS</h2><div class="tp-grid"><button type="button" class="tp-tile " data-tp="archive"><b>Kilitli TOP arşivi</b><small>Hafta ve liste sürümü</small></button><button type="button" class="tp-tile " data-tp="performance"><b>Başarı analiz merkezi</b><small>Lig / gol çizgisi</small></button><button type="button" class="tp-tile " data-tp="results"><b>Geçmiş maç sonuçları</b><small>Doğru / yanlış</small></button><button type="button" class="tp-tile " data-tp="search"><b>Takım ve maç arama</b><small>İsimle ara</small></button></div></section></nav><div id="tp-back" class="tp-back" hidden><button type="button" id="tp-home-button">← Ana menü</button><strong id="tp-title"></strong></div><section id="tp-custom" hidden><p id="tp-note" class="tp-note" role="status"></p><div class="tp-controls"><input id="tp-search" type="search" placeholder="Takım veya lig ara" aria-label="Takım veya lig ara"><select id="tp-order" aria-label="Sıralama"><option value="date">Başlangıç saati</option><option value="prob">Model yüzdesi</option></select></div><div id="tp-list" class="tp-list"></div><button id="tp-more" type="button" class="secondary" hidden>Daha fazla göster</button></section>
+<section id="league-center" class="panel" hidden aria-label="Ülke ve lig merkezi" style="padding:20px;margin:16px 0">
 <h2>🌐 ÜLKE VE LİG MERKEZİ</h2><p class="muted">Ülke seç · Lig seç · Tahminleri ve geçmiş sonuçları incele</p>
 <p id="lc-status" class="muted" role="status">Veriler okunuyor…</p>
 <div class="filters"><label>Ülke<br><select id="lc-country"><option value="">Ülke seç</option></select></label><label>Lig<br><select id="lc-league"><option value="">Tüm ülke ligleri</option></select></label><label>Liste<br><select id="lc-mode"><option value="0">Tüm güncel maçlar</option><option value="5">TOP 5</option><option value="10">TOP 10</option></select></label></div>
@@ -35,7 +38,7 @@
 <div class="scroll"><table><thead><tr><th>Maç</th><th>Lig</th><th>UTC</th><th>Kilitli seçim</th><th>1.5 ÜST</th><th>2.5 ÜST</th><th>3.5 ÜST</th><th>4.5 ÜST</th><th>5.5 ÜST</th><th>6.5 ÜST</th></tr></thead><tbody id="lc-current"></tbody></table></div>
 <details style="margin-top:16px"><summary style="cursor:pointer;font-weight:700">Geçmiş maç sonuçları</summary><div class="scroll"><table><thead><tr><th>Maç</th><th>Lig</th><th>UTC</th><th>Kilitli seçim</th><th>Skor</th><th>Sonuç</th></tr></thead><tbody id="lc-past"></tbody></table></div></details>
 </section>
-<section class="panel" aria-label="Dogrulanmis sonuclar">
+<section id="dashboard-results" class="panel" aria-label="Dogrulanmis sonuclar" hidden>
 <h2>Gerçek maç sonuçları</h2>
 <p class="muted">Yalnızca maçtan önce kilitlenmiş açık ÜST seçimleri başarı hesabına girer. Eski seçim yapılmamış maçlar sayılmaz.</p>
 <div class="result-summary" aria-label="Dogru ve yanlis tahmin ozeti">
@@ -52,7 +55,7 @@
 <div class="result-controls"><label for="result-filter">Sonuç filtresi</label><select id="result-filter" aria-label="Sonuçları filtrele"><option value="all">Tümü</option><option value="DOGRU">✅ Doğru</option><option value="YANLIS">❌ Yanlış</option><option value="BEKLIYOR">⏳ Bekleyen</option><option value="DEGERLENDIRILMEDI">Seçimsiz / PAS</option></select></div>
 <div class="scroll"><table><thead><tr><th>Maç</th><th>Başlangıç UTC</th><th>Kilitli seçim</th><th>Skor</th><th>Değerlendirme</th></tr></thead><tbody id="result-rows"></tbody></table></div>
 </section>
-<section class="panel" aria-label="En güvenilen tahminler">
+<section id="dashboard-oldtop" class="panel" aria-label="En güvenilen tahminler" hidden>
   <h2>🔄 GÜNCEL TOP LİSTELERİ</h2>
   <p class="muted">Otomatik yenilenen tahminler</p>
   <div class="actions">
@@ -63,11 +66,11 @@
   </div>
 </section>
 
-<section class="panel" aria-label="Kilitli TOP arşivi">
+<section id="dashboard-archive" class="panel" aria-label="Kilitli TOP arşivi" hidden>
 <h2>🔒 KİLİTLİ TOP ARŞİVİ</h2><p class="muted">Orijinal sıralamalar korunur. Yayın kayıtları ve başlangıç saatine göre oluşan liste değişimleri ayrı gösterilir. Hafta, liste oluşturulma zamanına göredir (UTC).</p>
 <div class="filters"><label>Liste <select id="top-archive-size"><option value="5">TOP 5</option><option value="10" selected>TOP 10</option><option value="20">TOP 20</option></select></label><label>Hafta <select id="top-archive-week"></select></label><label>Sürüm <select id="top-archive-version"></select></label></div>
 <p id="top-archive-summary" class="muted" role="status">Arşiv yükleniyor…</p><div class="scroll"><table><thead><tr><th>Sıra</th><th>Maç / Lig</th><th>UTC</th><th>Kilitli tahmin</th><th>Skor</th><th>Sonuç</th></tr></thead><tbody id="top-archive-rows"></tbody></table></div></section>
-<section class="panel">
+<section id="dashboard-oldmatches" class="panel" hidden>
 <div class="toolbar">
 <div><h2>Maç listesi</h2><p class="muted" id="meta">Kaynak okunuyor…</p></div>
 <div class="filters">
@@ -101,7 +104,7 @@
 <div class="pagination"><button class="secondary" id="prev">Önceki</button><span id="page" aria-live="polite"></span><button class="secondary" id="next">Sonraki</button></div>
 </section>
   
-<section id="aslan-modu" class="panel" aria-label="ASLAN MODU">
+<section id="aslan-modu" class="panel" hidden aria-label="ASLAN MODU">
   <h2>🦁 ASLAN MODU V1</h2>
   <p id="aslan-durum">Bağımsız test sonuçları bekleniyor.</p>
 </section>
@@ -167,9 +170,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const dugme = document.createElement("button");
   dugme.type = "button";
   dugme.textContent = "🦁 ASLAN MODU";
-  dugme.onclick = () => bolum.scrollIntoView({
-    behavior: "smooth"
-  });
+  dugme.onclick = () => window.tpOpen?.("aslan");
 
   const ust = document.querySelector(".intro .actions");
   if (ust) ust.appendChild(dugme);
@@ -357,5 +358,16 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 </script>
 
-</body>
+<script>
+(()=>{'use strict';const $=id=>document.getElementById(id),lines=['1.5','2.5','3.5','4.5','5.5','6.5'];let current=[],past=[],mode='home',limit=30,ready=false,err='',generation=0;
+const labels=Object.fromEntries([...document.querySelectorAll('[data-tp]')].map(b=>[b.dataset.tp,b.querySelector('b').textContent]));const dt=r=>Date.parse(r.tarih),p=(r,l)=>{let v=r.olasiliklar?.[l+'_ust']??r.tahmin?.[l+'_ust'];return typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=100?v:null},pick=r=>String(r.kilitli_secim||'').trim().toUpperCase().replace(/Ü/g,'U'),line=r=>/^([1-6]\.5) UST$/.exec(pick(r))?.[1],prob=r=>line(r)?p(r,line(r)):null,valid=r=>Number.isFinite(dt(r))&&Date.parse(r.hesaplama_zamani_utc)<=Date.parse(r.kilit_zamani_utc)&&Date.parse(r.kilit_zamani_utc)<dt(r),future=()=>current.filter(r=>dt(r)>Date.now()&&!String(r.lig_kodu||'').startsWith('uefa.')),name=r=>`${r.ev_sahibi||'—'} – ${r.deplasman||'—'}`,fmt=v=>v==null?'—':'%'+v.toFixed(1),stamp=t=>Number.isFinite(Date.parse(t))?new Date(t).toISOString().slice(0,16).replace('T',' ')+' UTC':'—';
+function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}function sorted(rows,l){return [...rows].sort((a,b)=>(l?p(b,l):prob(b))-(l?p(a,l):prob(a)))}
+const targets={league:'league-center',archive:'dashboard-archive',results:'dashboard-results',aslan:'aslan-modu'};
+function open(k,scroll=true){if(k!=='home'&&!Object.hasOwn(labels,k))k='home';mode=k;limit=30;for(const id of ['dashboard-intro','dashboard-stats','tp-home','tp-back','tp-custom',...Object.values(targets)])$(id).hidden=true; if(k==='home'){for(const id of ['dashboard-intro','dashboard-stats','tp-home'])$(id).hidden=false;}else{$('tp-back').hidden=false;$('tp-title').textContent=labels[k];if(targets[k])$(targets[k]).hidden=false;else{$('tp-custom').hidden=false;$('tp-search').value='';$('tp-order').value=(k.startsWith('g')||['star','opp','discover'].includes(k))?'prob':'date';render();}}if(scroll)window.scrollTo(0,0);}
+function go(k){if(k===mode)return;history.pushState({tp:k},'',k==='home'?location.pathname+location.search:'#'+k);open(k)}window.tpOpen=go;window.addEventListener('popstate',()=>open(location.hash.slice(1)||'home'));document.querySelectorAll('[data-tp]').forEach(b=>b.onclick=()=>go(b.dataset.tp));$('tp-home-button').onclick=()=>go('home');$('tp-refresh').onclick=()=>$('refresh').click();
+function perf(){const out=$('tp-list');const rows=past.filter(r=>['DOGRU','YANLIS'].includes(r.tahmin_sonucu));for(const [title,key] of [['Gol çizgisi',r=>pick(r).replace('UST','ÜST')],['Lig',r=>r.mac?.lig||'Bilinmeyen'],['Takım (en çok yanlış)',r=>r.mac?.ev_sahibi||'Bilinmeyen']]){const groups=new Map();for(const r of rows){const keys=title.startsWith('Takım')?[...new Set([r.mac?.ev_sahibi,r.mac?.deplasman].filter(Boolean))]:[key(r)];for(const k of keys){const v=groups.get(k)||[0,0];v[r.tahmin_sonucu==='DOGRU'?0:1]++;groups.set(k,v)}}const box=el('div',undefined,'panel tp-perf');box.append(el('h2',title));const wrap=el('div',undefined,'scroll'),table=el('table'),head=el('tr');for(const h of ['Grup','Doğru','Yanlış','Başarı'])head.append(el('th',h));table.append(head);for(const [k,[w,l]] of [...groups].sort((a,b)=>title.startsWith('Takım')?b[1][1]-a[1][1]:(b[1][0]+b[1][1])-(a[1][0]+a[1][1]))){const tr=el('tr');for(const v of [k,w,l,fmt(100*w/(w+l))])tr.append(el('td',String(v)));table.append(tr)}wrap.append(table);box.append(wrap);out.append(box)}$('tp-note').textContent=`${rows.length} değerlendirilmiş tahmin. Küçük örneklemler yanıltıcı olabilir.`;}
+function render(){const out=$('tp-list');out.replaceChildren();$('tp-more').hidden=true;const isPerf=mode==='performance';document.querySelector('#tp-custom .tp-controls').hidden=isPerf||mode.startsWith('top');if(!ready){$('tp-note').textContent=err||'Veri yükleniyor…';return}if(isPerf){perf();return}let rows=future(),focus=null,description='';const now=new Date(),day=now.toISOString().slice(0,10);if(mode==='today')rows=rows.filter(r=>new Date(dt(r)).toISOString().slice(0,10)===day);if(mode==='week')rows=rows.filter(r=>dt(r)<now.getTime()+7*86400000);if(/^g[1-6]\.5$/.test(mode)){focus=mode.slice(1);rows=rows.filter(r=>valid(r)&&line(r)===focus);description='Yalnızca bu çizgide kilitlenmiş seçimler.'}if(mode.startsWith('top')){rows=sorted(rows.filter(r=>valid(r)&&prob(r)!==null)).slice(0,Number(mode.slice(3)));description='Güncel, değişebilen TOP listesi.'}else if(mode==='star'){rows=sorted(rows.filter(r=>valid(r)&&prob(r)!==null)).slice(0,20);description='En yüksek kilitli model yüzdesine sahip 20 aday; bağımsız model veya başarı garantisi değildir.'}else if(mode==='opp'){focus='2.5';rows=sorted(rows.filter(r=>valid(r)&&line(r)!=='2.5'&&p(r,focus)!==null),focus).slice(0,20);description='Kilitli 2.5 ÜST seçimi olmayan maçlarda en yüksek 2.5 ÜST model olasılıkları. Oran verisi yok; değer bahsi veya yeni tahmin değildir.'}else if(mode==='discover'){focus='3.5';rows=sorted(rows.filter(r=>valid(r)&&p(r,focus)!==null),focus).slice(0,30);description='V18 modelinin 3.5 ÜST olasılığına göre gol keşif görünümü. Bağımsız pilot henüz bağlı değil.'}const q=$('tp-search').value.toLocaleLowerCase('tr').trim();if(q&&!mode.startsWith('top'))rows=rows.filter(r=>(name(r)+' '+r.lig).toLocaleLowerCase('tr').includes(q));if(!mode.startsWith('top')&&!['star','opp','discover'].includes(mode))rows=$('tp-order').value==='prob'?sorted(rows,focus):[...rows].sort((a,b)=>dt(a)-dt(b));$('tp-note').textContent=`${rows.length} maç · ${description||'Orijinal kilitli seçimler ve model olasılıkları.'}`;for(const r of rows.slice(0,limit)){const card=el('article',undefined,'tp-match');card.append(el('small',`${r.lig||'—'} · ${stamp(r.tarih)}`),el('h3',name(r)),el('div',`${pick(r).replace('UST','ÜST').replace('RISKLI','RİSKLİ')||'Seçim yok'}${prob(r)===null?'':' · '+fmt(prob(r))}`,'tp-pick'));const details=el('details');details.append(el('summary','Tüm gol yüzdeleri'));const grid=el('div',undefined,'tp-probs');for(const l of lines){const item=el('span',l+' ÜST');item.append(el('b',fmt(p(r,l))));grid.append(item)}details.append(grid);card.append(details);if(focus&&line(r)!==focus)card.append(el('small',focus+' ÜST model olasılığı: '+fmt(p(r,focus))));out.append(card)}if(!rows.length)out.append(el('p','Bu bölümde güncel maç yok.','tp-note'));$('tp-more').hidden=rows.length<=limit;}
+$('tp-search').oninput=()=>{limit=30;render()};$('tp-order').onchange=()=>{limit=30;render()};$('tp-more').onclick=()=>{limit+=30;render()};async function load(){const token=++generation;try{const [a,b]=await Promise.all(['panel_tahminler.json','v18_dogrulanan_sonuclar.json'].map(async f=>{const r=await fetch('./'+f,{cache:'no-store'});if(!r.ok)throw Error(f+' HTTP '+r.status);return r.json()}));if(token!==generation)return;if(!Array.isArray(a.tahminler)||!Array.isArray(b.kayitlar))throw Error('JSON biçimi');current=a.tahminler;past=b.kayitlar;ready=true;err='';$('tp-data-status').textContent=`${future().length} güncel ulusal lig maçı · Son veri: ${stamp(a.olusturulma_utc)}`;}catch(e){if(token!==generation)return;ready=false;err='Veri okunamadı: '+e.message;$('tp-data-status').textContent=err}if(!$('tp-custom').hidden)render()}
+$('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',false);load();})();
+</script></body>
 </html>
