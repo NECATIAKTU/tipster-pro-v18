@@ -1,9 +1,9 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-25T00:10:10.068185+00:00",
+  "olusturulma_utc": "2026-11-25T01:25:42.151055+00:00",
   "toplam_arsiv": 590,
-  "dogrulanan_mac": 292,
-  "bekleyen_mac": 298,
+  "dogrulanan_mac": 293,
+  "bekleyen_mac": 297,
   "degerlendirilen_tahmin": 198,
   "dogru": 137,
   "yanlis": 61,
@@ -3278,8 +3278,15 @@
         "kaynak_mac_sayisi": 157
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 4,
+        "dep_gol": 1,
+        "toplam_gol": 5,
+        "skor": "4-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 71.0,
         "2.5_ust": 45.2,
@@ -3297,6 +3304,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-25T01:25:39.192783+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 71.0,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 45.2,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 23.9,
+          "gerceklesti": true
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 10.7,
+          "gerceklesti": true
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 4.1,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 1.4,
+          "gerceklesti": false
+        }
       }
     },
     {
