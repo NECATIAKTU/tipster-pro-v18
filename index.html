@@ -26,6 +26,15 @@
 <article><span>İnceleme gerekli</span><strong id="flagged">—</strong></article>
 </section>
   
+<section id="league-center" class="panel" aria-label="Ülke ve lig merkezi" style="padding:20px;margin:16px 0">
+<h2>🌐 ÜLKE VE LİG MERKEZİ</h2><p class="muted">Ülke seç · Lig seç · Tahminleri ve geçmiş sonuçları incele</p>
+<p id="lc-status" class="muted" role="status">Veriler okunuyor…</p>
+<div class="filters"><label>Ülke<br><select id="lc-country"><option value="">Ülke seç</option></select></label><label>Lig<br><select id="lc-league"><option value="">Tüm ülke ligleri</option></select></label><label>Liste<br><select id="lc-mode"><option value="0">Tüm güncel maçlar</option><option value="5">TOP 5</option><option value="10">TOP 10</option></select></label></div>
+<p id="lc-summary" class="muted" aria-live="polite">Bir ülke seçerek başlayın.</p>
+<h3>Güncel tahminler</h3><p class="muted">Kilitli seçimler ve orijinal model yüzdeleri. TOP listesi seçilen ülke/lig için dinamik hesaplanır.</p>
+<div class="scroll"><table><thead><tr><th>Maç</th><th>Lig</th><th>UTC</th><th>Kilitli seçim</th><th>1.5 ÜST</th><th>2.5 ÜST</th><th>3.5 ÜST</th><th>4.5 ÜST</th><th>5.5 ÜST</th><th>6.5 ÜST</th></tr></thead><tbody id="lc-current"></tbody></table></div>
+<details style="margin-top:16px"><summary style="cursor:pointer;font-weight:700">Geçmiş maç sonuçları</summary><div class="scroll"><table><thead><tr><th>Maç</th><th>Lig</th><th>UTC</th><th>Kilitli seçim</th><th>Skor</th><th>Sonuç</th></tr></thead><tbody id="lc-past"></tbody></table></div></details>
+</section>
 <section class="panel" aria-label="Dogrulanmis sonuclar">
 <h2>Gerçek maç sonuçları</h2>
 <p class="muted">Yalnızca maçtan önce kilitlenmiş açık ÜST seçimleri başarı hesabına girer. Eski seçim yapılmamış maçlar sayılmaz.</p>
@@ -101,6 +110,48 @@
 </main>
 <script src="panel.js" defer></script>
 <script src="v18_top_arsiv.js" defer></script>
+<script>
+(() => {
+'use strict';
+const countries={eng:'İngiltere',sco:'İskoçya',ger:'Almanya',esp:'İspanya',ita:'İtalya',fra:'Fransa',ned:'Hollanda',por:'Portekiz',sui:'İsviçre',nor:'Norveç',tur:'Türkiye',bel:'Belçika',aut:'Avusturya',den:'Danimarka',swe:'İsveç',irl:'İrlanda',usa:'ABD',mex:'Meksika',bra:'Brezilya',arg:'Arjantin',col:'Kolombiya',jpn:'Japonya',chn:'Çin',aus:'Avustralya',rsa:'Güney Afrika',gre:'Yunanistan',pol:'Polonya'};
+const lines=['1.5','2.5','3.5','4.5','5.5','6.5'];
+const $=id=>document.getElementById('lc-'+id);
+const code=r=>String(r.lig_kodu||'');
+const country=c=>c.split('.')[0];
+const national=c=>/^([a-z]{3})\.\d+$/.test(c)&&c.split('.')[0]!=='uefa';
+const prob=(r,l)=>{const v=r.olasiliklar?.[l+'_ust']??r.tahmin?.[l+'_ust'];return typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=100?v:null;};
+const choice=r=>String(r.kilitli_secim||'');
+const fmt=s=>s.replace('UST','ÜST').replace('RISKLI','RİSKLİ');
+const time=r=>Date.parse(r.tarih);
+const stamp=s=>Number.isFinite(Date.parse(s))?new Date(s).toISOString().slice(0,16).replace('T',' '):'—';
+const match=r=>[r.ev_sahibi,r.deplasman].join(' – ');
+const verified=r=>Number.isFinite(Date.parse(r.kilit_zamani_utc))&&Date.parse(r.kilit_zamani_utc)<time(r)&&Date.parse(r.hesaplama_zamani_utc)<=Date.parse(r.kilit_zamani_utc);
+function top(rows,n){return rows.filter(r=>verified(r)&&/^([1-6]\.5) UST$/.test(choice(r))&&prob(r,choice(r).split(' ')[0])!==null).sort((a,b)=>prob(b,choice(b).split(' ')[0])-prob(a,choice(a).split(' ')[0])).slice(0,n);}
+function summary(rows){const w=rows.filter(r=>r.tahmin_sonucu==='DOGRU').length,l=rows.filter(r=>r.tahmin_sonucu==='YANLIS').length;return {w,l,rate:w+l?(100*w/(w+l)).toFixed(1):null};}
+let current=[],past=[],catalog=new Map(),generation=0;
+function add(r){if(national(code(r)))catalog.set(code(r),r.lig||code(r));}
+function option(s,v,t){const o=document.createElement('option');o.value=v;o.textContent=t;s.append(o);}
+function fill(s,items,old){s.replaceChildren();for(const [v,t] of items)option(s,v,t);if(items.some(x=>x[0]===old))s.value=old;}
+function future(){return current.filter(r=>national(code(r))&&time(r)>Date.now());}
+function count(rows,p){return rows.filter(p).length;}
+function countriesRender(){const rows=future(),keys=[...new Set([...catalog.keys()].map(country))].sort((a,b)=>(countries[a]||a).localeCompare(countries[b]||b,'tr'));fill($('country'),[['','Ülke seç'],...keys.map(k=>[k,`${countries[k]||k} (${count(rows,r=>country(code(r))===k)})`])],$('country').value);leaguesRender();}
+function leaguesRender(){const c=$('country').value,rows=future();fill($('league'),[['','Tüm ülke ligleri'],...[...catalog].filter(([k])=>country(k)===c).sort((a,b)=>a[0].localeCompare(b[0],undefined,{numeric:true})).map(([k,t])=>[k,`${t} (${count(rows,r=>code(r)===k)})`])],$('league').value);render();}
+function cells(body,values){const tr=document.createElement('tr');for(const v of values){const td=document.createElement('td');td.textContent=String(v??'—');tr.append(td);}body.append(tr);}
+function render(){const c=$('country').value,l=$('league').value;const a=$('current'),b=$('past');a.replaceChildren();b.replaceChildren();if(!c){$('summary').textContent='Bir ülke seçerek başlayın.';return;}
+const filter=r=>country(code(r))===c&&(!l||code(r)===l);
+const rows=future().filter(filter).sort((a,b)=>time(a)-time(b));const results=past.filter(r=>filter(r.mac||{})&&r.durum==='DOGRULANDI').sort((a,b)=>time(b.mac)-time(a.mac));const s=summary(results);
+$('summary').textContent=`${rows.length} güncel maç · ${results.length} doğrulanmış skor · ${s.w} doğru · ${s.l} yanlış · Başarı: ${s.rate===null?'—':'%'+s.rate} (değerlendirilen ${s.w+s.l})`;
+const n=Number($('mode').value),shown=n?top(rows,n):rows;
+for(const r of shown)cells(a,[match(r),r.lig,stamp(r.tarih),fmt(choice(r))||'Seçim yok',...lines.map(l=>{const p=prob(r,l);return p===null?'—':'%'+p.toFixed(1);})]);
+if(!shown.length)cells(a,['Bu seçimde güncel kayıt yok.']);
+for(const r of results)cells(b,[match(r.mac),r.mac.lig,stamp(r.mac.tarih),fmt(choice(r))||'Seçim yok',r.sonuc?.skor,r.tahmin_sonucu==='DOGRU'?'✅ Doğru':r.tahmin_sonucu==='YANLIS'?'❌ Yanlış':'Hesaba dahil değil']);
+if(!results.length)cells(b,['Doğrulanmış sonuç yok.']);}
+async function load(){const token=++generation;$('status').textContent='Veriler okunuyor…';try{const [a,b]=await Promise.all(['panel_tahminler.json','v18_dogrulanan_sonuclar.json'].map(async f=>{const r=await fetch('./'+f,{cache:'no-store'});if(!r.ok)throw Error(f+' HTTP '+r.status);return r.json();}));if(token!==generation)return;if(!Array.isArray(a.tahminler)||!Array.isArray(b.kayitlar))throw Error('JSON biçimi geçersiz');current=a.tahminler;past=b.kayitlar;catalog=new Map(Object.entries(baseCatalog));current.forEach(add);past.forEach(r=>add(r.mac||{}));countriesRender();$('status').textContent='Veriler okundu · UTC';}catch(e){if(token===generation)$('status').textContent='Veri okunamadı: '+e.message;}}
+const baseCatalog={"eng.1": "Ingiltere Premier League", "eng.2": "Ingiltere Championship", "eng.3": "Ingiltere League One", "eng.4": "Ingiltere League Two", "esp.1": "Ispanya La Liga", "ger.1": "Almanya Bundesliga", "ita.1": "Italya Serie A", "fra.1": "Fransa Ligue 1", "ned.1": "Hollanda Eredivisie", "por.1": "Portekiz Primeira Liga", "sui.1": "Isvicre Super League", "nor.1": "Norvec Eliteserien", "tur.1": "Turkiye Super Lig", "tur.2": "Turkiye 1. Lig", "sco.1": "Iskocya Premiership", "bel.1": "Belcika Pro League", "aut.1": "Avusturya Bundesliga", "den.1": "Danimarka Superliga", "swe.1": "Isvec Allsvenskan", "irl.1": "Irlanda Premier Division", "usa.1": "ABD MLS", "mex.1": "Meksika Liga MX", "bra.1": "Brezilya Serie A", "arg.1": "Arjantin Primera Division", "col.1": "Kolombiya Primera A", "jpn.1": "Japonya J1 League", "chn.1": "Cin Super League", "aus.1": "Avustralya A-League", "rsa.1": "Guney Afrika Premiership", "eng.5": "Ingiltere National League", "ger.2": "Almanya Bundesliga 2", "esp.2": "Ispanya La Liga 2", "ita.2": "Italya Serie B", "fra.2": "Fransa Ligue 2", "sco.2": "Iskocya Championship", "sco.3": "Iskocya League One", "gre.1": "Yunanistan Super Lig", "pol.1": "Polonya Ekstraklasa", "pol.2": "Polonya I Liga"};
+if(typeof module!=='undefined'&&module.exports){module.exports={national,prob,top,summary,verified,baseCatalog};return;}
+document.addEventListener('DOMContentLoaded',()=>{$('country').addEventListener('change',()=>{$('league').value='';leaguesRender();});$('league').addEventListener('change',render);$('mode').addEventListener('change',render);document.getElementById('refresh').addEventListener('click',load);load();});
+})();
+</script>
   
 <script>
 /* ASLAN MODU V1 - Gerçek maç keşif ekranı */
