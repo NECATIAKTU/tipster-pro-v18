@@ -252,6 +252,26 @@ jobs:
           print('PANEL ICIN GUNCEL TAHMIN:', len(records))
           PYCODE
 
+      - name: V18 TOP arsivini kalici kaydet
+        run: |
+          set -euo pipefail
+          python -m unittest -v test_v18_top_arsiv
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git worktree add --detach "$RUNNER_TEMP/top-worktree" origin/main
+            python v18_top_arsiv.py panel_tahminler.json "$RUNNER_TEMP/top-worktree/v18_top_arsivi.json" "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+            git -C "$RUNNER_TEMP/top-worktree" add v18_top_arsivi.json
+            if git -C "$RUNNER_TEMP/top-worktree" diff --cached --quiet || { git -C "$RUNNER_TEMP/top-worktree" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'V18 TOP arsiv kaydi' && git -C "$RUNNER_TEMP/top-worktree" push origin HEAD:main; }; then
+              cp "$RUNNER_TEMP/top-worktree/v18_top_arsivi.json" site/
+              git worktree remove --force "$RUNNER_TEMP/top-worktree"
+              cp v18_top_arsiv.js site/
+              exit 0
+            fi
+            git worktree remove --force "$RUNNER_TEMP/top-worktree"
+            sleep 3
+          done
+          exit 1
+
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
 
