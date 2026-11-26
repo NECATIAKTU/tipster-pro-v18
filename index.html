@@ -5308,5 +5308,37 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
   updateTitle();
 })();
 </script>
+   <style>
+@media (max-width: 768px) {
+
+  #aslan-v2 table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  #aslan-v2 th,
+  #aslan-v2 td {
+    padding: 10px 4px !important;
+    font-size: 11px !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  #aslan-v2 th:first-child,
+  #aslan-v2 td:first-child {
+    text-align: left;
+    width: 29%;
+  }
+
+  #aslan-v2 {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+</style>
 </body>
 </html>
