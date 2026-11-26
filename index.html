@@ -5279,5 +5279,34 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <style>
+#aslan-modu:has(#aslan-v2) > :not(#aslan-v2) {
+  display: none !important;
+}
+</style>
+
+<script>
+(() => {
+  const title = document.getElementById("tp-title");
+
+  if (!title) return;
+
+  function updateTitle() {
+    if (title.textContent.trim() === "ASLAN MODU") {
+      title.textContent = "ASLAN MODU V2";
+    }
+  }
+
+  const observer = new MutationObserver(updateTitle);
+
+  observer.observe(title, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+
+  updateTitle();
+})();
+</script>
 </body>
 </html>
