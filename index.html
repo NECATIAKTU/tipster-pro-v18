@@ -4083,5 +4083,498 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("akademi-menu");
+  const content = document.getElementById("akademi-content");
+
+  if (!menu || !content) return;
+
+  const models = [
+    "PUSULA X",
+    "ATLAS X",
+    "MATRIX X",
+    "TEMPO X",
+    "MERSIN"
+  ];
+
+  const MIN_SAMPLE = 100;
+
+  function node(tag, text) {
+    const e = document.createElement(tag);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function name(model) {
+    return model === "MERSIN" ? "MERSİN" : model;
+  }
+
+  function period(date, type) {
+
+    const d = new Date(date);
+
+    if (!Number.isFinite(d.getTime())) {
+      return null;
+    }
+
+    if (type === "month") {
+      return d.toISOString().slice(0, 7);
+    }
+
+    d.setUTCHours(0, 0, 0, 0);
+
+    const day = (d.getUTCDay() + 6) % 7;
+
+    d.setUTCDate(d.getUTCDate() - day);
+
+    return d.toISOString().slice(0, 10);
+  }
+
+  function valid(r) {
+
+    return (
+      ["DOGRU", "YANLIS"].includes(r.sonuc) &&
+      Number.isFinite(Date.parse(r.tarih)) &&
+      Date.parse(r.tarih) < Date.now() &&
+      Date.parse(r.kilit_zamani) < Date.parse(r.tarih)
+    );
+  }
+
+  function key(r) {
+
+    if (
+      r.id == null ||
+      !r.lig ||
+      !r.secim
+    ) return null;
+
+    return JSON.stringify([
+      String(r.id),
+      r.lig,
+      Date.parse(r.tarih),
+      r.secim
+    ]);
+  }
+
+  function summarize(rows) {
+
+    const correct = rows.filter(
+      r => r.sonuc === "DOGRU"
+    ).length;
+
+    const wrong = rows.length - correct;
+
+    return {
+      correct,
+      wrong,
+      total: rows.length,
+      rate: rows.length
+        ? 100 * correct / rows.length
+        : null
+    };
+  }
+
+  function brier(rows) {
+
+    if (!rows.length) return null;
+
+    return rows.reduce((sum, r) => {
+
+      const actual =
+        r.sonuc === "DOGRU" ? 1 : 0;
+
+      return sum +
+        (r.yuzde / 100 - actual) ** 2;
+
+    }, 0) / rows.length;
+  }
+
+  async function archive() {
+
+    const screen = node("div");
+
+    content.replaceChildren(screen);
+
+    screen.append(
+      node("h3", "📚 ŞAMPİYONLAR ARŞİVİ"),
+      node(
+        "p",
+        "Haftalık ve aylık matematik performans geçmişi."
+      )
+    );
+
+    const status = node(
+      "p", "Arşiv kayıtları okunuyor..."
+    );
+
+    screen.append(status);
+
+    try {
+
+      const response = await fetch(
+        "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_performans.json",
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const report = await response.json();
+
+      if (!report.modeller) {
+        throw new Error("Model raporu bulunamadı");
+      }
+
+      status.textContent =
+        "Son rapor: " +
+        (report.guncelleme || "—");
+
+      const type = node("select");
+
+      type.style.width = "100%";
+
+      for (const [value, label] of [
+        ["week", "Haftalık arşiv"],
+        ["month", "Aylık arşiv"]
+      ]) {
+
+        const option = node("option", label);
+
+        option.value = value;
+        type.append(option);
+      }
+
+      const selected = node("select");
+
+      selected.style.width = "100%";
+
+      const result = node("div");
+
+      screen.append(
+        type,
+        selected,
+        result
+      );
+
+      function rowsFor(model) {
+
+        const rows =
+          report.modeller[model]?.kayitlar;
+
+        if (!Array.isArray(rows)) {
+          return [];
+        }
+
+        return rows.filter(valid);
+      }
+
+      function selectedRows(model) {
+
+        const seen = new Set();
+
+        return rowsFor(model).filter(r => {
+
+          if (
+            period(r.tarih, type.value)
+              !== selected.value
+          ) return false;
+
+          const k = key(r);
+
+          if (k === null || seen.has(k)) {
+            return false;
+          }
+
+          seen.add(k);
+
+          return true;
+        });
+      }
+
+      function render() {
+
+        result.replaceChildren();
+
+        if (!selected.value) {
+
+          result.append(
+            node(
+              "p",
+              "Henüz değerlendirilmiş arşiv kaydı yok."
+            )
+          );
+
+          return;
+        }
+
+        result.append(
+          node(
+            "h3",
+            "DÖNEM: " + selected.value
+          )
+        );
+
+        const wrap = node("div");
+
+        wrap.className = "scroll";
+
+        const table = node("table");
+
+        table.style.minWidth = "480px";
+
+        const head = node("thead");
+        const header = node("tr");
+
+        for (const label of [
+          "Model",
+          "Doğru",
+          "Yanlış",
+          "Başarı",
+          "N"
+        ]) {
+
+          header.append(node("th", label));
+        }
+
+        head.append(header);
+        table.append(head);
+
+        const body = node("tbody");
+
+        const maps = [];
+
+        for (const model of models) {
+
+          const rows = selectedRows(model);
+          const s = summarize(rows);
+
+          const tr = node("tr");
+
+          const good = node("td", s.correct);
+          good.style.color = "#22c55e";
+
+          const bad = node("td", s.wrong);
+          bad.style.color = "#f87171";
+
+          tr.append(
+            node("td", name(model)),
+            good,
+            bad,
+            node(
+              "td",
+              s.rate === null
+                ? "—"
+                : "%" + s.rate.toFixed(2)
+            ),
+            node("td", s.total)
+          );
+
+          body.append(tr);
+
+          const eligible = rows.filter(r =>
+            typeof r.yuzde === "number" &&
+            Number.isFinite(r.yuzde) &&
+            r.yuzde >= 0 &&
+            r.yuzde <= 100 &&
+            typeof r.skor === "string" &&
+            r.skor.length > 0
+          );
+
+          maps.push(
+            new Map(
+              eligible.map(r => [key(r), r])
+            )
+          );
+        }
+
+        table.append(body);
+        wrap.append(table);
+        result.append(wrap);
+
+        const common = [...maps[0].keys()]
+          .filter(k => {
+
+            const first = maps[0].get(k);
+
+            return maps.every(m => {
+
+              const r = m.get(k);
+
+              return r &&
+                r.skor === first.skor &&
+                r.sonuc === first.sonuc;
+            });
+          });
+
+        result.append(
+          node("h3", "🏆 DÖNEMİN ŞAMPİYONU"),
+          node(
+            "p",
+            "Ortak değerlendirme: " +
+            common.length
+          ),
+          node(
+            "p",
+            "Minimum ortak sonuç: " +
+            MIN_SAMPLE
+          )
+        );
+
+        if (common.length < MIN_SAMPLE) {
+
+          result.append(
+            node(
+              "p",
+              "Şampiyon belirlemek için yeterli veri yok."
+            )
+          );
+
+        } else {
+
+          const ranking = models.map(
+            (model, i) => ({
+              model,
+              score: brier(
+                common.map(k => maps[i].get(k))
+              )
+            })
+          ).sort(
+            (a,b) => a.score - b.score
+          );
+
+          const tied = ranking.filter(
+            r => Math.abs(
+              r.score - ranking[0].score
+            ) < 0.000001
+          );
+
+          const title = node(
+            "h3",
+            tied.length > 1
+              ? "BERABERLİK"
+              : "👑 " + name(ranking[0].model)
+          );
+
+          title.style.color = "#eabf65";
+
+          result.append(title);
+
+          ranking.forEach((r, i) => {
+
+            result.append(
+              node(
+                "p",
+                (i + 1) + ". " +
+                name(r.model) +
+                " | Brier: " +
+                r.score.toFixed(6)
+              )
+            );
+          });
+        }
+
+        const radar = summarize(
+          selectedRows("RADAR X")
+        );
+
+        result.append(
+          node("h3", "RADAR X — ÖZEL KATEGORİ"),
+          node("p", "Doğru: " + radar.correct),
+          node("p", "Yanlış: " + radar.wrong),
+          node(
+            "p",
+            "Başarı: " +
+            (
+              radar.rate === null
+                ? "—"
+                : "%" + radar.rate.toFixed(2)
+            )
+          ),
+          node(
+            "p",
+            "Haftalar pazartesi başlar. " +
+            "Bütün tarihler UTC kullanır."
+          ),
+          node(
+            "p",
+            "Şampiyon sıralaması aynı maç ve " +
+            "aynı seçilmiş gol çizgisindeki " +
+            "ortak kayıtların Brier skoruna dayanır."
+          ),
+          node(
+            "p",
+            "Bu ekran geçmiş kayıtları yeniden " +
+            "hesaplar. Kesinleşmiş şampiyonlukları " +
+            "ayrı bir kalıcı dosyaya henüz yazmaz."
+          )
+        );
+      }
+
+      function fill() {
+
+        const periods = new Set();
+
+        for (const model of [
+          ...models, "RADAR X"
+        ]) {
+
+          for (const r of rowsFor(model)) {
+
+            const p = period(
+              r.tarih, type.value
+            );
+
+            if (p) periods.add(p);
+          }
+        }
+
+        selected.replaceChildren();
+
+        for (const p of [...periods]
+          .sort().reverse()) {
+
+          const option = node("option", p);
+
+          option.value = p;
+          selected.append(option);
+        }
+
+        render();
+      }
+
+      type.onchange = fill;
+      selected.onchange = render;
+
+      fill();
+
+    } catch (error) {
+
+      status.textContent =
+        "Şampiyonlar arşivi okunamadı: " +
+        error.message;
+    }
+  }
+
+  const button = [
+    ...menu.querySelectorAll("button")
+  ].find(
+    b => b.textContent.includes(
+      "ŞAMPİYONLAR ARŞİVİ"
+    )
+  );
+
+  if (button) {
+
+    button.addEventListener(
+      "click", archive
+    );
+  }
+
+})();
+</script>
 </body>
 </html>
