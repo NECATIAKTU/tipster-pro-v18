@@ -5340,5 +5340,135 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 }
 </style>
+   <style>
+@media screen and (max-width: 768px) {
+
+  #dashboard-results,
+  #dashboard-archive,
+  #league-center,
+  #tp-list {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #dashboard-results table,
+  #dashboard-archive table,
+  #league-center table {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #dashboard-results thead,
+  #dashboard-archive thead,
+  #league-center thead {
+    display: none;
+  }
+
+  #result-rows,
+  #top-archive-rows,
+  #lc-current,
+  #lc-past {
+    display: block;
+    width: 100%;
+  }
+
+  #result-rows tr,
+  #top-archive-rows tr,
+  #lc-current tr,
+  #lc-past tr {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 6px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #30445e;
+    border-radius: 12px;
+    background: #142033;
+  }
+
+  #result-rows td,
+  #top-archive-rows td,
+  #lc-current td,
+  #lc-past td {
+    display: block;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 6px !important;
+    font-size: 13px !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    text-align: left;
+    border: 0;
+  }
+
+  #result-rows td:first-child,
+  #lc-current td:first-child,
+  #lc-past td:first-child,
+  #top-archive-rows td:nth-child(2) {
+    grid-column: 1 / -1;
+    font-size: 15px !important;
+    font-weight: 700;
+  }
+
+  #lc-current td:nth-child(n+5)::before {
+    display: block;
+    color: #a6b8ce;
+    font-size: 11px;
+  }
+
+  #lc-current td:nth-child(5)::before {
+    content: "1.5 ÜST";
+  }
+  #lc-current td:nth-child(6)::before {
+    content: "2.5 ÜST";
+  }
+  #lc-current td:nth-child(7)::before {
+    content: "3.5 ÜST";
+  }
+  #lc-current td:nth-child(8)::before {
+    content: "4.5 ÜST";
+  }
+  #lc-current td:nth-child(9)::before {
+    content: "5.5 ÜST";
+  }
+  #lc-current td:nth-child(10)::before {
+    content: "6.5 ÜST";
+  }
+
+  #result-rows td:only-child,
+  #top-archive-rows td:only-child,
+  #lc-current td:only-child,
+  #lc-past td:only-child {
+    grid-column: 1 / -1;
+  }
+
+  #dashboard-archive select,
+  #league-center select {
+    max-width: 100%;
+  }
+
+  #tp-list table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+
+  #tp-list table th,
+  #tp-list table td {
+    padding: 8px 3px !important;
+    font-size: 11px !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+
+  #tp-list table th:first-child,
+  #tp-list table td:first-child {
+    width: 40% !important;
+  }
+
+}
+</style>
 </body>
 </html>
