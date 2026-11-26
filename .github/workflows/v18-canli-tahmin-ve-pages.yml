@@ -215,7 +215,43 @@ jobs:
           done
           echo 'UYARI: Arsiv push basarisiz; kurtarma dosyalari artifact icinde saklandi.'
           exit 1
+      - name: ASLAN MODU kalici arsiv kaydi
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            WT="$RUNNER_TEMP/aslan-worktree"
+            git worktree add --detach "$WT" origin/main
 
+            if [ -f "$WT/aslan_tahmin_arsivi.json" ]; then
+              cp "$WT/aslan_tahmin_arsivi.json" .
+            fi
+
+            python aslan_sonuc_takip.py --kilitle
+            python aslan_sonuc_takip.py --kontrol
+
+            cp aslan_tahmin_arsivi.json "$WT/"
+            cp aslan_dogrulanan_sonuclar.json "$WT/"
+
+            git -C "$WT" add aslan_tahmin_arsivi.json aslan_dogrulanan_sonuclar.json
+
+            if git -C "$WT" diff --cached --quiet; then
+              git worktree remove --force "$WT"
+              exit 0
+            fi
+
+            git -C "$WT" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'ASLAN kalici arsiv kaydi'
+
+            if git -C "$WT" push origin HEAD:main; then
+              git worktree remove --force "$WT"
+              echo 'ASLAN ARSIVI KAYDEDILDI'
+              exit 0
+            fi
+
+            git worktree remove --force "$WT"
+            sleep 3
+          done
+          exit 1
       - name: V18 panel verisini dogrula ve hazirla
         run: |
           python - <<'PYCODE'
