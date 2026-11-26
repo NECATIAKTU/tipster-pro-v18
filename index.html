@@ -1031,5 +1031,420 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <style>
+#mersin-performans {
+  margin: 15px 0;
+  padding: 12px;
+}
+#mersin-performans .stats {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px;
+}
+#mersin-performans article {
+  padding: 10px;
+  min-width: 0;
+}
+#mersin-performans strong {
+  display: block;
+  font-size: 23px;
+}
+#mersin-performans .dogru {
+  color: #22c55e;
+}
+#mersin-performans .yanlis {
+  color: #f87171;
+}
+#mersin-performans table {
+  min-width: 440px;
+  font-size: 13px;
+}
+</style>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+
+  const screen = $("mersin-screen");
+  const title = $("mersin-title");
+
+  if (!screen || !title) return;
+
+  const panel = document.createElement("section");
+
+  panel.id = "mersin-performans";
+  panel.className = "panel";
+
+  title.after(panel);
+
+  let generation = 0;
+
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
+
+  function fmt(value) {
+
+    return typeof value === "number"
+      && Number.isFinite(value)
+      ? String(value)
+      : "—";
+  }
+
+  function percent(value) {
+
+    return typeof value === "number"
+      && Number.isFinite(value)
+      ? "%" + value.toFixed(2)
+      : "—";
+  }
+
+  function node(tag, value, cls) {
+
+    const e = document.createElement(tag);
+
+    if (value !== undefined) {
+      e.textContent = value;
+    }
+
+    if (cls) e.className = cls;
+
+    return e;
+  }
+
+  function card(grid, label, value, cls) {
+
+    const article = node("article");
+
+    article.append(
+      node("span", label),
+      node("strong", value, cls)
+    );
+
+    grid.append(article);
+  }
+
+  function render(name, data, updated) {
+
+    panel.replaceChildren();
+
+    panel.append(
+      node("h3", name + " — PERFORMANS"),
+      node(
+        "p",
+        "Maç öncesi kilitlenmiş deneysel kayıtlar",
+        "tp-note"
+      )
+    );
+
+    const grid = node(
+      "div", undefined, "stats"
+    );
+
+    card(grid, "Doğru",
+      fmt(data.dogru), "dogru");
+
+    card(grid, "Yanlış",
+      fmt(data.yanlis), "yanlis");
+
+    card(grid, "Başarı",
+      percent(data.basari));
+
+    card(grid, "Bekleyen",
+      fmt(data.bekleyen));
+
+    card(grid, "Toplam kayıt",
+      fmt(data.toplam));
+
+    card(grid, "PAS",
+      fmt(data.pas));
+
+    card(grid, "Günlük başarı",
+      percent(data.gunluk?.basari));
+
+    card(grid, "Haftalık başarı",
+      percent(data.haftalik?.basari));
+
+    card(grid, "Aylık başarı",
+      percent(data.aylik?.basari));
+
+    card(grid, "Yetersiz veri",
+      fmt(data.yetersiz_veri));
+
+    if (name !== "RADAR X") {
+
+      card(grid, "Brier skoru",
+        fmt(data.brier));
+
+    }
+
+    panel.append(grid);
+
+    if (name !== "RADAR X") {
+
+      panel.append(
+        node("h3", "GOL ÇİZGİSİ PERFORMANSI")
+      );
+
+      const wrap = node(
+        "div", undefined, "scroll"
+      );
+
+      const table = node("table");
+      const head = node("thead");
+      const tr = node("tr");
+
+      for (const label of [
+        "Çizgi", "Doğru", "Yanlış",
+        "Başarı", "Brier"
+      ]) {
+        tr.append(node("th", label));
+      }
+
+      head.append(tr);
+      table.append(head);
+
+      const body = node("tbody");
+
+      for (const line of lines) {
+
+        const d = data.cizgiler?.[line] || {};
+        const row = node("tr");
+
+        row.append(
+          node("td", line + " ÜST"),
+          node("td", fmt(d.dogru), "dogru"),
+          node("td", fmt(d.yanlis), "yanlis"),
+          node("td", percent(d.basari)),
+          node("td", fmt(d.brier))
+        );
+
+        body.append(row);
+      }
+
+      table.append(body);
+      wrap.append(table);
+      panel.append(wrap);
+
+      panel.append(
+        node(
+          "p",
+          "Brier skorunda düşük değer daha iyidir.",
+          "tp-note"
+        )
+      );
+
+    } else {
+
+      panel.append(
+        node(
+          "p",
+          "RADAR X gol sapmasının yönüne göre " +
+          "değerlendirilir. Nötr kayıtlar PAS sayılır.",
+          "tp-note"
+        )
+      );
+    }
+
+    const details = node("details");
+
+    details.append(
+      node("summary", "Geçmiş model sonuçları")
+    );
+
+    const records = Array.isArray(data.kayitlar)
+      ? data.kayitlar
+      : [];
+
+    const list = node(
+      "div", undefined, "tp-list"
+    );
+
+    let limit = 30;
+
+    const ordered = [...records].sort(
+      (a,b) => Date.parse(b.tarih) -
+               Date.parse(a.tarih)
+    );
+
+    const more = node(
+      "button", "Daha fazla göster", "secondary"
+    );
+
+    more.type = "button";
+
+    function showRecords() {
+
+      list.replaceChildren();
+
+      for (const r of ordered.slice(0, limit)) {
+
+        const item = node(
+          "article", undefined, "tp-match"
+        );
+
+        const status =
+          r.sonuc === "DOGRU" ? "DOĞRU" :
+          r.sonuc === "YANLIS" ? "YANLIŞ" :
+          r.sonuc === "BEKLIYOR" ? "BEKLİYOR" :
+          "PAS";
+
+        const cls =
+          r.sonuc === "DOGRU" ? "dogru" :
+          r.sonuc === "YANLIS" ? "yanlis" :
+          "";
+
+        const selection = r.secim
+          ? name === "RADAR X"
+            ? r.secim
+            : r.secim + " ÜST"
+          : "PAS";
+
+        item.append(
+          node("small", r.lig || "—"),
+          node(
+            "h3",
+            (r.ev_sahibi || "—") +
+            " – " +
+            (r.deplasman || "—")
+          ),
+          node(
+            "p",
+            "Seçim: " + selection +
+            (r.yuzde != null
+              ? " · " + percent(r.yuzde)
+              : "")
+          ),
+          node(
+            "p",
+            "Skor: " + (r.skor || "—")
+          ),
+          node("b", status, cls)
+        );
+
+        list.append(item);
+      }
+
+      if (!ordered.length) {
+        list.append(
+          node(
+            "p",
+            "Henüz kayıt bulunmuyor.",
+            "tp-note"
+          )
+        );
+      }
+
+      more.hidden = ordered.length <= limit;
+    }
+
+    more.onclick = () => {
+      limit += 30;
+      showRecords();
+    };
+
+    details.append(list, more);
+    panel.append(details);
+
+    showRecords();
+
+    panel.append(
+      node(
+        "p",
+        "Son rapor: " + (updated || "—"),
+        "tp-note"
+      )
+    );
+  }
+
+  async function loadPerformance() {
+
+    const name = title.textContent.trim();
+
+    if (!name || screen.hidden) return;
+
+    const token = ++generation;
+
+    panel.textContent =
+      "Model performansı yükleniyor…";
+
+    const urls = [
+      "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_performans.json",
+      "./mersin_performans.json"
+    ];
+
+    for (const url of urls) {
+
+      try {
+
+        const response = await fetch(
+          url,
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            "HTTP " + response.status
+          );
+        }
+
+        const report = await response.json();
+
+        const key = name === "MERSİN"
+          ? "MERSIN"
+          : name;
+
+        const data = report.modeller?.[key];
+
+        if (!data) {
+          throw new Error(
+            "Model kaydı bulunamadı"
+          );
+        }
+
+        if (token !== generation) return;
+
+        render(name, data, report.guncelleme);
+
+        return;
+
+      } catch (error) {
+        console.warn(error);
+      }
+    }
+
+    if (token === generation) {
+
+      panel.textContent =
+        "Performans raporu henüz okunamadı. " +
+        "MERSİN LAB V17 sonuç dosyası kontrol edilmeli.";
+    }
+  }
+
+  const observer = new MutationObserver(
+    loadPerformance
+  );
+
+  observer.observe(title, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+
+  observer.observe(screen, {
+    attributes: true,
+    attributeFilter: ["hidden"]
+  });
+
+  $("mersin-refresh")?.addEventListener(
+    "click",
+    loadPerformance
+  );
+
+})();
+</script>
 </body>
 </html>
