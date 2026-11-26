@@ -2295,5 +2295,231 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("akademi-menu");
+  const content = document.getElementById("akademi-content");
+
+  if (!menu || !content) return;
+
+  const models = [
+    "PUSULA X",
+    "ATLAS X",
+    "MATRIX X",
+    "TEMPO X",
+    "MERSIN"
+  ];
+
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
+
+  const MIN_SAMPLE = 50;
+
+  function node(tag, text) {
+    const e = document.createElement(tag);
+
+    if (text !== undefined) {
+      e.textContent = text;
+    }
+
+    return e;
+  }
+
+  async function dna() {
+
+    const screen = node("div");
+
+    content.replaceChildren(screen);
+
+    screen.append(
+      node("h3", "🧬 MATEMATİK DNA")
+    );
+
+    const status = node(
+      "p", "Performans verisi yükleniyor..."
+    );
+
+    screen.append(status);
+
+    try {
+
+      const response = await fetch(
+        "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_performans.json",
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const report = await response.json();
+
+      if (!report.modeller) {
+        throw new Error("Model verisi bulunamadı");
+      }
+
+      status.textContent =
+        "Gol çizgilerine göre performans haritası";
+
+      const wrap = node("div");
+
+      wrap.className = "scroll";
+
+      const table = node("table");
+
+      table.style.minWidth = "650px";
+
+      const header = node("tr");
+
+      header.append(node("th", "MODEL"));
+
+      for (const line of lines) {
+
+        header.append(
+          node("th", line + " ÜST")
+        );
+      }
+
+      const head = node("thead");
+
+      head.append(header);
+      table.append(head);
+
+      const body = node("tbody");
+
+      for (const model of models) {
+
+        const row = node("tr");
+
+        row.append(
+          node(
+            "td",
+            model === "MERSIN"
+              ? "MERSİN"
+              : model
+          )
+        );
+
+        for (const line of lines) {
+
+          const d =
+            report.modeller[model]
+              ?.cizgiler?.[line];
+
+          const cell = node("td");
+
+          const count =
+            (d?.dogru || 0)
+            + (d?.yanlis || 0);
+
+          cell.style.textAlign = "center";
+          cell.style.padding = "10px";
+          cell.style.borderRadius = "6px";
+
+          if (
+            count < MIN_SAMPLE ||
+            typeof d?.basari !== "number" ||
+            !Number.isFinite(d.basari)
+          ) {
+
+            cell.style.background = "#273448";
+            cell.style.color = "#a6b5ca";
+
+            cell.append(
+              node("b", "—"),
+              node("div", "N: " + count)
+            );
+
+          } else {
+
+            const rate = d.basari;
+
+            if (rate >= 80) {
+
+              cell.style.background = "#164b35";
+              cell.style.color = "#4ade80";
+
+            } else if (rate >= 65) {
+
+              cell.style.background = "#49351d";
+              cell.style.color = "#fbbf24";
+
+            } else {
+
+              cell.style.background = "#48252e";
+              cell.style.color = "#f87171";
+            }
+
+            cell.append(
+              node("b", "%" + rate.toFixed(1)),
+              node("div", "N: " + count)
+            );
+          }
+
+          row.append(cell);
+        }
+
+        body.append(row);
+      }
+
+      table.append(body);
+      wrap.append(table);
+      screen.append(wrap);
+
+      screen.append(
+        node("h3", "RENK HARİTASI"),
+        node("p", "🟢 %80 ve üzeri"),
+        node("p", "🟠 %65 – %79.99"),
+        node("p", "🔴 %65 altı"),
+        node("p", "⚪ Yetersiz örneklem"),
+        node(
+          "p",
+          "N: Değerlendirilen tahmin sayısı."
+        ),
+        node(
+          "p",
+          "Renkler için en az 50 sonuç gerekir."
+        ),
+        node(
+          "p",
+          "Başarı oranları farklı gol çizgileri " +
+          "arasında tek başına karşılaştırılamaz."
+        ),
+        node(
+          "p",
+          "RADAR X farklı matematiksel ölçüm " +
+          "kullandığı için ayrı değerlendirilir."
+        ),
+        node(
+          "p",
+          "Son rapor: " +
+          (report.guncelleme || "—")
+        )
+      );
+
+    } catch (error) {
+
+      status.textContent =
+        "DNA verisi okunamadı: "
+        + error.message;
+    }
+  }
+
+  const button = [
+    ...menu.querySelectorAll("button")
+  ].find(
+    b => b.textContent.includes("MATEMATİK DNA")
+  );
+
+  if (button) {
+    button.addEventListener("click", dna);
+  }
+
+})();
+</script>
 </body>
 </html>
