@@ -1,9 +1,9 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-26T13:08:26.992769+00:00",
-  "toplam_arsiv": 626,
+  "olusturulma_utc": "2026-11-26T16:36:54.243382+00:00",
+  "toplam_arsiv": 631,
   "dogrulanan_mac": 319,
-  "bekleyen_mac": 307,
+  "bekleyen_mac": 312,
   "degerlendirilen_tahmin": 214,
   "dogru": 151,
   "yanlis": 63,
@@ -40430,6 +40430,241 @@
         "4.5_ust": 11.9,
         "5.5_ust": 4.7,
         "6.5_ust": 1.6
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "arg.1|401936657",
+      "mac": {
+        "id": "arg.1|401936657",
+        "tarih": "2026-11-29T23:30:00+00:00",
+        "lig_kodu": "arg.1",
+        "lig": "Arjantin Primera Division",
+        "ev_sahibi": "Boca Juniors",
+        "deplasman": "Gimnasia La Plata",
+        "istatistik_ev": "Boca Juniors",
+        "istatistik_deplasman": "Gimnasia La Plata",
+        "tahmin": {
+          "beklenen_gol": 2.68,
+          "1.5_ust": 74.8,
+          "2.5_ust": 50.2,
+          "3.5_ust": 28.2,
+          "4.5_ust": 13.4,
+          "5.5_ust": 5.5,
+          "6.5_ust": 2.0
+        },
+        "hesaplama_zamani_utc": "2026-11-26T16:31:15.566526+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 158
+      },
+      "kilit_zamani_utc": "2026-11-26T16:36:51.760999+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 74.8,
+        "2.5_ust": 50.2,
+        "3.5_ust": 28.2,
+        "4.5_ust": 13.4,
+        "5.5_ust": 5.5,
+        "6.5_ust": 2.0
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "col.1|401936055",
+      "mac": {
+        "id": "col.1|401936055",
+        "tarih": "2026-11-27T23:35:00+00:00",
+        "lig_kodu": "col.1",
+        "lig": "Kolombiya Primera A",
+        "ev_sahibi": "Deportivo Cali",
+        "deplasman": "Atlético Bucaramanga",
+        "istatistik_ev": "Deportivo Cali",
+        "istatistik_deplasman": "Atlético Bucaramanga",
+        "tahmin": {
+          "beklenen_gol": 2.44,
+          "1.5_ust": 70.0,
+          "2.5_ust": 44.0,
+          "3.5_ust": 22.9,
+          "4.5_ust": 10.1,
+          "5.5_ust": 3.8,
+          "6.5_ust": 1.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T16:31:15.566526+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 149
+      },
+      "kilit_zamani_utc": "2026-11-26T16:36:51.760999+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 70.0,
+        "2.5_ust": 44.0,
+        "3.5_ust": 22.9,
+        "4.5_ust": 10.1,
+        "5.5_ust": 3.8,
+        "6.5_ust": 1.3
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "col.1|401936054",
+      "mac": {
+        "id": "col.1|401936054",
+        "tarih": "2026-11-28T01:40:00+00:00",
+        "lig_kodu": "col.1",
+        "lig": "Kolombiya Primera A",
+        "ev_sahibi": "Millonarios",
+        "deplasman": "América de Cali",
+        "istatistik_ev": "Millonarios",
+        "istatistik_deplasman": "América de Cali",
+        "tahmin": {
+          "beklenen_gol": 2.42,
+          "1.5_ust": 69.5,
+          "2.5_ust": 43.5,
+          "3.5_ust": 22.5,
+          "4.5_ust": 9.8,
+          "5.5_ust": 3.7,
+          "6.5_ust": 1.2
+        },
+        "hesaplama_zamani_utc": "2026-11-26T16:31:15.566526+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 149
+      },
+      "kilit_zamani_utc": "2026-11-26T16:36:51.760999+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 69.5,
+        "2.5_ust": 43.5,
+        "3.5_ust": 22.5,
+        "4.5_ust": 9.8,
+        "5.5_ust": 3.7,
+        "6.5_ust": 1.2
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "col.1|401936045",
+      "mac": {
+        "id": "col.1|401936045",
+        "tarih": "2026-11-29T00:30:00+00:00",
+        "lig_kodu": "col.1",
+        "lig": "Kolombiya Primera A",
+        "ev_sahibi": "Independiente Santa Fe",
+        "deplasman": "Atlético Nacional",
+        "istatistik_ev": "Independiente Santa Fe",
+        "istatistik_deplasman": "Atlético Nacional",
+        "tahmin": {
+          "beklenen_gol": 2.74,
+          "1.5_ust": 75.8,
+          "2.5_ust": 51.5,
+          "3.5_ust": 29.4,
+          "4.5_ust": 14.2,
+          "5.5_ust": 6.0,
+          "6.5_ust": 2.2
+        },
+        "hesaplama_zamani_utc": "2026-11-26T16:31:15.566526+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 149
+      },
+      "kilit_zamani_utc": "2026-11-26T16:36:51.760999+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 75.8,
+        "2.5_ust": 51.5,
+        "3.5_ust": 29.4,
+        "4.5_ust": 14.2,
+        "5.5_ust": 6.0,
+        "6.5_ust": 2.2
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "col.1|401936044",
+      "mac": {
+        "id": "col.1|401936044",
+        "tarih": "2026-11-29T23:30:00+00:00",
+        "lig_kodu": "col.1",
+        "lig": "Kolombiya Primera A",
+        "ev_sahibi": "Independiente Medellín",
+        "deplasman": "Once Caldas",
+        "istatistik_ev": "Independiente Medellín",
+        "istatistik_deplasman": "Once Caldas",
+        "tahmin": {
+          "beklenen_gol": 2.32,
+          "1.5_ust": 67.4,
+          "2.5_ust": 40.9,
+          "3.5_ust": 20.5,
+          "4.5_ust": 8.6,
+          "5.5_ust": 3.1,
+          "6.5_ust": 1.0
+        },
+        "hesaplama_zamani_utc": "2026-11-26T16:31:15.566526+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 149
+      },
+      "kilit_zamani_utc": "2026-11-26T16:36:51.760999+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 67.4,
+        "2.5_ust": 40.9,
+        "3.5_ust": 20.5,
+        "4.5_ust": 8.6,
+        "5.5_ust": 3.1,
+        "6.5_ust": 1.0
       },
       "kilitli_secim": "RISKLI",
       "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
