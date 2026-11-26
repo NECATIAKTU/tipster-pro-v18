@@ -1928,5 +1928,372 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+
+  const menu = $("akademi-menu");
+  const content = $("akademi-content");
+
+  if (!menu || !content) return;
+
+  const models = [
+    "PUSULA X",
+    "ATLAS X",
+    "MATRIX X",
+    "TEMPO X",
+    "MERSIN"
+  ];
+
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
+
+  function node(tag, text, cls) {
+
+    const e = document.createElement(tag);
+
+    if (text !== undefined) {
+      e.textContent = text;
+    }
+
+    if (cls) e.className = cls;
+
+    return e;
+  }
+
+  function output(mac, model) {
+
+    return mac.motorlar?.[model]
+      ?? (
+        model === "MERSIN"
+        ? mac.olasiliklar
+        : null
+      );
+  }
+
+  function probability(mac, model, line) {
+
+    const value = output(mac, model)?.[line];
+
+    return typeof value === "number"
+      && Number.isFinite(value)
+      && value >= 0
+      && value <= 100
+      ? value
+      : null;
+  }
+
+  function matchName(mac) {
+
+    return (mac.ev_sahibi || "—")
+      + " – "
+      + (mac.deplasman || "—");
+  }
+
+  async function arena() {
+
+    const screen = node("div");
+
+    content.replaceChildren(screen);
+
+    screen.append(
+      node("h3", "⚔️ MATEMATİK ARENASI"),
+      node(
+        "p",
+        "Aynı maçta bağımsız model karşılaştırması.",
+        "tp-note"
+      )
+    );
+
+    const status = node(
+      "p", "Veriler yükleniyor…", "tp-note"
+    );
+
+    screen.append(status);
+
+    try {
+
+      const response = await fetch(
+        "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_panel.json",
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const data = await response.json();
+
+      const rows = Array.isArray(data)
+        ? data
+        : data.maclar;
+
+      if (!Array.isArray(rows)) {
+        throw new Error("Maç listesi bulunamadı");
+      }
+
+      const matches = rows.filter(
+        m => Date.parse(m.tarih) > Date.now()
+      ).sort(
+        (a,b) => Date.parse(a.tarih)
+               - Date.parse(b.tarih)
+      );
+
+      status.textContent =
+        matches.length + " güncel maç";
+
+      const search = node("input");
+
+      search.type = "search";
+      search.placeholder = "Takım veya lig ara";
+      search.style.width = "100%";
+
+      const select = node("select");
+
+      select.style.width = "100%";
+
+      const market = node("select");
+
+      market.style.width = "100%";
+
+      for (const line of lines) {
+
+        const option = node(
+          "option", line + " ÜST"
+        );
+
+        option.value = line;
+        market.append(option);
+      }
+
+      market.value = "2.5";
+
+      const result = node("div");
+
+      screen.append(
+        search,
+        select,
+        market,
+        result
+      );
+
+      function render() {
+
+        result.replaceChildren();
+
+        const mac = matches[
+          Number(select.value)
+        ];
+
+        if (!mac) {
+
+          result.append(
+            node("p", "Maç bulunamadı.")
+          );
+
+          return;
+        }
+
+        const line = market.value;
+
+        result.append(
+          node("h3", matchName(mac)),
+          node("p", mac.lig || "—", "tp-note"),
+          node("p", line + " ÜST")
+        );
+
+        const values = [];
+
+        for (const model of models) {
+
+          const value = probability(
+            mac, model, line
+          );
+
+          const card = node(
+            "article", undefined, "tp-match"
+          );
+
+          card.append(
+            node(
+              "b",
+              model === "MERSIN"
+                ? "MERSİN"
+                : model
+            )
+          );
+
+          if (value === null) {
+
+            card.append(
+              node(
+                "p",
+                "YETERSİZ VERİ",
+                "tp-note"
+              )
+            );
+
+          } else {
+
+            values.push(value);
+
+            const number = node(
+              "h3", "%" + value.toFixed(2)
+            );
+
+            number.style.color = "#82bfff";
+
+            const track = node("div");
+
+            track.style.cssText =
+              "height:12px;background:#1c2d46;" +
+              "border-radius:6px;overflow:hidden";
+
+            const bar = node("div");
+
+            bar.style.cssText =
+              "height:12px;background:#427bc9;" +
+              "width:" + value + "%";
+
+            track.append(bar);
+
+            card.append(number, track);
+          }
+
+          result.append(card);
+        }
+
+        if (values.length >= 2) {
+
+          const spread =
+            Math.max(...values)
+            - Math.min(...values);
+
+          result.append(
+            node(
+              "h3",
+              "MODEL GÖRÜŞ AYRILIĞI"
+            ),
+            node(
+              "p",
+              spread.toFixed(2)
+              + " yüzde puan fark"
+            ),
+            node(
+              "p",
+              "Karşılaştırılan model: "
+              + values.length,
+              "tp-note"
+            )
+          );
+        }
+
+        const radar =
+          mac.motorlar?.["RADAR X"];
+
+        if (radar) {
+
+          result.append(
+            node("h3", "RADAR X"),
+            node(
+              "p",
+              "Sapma: " +
+              (radar.sapma ?? "—")
+            ),
+            node(
+              "p",
+              "Lig ortalaması: " +
+              (radar.lig_ortalama ?? "—")
+            ),
+            node(
+              "p",
+              "Takım ortalaması: " +
+              (radar.takim_ortalama ?? "—")
+            )
+          );
+        }
+
+        result.append(
+          node(
+            "p",
+            "Model yüzdeleri deneysel çıktılardır. " +
+            "Modellerin aynı görüşte olması " +
+            "doğruluğu garanti etmez.",
+            "tp-note"
+          )
+        );
+      }
+
+      function fill() {
+
+        const q = search.value
+          .toLocaleLowerCase("tr")
+          .trim();
+
+        select.replaceChildren();
+
+        matches.forEach((mac, index) => {
+
+          const name = matchName(mac);
+
+          const text =
+            name + " " + (mac.lig || "");
+
+          if (
+            !text.toLocaleLowerCase("tr")
+              .includes(q)
+          ) return;
+
+          const option = node("option", name);
+
+          option.value = String(index);
+
+          select.append(option);
+        });
+
+        if (!select.options.length) {
+
+          result.textContent =
+            "Aramaya uygun maç bulunamadı.";
+
+          return;
+        }
+
+        render();
+      }
+
+      search.oninput = fill;
+      select.onchange = render;
+      market.onchange = render;
+
+      fill();
+
+    } catch (error) {
+
+      status.textContent =
+        "Arena verisi okunamadı: "
+        + error.message;
+    }
+  }
+
+  const button = [...menu.querySelectorAll(
+    "button"
+  )].find(
+    b => b.textContent.includes(
+      "MATEMATİK ARENASI"
+    )
+  );
+
+  if (button) {
+
+    button.addEventListener("click", arena);
+  }
+
+})();
+</script>
 </body>
 </html>
