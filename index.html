@@ -1446,5 +1446,69 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("tp-home");
+  const panel = document.getElementById(
+    "tp-live-performance"
+  );
+  const results = document.getElementById(
+    "dashboard-results"
+  );
+
+  if (!menu || !panel || !results) return;
+
+  results.prepend(panel);
+
+  const oldButton = document.getElementById(
+    "tp-performance-details"
+  );
+
+  if (oldButton) {
+    oldButton.remove();
+  }
+
+  const section = document.createElement("section");
+
+  section.className = "tp-group";
+
+  section.innerHTML = `
+    <h2>PERFORMANS MERKEZİ</h2>
+
+    <div class="tp-grid">
+
+      <button type="button"
+        class="tp-tile opp"
+        id="open-main-performance">
+
+        <b>📊 PERFORMANS</b>
+
+        <small>
+          Doğru / yanlış / başarı oranı
+        </small>
+
+      </button>
+
+    </div>
+  `;
+
+  menu.prepend(section);
+
+  document.getElementById(
+    "open-main-performance"
+  ).onclick = () => {
+
+    window.tpOpen("results");
+
+    document.getElementById(
+      "tp-title"
+    ).textContent = "PERFORMANS MERKEZİ";
+
+  };
+
+})();
+</script>
 </body>
 </html>
