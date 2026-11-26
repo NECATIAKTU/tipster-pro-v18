@@ -1510,5 +1510,423 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <style>
+#akademi-open {
+  background: #29251b;
+  border-color: #b89b50;
+  color: #eabf65;
+}
+
+#akademi-center {
+  margin-top: 20px;
+}
+
+#akademi-center .tp-tile {
+  min-height: 95px;
+}
+
+#akademi-center .tp-tile b {
+  color: #eabf65;
+}
+
+#akademi-content {
+  margin-top: 15px;
+}
+
+#akademi-content table {
+  min-width: 480px;
+}
+
+#akademi-content .dogru {
+  color: #22c55e;
+}
+
+#akademi-content .yanlis {
+  color: #f87171;
+}
+</style>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+
+  const mersin = $("mersin-open");
+
+  if (!mersin) return;
+
+  const grid = mersin.parentElement;
+  const section = grid.closest(".tp-group");
+
+  if (!section) return;
+
+  const heading = section.querySelector("h2");
+
+  if (heading) {
+    heading.textContent =
+      "MATEMATİK VE ARAŞTIRMA MERKEZİ";
+  }
+
+  const button = document.createElement("button");
+
+  button.type = "button";
+  button.id = "akademi-open";
+  button.className = "tp-tile";
+
+  button.innerHTML = `
+    <b>🏛️ MATEMATİK AKADEMİSİ</b>
+    <small>Bilimsel araştırma merkezi</small>
+  `;
+
+  grid.append(button);
+
+  const center = document.createElement("div");
+
+  center.id = "akademi-center";
+  center.hidden = true;
+
+  center.innerHTML = `
+    <h2>MATEMATİK AKADEMİSİ V1</h2>
+
+    <div class="tp-controls">
+      <button type="button"
+        id="akademi-close">
+        ← Ana menü
+      </button>
+    </div>
+
+    <div id="akademi-menu"
+      class="tp-grid"></div>
+
+    <div id="akademi-screen" hidden>
+
+      <div class="tp-controls">
+        <button type="button"
+          id="akademi-back">
+          ← Akademi
+        </button>
+      </div>
+
+      <h2 id="akademi-title"></h2>
+
+      <div id="akademi-content"
+        class="panel"></div>
+
+    </div>
+  `;
+
+  section.append(center);
+
+  const modules = [
+    [
+      "league",
+      "🏆 ŞAMPİYONLAR LİGİ",
+      "Matematik performans yarışması"
+    ],
+    [
+      "arena",
+      "⚔️ MATEMATİK ARENASI",
+      "Aynı maçta model karşılaştırması"
+    ],
+    [
+      "dna",
+      "🧬 MATEMATİK DNA",
+      "Güçlü ve zayıf alanlar"
+    ],
+    [
+      "errors",
+      "🔬 HATA LABORATUVARI",
+      "Yanlışların bilimsel analizi"
+    ],
+    [
+      "challenger",
+      "👑 ŞAMPİYON VE MEYDAN OKUYAN",
+      "Yeni matematik testleri"
+    ],
+    [
+      "health",
+      "🛡️ SİSTEM SAĞLIK MERKEZİ",
+      "Teknik denetim"
+    ],
+    [
+      "calibration",
+      "🎯 KALİBRASYON MERKEZİ",
+      "Olasılık güvenilirliği"
+    ],
+    [
+      "archive",
+      "📚 ŞAMPİYONLAR ARŞİVİ",
+      "Haftalık ve aylık kayıtlar"
+    ]
+  ];
+
+  let generation = 0;
+
+  function node(tag, value, cls) {
+
+    const e = document.createElement(tag);
+
+    if (value !== undefined) {
+      e.textContent = value;
+    }
+
+    if (cls) e.className = cls;
+
+    return e;
+  }
+
+  function fmt(value) {
+    return value == null ? "—" : String(value);
+  }
+
+  function percent(value) {
+    return typeof value === "number"
+      && Number.isFinite(value)
+      ? "%" + value.toFixed(2)
+      : "—";
+  }
+
+  function back() {
+
+    generation++;
+
+    $("akademi-menu").hidden = false;
+    $("akademi-screen").hidden = true;
+  }
+
+  function close() {
+
+    back();
+    center.hidden = true;
+  }
+
+  button.onclick = () => {
+
+    const opening = center.hidden;
+
+    close();
+
+    if (opening) {
+
+      const mersinCenter = $("mersin-center");
+
+      if (mersinCenter) {
+        mersinCenter.hidden = true;
+      }
+
+      center.hidden = false;
+
+      center.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
+  mersin.addEventListener("click", close);
+
+  $("akademi-close").onclick = () => {
+
+    close();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  $("akademi-back").onclick = back;
+
+  async function league() {
+
+    const token = ++generation;
+
+    const content = $("akademi-content");
+
+    content.textContent =
+      "Performans raporu yükleniyor…";
+
+    try {
+
+      const response = await fetch(
+        "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/mersin_performans.json",
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const report = await response.json();
+
+      if (!report.modeller) {
+        throw new Error("Model raporu bulunamadı");
+      }
+
+      if (token !== generation) return;
+
+      content.replaceChildren();
+
+      content.append(
+        node("h3", "MATEMATİK PERFORMANS TABLOSU"),
+        node(
+          "p",
+          "Maç öncesinde kilitlenmiş kayıtlar.",
+          "tp-note"
+        )
+      );
+
+      const wrap = node(
+        "div", undefined, "scroll"
+      );
+
+      const table = node("table");
+      const head = node("thead");
+      const header = node("tr");
+
+      for (const label of [
+        "Model",
+        "Doğru",
+        "Yanlış",
+        "Bekleyen",
+        "Başarı",
+        "Brier"
+      ]) {
+        header.append(node("th", label));
+      }
+
+      head.append(header);
+      table.append(head);
+
+      const body = node("tbody");
+
+      const models = [
+        "PUSULA X",
+        "ATLAS X",
+        "MATRIX X",
+        "TEMPO X",
+        "MERSIN"
+      ];
+
+      for (const name of models) {
+
+        const d = report.modeller[name];
+
+        if (!d) continue;
+
+        const row = node("tr");
+
+        row.append(
+          node("td",
+            name === "MERSIN" ? "MERSİN" : name),
+          node("td", fmt(d.dogru), "dogru"),
+          node("td", fmt(d.yanlis), "yanlis"),
+          node("td", fmt(d.bekleyen)),
+          node("td", percent(d.basari)),
+          node("td", fmt(d.brier))
+        );
+
+        body.append(row);
+      }
+
+      table.append(body);
+      wrap.append(table);
+      content.append(wrap);
+
+      const radar = report.modeller["RADAR X"];
+
+      if (radar) {
+
+        content.append(
+          node("h3", "RADAR X — ÖZEL KATEGORİ"),
+          node(
+            "p",
+            "Doğru: " + fmt(radar.dogru) +
+            " | Yanlış: " + fmt(radar.yanlis) +
+            " | Bekleyen: " + fmt(radar.bekleyen) +
+            " | Başarı: " + percent(radar.basari)
+          )
+        );
+      }
+
+      content.append(
+        node("h3", "🏆 Haftanın şampiyonu"),
+        node(
+          "p",
+          "Ortak maç değerlendirmesi bekleniyor.",
+          "tp-note"
+        ),
+        node("h3", "👑 Ayın şampiyonu"),
+        node(
+          "p",
+          "Yeterli karşılaştırılabilir veri bekleniyor.",
+          "tp-note"
+        ),
+        node(
+          "p",
+          "Son güncelleme: " +
+          (report.guncelleme || "—"),
+          "tp-note"
+        )
+      );
+
+      content.append(
+        node(
+          "p",
+          "Adil sıralama için aynı maçlar ve aynı " +
+          "gol çizgileri karşılaştırılacaktır. " +
+          "Bu tablo tek başına şampiyon belirlemez.",
+          "tp-note"
+        )
+      );
+
+    } catch (error) {
+
+      if (token !== generation) return;
+
+      content.textContent =
+        "Performans verisi okunamadı: " +
+        error.message;
+    }
+  }
+
+  for (const [key, name, description] of modules) {
+
+    const tile = node(
+      "button", undefined, "tp-tile"
+    );
+
+    tile.type = "button";
+
+    tile.append(
+      node("b", name),
+      node("small", description)
+    );
+
+    tile.onclick = () => {
+
+      generation++;
+
+      $("akademi-menu").hidden = true;
+      $("akademi-screen").hidden = false;
+      $("akademi-title").textContent = name;
+
+      if (key === "league") {
+
+        league();
+
+      } else {
+
+        $("akademi-content").textContent =
+          "Bu merkezin veri bağlantısı henüz kurulmadı.";
+      }
+    };
+
+    $("akademi-menu").append(tile);
+  }
+
+})();
+</script>
 </body>
 </html>
