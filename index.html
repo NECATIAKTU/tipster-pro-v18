@@ -859,6 +859,177 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+<style>
+#tp-live-performance {
+  margin: 18px 0;
+  padding: 14px;
+}
+#tp-live-performance .stats {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px;
+  margin: 12px 0;
+}
+#tp-live-performance article {
+  padding: 12px;
+  min-width: 0;
+}
+#tp-live-performance strong {
+  display: block;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+#tp-live-performance .win {
+  color: #22c55e;
+}
+#tp-live-performance .loss {
+  color: #f87171;
+}
+</style>
 
+<script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("tp-home");
+
+  if (!menu) return;
+
+  const section = document.createElement("section");
+
+  section.id = "tp-live-performance";
+  section.className = "panel";
+
+  section.innerHTML = `
+    <h2>📊 GERÇEK TAHMİN PERFORMANSI</h2>
+
+    <div class="stats">
+
+      <article>
+        <span>✅ Doğru tahmin</span>
+        <strong class="win"
+          data-result-copy="wins">—</strong>
+      </article>
+
+      <article>
+        <span>❌ Yanlış tahmin</span>
+        <strong class="loss"
+          data-result-copy="losses">—</strong>
+      </article>
+
+      <article>
+        <span>Başarı oranı</span>
+        <strong
+          data-result-copy="winrate">—</strong>
+      </article>
+
+      <article>
+        <span>Bekleyen kayıt</span>
+        <strong
+          data-result-copy="pending">—</strong>
+      </article>
+
+      <article>
+        <span>Bugünkü başarı</span>
+        <strong
+          data-result-copy="todayrate">—</strong>
+      </article>
+
+      <article>
+        <span>Haftalık başarı</span>
+        <strong
+          data-result-copy="weekrate">—</strong>
+      </article>
+
+      <article>
+        <span>Aylık başarı</span>
+        <strong
+          data-result-copy="monthrate">—</strong>
+      </article>
+
+      <article>
+        <span>Seçimsiz / PAS</span>
+        <strong
+          data-result-copy="ungraded">—</strong>
+      </article>
+
+    </div>
+
+    <p class="tp-note">
+      Yalnızca doğrulanmış ve değerlendirilmiş
+      tahminler başarı hesabına girer.
+    </p>
+
+    <button type="button"
+      class="secondary"
+      id="tp-performance-details">
+      📋 Geçmiş maç sonuçları
+    </button>
+  `;
+
+  menu.prepend(section);
+
+  const copies = [
+    ...section.querySelectorAll(
+      "[data-result-copy]"
+    )
+  ];
+
+  function sync() {
+
+    for (const target of copies) {
+
+      const source = document.getElementById(
+        target.dataset.resultCopy
+      );
+
+      const value =
+        source?.textContent || "—";
+
+      if (target.textContent !== value) {
+        target.textContent = value;
+      }
+    }
+  }
+
+  function start() {
+
+    const source = document.getElementById(
+      "dashboard-results"
+    );
+
+    if (source) {
+
+      const observer = new MutationObserver(sync);
+
+      observer.observe(source, {
+        childList: true,
+        subtree: true,
+        characterData: true
+      });
+    }
+
+    sync();
+  }
+
+  if (document.readyState === "loading") {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      start
+    );
+
+  } else {
+    start();
+  }
+
+  document.getElementById(
+    "tp-performance-details"
+  ).onclick = () => {
+    window.tpOpen?.("results");
+  };
+
+})();
+</script>
 </body>
 </html>
