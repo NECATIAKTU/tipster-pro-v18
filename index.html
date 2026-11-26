@@ -3286,5 +3286,389 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("akademi-menu");
+  const content = document.getElementById("akademi-content");
+
+  if (!menu || !content) return;
+
+  const base =
+    "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/";
+
+  const models = [
+    "PUSULA X",
+    "ATLAS X",
+    "RADAR X",
+    "MATRIX X",
+    "TEMPO X",
+    "MERSIN"
+  ];
+
+  function node(tag, text) {
+
+    const e = document.createElement(tag);
+
+    if (text !== undefined) {
+      e.textContent = text;
+    }
+
+    return e;
+  }
+
+  async function read(url) {
+
+    const response = await fetch(url, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+
+      throw new Error(
+        "HTTP " + response.status
+      );
+    }
+
+    return response.json();
+  }
+
+  async function health() {
+
+    const screen = node("div");
+
+    content.replaceChildren(screen);
+
+    screen.append(
+      node("h3", "🛡️ SİSTEM SAĞLIK MERKEZİ"),
+      node(
+        "p",
+        "Bağımsız veri ve bağlantı denetimi."
+      )
+    );
+
+    const refresh = node(
+      "button", "Yeniden kontrol et"
+    );
+
+    refresh.type = "button";
+    refresh.className = "secondary";
+    refresh.onclick = health;
+
+    screen.append(refresh);
+
+    const summary = node(
+      "p", "Sistem kontrol ediliyor..."
+    );
+
+    screen.append(summary);
+
+    const list = node("div");
+
+    list.className = "tp-list";
+
+    screen.append(list);
+
+    let success = 0;
+    let warning = 0;
+    let failed = 0;
+
+    function check(name, state, detail) {
+
+      const card = node("article");
+
+      card.className = "tp-match";
+
+      const label = node("b");
+
+      if (state === "ok") {
+
+        label.textContent = "✓ BAŞARILI";
+        label.style.color = "#22c55e";
+        success++;
+
+      } else if (state === "warning") {
+
+        label.textContent = "⚠ İNCELEME";
+        label.style.color = "#fbbf24";
+        warning++;
+
+      } else {
+
+        label.textContent = "✕ HATA";
+        label.style.color = "#f87171";
+        failed++;
+      }
+
+      card.append(
+        node("h3", name),
+        label,
+        node("p", detail)
+      );
+
+      list.append(card);
+
+      summary.textContent =
+        "Başarılı: " + success +
+        " | İnceleme: " + warning +
+        " | Hata: " + failed;
+    }
+
+    function freshness(name, value) {
+
+      const time = Date.parse(value);
+
+      if (!Number.isFinite(time)) {
+
+        check(
+          name,
+          "warning",
+          "Güncelleme zamanı doğrulanamadı."
+        );
+
+        return;
+      }
+
+      const hours =
+        (Date.now() - time) / 3600000;
+
+      const valid =
+        hours >= -0.1 && hours <= 36;
+
+      check(
+        name,
+        valid ? "ok" : "warning",
+        "Son güncelleme: " +
+        new Date(time).toISOString() +
+        " | Yaş: " + hours.toFixed(1) +
+        " saat"
+      );
+    }
+
+    const sources = [
+      [
+        "V18 tahmin dosyası",
+        "./panel_tahminler.json",
+        "tahminler"
+      ],
+      [
+        "V18 gerçek sonuçları",
+        "./v18_dogrulanan_sonuclar.json",
+        "kayitlar"
+      ],
+      [
+        "ASLAN MODU raporu",
+        "./aslan_modu_rapor.json",
+        "maclar"
+      ],
+      [
+        "MERSİN panel bağlantısı",
+        base + "mersin_panel.json",
+        null
+      ],
+      [
+        "MERSİN kalıcı arşivi",
+        base + "mersin_kalici_arsiv.json",
+        null
+      ],
+      [
+        "MERSİN tahmin arşivi",
+        base + "mersin_tahmin_arsivi.json",
+        null
+      ],
+      [
+        "MERSİN performans raporu",
+        base + "mersin_performans.json",
+        null
+      ]
+    ];
+
+    let performance = null;
+
+    for (const [name, url, field] of sources) {
+
+      try {
+
+        const data = await read(url);
+
+        if (!data || typeof data !== "object") {
+
+          throw new Error("Geçersiz JSON");
+        }
+
+        if (field && !Array.isArray(data[field])) {
+
+          throw new Error(
+            "Beklenen kayıt listesi bulunamadı."
+          );
+        }
+
+        if (
+          name === "MERSİN performans raporu"
+        ) {
+
+          if (!data.modeller) {
+
+            throw new Error(
+              "Model raporları bulunamadı."
+            );
+          }
+
+          performance = data;
+        }
+
+        const rows = Array.isArray(data)
+          ? data
+          : field
+            ? data[field]
+            : data.maclar ?? data.kayitlar;
+
+        if (Array.isArray(rows)) {
+
+          check(
+            name,
+            rows.length ? "ok" : "warning",
+            "Kayıt sayısı: " + rows.length
+          );
+
+        } else {
+
+          check(
+            name,
+            "ok",
+            "JSON dosyasına erişildi."
+          );
+        }
+
+        if (name === "V18 tahmin dosyası") {
+
+          freshness(
+            "V18 veri güncelliği",
+            data.olusturulma_utc
+          );
+        }
+
+      } catch (error) {
+
+        check(
+          name,
+          "error",
+          error.message
+        );
+      }
+    }
+
+    if (performance) {
+
+      freshness(
+        "MERSİN veri güncelliği",
+        performance.guncelleme
+      );
+
+      for (const model of models) {
+
+        const d = performance.modeller[model];
+
+        if (!d) {
+
+          check(
+            model,
+            "error",
+            "Performans kaydı bulunamadı."
+          );
+
+          continue;
+        }
+
+        const fields = [
+          d.dogru,
+          d.yanlis,
+          d.bekleyen,
+          d.pas,
+          d.toplam
+        ];
+
+        const valid = fields.every(
+          v => Number.isInteger(v) && v >= 0
+        );
+
+        if (!valid) {
+
+          check(
+            model,
+            "warning",
+            "Eksik veya geçersiz sayaç."
+          );
+
+          continue;
+        }
+
+        const total =
+          d.dogru +
+          d.yanlis +
+          d.bekleyen +
+          d.pas;
+
+        check(
+          model,
+          total === d.toplam
+            ? "ok"
+            : "warning",
+          "Toplam: " + d.toplam +
+          " | Doğru: " + d.dogru +
+          " | Yanlış: " + d.yanlis +
+          " | Bekleyen: " + d.bekleyen +
+          " | PAS: " + d.pas
+        );
+      }
+    }
+
+    check(
+      "Panel navigasyonu",
+      typeof window.tpOpen === "function"
+        ? "ok"
+        : "error",
+      typeof window.tpOpen === "function"
+        ? "Ana menü bağlantısı mevcut."
+        : "Ana menü bağlantısı bulunamadı."
+    );
+
+    check(
+      "Otomatik çalışma denetimi",
+      "warning",
+      "GitHub Actions zamanlaması ayrıca doğrulanmalıdır."
+    );
+
+    screen.append(
+      node(
+        "p",
+        "Son kontrol: " +
+        new Date().toISOString()
+      ),
+      node(
+        "p",
+        "Bu denetim veri bağlantılarını ve temel " +
+        "kayıt tutarlılığını kontrol eder. " +
+        "Matematiksel doğruluğu garanti etmez."
+      )
+    );
+  }
+
+  const button = [
+    ...menu.querySelectorAll("button")
+  ].find(
+    b => b.textContent.includes(
+      "SİSTEM SAĞLIK MERKEZİ"
+    )
+  );
+
+  if (button) {
+
+    button.addEventListener("click", health);
+  }
+
+})();
+</script>
 </body>
 </html>
