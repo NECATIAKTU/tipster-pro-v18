@@ -1,13 +1,13 @@
 {
   "model": "TIPSTER PRO V18",
-  "olusturulma_utc": "2026-11-25T22:22:30.277957+00:00",
-  "toplam_arsiv": 608,
-  "dogrulanan_mac": 313,
-  "bekleyen_mac": 295,
-  "degerlendirilen_tahmin": 210,
-  "dogru": 149,
+  "olusturulma_utc": "2026-11-26T02:23:29.027553+00:00",
+  "toplam_arsiv": 625,
+  "dogrulanan_mac": 316,
+  "bekleyen_mac": 309,
+  "degerlendirilen_tahmin": 211,
+  "dogru": 150,
   "yanlis": 61,
-  "basari_yuzdesi": 70.95,
+  "basari_yuzdesi": 71.09,
   "not": "Yalnizca mac oncesi kilitli UST secimleri basari hesabina girer. Model olasiliklari basari orani degildir.",
   "kayitlar": [
     {
@@ -603,8 +603,15 @@
         "kaynak_mac_sayisi": 165
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 2,
+        "dep_gol": 0,
+        "toplam_gol": 2,
+        "skor": "2-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 75.6,
         "2.5_ust": 51.3,
@@ -622,7 +629,35 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
-      }
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-26T02:23:24.202553+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 75.6,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 51.3,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 29.2,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 14.1,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 5.9,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 2.2,
+          "gerceklesti": false
+        }
+      },
+      "tahmin_sonucu": "DOGRU"
     },
     {
       "kimlik": "aut.1|401881749",
@@ -2907,8 +2942,15 @@
         "kaynak_mac_sayisi": 117
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 1,
+        "dep_gol": 1,
+        "toplam_gol": 2,
+        "skor": "1-1",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 70.2,
         "2.5_ust": 44.3,
@@ -2926,6 +2968,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-26T02:23:24.202553+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 70.2,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 44.3,
+          "gerceklesti": false
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 23.1,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 10.2,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 3.9,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 1.3,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -3440,8 +3509,15 @@
         "kaynak_mac_sayisi": 157
       },
       "kilit_zamani_utc": "2026-11-20T00:47:16.759370+00:00",
-      "durum": "BEKLIYOR",
-      "sonuc": null,
+      "durum": "DOGRULANDI",
+      "sonuc": {
+        "ev_gol": 3,
+        "dep_gol": 0,
+        "toplam_gol": 3,
+        "skor": "3-0",
+        "durum": "TAMAMLANDI",
+        "kaynak": "ESPN"
+      },
       "olasiliklar": {
         "1.5_ust": 64.2,
         "2.5_ust": 37.3,
@@ -3459,6 +3535,33 @@
         "4.5": 65.0,
         "5.5": 65.0,
         "6.5": 65.0
+      },
+      "sonuc_dogrulama_zamani_utc": "2026-11-26T02:23:24.202553+00:00",
+      "cizgi_sonuclari": {
+        "1.5_ust": {
+          "model_yuzdesi": 64.2,
+          "gerceklesti": true
+        },
+        "2.5_ust": {
+          "model_yuzdesi": 37.3,
+          "gerceklesti": true
+        },
+        "3.5_ust": {
+          "model_yuzdesi": 17.8,
+          "gerceklesti": false
+        },
+        "4.5_ust": {
+          "model_yuzdesi": 7.1,
+          "gerceklesti": false
+        },
+        "5.5_ust": {
+          "model_yuzdesi": 2.4,
+          "gerceklesti": false
+        },
+        "6.5_ust": {
+          "model_yuzdesi": 0.7,
+          "gerceklesti": false
+        }
       }
     },
     {
@@ -39376,6 +39479,805 @@
         "4.5_ust": 15.8,
         "5.5_ust": 6.8,
         "6.5_ust": 2.6
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841338",
+      "mac": {
+        "id": "bra.1|401841338",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Athletico-PR",
+        "deplasman": "São Paulo",
+        "istatistik_ev": "Athletico-PR",
+        "istatistik_deplasman": "São Paulo",
+        "tahmin": {
+          "beklenen_gol": 3.0,
+          "1.5_ust": 80.0,
+          "2.5_ust": 57.6,
+          "3.5_ust": 35.2,
+          "4.5_ust": 18.4,
+          "5.5_ust": 8.4,
+          "6.5_ust": 3.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 80.0,
+        "2.5_ust": 57.6,
+        "3.5_ust": 35.2,
+        "4.5_ust": 18.4,
+        "5.5_ust": 8.4,
+        "6.5_ust": 3.3
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841339",
+      "mac": {
+        "id": "bra.1|401841339",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Bahia",
+        "deplasman": "Atlético-MG",
+        "istatistik_ev": "Bahia",
+        "istatistik_deplasman": "Atlético-MG",
+        "tahmin": {
+          "beklenen_gol": 2.53,
+          "1.5_ust": 71.9,
+          "2.5_ust": 46.4,
+          "3.5_ust": 24.9,
+          "4.5_ust": 11.3,
+          "5.5_ust": 4.4,
+          "6.5_ust": 1.5
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 71.9,
+        "2.5_ust": 46.4,
+        "3.5_ust": 24.9,
+        "4.5_ust": 11.3,
+        "5.5_ust": 4.4,
+        "6.5_ust": 1.5
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841340",
+      "mac": {
+        "id": "bra.1|401841340",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Cruzeiro",
+        "deplasman": "Internacional",
+        "istatistik_ev": "Cruzeiro",
+        "istatistik_deplasman": "Internacional",
+        "tahmin": {
+          "beklenen_gol": 3.33,
+          "1.5_ust": 84.5,
+          "2.5_ust": 64.7,
+          "3.5_ust": 42.7,
+          "4.5_ust": 24.4,
+          "5.5_ust": 12.1,
+          "6.5_ust": 5.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 84.5,
+        "2.5_ust": 64.7,
+        "3.5_ust": 42.7,
+        "4.5_ust": 24.4,
+        "5.5_ust": 12.1,
+        "6.5_ust": 5.3
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841341",
+      "mac": {
+        "id": "bra.1|401841341",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Flamengo",
+        "deplasman": "Chapecoense",
+        "istatistik_ev": "Flamengo",
+        "istatistik_deplasman": "Chapecoense",
+        "tahmin": {
+          "beklenen_gol": 2.96,
+          "1.5_ust": 79.5,
+          "2.5_ust": 56.9,
+          "3.5_ust": 34.5,
+          "4.5_ust": 17.9,
+          "5.5_ust": 8.0,
+          "6.5_ust": 3.2
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 79.5,
+        "2.5_ust": 56.9,
+        "3.5_ust": 34.5,
+        "4.5_ust": 17.9,
+        "5.5_ust": 8.0,
+        "6.5_ust": 3.2
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841347",
+      "mac": {
+        "id": "bra.1|401841347",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Grêmio",
+        "deplasman": "Mirassol",
+        "istatistik_ev": "Grêmio",
+        "istatistik_deplasman": "Mirassol",
+        "tahmin": {
+          "beklenen_gol": 2.23,
+          "1.5_ust": 65.3,
+          "2.5_ust": 38.6,
+          "3.5_ust": 18.7,
+          "4.5_ust": 7.6,
+          "5.5_ust": 2.6,
+          "6.5_ust": 0.8
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 65.3,
+        "2.5_ust": 38.6,
+        "3.5_ust": 18.7,
+        "4.5_ust": 7.6,
+        "5.5_ust": 2.6,
+        "6.5_ust": 0.8
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841343",
+      "mac": {
+        "id": "bra.1|401841343",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Palmeiras",
+        "deplasman": "Coritiba",
+        "istatistik_ev": "Palmeiras",
+        "istatistik_deplasman": "Coritiba",
+        "tahmin": {
+          "beklenen_gol": 2.45,
+          "1.5_ust": 70.2,
+          "2.5_ust": 44.3,
+          "3.5_ust": 23.2,
+          "4.5_ust": 10.2,
+          "5.5_ust": 3.9,
+          "6.5_ust": 1.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 70.2,
+        "2.5_ust": 44.3,
+        "3.5_ust": 23.2,
+        "4.5_ust": 10.2,
+        "5.5_ust": 3.9,
+        "6.5_ust": 1.3
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841344",
+      "mac": {
+        "id": "bra.1|401841344",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Red Bull Bragantino",
+        "deplasman": "Fluminense",
+        "istatistik_ev": "Red Bull Bragantino",
+        "istatistik_deplasman": "Fluminense",
+        "tahmin": {
+          "beklenen_gol": 2.8,
+          "1.5_ust": 76.9,
+          "2.5_ust": 53.1,
+          "3.5_ust": 30.8,
+          "4.5_ust": 15.3,
+          "5.5_ust": 6.5,
+          "6.5_ust": 2.4
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 76.9,
+        "2.5_ust": 53.1,
+        "3.5_ust": 30.8,
+        "4.5_ust": 15.3,
+        "5.5_ust": 6.5,
+        "6.5_ust": 2.4
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841345",
+      "mac": {
+        "id": "bra.1|401841345",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Remo",
+        "deplasman": "Corinthians",
+        "istatistik_ev": "Remo",
+        "istatistik_deplasman": "Corinthians",
+        "tahmin": {
+          "beklenen_gol": 2.88,
+          "1.5_ust": 78.1,
+          "2.5_ust": 54.8,
+          "3.5_ust": 32.5,
+          "4.5_ust": 16.4,
+          "5.5_ust": 7.2,
+          "6.5_ust": 2.8
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 78.1,
+        "2.5_ust": 54.8,
+        "3.5_ust": 32.5,
+        "4.5_ust": 16.4,
+        "5.5_ust": 7.2,
+        "6.5_ust": 2.8
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841346",
+      "mac": {
+        "id": "bra.1|401841346",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Santos",
+        "deplasman": "Botafogo",
+        "istatistik_ev": "Santos",
+        "istatistik_deplasman": "Botafogo",
+        "tahmin": {
+          "beklenen_gol": 2.46,
+          "1.5_ust": 70.5,
+          "2.5_ust": 44.6,
+          "3.5_ust": 23.4,
+          "4.5_ust": 10.4,
+          "5.5_ust": 4.0,
+          "6.5_ust": 1.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 70.5,
+        "2.5_ust": 44.6,
+        "3.5_ust": 23.4,
+        "4.5_ust": 10.4,
+        "5.5_ust": 4.0,
+        "6.5_ust": 1.3
+      },
+      "kilitli_secim": "RISKLI",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "bra.1|401841342",
+      "mac": {
+        "id": "bra.1|401841342",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "bra.1",
+        "lig": "Brezilya Serie A",
+        "ev_sahibi": "Vasco da Gama",
+        "deplasman": "Vitória",
+        "istatistik_ev": "Vasco da Gama",
+        "istatistik_deplasman": "Vitória",
+        "tahmin": {
+          "beklenen_gol": 3.01,
+          "1.5_ust": 80.2,
+          "2.5_ust": 57.8,
+          "3.5_ust": 35.4,
+          "4.5_ust": 18.6,
+          "5.5_ust": 8.5,
+          "6.5_ust": 3.4
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 126
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 80.2,
+        "2.5_ust": 57.8,
+        "3.5_ust": 35.4,
+        "4.5_ust": 18.6,
+        "5.5_ust": 8.5,
+        "6.5_ust": 3.4
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933719",
+      "mac": {
+        "id": "usa.1|401933719",
+        "tarih": "2026-12-03T00:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "New England Revolution",
+        "deplasman": "Philadelphia Union",
+        "istatistik_ev": "New England Revolution",
+        "istatistik_deplasman": "Philadelphia Union",
+        "tahmin": {
+          "beklenen_gol": 3.43,
+          "1.5_ust": 85.6,
+          "2.5_ust": 66.6,
+          "3.5_ust": 44.8,
+          "4.5_ust": 26.1,
+          "5.5_ust": 13.3,
+          "6.5_ust": 6.0
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 85.6,
+        "2.5_ust": 66.6,
+        "3.5_ust": 44.8,
+        "4.5_ust": 26.1,
+        "5.5_ust": 13.3,
+        "6.5_ust": 6.0
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933720",
+      "mac": {
+        "id": "usa.1|401933720",
+        "tarih": "2026-12-03T00:30:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "Inter Miami CF",
+        "deplasman": "Columbus Crew",
+        "istatistik_ev": "Inter Miami CF",
+        "istatistik_deplasman": "Columbus Crew",
+        "tahmin": {
+          "beklenen_gol": 3.61,
+          "1.5_ust": 87.5,
+          "2.5_ust": 69.9,
+          "3.5_ust": 48.6,
+          "4.5_ust": 29.5,
+          "5.5_ust": 15.7,
+          "6.5_ust": 7.4
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 87.5,
+        "2.5_ust": 69.9,
+        "3.5_ust": 48.6,
+        "4.5_ust": 29.5,
+        "5.5_ust": 15.7,
+        "6.5_ust": 7.4
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933718",
+      "mac": {
+        "id": "usa.1|401933718",
+        "tarih": "2026-12-03T01:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "Chicago Fire FC",
+        "deplasman": "Charlotte FC",
+        "istatistik_ev": "Chicago Fire FC",
+        "istatistik_deplasman": "Charlotte FC",
+        "tahmin": {
+          "beklenen_gol": 3.72,
+          "1.5_ust": 88.6,
+          "2.5_ust": 71.8,
+          "3.5_ust": 51.0,
+          "4.5_ust": 31.6,
+          "5.5_ust": 17.3,
+          "6.5_ust": 8.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 88.6,
+        "2.5_ust": 71.8,
+        "3.5_ust": 51.0,
+        "4.5_ust": 31.6,
+        "5.5_ust": 17.3,
+        "6.5_ust": 8.3
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933716",
+      "mac": {
+        "id": "usa.1|401933716",
+        "tarih": "2026-12-03T01:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "FC Dallas",
+        "deplasman": "Portland Timbers",
+        "istatistik_ev": "FC Dallas",
+        "istatistik_deplasman": "Portland Timbers",
+        "tahmin": {
+          "beklenen_gol": 3.39,
+          "1.5_ust": 85.2,
+          "2.5_ust": 65.9,
+          "3.5_ust": 44.0,
+          "4.5_ust": 25.4,
+          "5.5_ust": 12.9,
+          "6.5_ust": 5.7
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 85.2,
+        "2.5_ust": 65.9,
+        "3.5_ust": 44.0,
+        "4.5_ust": 25.4,
+        "5.5_ust": 12.9,
+        "6.5_ust": 5.7
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933736",
+      "mac": {
+        "id": "usa.1|401933736",
+        "tarih": "2026-12-03T01:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "Nashville SC",
+        "deplasman": "FC Cincinnati",
+        "istatistik_ev": "Nashville SC",
+        "istatistik_deplasman": "FC Cincinnati",
+        "tahmin": {
+          "beklenen_gol": 3.02,
+          "1.5_ust": 80.4,
+          "2.5_ust": 58.2,
+          "3.5_ust": 35.8,
+          "4.5_ust": 18.8,
+          "5.5_ust": 8.6,
+          "6.5_ust": 3.5
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 80.4,
+        "2.5_ust": 58.2,
+        "3.5_ust": 35.8,
+        "4.5_ust": 18.8,
+        "5.5_ust": 8.6,
+        "6.5_ust": 3.5
+      },
+      "kilitli_secim": "1.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933735",
+      "mac": {
+        "id": "usa.1|401933735",
+        "tarih": "2026-12-03T01:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "St. Louis CITY SC",
+        "deplasman": "LAFC",
+        "istatistik_ev": "St. Louis CITY SC",
+        "istatistik_deplasman": "LAFC",
+        "tahmin": {
+          "beklenen_gol": 3.46,
+          "1.5_ust": 86.0,
+          "2.5_ust": 67.2,
+          "3.5_ust": 45.6,
+          "4.5_ust": 26.8,
+          "5.5_ust": 13.8,
+          "6.5_ust": 6.3
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 86.0,
+        "2.5_ust": 67.2,
+        "3.5_ust": 45.6,
+        "4.5_ust": 26.8,
+        "5.5_ust": 13.8,
+        "6.5_ust": 6.3
+      },
+      "kilitli_secim": "2.5 UST",
+      "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
+      "secim_esikleri": {
+        "1.5": 75.0,
+        "2.5": 65.0,
+        "3.5": 65.0,
+        "4.5": 65.0,
+        "5.5": 65.0,
+        "6.5": 65.0
+      }
+    },
+    {
+      "kimlik": "usa.1|401933717",
+      "mac": {
+        "id": "usa.1|401933717",
+        "tarih": "2026-12-03T02:00:00+00:00",
+        "lig_kodu": "usa.1",
+        "lig": "ABD MLS",
+        "ev_sahibi": "Vancouver Whitecaps",
+        "deplasman": "Real Salt Lake",
+        "istatistik_ev": "Vancouver Whitecaps",
+        "istatistik_deplasman": "Real Salt Lake",
+        "tahmin": {
+          "beklenen_gol": 2.91,
+          "1.5_ust": 78.7,
+          "2.5_ust": 55.6,
+          "3.5_ust": 33.3,
+          "4.5_ust": 17.0,
+          "5.5_ust": 7.5,
+          "6.5_ust": 2.9
+        },
+        "hesaplama_zamani_utc": "2026-11-26T02:16:43.907227+00:00",
+        "veri_kaynagi": "ESPN tamamlanmis mac skorları",
+        "gecmis_gun": 90,
+        "kaynak_mac_sayisi": 206
+      },
+      "kilit_zamani_utc": "2026-11-26T02:23:24.109187+00:00",
+      "durum": "BEKLIYOR",
+      "sonuc": null,
+      "olasiliklar": {
+        "1.5_ust": 78.7,
+        "2.5_ust": 55.6,
+        "3.5_ust": 33.3,
+        "4.5_ust": 17.0,
+        "5.5_ust": 7.5,
+        "6.5_ust": 2.9
       },
       "kilitli_secim": "1.5 UST",
       "secim_politikasi": "YUKSEK_CIZGIDEN_BASLA_V1",
