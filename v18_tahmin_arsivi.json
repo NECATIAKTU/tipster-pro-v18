@@ -37085,8 +37085,15 @@
       "kaynak_mac_sayisi": 108
     },
     "kilit_zamani_utc": "2026-11-24T11:39:55.929538+00:00",
-    "durum": "BEKLIYOR",
-    "sonuc": null,
+    "durum": "DOGRULANDI",
+    "sonuc": {
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0,
+      "skor": "0-0",
+      "durum": "TAMAMLANDI",
+      "kaynak": "ESPN"
+    },
     "olasiliklar": {
       "1.5_ust": 86.8,
       "2.5_ust": 68.7,
@@ -37104,7 +37111,35 @@
       "4.5": 65.0,
       "5.5": 65.0,
       "6.5": 65.0
-    }
+    },
+    "sonuc_dogrulama_zamani_utc": "2026-11-26T12:27:12.979423+00:00",
+    "cizgi_sonuclari": {
+      "1.5_ust": {
+        "model_yuzdesi": 86.8,
+        "gerceklesti": false
+      },
+      "2.5_ust": {
+        "model_yuzdesi": 68.7,
+        "gerceklesti": false
+      },
+      "3.5_ust": {
+        "model_yuzdesi": 47.2,
+        "gerceklesti": false
+      },
+      "4.5_ust": {
+        "model_yuzdesi": 28.2,
+        "gerceklesti": false
+      },
+      "5.5_ust": {
+        "model_yuzdesi": 14.8,
+        "gerceklesti": false
+      },
+      "6.5_ust": {
+        "model_yuzdesi": 6.9,
+        "gerceklesti": false
+      }
+    },
+    "tahmin_sonucu": "YANLIS"
   },
   {
     "kimlik": "mex.1|401931982",
