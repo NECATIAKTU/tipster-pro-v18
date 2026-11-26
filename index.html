@@ -3670,5 +3670,418 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <script>
+(() => {
+  "use strict";
+
+  const menu = document.getElementById("akademi-menu");
+  const content = document.getElementById("akademi-content");
+
+  if (!menu || !content) return;
+
+  const base =
+    "https://raw.githubusercontent.com/NECATIAKTU/mersin-lab/main/";
+
+  const models = [
+    "PUSULA X",
+    "ATLAS X",
+    "MATRIX X",
+    "TEMPO X",
+    "MERSIN"
+  ];
+
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
+
+  const MIN_SAMPLE = 50;
+
+  function node(tag, text) {
+    const e = document.createElement(tag);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  async function read(file) {
+
+    const response = await fetch(base + file, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        file + " HTTP " + response.status
+      );
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.maclar)) {
+      throw new Error(file + ": Geçersiz kayıt listesi");
+    }
+
+    return data.maclar;
+  }
+
+  function key(r) {
+
+    if (
+      r.id == null ||
+      !r.lig ||
+      !Number.isFinite(Date.parse(r.tarih))
+    ) return null;
+
+    return JSON.stringify([
+      String(r.id),
+      r.lig,
+      Date.parse(r.tarih)
+    ]);
+  }
+
+  async function calibration() {
+
+    const screen = node("div");
+
+    content.replaceChildren(screen);
+
+    screen.append(
+      node("h3", "🎯 KALİBRASYON MERKEZİ"),
+      node(
+        "p",
+        "Model olasılıkları ve gerçek gerçekleşme oranları."
+      )
+    );
+
+    const status = node(
+      "p", "Kalıcı arşivler okunuyor..."
+    );
+
+    screen.append(status);
+
+    try {
+
+      const [predictions, results] =
+        await Promise.all([
+          read("mersin_tahmin_arsivi.json"),
+          read("mersin_kalici_arsiv.json")
+        ]);
+
+      const scores = new Map();
+
+      for (const r of results) {
+
+        const k = key(r);
+
+        if (
+          k !== null &&
+          Date.parse(r.tarih) < Date.now() &&
+          Number.isInteger(r.ev_gol) &&
+          Number.isInteger(r.dep_gol) &&
+          r.ev_gol >= 0 &&
+          r.dep_gol >= 0
+        ) {
+
+          scores.set(
+            k,
+            r.ev_gol + r.dep_gol
+          );
+        }
+      }
+
+      status.textContent =
+        "Arşiv kayıtları: " + predictions.length +
+        " | Skor kayıtları: " + scores.size;
+
+      const modelSelect = node("select");
+
+      modelSelect.style.width = "100%";
+
+      for (const model of models) {
+
+        const option = node(
+          "option",
+          model === "MERSIN" ? "MERSİN" : model
+        );
+
+        option.value = model;
+
+        modelSelect.append(option);
+      }
+
+      const lineSelect = node("select");
+
+      lineSelect.style.width = "100%";
+
+      for (const line of lines) {
+
+        const option = node(
+          "option", line + " ÜST"
+        );
+
+        option.value = line;
+
+        lineSelect.append(option);
+      }
+
+      lineSelect.value = "2.5";
+
+      const result = node("div");
+
+      screen.append(
+        node("h3", "MATEMATİK MODELİ"),
+        modelSelect,
+        node("h3", "GOL ÇİZGİSİ"),
+        lineSelect,
+        result
+      );
+
+      function render() {
+
+        result.replaceChildren();
+
+        const model = modelSelect.value;
+        const line = lineSelect.value;
+
+        const bins = Array.from(
+          { length: 10 },
+          (_, i) => ({
+            low: i * 10,
+            high: (i + 1) * 10,
+            count: 0,
+            expected: 0,
+            actual: 0
+          })
+        );
+
+        const seen = new Set();
+
+        let total = 0;
+        let squaredError = 0;
+
+        for (const r of predictions) {
+
+          const k = key(r);
+
+          if (
+            k === null ||
+            seen.has(k) ||
+            !scores.has(k)
+          ) continue;
+
+          const start = Date.parse(r.tarih);
+          const lock = Date.parse(r.kilit_zamani);
+          const calculated = Date.parse(
+            r.hesaplama_zamani
+          );
+
+          if (!(
+            calculated <= lock &&
+            lock < start
+          )) continue;
+
+          const p = r.motorlar?.[model]?.[line];
+
+          if (
+            typeof p !== "number" ||
+            !Number.isFinite(p) ||
+            p < 0 ||
+            p > 100
+          ) continue;
+
+          seen.add(k);
+
+          const actual =
+            scores.get(k) > Number(line)
+              ? 1 : 0;
+
+          const index = Math.min(
+            9, Math.floor(p / 10)
+          );
+
+          const bin = bins[index];
+
+          bin.count++;
+          bin.expected += p;
+          bin.actual += actual;
+
+          squaredError +=
+            (p / 100 - actual) ** 2;
+
+          total++;
+        }
+
+        result.append(
+          node("h3", "KALİBRASYON RAPORU"),
+          node("p", "Değerlendirilen maç: " + total),
+          node(
+            "p",
+            "Brier skoru: " +
+            (
+              total
+                ? (squaredError / total).toFixed(6)
+                : "—"
+            )
+          )
+        );
+
+        const wrap = node("div");
+
+        wrap.className = "scroll";
+
+        const table = node("table");
+
+        table.style.minWidth = "520px";
+
+        const head = node("thead");
+        const header = node("tr");
+
+        for (const label of [
+          "Olasılık",
+          "Model ort.",
+          "Gerçek",
+          "Sapma",
+          "N"
+        ]) {
+
+          header.append(node("th", label));
+        }
+
+        head.append(header);
+        table.append(head);
+
+        const body = node("tbody");
+
+        let ece = 0;
+
+        for (const bin of [...bins].reverse()) {
+
+          const tr = node("tr");
+
+          const expected = bin.count
+            ? bin.expected / bin.count
+            : null;
+
+          const actual = bin.count
+            ? 100 * bin.actual / bin.count
+            : null;
+
+          const gap = bin.count
+            ? Math.abs(expected - actual)
+            : null;
+
+          if (bin.count) {
+            ece += bin.count * gap;
+          }
+
+          const fmt = v =>
+            v === null ? "—" : "%" + v.toFixed(1);
+
+          const gapCell = node(
+            "td",
+            gap === null
+              ? "—"
+              : gap.toFixed(1) + " puan"
+          );
+
+          if (bin.count < MIN_SAMPLE) {
+
+            gapCell.style.color = "#a6b5ca";
+
+          } else if (gap <= 5) {
+
+            gapCell.style.color = "#22c55e";
+
+          } else if (gap <= 10) {
+
+            gapCell.style.color = "#fbbf24";
+
+          } else {
+
+            gapCell.style.color = "#f87171";
+          }
+
+          tr.append(
+            node(
+              "td",
+              "%" + bin.low + "–" + bin.high
+            ),
+            node("td", fmt(expected)),
+            node("td", fmt(actual)),
+            gapCell,
+            node("td", bin.count)
+          );
+
+          body.append(tr);
+        }
+
+        table.append(body);
+        wrap.append(table);
+        result.append(wrap);
+
+        result.append(
+          node("h3", "ORTALAMA KALİBRASYON HATASI"),
+          node(
+            "p",
+            total
+              ? (ece / total).toFixed(2) + " yüzde puan"
+              : "Henüz doğrulanmış sonuç yok."
+          ),
+          node("p", "🟢 Sapma: 0–5 puan"),
+          node("p", "🟠 Sapma: 5–10 puan"),
+          node("p", "🔴 Sapma: 10 puan üzeri"),
+          node("p", "⚪ 50 sonuçtan az örneklem"),
+          node(
+            "p",
+            "Brier skorunun düşük olması daha iyidir."
+          ),
+          node(
+            "p",
+            "PAS dahil bütün geçerli olasılıklar " +
+            "kalibrasyon hesabına katılır."
+          ),
+          node(
+            "p",
+            "RADAR X olasılık modeli olmadığı için " +
+            "bu değerlendirmeye dahil edilmez."
+          ),
+          node(
+            "p",
+            "Renk sınırları deneysel kontrol " +
+            "kriterleridir."
+          )
+        );
+      }
+
+      modelSelect.onchange = render;
+      lineSelect.onchange = render;
+
+      render();
+
+    } catch (error) {
+
+      status.textContent =
+        "Kalibrasyon verisi okunamadı: " +
+        error.message;
+    }
+  }
+
+  const button = [
+    ...menu.querySelectorAll("button")
+  ].find(
+    b => b.textContent.includes(
+      "KALİBRASYON MERKEZİ"
+    )
+  );
+
+  if (button) {
+
+    button.addEventListener(
+      "click", calibration
+    );
+  }
+
+})();
+</script>
 </body>
 </html>
