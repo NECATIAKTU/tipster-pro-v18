@@ -4576,5 +4576,708 @@ $('refresh').addEventListener('click',load);open(location.hash.slice(1)||'home',
 
 })();
 </script>
+   <style>
+#aslan-v2 {
+  padding: 4px;
+}
+#aslan-v2 .av-card {
+  background: #111e31;
+  border: 1px solid #304764;
+  border-radius: 15px;
+  padding: 14px;
+  margin: 12px 0;
+}
+#aslan-v2 .av-gold {
+  color: #eabf65;
+}
+#aslan-v2 .av-green {
+  color: #22c55e;
+}
+#aslan-v2 .av-red {
+  color: #ff6767;
+}
+#aslan-v2 .av-muted {
+  color: #a6b5ca;
+}
+#aslan-v2 .av-number {
+  font-size: 27px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+#aslan-v2 .tp-tile {
+  min-height: 100px;
+}
+#aslan-v2 .av-scroll {
+  overflow-x: auto;
+}
+#aslan-v2 input,
+#aslan-v2 select {
+  width: 100%;
+  margin: 7px 0;
+}
+</style>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const host = $("aslan-modu");
+  if (!host || $("aslan-v2")) return;
+
+  const eski = [...host.children];
+
+  for (const el of eski) {
+    el.hidden = true;
+  }
+
+  const root = document.createElement("div");
+  root.id = "aslan-v2";
+  host.prepend(root);
+
+  root.innerHTML = `
+    <h2 class="av-gold">🦁 ASLAN MODU V2</h2>
+    <p class="av-muted">
+      Gol keşif ve performans merkezi
+    </p>
+
+    <div id="av-menu" class="tp-grid"></div>
+
+    <div id="av-screen" hidden>
+      <div class="tp-controls">
+        <button id="av-back" type="button">
+          ← ASLAN Menü
+        </button>
+        <button id="av-refresh" type="button"
+          class="secondary">
+          Yenile
+        </button>
+      </div>
+
+      <h2 id="av-title" class="av-gold"></h2>
+      <p id="av-status" class="av-muted"></p>
+      <div id="av-content"></div>
+    </div>
+  `;
+
+  const menu = $("av-menu");
+  const screen = $("av-screen");
+  const content = $("av-content");
+  const status = $("av-status");
+
+  const lines = [
+    "1.5", "2.5", "3.5",
+    "4.5", "5.5", "6.5"
+  ];
+
+  const sections = [
+    ["performance", "📊 PERFORMANS",
+      "Doğru / yanlış / başarı"],
+    ["discovery", "🔍 KEŞİF MAÇLARI",
+      "Güncel model analizleri"],
+    ["goals", "🎯 GOL MERKEZİ",
+      "Gol çizgisi performansı"],
+    ["archive", "📚 KALICI ARŞİV",
+      "Kilitli tahmin ve sonuçlar"],
+    ["errors", "🔬 HATA ANALİZİ",
+      "Yanlış tahmin incelemesi"],
+    ["colors", "📈 RENK PERFORMANSI",
+      "Model yüzdesi doğruluğu"]
+  ];
+
+  let active = "";
+  let generation = 0;
+
+  function node(tag, text, cls) {
+    const el = document.createElement(tag);
+    if (text !== undefined) {
+      el.textContent = String(text);
+    }
+    if (cls) el.className = cls;
+    return el;
+  }
+
+  async function load(file) {
+    const response = await fetch(
+      "./" + file + "?t=" + Date.now(),
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        file + " HTTP " + response.status
+      );
+    }
+
+    return response.json();
+  }
+
+  function percent(value) {
+    if (
+      value === null ||
+      value === undefined ||
+      value === ""
+    ) return "—";
+
+    const n = Number(value);
+
+    return Number.isFinite(n)
+      ? "%" + n.toFixed(1)
+      : "—";
+  }
+
+  function dateText(value) {
+    const date = new Date(value);
+
+    return Number.isFinite(date.getTime())
+      ? date.toISOString()
+          .slice(0, 16)
+          .replace("T", " ") + " UTC"
+      : "—";
+  }
+
+  function verified(r) {
+    const start = Date.parse(r.tarih);
+    const lock = Date.parse(r.kilit_zamani_utc);
+    const report = Date.parse(r.rapor_zamani_utc);
+
+    return (
+      Number.isFinite(start) &&
+      Number.isFinite(lock) &&
+      Number.isFinite(report) &&
+      report <= lock &&
+      lock < start
+    );
+  }
+
+  function settled(r) {
+    return verified(r) &&
+      r.durum === "DOGRULANDI" &&
+      ["DOGRU", "YANLIS"].includes(
+        r.tahmin_sonucu
+      );
+  }
+
+  function stats(records) {
+    const valid = records.filter(settled);
+
+    const dogru = valid.filter(
+      r => r.tahmin_sonucu === "DOGRU"
+    ).length;
+
+    const yanlis = valid.filter(
+      r => r.tahmin_sonucu === "YANLIS"
+    ).length;
+
+    const bekleyen = records.filter(
+      r => verified(r) &&
+        r.durum === "BEKLIYOR"
+    ).length;
+
+    return {
+      dogru,
+      yanlis,
+      bekleyen,
+      toplam: valid.length,
+      basari: valid.length
+        ? 100 * dogru / valid.length
+        : null
+    };
+  }
+
+  function metric(label, value, cls) {
+    const box = node("div", undefined, "av-card");
+
+    box.append(
+      node("div", label, "av-muted"),
+      node("div", value,
+        "av-number " + (cls || ""))
+    );
+
+    return box;
+  }
+
+  function summary(records) {
+    const s = stats(records);
+    const grid = node(
+      "div", undefined, "tp-grid"
+    );
+
+    grid.append(
+      metric("Doğru", s.dogru, "av-green"),
+      metric("Yanlış", s.yanlis, "av-red"),
+      metric("Başarı", percent(s.basari)),
+      metric("Bekleyen", s.bekleyen),
+      metric("Toplam kayıt", records.length),
+      metric("Değerlendirilen", s.toplam)
+    );
+
+    return grid;
+  }
+
+  function table(groups) {
+    const wrap = node(
+      "div", undefined, "av-scroll av-card"
+    );
+
+    const t = document.createElement("table");
+    const head = document.createElement("thead");
+    const hr = document.createElement("tr");
+
+    for (const label of [
+      "Grup", "Doğru", "Yanlış",
+      "Bekleyen", "Başarı"
+    ]) {
+      hr.append(node("th", label));
+    }
+
+    head.append(hr);
+    t.append(head);
+
+    const body = document.createElement("tbody");
+
+    for (const [label, records] of groups) {
+      const s = stats(records);
+      const row = document.createElement("tr");
+
+      row.append(
+        node("td", label),
+        node("td", s.dogru, "av-green"),
+        node("td", s.yanlis, "av-red"),
+        node("td", s.bekleyen),
+        node("td", percent(s.basari))
+      );
+
+      body.append(row);
+    }
+
+    t.append(body);
+    wrap.append(t);
+    return wrap;
+  }
+
+  function resultCard(r) {
+    const card = node(
+      "div", undefined, "tp-match"
+    );
+
+    let outcome = "BEKLİYOR";
+    let color = "av-muted";
+
+    if (!verified(r) ||
+        r.durum === "INCELEME") {
+      outcome = "İNCELEME";
+    } else if (settled(r)) {
+      outcome = r.tahmin_sonucu === "DOGRU"
+        ? "✓ DOĞRU"
+        : "✗ YANLIŞ";
+
+      color = r.tahmin_sonucu === "DOGRU"
+        ? "av-green"
+        : "av-red";
+    }
+
+    card.append(
+      node("small",
+        (r.lig || "—") + " • " +
+        dateText(r.tarih)),
+      node("h3",
+        (r.ev_sahibi || "—") + " – " +
+        (r.deplasman || "—")),
+      node("p",
+        String(r.tahmin || "—")
+          .replace("UST", "ÜST") +
+        " • " + percent(r.model_yuzdesi),
+        "av-gold"),
+      node("p",
+        "Skor: " + (r.skor || "—")),
+      node("strong", outcome, color),
+      node("p",
+        "Kilit: " +
+        dateText(r.kilit_zamani_utc),
+        "av-muted")
+    );
+
+    if (r.skor_uyarisi) {
+      card.append(
+        node("p",
+          "Skor çelişkisi: inceleme gerekli",
+          "av-red")
+      );
+    }
+
+    return card;
+  }
+
+  function list(records, builder) {
+    const search = document.createElement("input");
+    search.type = "search";
+    search.placeholder = "Takım veya lig ara";
+
+    const info = node(
+      "p", "", "av-muted"
+    );
+
+    const holder = node(
+      "div", undefined, "tp-list"
+    );
+
+    const more = node(
+      "button", "Daha fazla göster", "secondary"
+    );
+
+    more.type = "button";
+
+    let limit = 30;
+
+    function render() {
+      const q = search.value
+        .toLocaleLowerCase("tr")
+        .trim();
+
+      const filtered = records.filter(r =>
+        [
+          r.ev_sahibi,
+          r.deplasman,
+          r.lig
+        ].join(" ")
+          .toLocaleLowerCase("tr")
+          .includes(q)
+      );
+
+      holder.replaceChildren();
+
+      for (const r of filtered.slice(0, limit)) {
+        holder.append(builder(r));
+      }
+
+      info.textContent =
+        "Gösterilen: " +
+        Math.min(limit, filtered.length) +
+        " / " + filtered.length;
+
+      if (!filtered.length) {
+        holder.append(
+          node("p",
+            "Bu bölümde henüz kayıt yok.",
+            "av-muted")
+        );
+      }
+
+      more.hidden = filtered.length <= limit;
+    }
+
+    search.oninput = () => {
+      limit = 30;
+      render();
+    };
+
+    more.onclick = () => {
+      limit += 30;
+      render();
+    };
+
+    content.append(
+      search, info, holder, more
+    );
+
+    render();
+  }
+
+  function discoveryCard(r) {
+    const card = node(
+      "div", undefined, "tp-match"
+    );
+
+    const a = r.analiz || {};
+
+    card.append(
+      node("small",
+        (r.lig || "—") +
+        " • " + dateText(r.tarih)),
+      node("h3",
+        (r.ev_sahibi || "—") + " – " +
+        (r.deplasman || "—"))
+    );
+
+    if (a.durum === "KESIF_ADAYI") {
+      const s = a.en_yuksek_uygun_cizgi || {};
+
+      card.append(node("p",
+        "Keşif etiketi: " +
+        String(s.cizgi || "—")
+          .replace("UST", "ÜST") +
+        " • " + percent(s.model_yuzdesi),
+        "av-gold"));
+    } else {
+      card.append(node(
+        "p",
+        a.durum === "VERI_YOK"
+          ? "YETERSİZ VERİ"
+          : "İNCELEME",
+        "av-muted"
+      ));
+    }
+
+    const grid = node(
+      "div", undefined, "tp-probs"
+    );
+
+    for (const c of lines) {
+      const item = (a.tum_cizgiler || []).find(
+        x => String(x.cizgi)
+          .split(" ")[0] === c
+      );
+
+      const p = item?.model_yuzdesi;
+      const box = document.createElement("span");
+
+      const color = p == null
+        ? "av-muted"
+        : p >= 80
+          ? "av-green"
+          : p >= 70
+            ? "av-gold"
+            : p >= 50
+              ? ""
+              : "av-muted";
+
+      box.append(
+        node("small", c + " ÜST"),
+        node("b", percent(p), color)
+      );
+
+      grid.append(box);
+    }
+
+    card.append(grid);
+    return card;
+  }
+
+  async function open(key) {
+    active = key;
+    const current = ++generation;
+
+    menu.hidden = true;
+    screen.hidden = false;
+
+    $("av-title").textContent =
+      sections.find(x => x[0] === key)?.[1] || "";
+
+    content.replaceChildren();
+    status.textContent = "Veri okunuyor…";
+
+    try {
+      if (key === "discovery") {
+        const report = await load(
+          "aslan_modu_rapor.json"
+        );
+
+        if (current !== generation) return;
+
+        if (!Array.isArray(report.maclar)) {
+          throw new Error("Maç listesi geçersiz");
+        }
+
+        const records = report.maclar.filter(
+          r => Date.parse(r.tarih) > Date.now()
+        );
+
+        status.textContent =
+          "Güncel maç: " + records.length +
+          " | Rapor: " +
+          dateText(report.olusturulma_utc);
+
+        list(records, discoveryCard);
+        return;
+      }
+
+      const report = await load(
+        "aslan_dogrulanan_sonuclar.json"
+      );
+
+      if (current !== generation) return;
+
+      if (!Array.isArray(report.kayitlar)) {
+        throw new Error("Sonuç arşivi geçersiz");
+      }
+
+      const records = report.kayitlar;
+
+      status.textContent =
+        "Son rapor: " +
+        dateText(report.olusturulma_utc);
+
+      if (key === "performance") {
+        content.append(summary(records));
+
+        const now = new Date();
+
+        const today = new Date(now);
+        today.setUTCHours(0, 0, 0, 0);
+
+        const week = new Date(today);
+        week.setUTCDate(
+          week.getUTCDate() -
+          ((week.getUTCDay() + 6) % 7)
+        );
+
+        const month = new Date(today);
+        month.setUTCDate(1);
+
+        const period = start =>
+          records.filter(r => {
+            const t = Date.parse(r.tarih);
+            return t >= start.getTime() &&
+              t <= now.getTime();
+          });
+
+        content.append(
+          node("h3", "DÖNEMSEL PERFORMANS"),
+          table([
+            ["Bugün", period(today)],
+            ["Bu hafta", period(week)],
+            ["Bu ay", period(month)],
+            ["Tüm zamanlar", records]
+          ]),
+          metric("İnceleme gerekli",
+            records.filter(r =>
+              !verified(r) ||
+              r.durum === "INCELEME"
+            ).length)
+        );
+      }
+
+      if (key === "goals") {
+        content.append(table(
+          lines.map(c => [
+            c + " ÜST",
+            records.filter(r =>
+              String(r.gol_cizgisi) === c
+            )
+          ])
+        ));
+      }
+
+      if (key === "colors") {
+        const groups = [
+          ["🟢 %80–100", 80, 101],
+          ["🟡 %70–80 altı", 70, 80],
+          ["⚪ %60–70 altı", 60, 70],
+          ["⚪ %50–60 altı", 50, 60]
+        ];
+
+        content.append(table(
+          groups.map(([label, min, max]) => [
+            label,
+            records.filter(r =>
+              r.model_yuzdesi != null &&
+              Number(r.model_yuzdesi) >= min &&
+              Number(r.model_yuzdesi) < max
+            )
+          ])
+        ));
+      }
+
+      if (key === "archive") {
+        const sorted = [...records].sort(
+          (a, b) =>
+            Date.parse(b.tarih) -
+            Date.parse(a.tarih)
+        );
+
+        list(sorted, resultCard);
+      }
+
+      if (key === "errors") {
+        const errors = records.filter(
+          r => settled(r) &&
+            r.tahmin_sonucu === "YANLIS"
+        );
+
+        content.append(
+          metric("Yanlış kayıt", errors.length,
+            "av-red")
+        );
+
+        list(errors, resultCard);
+      }
+
+      content.append(
+        node("p",
+          "Yalnızca maç öncesinde kilitlenmiş " +
+          "ve doğrulanmış sonuçlar başarıya " +
+          "dahil edilir. Model yüzdeleri " +
+          "gerçek başarı oranı değildir.",
+          "av-muted")
+      );
+
+    } catch (error) {
+      if (current !== generation) return;
+
+      status.textContent =
+        "Veri okunamadı: " + error.message;
+    }
+  }
+
+  function home() {
+    generation++;
+    screen.hidden = true;
+    menu.hidden = false;
+    content.replaceChildren();
+    active = "";
+  }
+
+  for (const [key, name, description]
+    of sections) {
+
+    const button = node(
+      "button", undefined, "tp-tile"
+    );
+
+    button.type = "button";
+
+    button.append(
+      node("b", name, "av-gold"),
+      node("small", description)
+    );
+
+    button.onclick = () => open(key);
+    menu.append(button);
+  }
+
+  $("av-back").onclick = home;
+
+  $("av-refresh").onclick = () => {
+    if (active) open(active);
+  };
+
+  const observer = new MutationObserver(() => {
+    if (host.hidden) home();
+  });
+
+  observer.observe(host, {
+    attributes: true,
+    attributeFilter: ["hidden"]
+  });
+
+  const mainButton = document.querySelector(
+    '[data-tp="aslan"]'
+  );
+
+  if (mainButton) {
+    mainButton.classList.add("star");
+
+    const b = mainButton.querySelector("b");
+    const small = mainButton.querySelector("small");
+
+    if (b) b.textContent = "🦁 ASLAN MODU V2";
+    if (small) {
+      small.textContent = "Keşif ve performans merkezi";
+    }
+  }
+
+})();
+</script>
 </body>
 </html>
