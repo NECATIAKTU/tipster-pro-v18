@@ -114,6 +114,10 @@ def produce(fixture, now, days=90, fetch=get_json):
                 'hesaplama_zamani_utc': now.isoformat(),
                 'veri_kaynagi': 'ESPN tamamlanmis mac skorları',
                 'gecmis_gun': days, 'kaynak_mac_sayisi': provenance['tamamlanmis_mac'],
+                'gol_gecmisi': {
+                'ev': teams[home]['son_maclar'],
+                'dep': teams[away]['son_maclar'],
+                },
             })
             status['TAHMIN_URETILDI'] += 1
     return {'olusturulma_utc': now.isoformat(), 'model': 'TIPSTER PRO V18',
