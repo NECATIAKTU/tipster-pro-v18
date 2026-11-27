@@ -42,5 +42,18 @@ class PanelArchiveTest(unittest.TestCase):
         r = copy.deepcopy(self.archive[-1])
         r.pop('kilitli_secim', None)
         self.assertEqual(convert([r], self.now)['tahminler'], [])
-
+    def test_guncel_mac_saati(self):
+        from datetime import timedelta
+        r = copy.deepcopy(self.archive[-1])
+        r['durum'] = 'BEKLIYOR'
+        original = copy.deepcopy(r)
+        now = datetime.fromisoformat(r['kilit_zamani_utc'])
+        mac = copy.deepcopy(r['mac'])
+        yeni = datetime.fromisoformat(mac['tarih']) + timedelta(hours=2)
+        mac['tarih'] = yeni.isoformat()
+        output = convert([r], now, {'maclar': [mac]})['tahminler']
+        self.assertEqual(len(output), 1)
+        self.assertEqual(output[0]['tarih'], yeni.isoformat())
+        self.assertEqual(output[0]['olasiliklar'], r['olasiliklar'])
+        self.assertEqual(r, original)
 if __name__ == '__main__': unittest.main()
