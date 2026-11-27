@@ -367,6 +367,18 @@ jobs:
 
           exit 1
 
+      - name: Dunya Ligleri Merkezi V2 kapsam denetimi
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          set -euo pipefail
+          python dunya_ligleri_merkezi_v2.py \
+            --fikstur gelecek_maclar.json \
+            --model v18_canli_cikti.json \
+            --panel panel_tahminler.json \
+            --cikti "$RUNNER_TEMP/dunya_ligleri_raporu_v2.json"
+          cp "$RUNNER_TEMP/dunya_ligleri_raporu_v2.json" site/
+
 
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
