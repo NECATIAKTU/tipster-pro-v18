@@ -1,12 +1,12 @@
 {
   "modul": "ASLAN MODU V1 SONUC TAKIP",
-  "olusturulma_utc": "2026-11-26T17:03:50.728467+00:00",
-  "toplam_kilitli_tahmin": 314,
-  "degerlendirilen": 0,
-  "dogru": 0,
+  "olusturulma_utc": "2026-11-27T11:08:33.817762+00:00",
+  "toplam_kilitli_tahmin": 316,
+  "degerlendirilen": 4,
+  "dogru": 4,
   "yanlis": 0,
-  "bekleyen": 314,
-  "basari_yuzdesi": null,
+  "bekleyen": 312,
+  "basari_yuzdesi": 100.0,
   "guven_siniflari": {
     "YESIL": {
       "dogru": 0,
@@ -15,16 +15,16 @@
       "basari_yuzdesi": null
     },
     "SARI": {
-      "dogru": 0,
+      "dogru": 1,
       "yanlis": 0,
-      "degerlendirilen": 0,
-      "basari_yuzdesi": null
+      "degerlendirilen": 1,
+      "basari_yuzdesi": 100.0
     },
     "NORMAL": {
-      "dogru": 0,
+      "dogru": 3,
       "yanlis": 0,
-      "degerlendirilen": 0,
-      "basari_yuzdesi": null
+      "degerlendirilen": 3,
+      "basari_yuzdesi": 100.0
     }
   },
   "not": "Yalnizca mac baslamadan once kilitlenmis ASLAN secimleri basari hesabina girer. Model yuzdeleri gercek basari oranlari degildir.",
@@ -364,10 +364,11 @@
       "guven_sinifi": "SARI",
       "rapor_zamani_utc": "2026-11-26T12:27:15.357901+00:00",
       "kilit_zamani_utc": "2026-11-26T12:27:15.408594+00:00",
-      "durum": "BEKLIYOR",
-      "skor": null,
-      "toplam_gol": null,
-      "tahmin_sonucu": null
+      "durum": "DOGRULANDI",
+      "skor": "3-1",
+      "toplam_gol": 4,
+      "tahmin_sonucu": "DOGRU",
+      "dogrulama_zamani_utc": "2026-11-27T11:08:33.817762+00:00"
     },
     {
       "id": "bra.1|401841337",
@@ -1316,10 +1317,11 @@
       "guven_sinifi": "NORMAL",
       "rapor_zamani_utc": "2026-11-26T12:27:15.357901+00:00",
       "kilit_zamani_utc": "2026-11-26T12:27:15.408594+00:00",
-      "durum": "BEKLIYOR",
-      "skor": null,
-      "toplam_gol": null,
-      "tahmin_sonucu": null
+      "durum": "DOGRULANDI",
+      "skor": "2-3",
+      "toplam_gol": 5,
+      "tahmin_sonucu": "DOGRU",
+      "dogrulama_zamani_utc": "2026-11-27T11:08:33.817762+00:00"
     },
     {
       "id": "eng.3|401880725",
@@ -3798,10 +3800,11 @@
       "guven_sinifi": "NORMAL",
       "rapor_zamani_utc": "2026-11-26T12:27:15.357901+00:00",
       "kilit_zamani_utc": "2026-11-26T12:27:15.408594+00:00",
-      "durum": "BEKLIYOR",
-      "skor": null,
-      "toplam_gol": null,
-      "tahmin_sonucu": null
+      "durum": "DOGRULANDI",
+      "skor": "2-1",
+      "toplam_gol": 3,
+      "tahmin_sonucu": "DOGRU",
+      "dogrulama_zamani_utc": "2026-11-27T11:08:33.817762+00:00"
     },
     {
       "id": "mex.1|401931995",
@@ -3815,10 +3818,11 @@
       "guven_sinifi": "NORMAL",
       "rapor_zamani_utc": "2026-11-26T12:27:15.357901+00:00",
       "kilit_zamani_utc": "2026-11-26T12:27:15.408594+00:00",
-      "durum": "BEKLIYOR",
-      "skor": null,
-      "toplam_gol": null,
-      "tahmin_sonucu": null
+      "durum": "DOGRULANDI",
+      "skor": "0-4",
+      "toplam_gol": 4,
+      "tahmin_sonucu": "DOGRU",
+      "dogrulama_zamani_utc": "2026-11-27T11:08:33.817762+00:00"
     },
     {
       "id": "mex.1|401931997",
@@ -5362,6 +5366,40 @@
       "guven_sinifi": "NORMAL",
       "rapor_zamani_utc": "2026-11-26T17:03:48.685794+00:00",
       "kilit_zamani_utc": "2026-11-26T17:03:50.692009+00:00",
+      "durum": "BEKLIYOR",
+      "skor": null,
+      "toplam_gol": null,
+      "tahmin_sonucu": null
+    },
+    {
+      "id": "eng.1|401878749",
+      "tarih": "2026-12-03T20:00:00+00:00",
+      "lig": "Ingiltere Premier League",
+      "ev_sahibi": "Tottenham Hotspur",
+      "deplasman": "Fulham",
+      "tahmin": "1.5 UST",
+      "gol_cizgisi": "1.5",
+      "model_yuzdesi": 58.0,
+      "guven_sinifi": "NORMAL",
+      "rapor_zamani_utc": "2026-11-27T11:08:31.272529+00:00",
+      "kilit_zamani_utc": "2026-11-27T11:08:33.772618+00:00",
+      "durum": "BEKLIYOR",
+      "skor": null,
+      "toplam_gol": null,
+      "tahmin_sonucu": null
+    },
+    {
+      "id": "jpn.1|401877522",
+      "tarih": "2026-12-04T09:30:00+00:00",
+      "lig": "Japonya J1 League",
+      "ev_sahibi": "FC Tokyo",
+      "deplasman": "Kawasaki Frontale",
+      "tahmin": "2.5 UST",
+      "gol_cizgisi": "2.5",
+      "model_yuzdesi": 62.6,
+      "guven_sinifi": "NORMAL",
+      "rapor_zamani_utc": "2026-11-27T11:08:31.272529+00:00",
+      "kilit_zamani_utc": "2026-11-27T11:08:33.772618+00:00",
       "durum": "BEKLIYOR",
       "skor": null,
       "toplam_gol": null,
