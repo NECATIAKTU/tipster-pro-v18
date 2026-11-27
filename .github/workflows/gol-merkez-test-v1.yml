@@ -38,6 +38,9 @@ jobs:
             test_motor_karsilastirma_merkezi_v1 \
             test_dunya_ligleri_merkezi_v1 \
             test_gol_merkez_entegrasyon_v1
+      - name: Kalici Veri Bankasi V2 testleri
+        run: python -m unittest -v test_kalici_veri_bankasi_v2
+
 
       - name: Gercek arsiv ile entegrasyon testi
         run: |
