@@ -240,7 +240,7 @@
 (() => {
     "use strict";
 
-    const body = document.getElementById("current");
+    const body = document.getElementById("lc-current");
 
     if (!body) return;
 
