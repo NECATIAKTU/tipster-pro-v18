@@ -282,6 +282,8 @@ jobs:
               'aslan_modu_rapor.json',
               'aslan_tahmin_arsivi.json',
               'aslan_dogrulanan_sonuclar.json',
+              'panel_mobil_v1.css',
+              'panel_mobil_v1.js',
 
           ):
               shutil.copy2(name, out / name)
