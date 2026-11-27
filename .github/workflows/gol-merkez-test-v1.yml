@@ -56,6 +56,9 @@ jobs:
 
           test -s gol_veri_bankasi_v2.json
 
+      - name: Dunya Ligleri Merkezi V2 testleri
+        run: python -m unittest -v test_dunya_ligleri_merkezi_v2
+
 
       - name: Gercek arsiv ile entegrasyon testi
         run: |
