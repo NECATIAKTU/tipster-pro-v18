@@ -317,6 +317,56 @@ jobs:
             --cikti "$RUNNER_TEMP/gol_merkez_raporu_v1.json"
           cp "$RUNNER_TEMP/gol_merkez_raporu_v1.json" site/
 
+      - name: Kalici Veri Bankasi V2
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          set -euo pipefail
+
+          python -m unittest -v test_kalici_veri_bankasi_v2
+
+          ROOT="$PWD"
+          WT="$RUNNER_TEMP/banka-v2-worktree"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git worktree add --detach "$WT" origin/main
+
+            if (
+              cd "$WT"
+              python "$ROOT/kalici_veri_bankasi_v2.py" \
+                --arsiv "$WT/v18_tahmin_arsivi.json"
+            ); then
+
+              git -C "$WT" add gol_veri_bankasi_v2.json
+
+              if git -C "$WT" diff --cached --quiet; then
+                git worktree remove --force "$WT"
+                exit 0
+              fi
+
+              git -C "$WT" \
+                -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m 'Kalici Veri Bankasi V2 guncelleme'
+
+              if git -C "$WT" push origin HEAD:main; then
+                git worktree remove --force "$WT"
+                echo 'VERI BANKASI KAYDEDILDI'
+                exit 0
+              fi
+            else
+              git worktree remove --force "$WT"
+              exit 1
+            fi
+
+            git worktree remove --force "$WT"
+            sleep 3
+          done
+
+          exit 1
+
 
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5

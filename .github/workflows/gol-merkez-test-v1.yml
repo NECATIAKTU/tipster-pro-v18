@@ -38,6 +38,24 @@ jobs:
             test_motor_karsilastirma_merkezi_v1 \
             test_dunya_ligleri_merkezi_v1 \
             test_gol_merkez_entegrasyon_v1
+      - name: Kalici Veri Bankasi V2 testleri
+        run: python -m unittest -v test_kalici_veri_bankasi_v2
+
+      - name: Kalici Veri Bankasi V2 gercek arsiv testi
+        run: |
+          set -euo pipefail
+          ROOT="$PWD"
+          mkdir -p "$RUNNER_TEMP/banka-v2-test"
+          cd "$RUNNER_TEMP/banka-v2-test"
+
+          python "$ROOT/kalici_veri_bankasi_v2.py" \
+            --arsiv "$ROOT/v18_tahmin_arsivi.json"
+
+          python "$ROOT/kalici_veri_bankasi_v2.py" \
+            --arsiv "$ROOT/v18_tahmin_arsivi.json"
+
+          test -s gol_veri_bankasi_v2.json
+
 
       - name: Gercek arsiv ile entegrasyon testi
         run: |
