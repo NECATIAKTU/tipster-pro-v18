@@ -240,7 +240,7 @@
 (() => {
     "use strict";
 
-    const body = document.getElementById("lc-current");
+    const body = document.getElementById("current");
 
     if (!body) return;
 
@@ -359,7 +359,7 @@
         }
     }
 
-    const mode = document.getElementById("lc-mode");
+    const mode = document.getElementById("mode");
 
     if (
         mode &&
