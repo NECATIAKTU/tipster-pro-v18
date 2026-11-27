@@ -27,6 +27,23 @@ class Tests(unittest.TestCase):
         result=produce(fixture, NOW, 30, fetch)
         self.assertEqual(len(result['tahminler']),1)
         self.assertIn('tahmin', result['tahminler'][0])
+    def test_form_ve_ev_deplasman(self):
+        def fetch(lig, day):
+            return {'events': [{
+                'id': str(day),
+                'date': day.isoformat(),
+                'status': {'type': {'completed': True}},
+                'competitions': [{'competitors': [
+                    {'homeAway': 'home', 'team': {'displayName': 'Home City'}, 'score': str(day.day)},
+                    {'homeAway': 'away', 'team': {'displayName': 'Away United'}, 'score': '1'}
+                ]}]
+            }]}
 
+        stats, audit = historical_stats('eng.1', NOW, 5, fetch)
+        self.assertEqual(stats['Home City']['ev_mac'], 5)
+        self.assertEqual(stats['Away United']['dep_mac'], 5)
+        self.assertEqual(stats['Home City']['ev_attigi'], 45)
+        self.assertEqual(stats['Away United']['dep_yedigi'], 45)
+        self.assertEqual(stats['Home City']['son_maclar'][-1], (11, 1))
 if __name__ == '__main__':
     unittest.main()
