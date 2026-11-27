@@ -359,7 +359,7 @@
         }
     }
 
-    const mode = document.getElementById("mode");
+    const mode = document.getElementById("lc-mode");
 
     if (
         mode &&
