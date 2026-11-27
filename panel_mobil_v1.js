@@ -493,3 +493,126 @@
     convert();
 
 })();
+/* MERSIN LAB - MOBIL V1 */
+
+(() => {
+    "use strict";
+
+    const host = document.getElementById(
+        "mersin-list"
+    );
+
+    if (!host) return;
+
+    function el(tag, text, cls) {
+        const node = document.createElement(tag);
+
+        if (text !== undefined) {
+            node.textContent = text;
+        }
+
+        if (cls) node.className = cls;
+
+        return node;
+    }
+
+    function convert() {
+
+        const cards = host.querySelectorAll(
+            ".tp-match"
+        );
+
+        for (const card of cards) {
+
+            if (card.dataset.pmMersin) continue;
+
+            const title = card.querySelector("h3");
+
+            if (!title) continue;
+
+            const name = title.textContent.trim();
+
+            const grid = card.querySelector(
+                ".tp-probs"
+            );
+
+            const status = card.querySelector(
+                "p.tp-note"
+            );
+
+            const label = status
+                ? status.textContent.trim()
+                : grid
+                    ? "MODEL ANALIZI"
+                    : "VERI YOK";
+
+            card.dataset.pmMersin = "1";
+
+            const detail = el(
+                "div", undefined, "pm-detail"
+            );
+
+            detail.hidden = true;
+
+            while (card.firstChild) {
+                detail.append(card.firstChild);
+            }
+
+            const button = el(
+                "button",
+                undefined,
+                "pm-match-button"
+            );
+
+            button.type = "button";
+
+            const arrow = el(
+                "span", "›", "pm-match-arrow"
+            );
+
+            const result = el(
+                "span",
+                label,
+                "pm-match-pick pm-risk"
+            );
+
+            button.append(
+                el("span", name, "pm-match-name"),
+                result,
+                arrow
+            );
+
+            button.setAttribute(
+                "aria-expanded", "false"
+            );
+
+            button.addEventListener("click", () => {
+
+                detail.hidden = !detail.hidden;
+
+                arrow.textContent =
+                    detail.hidden ? "›" : "⌄";
+
+                button.setAttribute(
+                    "aria-expanded",
+                    String(!detail.hidden)
+                );
+
+            });
+
+            card.className = "pm-match";
+
+            card.append(button, detail);
+        }
+    }
+
+    const observer = new MutationObserver(convert);
+
+    observer.observe(host, {
+        childList: true,
+        subtree: true
+    });
+
+    convert();
+
+})();
