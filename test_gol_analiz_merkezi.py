@@ -67,6 +67,18 @@ class TestGolAnaliz(unittest.TestCase):
         m["olasiliklar"]["6.5_ust"] = 99
         self.assertEqual(audit([m])["dogrulanan"], 0)
 
+    def test_dusuk_cizgide_kacirilan_gol(self):
+        m = sample()
+        m["kilitli_secim"] = "1.5 UST"
+        r = audit([m])
+        self.assertEqual(
+            r["kacirilan_goller"][0]["kacirilan_cizgiler"],
+            [3.5, 4.5, 5.5]
+        )
 
+    def test_yuksek_cizgi_dogru(self):
+        m = sample()
+        m["kilitli_secim"] = "5.5 UST"
+        self.assertEqual(len(audit([m])["kacirilan_goller"]), 0)
 if __name__ == "__main__":
     unittest.main()
