@@ -61,6 +61,8 @@ jobs:
 
       - name: V18 Panel saat guvenlik testleri
         run: python -m unittest -v test_v18_panel_aktar
+      - name: V18 Gol Motoru V2 testleri
+        run: python -m unittest -v test_gercek_tahmin_v18
       - name: Gercek arsiv ile entegrasyon testi
         run: |
           python gol_merkez_entegrasyon_v1.py \
