@@ -59,7 +59,8 @@ jobs:
       - name: Dunya Ligleri Merkezi V2 testleri
         run: python -m unittest -v test_dunya_ligleri_merkezi_v2
 
-
+      - name: V18 Panel saat guvenlik testleri
+        run: python -m unittest -v test_v18_panel_aktar
       - name: Gercek arsiv ile entegrasyon testi
         run: |
           python gol_merkez_entegrasyon_v1.py \

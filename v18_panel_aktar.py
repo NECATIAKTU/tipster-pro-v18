@@ -10,7 +10,13 @@ LINES = tuple(f'{i}.5_ust' for i in range(1, 7))
 CHOICES = {'RISKLI', *(f'{i}.5 UST' for i in range(1, 7))}
 
 
-def convert(archive, now):
+def convert(archive, now, fikstur=None):
+    guncel_saatler = {}
+    for mac in (fikstur or {}).get('maclar', []):
+        key = kimlik(mac)
+        start = utc(mac.get('tarih'))
+        if key and start:
+            guncel_saatler[key] = start
     if not isinstance(archive, list):
         raise ValueError('Arşiv liste olmalı')
     seen, clean = set(), []
@@ -21,7 +27,7 @@ def convert(archive, now):
         if not key or key in seen or kimlik(match) != key:
             raise ValueError(f'Geçersiz veya tekrarlı kimlik: {key}')
         seen.add(key)
-        start = utc(match.get('tarih'))
+        start = guncel_saatler.get(key, utc(match.get('tarih')))
         if start is None:
             raise ValueError(f'Geçersiz maç tarihi: {key}')
         if start <= now or record.get('durum') != 'BEKLIYOR':
@@ -37,6 +43,8 @@ def convert(archive, now):
             raise ValueError(f'Geçersiz olasılıklar: {key}')
         prediction = dict(match.get('tahmin') or {})
         prediction.update(probs)
+        match = dict(match)
+        match['tarih'] = start.isoformat()
         clean.append({**match, 'id': key, 'tahmin': prediction,
                       'olasiliklar': dict(probs), 'kilitli_secim': choice,
                       'kilit_zamani_utc': record['kilit_zamani_utc']})
@@ -55,7 +63,8 @@ def main():
     results = json.loads(Path(a.sonuclar).read_text(encoding='utf-8'))
     if results.get('kayitlar') != archive:
         raise ValueError('Arşiv ve sonuç dosyası farklı; yayın durduruldu')
-    result = convert(archive, datetime.now(timezone.utc))
+    fikstur = json.loads(Path('gelecek_maclar.json').read_text(encoding='utf-8'))
+    result = convert(archive, datetime.now(timezone.utc), fikstur)
     out = Path(a.cikti)
     tmp = out.with_suffix(out.suffix + '.tmp')
     tmp.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
