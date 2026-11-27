@@ -235,3 +235,145 @@
     refresh();
 
 })();
+/* ULKE VE LIG MERKEZI - MOBIL V1 */
+
+(() => {
+    "use strict";
+
+    const body = document.getElementById("lc-current");
+
+    if (!body) return;
+
+    const lines = ["1.5", "2.5", "3.5", "4.5", "5.5", "6.5"];
+
+    function el(tag, text, cls) {
+        const node = document.createElement(tag);
+        if (text !== undefined) node.textContent = text;
+        if (cls) node.className = cls;
+        return node;
+    }
+
+    function convert() {
+        for (const row of body.rows) {
+            if (row.dataset.pmReady) continue;
+            if (row.cells.length !== 10) continue;
+
+            const values = Array.from(
+                row.cells,
+                cell => cell.textContent.trim()
+            );
+
+            row.dataset.pmReady = "1";
+
+            const cell = el("td");
+            cell.colSpan = 10;
+            cell.style.gridColumn = "1 / -1";
+
+            const button = el(
+                "button", undefined, "pm-match-button"
+            );
+
+            button.type = "button";
+
+            const pick = el(
+                "span", values[3], "pm-match-pick"
+            );
+
+            if (!/^[1-6]\.5 ÜST/.test(values[3])) {
+                pick.classList.add("pm-risk");
+            }
+
+            button.append(
+                el("span", values[0], "pm-match-name"),
+                pick,
+                el("span", "›", "pm-match-arrow")
+            );
+
+            const detail = el(
+                "section", undefined, "pm-detail"
+            );
+
+            detail.hidden = true;
+
+            detail.append(
+                el("h2", values[0], "pm-detail-title"),
+                el("p", values[1], "tp-note"),
+                el("p", values[2], "tp-note")
+            );
+
+            for (let i = 0; i < lines.length; i++) {
+                const item = el(
+                    "div", undefined, "pm-prob-row"
+                );
+
+                const track = el(
+                    "div", undefined, "pm-prob-track"
+                );
+
+                const fill = el(
+                    "div", undefined, "pm-prob-fill"
+                );
+
+                const value = parseFloat(
+                    values[i + 4]
+                        .replace("%", "")
+                        .replace(",", ".")
+                );
+
+                fill.style.width =
+                    Number.isFinite(value) &&
+                    value >= 0 && value <= 100
+                        ? value + "%"
+                        : "0%";
+
+                track.append(fill);
+
+                item.append(
+                    el("span", lines[i] + " ÜST"),
+                    track,
+                    el(
+                        "span",
+                        values[i + 4],
+                        "pm-prob-value"
+                    )
+                );
+
+                detail.append(item);
+            }
+
+            button.setAttribute(
+                "aria-expanded", "false"
+            );
+
+            button.addEventListener("click", () => {
+                detail.hidden = !detail.hidden;
+
+                button.setAttribute(
+                    "aria-expanded",
+                    String(!detail.hidden)
+                );
+            });
+
+            cell.append(button, detail);
+            row.replaceChildren(cell);
+        }
+    }
+
+    const mode = document.getElementById("lc-mode");
+
+    if (
+        mode &&
+        !Array.from(mode.options).some(
+            option => option.value === "20"
+        )
+    ) {
+        mode.append(new Option("TOP 20", "20"));
+    }
+
+    new MutationObserver(convert).observe(body, {
+        childList: true
+    });
+
+    convert();
+
+})();
