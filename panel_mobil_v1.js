@@ -377,3 +377,119 @@
     convert();
 
 })();
+/* ASLAN MODU - MOBIL V1 */
+
+(() => {
+    "use strict";
+
+    const host = document.getElementById("aslan-modu");
+
+    if (!host) return;
+
+    function el(tag, text, cls) {
+        const node = document.createElement(tag);
+
+        if (text !== undefined) {
+            node.textContent = text;
+        }
+
+        if (cls) node.className = cls;
+
+        return node;
+    }
+
+    function convert() {
+        const cards = host.querySelectorAll(
+            "#aslan-v2 .tp-match"
+        );
+
+        for (const card of cards) {
+
+            if (card.dataset.pmAslan) continue;
+
+            const title = card.querySelector("h3");
+
+            const choice = card.querySelector(
+                ".av-gold, p.av-muted"
+            );
+
+            if (!title || !choice) continue;
+
+            card.dataset.pmAslan = "1";
+
+            const name = title.textContent.trim();
+
+            const pick = choice.textContent
+                .trim()
+                .replace("Keşif etiketi: ", "");
+
+            const detail = el(
+                "div", undefined, "pm-detail"
+            );
+
+            detail.hidden = true;
+
+            while (card.firstChild) {
+                detail.append(card.firstChild);
+            }
+
+            const button = el(
+                "button",
+                undefined,
+                "pm-match-button"
+            );
+
+            button.type = "button";
+
+            const pickNode = el(
+                "span", pick, "pm-match-pick"
+            );
+
+            if (!/^[1-6]\.5 ÜST/.test(pick)) {
+                pickNode.classList.add("pm-risk");
+            }
+
+            const arrow = el(
+                "span", "›", "pm-match-arrow"
+            );
+
+            button.append(
+                el("span", name, "pm-match-name"),
+                pickNode,
+                arrow
+            );
+
+            button.setAttribute(
+                "aria-expanded", "false"
+            );
+
+            button.addEventListener("click", () => {
+
+                detail.hidden = !detail.hidden;
+
+                arrow.textContent =
+                    detail.hidden ? "›" : "⌄";
+
+                button.setAttribute(
+                    "aria-expanded",
+                    String(!detail.hidden)
+                );
+
+            });
+
+            card.className = "pm-match";
+
+            card.append(button, detail);
+        }
+    }
+
+    const observer = new MutationObserver(convert);
+
+    observer.observe(host, {
+        childList: true,
+        subtree: true
+    });
+
+    convert();
+
+})();
