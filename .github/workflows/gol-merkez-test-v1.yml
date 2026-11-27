@@ -1,0 +1,52 @@
+name: TIPSTER PRO - Gol Merkez Toplu Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gol-merkez-test:
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 5
+
+    steps:
+
+      - name: Gelistirme dalini al
+        uses: actions/checkout@v4
+        with:
+          ref: tipster-gelistirme
+          persist-credentials: false
+
+      - name: Python kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Onceki gelistirme testleri
+        run: python -m unittest -v gelistirme_test_v1
+
+      - name: Yeni gol merkezi testleri
+        run: |
+          python -m unittest -v \
+            test_gol_analiz_merkezi \
+            test_yuksek_gol_radari_v1 \
+            test_kalici_veri_bankasi_v1 \
+            test_motor_karsilastirma_merkezi_v1 \
+            test_dunya_ligleri_merkezi_v1 \
+            test_gol_merkez_entegrasyon_v1
+
+      - name: Gercek arsiv ile entegrasyon testi
+        run: |
+          python gol_merkez_entegrasyon_v1.py \
+            --cikti "$RUNNER_TEMP/gol_merkez_test.json"
+
+      - name: Test raporunu sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: gol-merkez-test-raporu
+          path: ${{ runner.temp }}/gol_merkez_test.json
+          retention-days: 3
