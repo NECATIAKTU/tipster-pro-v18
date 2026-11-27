@@ -282,6 +282,8 @@ jobs:
               'aslan_modu_rapor.json',
               'aslan_tahmin_arsivi.json',
               'aslan_dogrulanan_sonuclar.json',
+              'panel_mobil_v1.css',
+              'panel_mobil_v1.js',
 
           ):
               shutil.copy2(name, out / name)
@@ -307,6 +309,14 @@ jobs:
             sleep 3
           done
           exit 1
+      - name: Gol Merkezi V1 analiz raporu
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python gol_merkez_entegrasyon_v1.py \
+            --cikti "$RUNNER_TEMP/gol_merkez_raporu_v1.json"
+          cp "$RUNNER_TEMP/gol_merkez_raporu_v1.json" site/
+
 
       - name: GitHub Pages hazirla
         uses: actions/configure-pages@v5
