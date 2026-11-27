@@ -1,0 +1,3242 @@
+{
+  "surum": "KALICI VERI BANKASI V2",
+  "toplam_mac": 323,
+  "yeni_mac": 323,
+  "tekrar_mac": 0,
+  "celiskili_mac": 0,
+  "atlanan": {
+    "unverified_result": 314
+  },
+  "maclar": [
+    {
+      "id": "bra.1|401841308",
+      "tarih": "2026-11-19T22:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Vasco da Gama",
+      "deplasman": "Internacional",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bra.1|401841317",
+      "tarih": "2026-11-19T22:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Vitória",
+      "deplasman": "Red Bull Bragantino",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bra.1|401841309",
+      "tarih": "2026-11-20T00:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "São Paulo",
+      "deplasman": "Fluminense",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "usa.1|401933535",
+      "tarih": "2026-11-20T00:30:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Orlando City SC",
+      "deplasman": "FC Cincinnati",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "usa.1|401933555",
+      "tarih": "2026-11-20T03:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Seattle Sounders FC",
+      "deplasman": "Real Salt Lake",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "jpn.1|401877534",
+      "tarih": "2026-11-20T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Kashima Antlers",
+      "deplasman": "Shimizu S-Pulse",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "jpn.1|401877548",
+      "tarih": "2026-11-20T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Vissel Kobe",
+      "deplasman": "Mito Hollyhock",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877553",
+      "tarih": "2026-11-20T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Kashiwa Reysol",
+      "deplasman": "JEF United Ichihara-Chiba",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.2|401885049",
+      "tarih": "2026-11-20T17:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "Arminia Bielefeld",
+      "deplasman": "1. FC Magdeburg",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ger.2|401885053",
+      "tarih": "2026-11-20T17:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "SV Darmstadt 98",
+      "deplasman": "1. FC Heidenheim 1846",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "den.1|401874492",
+      "tarih": "2026-11-20T18:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "AGF",
+      "deplasman": "Lyngby Boldklub",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "nor.1|401843486",
+      "tarih": "2026-11-20T18:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Molde",
+      "deplasman": "Bodo/Glimt",
+      "ev_gol": 2,
+      "dep_gol": 4,
+      "toplam_gol": 6
+    },
+    {
+      "id": "fra.2|401876685",
+      "tarih": "2026-11-20T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Red Star FC 93",
+      "deplasman": "Pau",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "fra.2|401876687",
+      "tarih": "2026-11-20T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "AS Nancy Lorraine",
+      "deplasman": "Dijon FCO",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "fra.2|401876688",
+      "tarih": "2026-11-20T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Metz",
+      "deplasman": "Boulogne",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "fra.2|401876690",
+      "tarih": "2026-11-20T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Guingamp",
+      "deplasman": "Rodez Aveyron",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "fra.2|401876691",
+      "tarih": "2026-11-20T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Annecy",
+      "deplasman": "Clermont Foot",
+      "ev_gol": 4,
+      "dep_gol": 2,
+      "toplam_gol": 6
+    },
+    {
+      "id": "esp.2|401883112",
+      "tarih": "2026-11-20T19:30:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "FC Andorra",
+      "deplasman": "Leganés",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ger.1|401884736",
+      "tarih": "2026-11-20T19:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Bayern Munich",
+      "deplasman": "FC Cologne",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899543",
+      "tarih": "2026-11-20T19:30:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Hellas Verona",
+      "deplasman": "Cesena",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "sco.2|401878519",
+      "tarih": "2026-11-20T19:30:00+00:00",
+      "lig_kodu": "sco.2",
+      "ev_sahibi": "Inverness Caledonian Thistle",
+      "deplasman": "Ayr United",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "bel.1|401878937",
+      "tarih": "2026-11-20T19:45:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Cercle Brugge KSV",
+      "deplasman": "KVC Westerlo",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.5|401889201",
+      "tarih": "2026-11-20T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Southend United",
+      "deplasman": "Boreham Wood",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "fra.1|401876395",
+      "tarih": "2026-11-20T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Troyes",
+      "deplasman": "Le Havre AC",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.3|401880742",
+      "tarih": "2026-11-20T20:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Barnsley",
+      "deplasman": "Sheffield Wednesday",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.1|401882805",
+      "tarih": "2026-11-20T20:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Athletic Club",
+      "deplasman": "Espanyol",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "col.1|401934708",
+      "tarih": "2026-11-20T21:30:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Independiente Medellín",
+      "deplasman": "Independiente Santa Fe",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "arg.1|401933760",
+      "tarih": "2026-11-20T23:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Vélez Sarsfield",
+      "deplasman": "Belgrano (Córdoba)",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "col.1|401934690",
+      "tarih": "2026-11-20T23:35:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Atlético Bucaramanga",
+      "deplasman": "América de Cali",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "mex.1|401877054",
+      "tarih": "2026-11-21T01:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Puebla",
+      "deplasman": "Atlético de San Luis",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "col.1|401934707",
+      "tarih": "2026-11-21T01:40:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Deportivo Cali",
+      "deplasman": "Millonarios",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "mex.1|401877053",
+      "tarih": "2026-11-21T03:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "FC Juárez",
+      "deplasman": "Atlas",
+      "ev_gol": 3,
+      "dep_gol": 3,
+      "toplam_gol": 6
+    },
+    {
+      "id": "mex.1|401877052",
+      "tarih": "2026-11-21T03:10:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Tijuana",
+      "deplasman": "Atlante",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "jpn.1|401877531",
+      "tarih": "2026-11-21T05:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Sanfrecce Hiroshima",
+      "deplasman": "Yokohama F. Marinos",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "jpn.1|401877533",
+      "tarih": "2026-11-21T05:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Tokyo Verdy 1969",
+      "deplasman": "Nagoya Grampus",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "jpn.1|401877550",
+      "tarih": "2026-11-21T05:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Kyoto Sanga",
+      "deplasman": "Urawa Red Diamonds",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877552",
+      "tarih": "2026-11-21T05:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Machida Zelvia",
+      "deplasman": "V-Varen Nagasaki",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "jpn.1|401877549",
+      "tarih": "2026-11-21T06:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Cerezo Osaka",
+      "deplasman": "FC Tokyo",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877551",
+      "tarih": "2026-11-21T06:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Kawasaki Frontale",
+      "deplasman": "Avispa Fukuoka",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "jpn.1|401877532",
+      "tarih": "2026-11-21T07:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Gamba Osaka",
+      "deplasman": "Fagiano Okayama",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "tur.1|401888247",
+      "tarih": "2026-11-21T10:30:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Genclerbirligi",
+      "deplasman": "Gaziantep FK",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.2|401885051",
+      "tarih": "2026-11-21T12:00:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "1. FC Nürnberg",
+      "deplasman": "TSV Eintracht Braunschweig",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ger.2|401885054",
+      "tarih": "2026-11-21T12:00:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "Hannover 96",
+      "deplasman": "SpVgg Greuther Fürth",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ger.2|401885056",
+      "tarih": "2026-11-21T12:00:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "VfL Wolfsburg",
+      "deplasman": "Holstein Kiel",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.1|401879233",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Manchester City",
+      "deplasman": "Fulham",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880153",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Southampton",
+      "deplasman": "Derby County",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880155",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Norwich City",
+      "deplasman": "Cardiff City",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.2|401880156",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Millwall",
+      "deplasman": "Queens Park Rangers",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.3|401880731",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Reading",
+      "deplasman": "Bromley",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.3|401880741",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Blackpool",
+      "deplasman": "Wigan Athletic",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881257",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Newport County",
+      "deplasman": "Swindon Town",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.4|401881259",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Gillingham",
+      "deplasman": "Crewe Alexandra",
+      "ev_gol": 3,
+      "dep_gol": 3,
+      "toplam_gol": 6
+    },
+    {
+      "id": "eng.5|401889199",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Tamworth",
+      "deplasman": "Eastleigh",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.5|401889200",
+      "tarih": "2026-11-21T12:30:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Solihull Moors",
+      "deplasman": "Altrincham",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.1|401882806",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Alavés",
+      "deplasman": "Deportivo",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "esp.2|401882299",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "CD Sabadell",
+      "deplasman": "Granada",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "fra.2|401876689",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Stade Laval",
+      "deplasman": "Montpellier",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "nor.1|401843483",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Tromso",
+      "deplasman": "Viking FK",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "tur.1|401888245",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Galatasaray",
+      "deplasman": "Samsunspor",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "tur.1|401888369",
+      "tarih": "2026-11-21T13:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Amed SFK",
+      "deplasman": "Caykur Rizespor",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.1|401874981",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Lazio",
+      "deplasman": "Lecce",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ita.1|401875056",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Como",
+      "deplasman": "Cagliari",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899540",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Sudtirol",
+      "deplasman": "Cremonese",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ita.2|401899541",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Sampdoria",
+      "deplasman": "Benevento",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ita.2|401899542",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Modena",
+      "deplasman": "Juve Stabia",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899546",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Carrarese",
+      "deplasman": "Virtus Entella",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ita.2|401899548",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Ascoli",
+      "deplasman": "Vicenza",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "swe.1|401842882",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "AIK",
+      "deplasman": "Degerfors IF",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "swe.1|401842886",
+      "tarih": "2026-11-21T14:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "Mjällby AIF",
+      "deplasman": "Malmö FF",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ger.1|401884728",
+      "tarih": "2026-11-21T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "SV Elversberg",
+      "deplasman": "SC Freiburg",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.1|401884731",
+      "tarih": "2026-11-21T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Borussia Mönchengladbach",
+      "deplasman": "Borussia Dortmund",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.1|401884732",
+      "tarih": "2026-11-21T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "1. FC Union Berlin",
+      "deplasman": "RB Leipzig",
+      "ev_gol": 1,
+      "dep_gol": 5,
+      "toplam_gol": 6
+    },
+    {
+      "id": "ger.1|401884734",
+      "tarih": "2026-11-21T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Eintracht Frankfurt",
+      "deplasman": "TSG Hoffenheim",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.1|401884735",
+      "tarih": "2026-11-21T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Bayer Leverkusen",
+      "deplasman": "SC Paderborn 07",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bel.1|401878940",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Royal Charleroi SC",
+      "deplasman": "Sint-Truidense",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.1|401878754",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Tottenham Hotspur",
+      "deplasman": "Ipswich Town",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.1|401878756",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Aston Villa",
+      "deplasman": "Sunderland",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.1|401879235",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Coventry City",
+      "deplasman": "Crystal Palace",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.1|401879236",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Chelsea",
+      "deplasman": "Leeds United",
+      "ev_gol": 1,
+      "dep_gol": 4,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.1|401879238",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "AFC Bournemouth",
+      "deplasman": "Nottingham Forest",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880149",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Wolverhampton Wanderers",
+      "deplasman": "Charlton Athletic",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.2|401880150",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "West Ham United",
+      "deplasman": "Preston North End",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880151",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Swansea City",
+      "deplasman": "West Bromwich Albion",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880152",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Stoke City",
+      "deplasman": "Birmingham City",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.2|401880154",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Sheffield United",
+      "deplasman": "Watford",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880157",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Middlesbrough",
+      "deplasman": "Bristol City",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880158",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Lincoln City",
+      "deplasman": "Wrexham",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.2|401880160",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Bolton Wanderers",
+      "deplasman": "Portsmouth",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880732",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Plymouth Argyle",
+      "deplasman": "Peterborough United",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880733",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Oxford United",
+      "deplasman": "Wycombe Wanderers",
+      "ev_gol": 4,
+      "dep_gol": 3,
+      "toplam_gol": 7
+    },
+    {
+      "id": "eng.3|401880734",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Notts County",
+      "deplasman": "Stevenage",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.3|401880735",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Mansfield Town",
+      "deplasman": "Milton Keynes Dons",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880736",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Leyton Orient",
+      "deplasman": "AFC Wimbledon",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.3|401880737",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Huddersfield Town",
+      "deplasman": "Leicester City",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.3|401880738",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Cambridge United",
+      "deplasman": "Stockport County",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.3|401880739",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Burton Albion",
+      "deplasman": "Luton Town",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.3|401880740",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Bradford City",
+      "deplasman": "Doncaster Rovers",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.4|401881253",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "York City",
+      "deplasman": "Walsall",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.4|401881254",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Tranmere Rovers",
+      "deplasman": "Colchester United",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881255",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Oldham Athletic",
+      "deplasman": "Exeter City",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.4|401881256",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Northampton Town",
+      "deplasman": "Rochdale",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.4|401881258",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Grimsby Town",
+      "deplasman": "Rotherham United",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.4|401881260",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Crawley Town",
+      "deplasman": "Fleetwood Town",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881261",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Chesterfield",
+      "deplasman": "Shrewsbury Town",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.4|401881262",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Cheltenham Town",
+      "deplasman": "Bristol Rovers",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881263",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Barnet",
+      "deplasman": "Port Vale",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881264",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Accrington Stanley",
+      "deplasman": "Salford City",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889192",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Worthing",
+      "deplasman": "Harrogate Town",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.5|401889193",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Sutton United",
+      "deplasman": "Boston United",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.5|401889194",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Kidderminster Harriers",
+      "deplasman": "AFC Fylde",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.5|401889195",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Gateshead",
+      "deplasman": "Hartlepool United",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.5|401889196",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "FC Halifax Town",
+      "deplasman": "Woking",
+      "ev_gol": 5,
+      "dep_gol": 0,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.5|401889197",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Barrow",
+      "deplasman": "Carlisle United",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889198",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Aldershot Town",
+      "deplasman": "Scunthorpe United",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889417",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Wealdstone",
+      "deplasman": "AFC Hornchurch",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "nor.1|401843489",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Hamarkameratene",
+      "deplasman": "Fredrikstad",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "sco.1|401878334",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Kilmarnock",
+      "deplasman": "Aberdeen",
+      "ev_gol": 2,
+      "dep_gol": 4,
+      "toplam_gol": 6
+    },
+    {
+      "id": "sco.1|401878335",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Hibernian",
+      "deplasman": "Dundee United",
+      "ev_gol": 0,
+      "dep_gol": 4,
+      "toplam_gol": 4
+    },
+    {
+      "id": "sco.1|401878336",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Falkirk",
+      "deplasman": "St Johnstone",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "sco.1|401878338",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Celtic",
+      "deplasman": "St Mirren",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "sco.2|401878517",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.2",
+      "ev_sahibi": "Raith Rovers",
+      "deplasman": "Partick Thistle",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "sco.2|401878518",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.2",
+      "ev_sahibi": "Queen's Park",
+      "deplasman": "Livingston",
+      "ev_gol": 1,
+      "dep_gol": 4,
+      "toplam_gol": 5
+    },
+    {
+      "id": "sco.2|401878521",
+      "tarih": "2026-11-21T15:00:00+00:00",
+      "lig_kodu": "sco.2",
+      "ev_sahibi": "Arbroath",
+      "deplasman": "Stenhousemuir",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.1|401882799",
+      "tarih": "2026-11-21T15:15:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Rayo Vallecano",
+      "deplasman": "Valencia",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "esp.2|401883108",
+      "tarih": "2026-11-21T15:15:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Real Sociedad II",
+      "deplasman": "Cádiz",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ned.1|401875541",
+      "tarih": "2026-11-21T15:30:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "NEC Nijmegen",
+      "deplasman": "PSV Eindhoven",
+      "ev_gol": 1,
+      "dep_gol": 4,
+      "toplam_gol": 5
+    },
+    {
+      "id": "aut.1|401881744",
+      "tarih": "2026-11-21T16:00:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "WSG Swarovski Tirol",
+      "deplasman": "Austria Lustenau",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "aut.1|401881749",
+      "tarih": "2026-11-21T16:00:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "LASK Linz",
+      "deplasman": "TSV Hartberg",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "tur.1|401888244",
+      "tarih": "2026-11-21T16:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Kocaelispor",
+      "deplasman": "Fenerbahce",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "fra.1|401876398",
+      "tarih": "2026-11-21T16:15:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Nice",
+      "deplasman": "Paris Saint-Germain",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ita.2|401899545",
+      "tarih": "2026-11-21T16:15:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Catanzaro",
+      "deplasman": "Palermo",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "swe.1|401842889",
+      "tarih": "2026-11-21T16:30:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "GAIS",
+      "deplasman": "Västerås SK",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ita.1|401874967",
+      "tarih": "2026-11-21T17:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Parma",
+      "deplasman": "AS Roma",
+      "ev_gol": 1,
+      "dep_gol": 5,
+      "toplam_gol": 6
+    },
+    {
+      "id": "nor.1|401843485",
+      "tarih": "2026-11-21T17:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Vålerenga",
+      "deplasman": "IK Start",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bel.1|401878939",
+      "tarih": "2026-11-21T17:15:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Racing Genk",
+      "deplasman": "RAAL La Louvière",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.1|401879232",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Newcastle United",
+      "deplasman": "Arsenal",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.5|401889191",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Yeovil Town",
+      "deplasman": "Forest Green Rovers",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "esp.1|401882797",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Sevilla",
+      "deplasman": "Real Betis",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "esp.2|401882301",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Castellón",
+      "deplasman": "Eldense",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ger.1|401884729",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Schalke 04",
+      "deplasman": "VfB Stuttgart",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "gre.1|401896810",
+      "tarih": "2026-11-21T17:30:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Kalamata",
+      "deplasman": "AEK Athens",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ned.1|401875543",
+      "tarih": "2026-11-21T17:45:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "Feyenoord Rotterdam",
+      "deplasman": "Excelsior",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ned.1|401875544",
+      "tarih": "2026-11-21T17:45:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "FC Utrecht",
+      "deplasman": "SC Cambuur",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "sco.1|401878337",
+      "tarih": "2026-11-21T17:45:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Dundee",
+      "deplasman": "Heart of Midlothian",
+      "ev_gol": 0,
+      "dep_gol": 8,
+      "toplam_gol": 8
+    },
+    {
+      "id": "arg.1|401933758",
+      "tarih": "2026-11-21T18:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Defensa y Justicia",
+      "deplasman": "Barracas Central",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "aut.1|401881746",
+      "tarih": "2026-11-21T18:30:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "Grazer AK",
+      "deplasman": "Rapid Vienna",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ita.2|401899544",
+      "tarih": "2026-11-21T18:30:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Empoli",
+      "deplasman": "Pisa",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "fra.2|401876684",
+      "tarih": "2026-11-21T19:00:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Stade de Reims",
+      "deplasman": "Saint-Étienne",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "usa.1|401933733",
+      "tarih": "2026-11-21T19:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "New England Revolution",
+      "deplasman": "Philadelphia Union",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "bra.1|401841322",
+      "tarih": "2026-11-21T19:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Palmeiras",
+      "deplasman": "Flamengo",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ger.2|401885055",
+      "tarih": "2026-11-21T19:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "St. Pauli",
+      "deplasman": "VfL Bochum",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "bel.1|401878935",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "KV Mechelen",
+      "deplasman": "Club Brugge",
+      "ev_gol": 1,
+      "dep_gol": 5,
+      "toplam_gol": 6
+    },
+    {
+      "id": "bel.1|401878938",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Zulte-Waregem",
+      "deplasman": "Antwerp",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "fra.1|401876396",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Strasbourg",
+      "deplasman": "Brest",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "fra.1|401876399",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "AS Monaco",
+      "deplasman": "AJ Auxerre",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "fra.1|401876402",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Lille",
+      "deplasman": "Lyon",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "fra.1|401876403",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Lens",
+      "deplasman": "Toulouse",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.1|401875067",
+      "tarih": "2026-11-21T19:45:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Napoli",
+      "deplasman": "Torino",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "arg.1|401933755",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Argentinos Juniors",
+      "deplasman": "Independiente",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.1|401882798",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Real Madrid",
+      "deplasman": "Celta Vigo",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.2|401883107",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Tenerife",
+      "deplasman": "Mallorca",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "ned.1|401875539",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "Telstar",
+      "deplasman": "PEC Zwolle",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ned.1|401875546",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "FC Groningen",
+      "deplasman": "Heerenveen",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "sco.1|401878333",
+      "tarih": "2026-11-21T20:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Motherwell",
+      "deplasman": "Rangers",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bra.1|401841327",
+      "tarih": "2026-11-21T20:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Bahia",
+      "deplasman": "Coritiba",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "usa.1|401933732",
+      "tarih": "2026-11-21T21:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "FC Dallas",
+      "deplasman": "Portland Timbers",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "mex.1|401877050",
+      "tarih": "2026-11-21T22:50:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Pachuca",
+      "deplasman": "Toluca",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "mex.1|401877051",
+      "tarih": "2026-11-21T23:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Santos",
+      "deplasman": "León",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "usa.1|401933739",
+      "tarih": "2026-11-21T23:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Inter Miami CF",
+      "deplasman": "Columbus Crew",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bra.1|401841325",
+      "tarih": "2026-11-22T00:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Chapecoense",
+      "deplasman": "Cruzeiro",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "mex.1|401877049",
+      "tarih": "2026-11-22T01:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Pumas UNAM",
+      "deplasman": "Monterrey",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "col.1|401934689",
+      "tarih": "2026-11-22T01:15:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Once Caldas",
+      "deplasman": "Atlético Nacional",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "mex.1|401877048",
+      "tarih": "2026-11-22T03:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Tigres UANL",
+      "deplasman": "América",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "tur.1|401888243",
+      "tarih": "2026-11-22T10:30:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Erzurum BB",
+      "deplasman": "Goztepe",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ned.1|401875545",
+      "tarih": "2026-11-22T11:15:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "FC Twente",
+      "deplasman": "Willem II",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ita.1|401875008",
+      "tarih": "2026-11-22T11:30:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Juventus",
+      "deplasman": "Venezia",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880159",
+      "tarih": "2026-11-22T12:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Burnley",
+      "deplasman": "Blackburn Rovers",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bel.1|401878942",
+      "tarih": "2026-11-22T12:30:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Waasland-Beveren",
+      "deplasman": "KAA Gent",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ger.2|401885048",
+      "tarih": "2026-11-22T12:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "Energie Cottbus",
+      "deplasman": "Hertha Berlin",
+      "ev_gol": 0,
+      "dep_gol": 4,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ger.2|401885050",
+      "tarih": "2026-11-22T12:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "Karlsruher SC",
+      "deplasman": "VfL Osnabruck",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "ger.2|401885052",
+      "tarih": "2026-11-22T12:30:00+00:00",
+      "lig_kodu": "ger.2",
+      "ev_sahibi": "Kaiserslautern",
+      "deplasman": "Dynamo Dresden",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "den.1|401874558",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "Viborg FF",
+      "deplasman": "Randers FC",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "den.1|401874575",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "AC Horsens",
+      "deplasman": "Silkeborg IF",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "esp.1|401882804",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Barcelona",
+      "deplasman": "Villarreal",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "esp.2|401882300",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Córdoba",
+      "deplasman": "Real Oviedo",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "swe.1|401842885",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "IK Sirius",
+      "deplasman": "Djurgården",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "swe.1|401842887",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "BK Häcken",
+      "deplasman": "IF Elfsborg",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "tur.1|401888246",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Konyaspor",
+      "deplasman": "Besiktas",
+      "ev_gol": 2,
+      "dep_gol": 4,
+      "toplam_gol": 6
+    },
+    {
+      "id": "tur.1|401888248",
+      "tarih": "2026-11-22T13:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Kasimpasa",
+      "deplasman": "Alanyaspor",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "aut.1|401881745",
+      "tarih": "2026-11-22T13:30:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "SC Rheindorf Altach",
+      "deplasman": "SK Sturm Graz",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "aut.1|401881748",
+      "tarih": "2026-11-22T13:30:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "Wolfsberger",
+      "deplasman": "SV Josko Ried",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ned.1|401875540",
+      "tarih": "2026-11-22T13:30:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "Sparta Rotterdam",
+      "deplasman": "AZ Alkmaar",
+      "ev_gol": 1,
+      "dep_gol": 5,
+      "toplam_gol": 6
+    },
+    {
+      "id": "ned.1|401875547",
+      "tarih": "2026-11-22T13:30:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "Ajax Amsterdam",
+      "deplasman": "ADO Den Haag",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.1|401879234",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Hull City",
+      "deplasman": "Brighton & Hove Albion",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "fra.1|401876397",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Paris FC",
+      "deplasman": "Angers",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "gre.1|401896727",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Levadiakos",
+      "deplasman": "Atromitos",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.1|401874960",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Sassuolo",
+      "deplasman": "Genoa",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.1|401875047",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Bologna",
+      "deplasman": "Udinese",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899547",
+      "tarih": "2026-11-22T14:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "US Avellino",
+      "deplasman": "Mantova",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ger.1|401884733",
+      "tarih": "2026-11-22T14:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "FC Augsburg",
+      "deplasman": "Mainz",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bel.1|401878936",
+      "tarih": "2026-11-22T15:00:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "KV Kortrijk",
+      "deplasman": "Union St.-Gilloise",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "den.1|401874541",
+      "tarih": "2026-11-22T15:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "Sønderjyske Fodbold",
+      "deplasman": "Odense Boldklub",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "gre.1|401896725",
+      "tarih": "2026-11-22T15:00:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Panetolikos",
+      "deplasman": "Volos NFC",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "esp.1|401882800",
+      "tarih": "2026-11-22T15:15:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Racing Santander",
+      "deplasman": "Real Sociedad",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "esp.2|401882298",
+      "tarih": "2026-11-22T15:15:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Sporting Gijón",
+      "deplasman": "Las Palmas",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "gre.1|401896726",
+      "tarih": "2026-11-22T15:30:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Panathinaikos",
+      "deplasman": "OFI Crete",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "swe.1|401842883",
+      "tarih": "2026-11-22T15:30:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "IF Brommapojkarna",
+      "deplasman": "Halmstads BK",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ned.1|401875542",
+      "tarih": "2026-11-22T15:45:00+00:00",
+      "lig_kodu": "ned.1",
+      "ev_sahibi": "Go Ahead Eagles",
+      "deplasman": "Fortuna Sittard",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "aut.1|401881747",
+      "tarih": "2026-11-22T16:00:00+00:00",
+      "lig_kodu": "aut.1",
+      "ev_sahibi": "Austria Vienna",
+      "deplasman": "RB Salzburg",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "nor.1|401843487",
+      "tarih": "2026-11-22T16:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Kristiansund BK",
+      "deplasman": "Sandefjord",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "nor.1|401843488",
+      "tarih": "2026-11-22T16:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "KFUM Oslo",
+      "deplasman": "SK Brann",
+      "ev_gol": 3,
+      "dep_gol": 4,
+      "toplam_gol": 7
+    },
+    {
+      "id": "nor.1|401843490",
+      "tarih": "2026-11-22T16:00:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Aalesund",
+      "deplasman": "Rosenborg",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "tur.1|401888249",
+      "tarih": "2026-11-22T16:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Trabzonspor",
+      "deplasman": "Eyupspor",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "fra.1|401876401",
+      "tarih": "2026-11-22T16:15:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Lorient",
+      "deplasman": "Stade Rennais",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899549",
+      "tarih": "2026-11-22T16:15:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Arezzo",
+      "deplasman": "Padova",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.1|401878755",
+      "tarih": "2026-11-22T16:30:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Liverpool",
+      "deplasman": "Manchester United",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ger.1|401884730",
+      "tarih": "2026-11-22T16:30:00+00:00",
+      "lig_kodu": "ger.1",
+      "ev_sahibi": "Werder Bremen",
+      "deplasman": "Hamburg SV",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "den.1|401874493",
+      "tarih": "2026-11-22T17:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "FC Nordsjælland",
+      "deplasman": "F.C. København",
+      "ev_gol": 5,
+      "dep_gol": 0,
+      "toplam_gol": 5
+    },
+    {
+      "id": "gre.1|401896809",
+      "tarih": "2026-11-22T17:00:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Olympiacos",
+      "deplasman": "Iraklis",
+      "ev_gol": 6,
+      "dep_gol": 2,
+      "toplam_gol": 8
+    },
+    {
+      "id": "ita.1|401874989",
+      "tarih": "2026-11-22T17:00:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "AC Milan",
+      "deplasman": "Frosinone",
+      "ev_gol": 5,
+      "dep_gol": 1,
+      "toplam_gol": 6
+    },
+    {
+      "id": "bel.1|401878941",
+      "tarih": "2026-11-22T17:30:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Anderlecht",
+      "deplasman": "OH Leuven",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "esp.1|401882801",
+      "tarih": "2026-11-22T17:30:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Osasuna",
+      "deplasman": "Málaga",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "esp.2|401883109",
+      "tarih": "2026-11-22T17:30:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Girona",
+      "deplasman": "Eibar",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.2|401883304",
+      "tarih": "2026-11-22T17:30:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "RC Celta Fortuna",
+      "deplasman": "Real Valladolid",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "gre.1|401896724",
+      "tarih": "2026-11-22T17:30:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "PAOK",
+      "deplasman": "Kifisia",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bel.1|401878934",
+      "tarih": "2026-11-22T18:15:00+00:00",
+      "lig_kodu": "bel.1",
+      "ev_sahibi": "Lommel SK",
+      "deplasman": "Standard Liege",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "nor.1|401843484",
+      "tarih": "2026-11-22T18:15:00+00:00",
+      "lig_kodu": "nor.1",
+      "ev_sahibi": "Sarpsborg FK",
+      "deplasman": "Lillestrom",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "arg.1|401933759",
+      "tarih": "2026-11-22T19:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Rosario Central",
+      "deplasman": "Gimnasia (Mendoza)",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bra.1|401841318",
+      "tarih": "2026-11-22T19:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Athletico-PR",
+      "deplasman": "Remo",
+      "ev_gol": 4,
+      "dep_gol": 2,
+      "toplam_gol": 6
+    },
+    {
+      "id": "fra.1|401876400",
+      "tarih": "2026-11-22T19:45:00+00:00",
+      "lig_kodu": "fra.1",
+      "ev_sahibi": "Marseille",
+      "deplasman": "Le Mans",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ita.1|401875001",
+      "tarih": "2026-11-22T19:45:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Atalanta",
+      "deplasman": "Internazionale",
+      "ev_gol": 4,
+      "dep_gol": 4,
+      "toplam_gol": 8
+    },
+    {
+      "id": "esp.1|401882803",
+      "tarih": "2026-11-22T20:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Getafe",
+      "deplasman": "Atlético Madrid",
+      "ev_gol": 0,
+      "dep_gol": 3,
+      "toplam_gol": 3
+    },
+    {
+      "id": "esp.2|401883111",
+      "tarih": "2026-11-22T20:00:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Burgos",
+      "deplasman": "Albacete",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "usa.1|401933731",
+      "tarih": "2026-11-22T21:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Nashville SC",
+      "deplasman": "FC Cincinnati",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "bra.1|401841324",
+      "tarih": "2026-11-22T21:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Fluminense",
+      "deplasman": "Mirassol",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "arg.1|401933761",
+      "tarih": "2026-11-22T22:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "River Plate",
+      "deplasman": "Lanús",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "bra.1|401841321",
+      "tarih": "2026-11-22T22:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Red Bull Bragantino",
+      "deplasman": "Vasco da Gama",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "mex.1|401877047",
+      "tarih": "2026-11-22T23:07:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Guadalajara",
+      "deplasman": "Cruz Azul",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "usa.1|401933730",
+      "tarih": "2026-11-22T23:30:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Chicago Fire FC",
+      "deplasman": "Charlotte FC",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "arg.1|401933762",
+      "tarih": "2026-11-23T01:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Instituto (Córdoba)",
+      "deplasman": "Huracán",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "mex.1|401877046",
+      "tarih": "2026-11-23T01:10:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Querétaro",
+      "deplasman": "Necaxa",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "usa.1|401933729",
+      "tarih": "2026-11-23T01:30:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "Vancouver Whitecaps",
+      "deplasman": "Real Salt Lake",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "gre.1|401896728",
+      "tarih": "2026-11-23T15:00:00+00:00",
+      "lig_kodu": "gre.1",
+      "ev_sahibi": "Asteras Tripoli",
+      "deplasman": "Aris",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "tur.1|401888370",
+      "tarih": "2026-11-23T17:00:00+00:00",
+      "lig_kodu": "tur.1",
+      "ev_sahibi": "Istanbul Basaksehir",
+      "deplasman": "Çorum FK",
+      "ev_gol": 4,
+      "dep_gol": 2,
+      "toplam_gol": 6
+    },
+    {
+      "id": "den.1|401874538",
+      "tarih": "2026-11-23T18:00:00+00:00",
+      "lig_kodu": "den.1",
+      "ev_sahibi": "Brøndby IF",
+      "deplasman": "FC Midtjylland",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "swe.1|401842884",
+      "tarih": "2026-11-23T18:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "Örgryte IS",
+      "deplasman": "Kalmar FF",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "swe.1|401842888",
+      "tarih": "2026-11-23T18:00:00+00:00",
+      "lig_kodu": "swe.1",
+      "ev_sahibi": "Hammarby IF",
+      "deplasman": "IFK Göteborg",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "esp.2|401883110",
+      "tarih": "2026-11-23T19:30:00+00:00",
+      "lig_kodu": "esp.2",
+      "ev_sahibi": "Ceuta",
+      "deplasman": "Almería",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "fra.2|401876683",
+      "tarih": "2026-11-23T19:45:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Sochaux",
+      "deplasman": "Dunkerque",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "fra.2|401876686",
+      "tarih": "2026-11-23T19:45:00+00:00",
+      "lig_kodu": "fra.2",
+      "ev_sahibi": "Nantes",
+      "deplasman": "Grenoble",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ita.1|401875009",
+      "tarih": "2026-11-23T19:45:00+00:00",
+      "lig_kodu": "ita.1",
+      "ev_sahibi": "Monza",
+      "deplasman": "Fiorentina",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "arg.1|401933756",
+      "tarih": "2026-11-23T20:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Gimnasia La Plata",
+      "deplasman": "Newell's Old Boys",
+      "ev_gol": 4,
+      "dep_gol": 2,
+      "toplam_gol": 6
+    },
+    {
+      "id": "eng.1|401879237",
+      "tarih": "2026-11-23T20:00:00+00:00",
+      "lig_kodu": "eng.1",
+      "ev_sahibi": "Brentford",
+      "deplasman": "Everton",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "esp.1|401882802",
+      "tarih": "2026-11-23T20:00:00+00:00",
+      "lig_kodu": "esp.1",
+      "ev_sahibi": "Levante",
+      "deplasman": "Elche",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "bra.1|401841323",
+      "tarih": "2026-11-23T22:30:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Internacional",
+      "deplasman": "Vitória",
+      "ev_gol": 2,
+      "dep_gol": 5,
+      "toplam_gol": 7
+    },
+    {
+      "id": "bra.1|401841326",
+      "tarih": "2026-11-23T23:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Botafogo",
+      "deplasman": "São Paulo",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "bra.1|401841320",
+      "tarih": "2026-11-24T00:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Santos",
+      "deplasman": "Grêmio",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "usa.1|401933728",
+      "tarih": "2026-11-24T01:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "St. Louis CITY SC",
+      "deplasman": "LAFC",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "rsa.1|401902004",
+      "tarih": "2026-11-24T17:30:00+00:00",
+      "lig_kodu": "rsa.1",
+      "ev_sahibi": "Orlando Pirates",
+      "deplasman": "Golden Arrows",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "rsa.1|401902008",
+      "tarih": "2026-11-24T17:30:00+00:00",
+      "lig_kodu": "rsa.1",
+      "ev_sahibi": "Durban City",
+      "deplasman": "Polokwane City FC",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ita.2|401899536",
+      "tarih": "2026-11-24T18:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Juve Stabia",
+      "deplasman": "Catanzaro",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ita.2|401899530",
+      "tarih": "2026-11-24T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Virtus Entella",
+      "deplasman": "Hellas Verona",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ita.2|401899532",
+      "tarih": "2026-11-24T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Palermo",
+      "deplasman": "Sudtirol",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ita.2|401899535",
+      "tarih": "2026-11-24T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Vicenza",
+      "deplasman": "Carrarese",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "ita.2|401899538",
+      "tarih": "2026-11-24T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Cesena",
+      "deplasman": "Ascoli",
+      "ev_gol": 5,
+      "dep_gol": 1,
+      "toplam_gol": 6
+    },
+    {
+      "id": "ita.2|401899539",
+      "tarih": "2026-11-24T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Benevento",
+      "deplasman": "Empoli",
+      "ev_gol": 5,
+      "dep_gol": 0,
+      "toplam_gol": 5
+    },
+    {
+      "id": "eng.2|401880142",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Sheffield United",
+      "deplasman": "Southampton",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880143",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Portsmouth",
+      "deplasman": "West Ham United",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.2|401880144",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Norwich City",
+      "deplasman": "Queens Park Rangers",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880145",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Middlesbrough",
+      "deplasman": "Swansea City",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.2|401880146",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Charlton Athletic",
+      "deplasman": "Lincoln City",
+      "ev_gol": 4,
+      "dep_gol": 0,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880147",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Cardiff City",
+      "deplasman": "Preston North End",
+      "ev_gol": 0,
+      "dep_gol": 4,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880148",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Bristol City",
+      "deplasman": "Wrexham",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880823",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Bromley",
+      "deplasman": "Wycombe Wanderers",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880824",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Blackpool",
+      "deplasman": "Leicester City",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.3|401880829",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Stevenage",
+      "deplasman": "Sheffield Wednesday",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.3|401880838",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Bradford City",
+      "deplasman": "Barnsley",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.4|401881354",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Port Vale",
+      "deplasman": "Northampton Town",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.4|401881358",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.4",
+      "ev_sahibi": "Crawley Town",
+      "deplasman": "Barnet",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.5|401889183",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Woking",
+      "deplasman": "Worthing",
+      "ev_gol": 4,
+      "dep_gol": 3,
+      "toplam_gol": 7
+    },
+    {
+      "id": "eng.5|401889184",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Scunthorpe United",
+      "deplasman": "Gateshead",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.5|401889185",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Forest Green Rovers",
+      "deplasman": "Southend United",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889186",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Eastleigh",
+      "deplasman": "Yeovil Town",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.5|401889187",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Carlisle United",
+      "deplasman": "Tamworth",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.5|401889188",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Boston United",
+      "deplasman": "Barrow",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.5|401889189",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Altrincham",
+      "deplasman": "Wealdstone",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.5|401889190",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "AFC Fylde",
+      "deplasman": "FC Halifax Town",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889416",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "AFC Hornchurch",
+      "deplasman": "Sutton United",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "sco.1|401878348",
+      "tarih": "2026-11-24T19:45:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Hibernian",
+      "deplasman": "Dundee",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.2|401880141",
+      "tarih": "2026-11-24T20:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Wolverhampton Wanderers",
+      "deplasman": "Derby County",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "sco.1|401878345",
+      "tarih": "2026-11-24T20:00:00+00:00",
+      "lig_kodu": "sco.1",
+      "ev_sahibi": "Rangers",
+      "deplasman": "Aberdeen",
+      "ev_gol": 3,
+      "dep_gol": 2,
+      "toplam_gol": 5
+    },
+    {
+      "id": "bra.1|401841335",
+      "tarih": "2026-11-24T21:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Chapecoense",
+      "deplasman": "Palmeiras",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "col.1|401934688",
+      "tarih": "2026-11-24T23:20:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Millonarios",
+      "deplasman": "Atlético Bucaramanga",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "col.1|401934706",
+      "tarih": "2026-11-25T01:30:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "América de Cali",
+      "deplasman": "Deportivo Cali",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "usa.1|401933738",
+      "tarih": "2026-11-25T03:00:00+00:00",
+      "lig_kodu": "usa.1",
+      "ev_sahibi": "San Jose Earthquakes",
+      "deplasman": "Houston Dynamo FC",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877527",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Avispa Fukuoka",
+      "deplasman": "Yokohama F. Marinos",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877528",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Fagiano Okayama",
+      "deplasman": "Shimizu S-Pulse",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "jpn.1|401877529",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "JEF United Ichihara-Chiba",
+      "deplasman": "Nagoya Grampus",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877530",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Mito Hollyhock",
+      "deplasman": "Tokyo Verdy 1969",
+      "ev_gol": 1,
+      "dep_gol": 0,
+      "toplam_gol": 1
+    },
+    {
+      "id": "jpn.1|401877545",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "V-Varen Nagasaki",
+      "deplasman": "Kawasaki Frontale",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "jpn.1|401877546",
+      "tarih": "2026-11-25T10:00:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "FC Tokyo",
+      "deplasman": "Sanfrecce Hiroshima",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "jpn.1|401877547",
+      "tarih": "2026-11-25T10:30:00+00:00",
+      "lig_kodu": "jpn.1",
+      "ev_sahibi": "Urawa Red Diamonds",
+      "deplasman": "Cerezo Osaka",
+      "ev_gol": 2,
+      "dep_gol": 2,
+      "toplam_gol": 4
+    },
+    {
+      "id": "ita.2|401899537",
+      "tarih": "2026-11-25T18:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Cremonese",
+      "deplasman": "US Avellino",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.5|401889182",
+      "tarih": "2026-11-25T19:00:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Boreham Wood",
+      "deplasman": "Aldershot Town",
+      "ev_gol": 4,
+      "dep_gol": 1,
+      "toplam_gol": 5
+    },
+    {
+      "id": "ita.2|401899531",
+      "tarih": "2026-11-25T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Pisa",
+      "deplasman": "Modena",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "ita.2|401899533",
+      "tarih": "2026-11-25T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Padova",
+      "deplasman": "Sampdoria",
+      "ev_gol": 1,
+      "dep_gol": 2,
+      "toplam_gol": 3
+    },
+    {
+      "id": "ita.2|401899534",
+      "tarih": "2026-11-25T19:00:00+00:00",
+      "lig_kodu": "ita.2",
+      "ev_sahibi": "Mantova",
+      "deplasman": "Arezzo",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "eng.2|401880137",
+      "tarih": "2026-11-25T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Watford",
+      "deplasman": "Blackburn Rovers",
+      "ev_gol": 0,
+      "dep_gol": 1,
+      "toplam_gol": 1
+    },
+    {
+      "id": "eng.2|401880139",
+      "tarih": "2026-11-25T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Burnley",
+      "deplasman": "Birmingham City",
+      "ev_gol": 0,
+      "dep_gol": 2,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.2|401880140",
+      "tarih": "2026-11-25T19:45:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Bolton Wanderers",
+      "deplasman": "West Bromwich Albion",
+      "ev_gol": 1,
+      "dep_gol": 3,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.5|401889180",
+      "tarih": "2026-11-25T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Hartlepool United",
+      "deplasman": "Solihull Moors",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "eng.5|401889181",
+      "tarih": "2026-11-25T19:45:00+00:00",
+      "lig_kodu": "eng.5",
+      "ev_sahibi": "Harrogate Town",
+      "deplasman": "Kidderminster Harriers",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "eng.2|401880138",
+      "tarih": "2026-11-25T20:00:00+00:00",
+      "lig_kodu": "eng.2",
+      "ev_sahibi": "Stoke City",
+      "deplasman": "Millwall",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "bra.1|401841319",
+      "tarih": "2026-11-25T23:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "Atlético-MG",
+      "deplasman": "Corinthians",
+      "ev_gol": 1,
+      "dep_gol": 1,
+      "toplam_gol": 2
+    },
+    {
+      "id": "col.1|401934687",
+      "tarih": "2026-11-25T23:20:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Independiente Santa Fe",
+      "deplasman": "Once Caldas",
+      "ev_gol": 3,
+      "dep_gol": 0,
+      "toplam_gol": 3
+    },
+    {
+      "id": "arg.1|401933757",
+      "tarih": "2026-11-26T00:00:00+00:00",
+      "lig_kodu": "arg.1",
+      "ev_sahibi": "Boca Juniors",
+      "deplasman": "Independiente Rivadavia",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "mex.1|401931986",
+      "tarih": "2026-11-26T01:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Toluca",
+      "deplasman": "Atlas",
+      "ev_gol": 2,
+      "dep_gol": 0,
+      "toplam_gol": 2
+    },
+    {
+      "id": "col.1|401934705",
+      "tarih": "2026-11-26T01:30:00+00:00",
+      "lig_kodu": "col.1",
+      "ev_sahibi": "Atlético Nacional",
+      "deplasman": "Independiente Medellín",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "mex.1|401931998",
+      "tarih": "2026-11-26T03:10:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Monterrey",
+      "deplasman": "América",
+      "ev_gol": 0,
+      "dep_gol": 0,
+      "toplam_gol": 0
+    },
+    {
+      "id": "eng.3|401880728",
+      "tarih": "2026-11-26T20:00:00+00:00",
+      "lig_kodu": "eng.3",
+      "ev_sahibi": "Doncaster Rovers",
+      "deplasman": "Huddersfield Town",
+      "ev_gol": 2,
+      "dep_gol": 3,
+      "toplam_gol": 5
+    },
+    {
+      "id": "bra.1|401841329",
+      "tarih": "2026-11-26T23:00:00+00:00",
+      "lig_kodu": "bra.1",
+      "ev_sahibi": "São Paulo",
+      "deplasman": "Remo",
+      "ev_gol": 3,
+      "dep_gol": 1,
+      "toplam_gol": 4
+    },
+    {
+      "id": "mex.1|401931982",
+      "tarih": "2026-11-27T01:00:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "Pachuca",
+      "deplasman": "Guadalajara",
+      "ev_gol": 2,
+      "dep_gol": 1,
+      "toplam_gol": 3
+    },
+    {
+      "id": "mex.1|401931995",
+      "tarih": "2026-11-27T03:10:00+00:00",
+      "lig_kodu": "mex.1",
+      "ev_sahibi": "León",
+      "deplasman": "Cruz Azul",
+      "ev_gol": 0,
+      "dep_gol": 4,
+      "toplam_gol": 4
+    }
+  ]
+}
