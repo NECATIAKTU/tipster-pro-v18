@@ -13,7 +13,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from fikstur_yeni import LIGLER
-from gol_modeli import mac_analizi
+from gol_modeli import mac_analizi, bos_takim
 from tahmin_motoru import otomatik_eslestir, indeks_olustur, tarih_utc
 
 BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/{}/scoreboard'
@@ -39,9 +39,9 @@ def historical_stats(lig, now, days, fetch=get_json):
                     events[str(e.get('id'))] = e
         except (OSError, ValueError, KeyError, TypeError):
             errors += 1
-    teams = defaultdict(lambda: {'mac': 0, 'attigi': 0, 'yedigi': 0})
+    teams = defaultdict(bos_takim)
     valid = 0
-    for event in events.values():
+    for event in sorted(events.values(), key=lambda e: e.get('date') or ''):
         try:
             competitors = event['competitions'][0]['competitors']
             home = next(c for c in competitors if c['homeAway'] == 'home')
@@ -54,6 +54,14 @@ def historical_stats(lig, now, days, fetch=get_json):
             continue
         teams[h]['mac'] += 1; teams[h]['attigi'] += hg; teams[h]['yedigi'] += ag
         teams[a]['mac'] += 1; teams[a]['attigi'] += ag; teams[a]['yedigi'] += hg
+        teams[h]['ev_mac'] += 1
+        teams[h]['ev_attigi'] += hg
+        teams[h]['ev_yedigi'] += ag
+        teams[h]['son_maclar'].append((hg, ag))
+        teams[a]['dep_mac'] += 1
+        teams[a]['dep_attigi'] += ag
+        teams[a]['dep_yedigi'] += hg
+        teams[a]['son_maclar'].append((ag, hg))
         valid += 1
     return dict(teams), {'tamamlanmis_mac': valid, 'hata_gunu': errors, 'sorgu_gunu': days}
 
