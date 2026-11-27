@@ -83,11 +83,20 @@ def audit(records):
                     groups[(scope, line, "all")].append((p, y))
                     groups[(scope, line, str(bucket))].append((p, y))
 
-            if total >= 4 and str(
-                r.get("kilitli_secim", "")
-            ).upper() in ("RISKLI", "RİSKLİ"):
+            secim = str(r.get("kilitli_secim", "")).upper()
+            secilen = next(
+                (l for l in LINES if secim.startswith(f"{l:.1f} ")),
+                0.0
+            )
+
+            if total >= 4 and secilen < min(total - 0.5, 6.5):
                 missed.append({
                     **row,
+                    "kilitli_secim": secim,
+                    "kacirilan_cizgiler": [
+                        l for l in LINES
+                        if l >= 3.5 and secilen < l < total
+                    ],
                     "olasiliklar": r["olasiliklar"]
                 })
 
