@@ -2,7 +2,7 @@ import unittest
 from copy import deepcopy
 from datetime import datetime, timezone
 
-from yuksek_gol_radari_v1 import radar
+from yuksek_gol_radari_v1 import radar, gol_dagilimi
 
 
 NOW = datetime(
@@ -95,6 +95,17 @@ class TestYuksekGolRadari(unittest.TestCase):
             "test-2"
         )
 
+    def test_gol_dagilimi(self):
+        gecmis = {
+            "ev": [(3, 2)] * 5,
+            "dep": [(2, 2)] * 5
+        }
+        r = gol_dagilimi(gecmis)
+        self.assertEqual(r["ev"]["gol_ortalamasi"], 5.0)
+        self.assertEqual(r["ev"]["gol_frekanslari"]["4.5_ust"], 100)
+        self.assertEqual(r["dep"]["gol_frekanslari"]["4.5_ust"], 0)
 
+    def test_eksik_gol_gecmisi(self):
+        self.assertIsNone(gol_dagilimi({}))
 if __name__ == "__main__":
     unittest.main(verbosity=2)
