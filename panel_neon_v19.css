@@ -1,0 +1,191 @@
+/* TIPSTER PRO - NEON PANEL V19 */
+
+:root {
+  --bg: #080808;
+  --panel: #140b0c;
+  --card: #1b1011;
+  --border: #99202a;
+  --red: #ff2538;
+  --green: #39ff14;
+  --text: #f5f5f5;
+  --muted: #b8b8b8;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: #080808 !important;
+  color: #f5f5f5 !important;
+}
+
+body > header {
+  background: linear-gradient(120deg, #080808, #31090e) !important;
+  border-bottom: 2px solid #ff2538 !important;
+  box-shadow: 0 4px 18px #ff172733;
+}
+
+.brand strong {
+  color: #ffffff !important;
+  font-weight: 900;
+}
+
+.brand small {
+  color: #cccccc !important;
+}
+
+main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#dashboard-intro {
+  background: linear-gradient(135deg, #080808, #36090d);
+  border: 1px solid #ff2538;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 14px #ff253833;
+}
+
+#dashboard-intro h1 {
+  color: #ffffff !important;
+}
+
+.eyebrow,
+.tp-group h2 {
+  color: #ff5967 !important;
+  font-weight: 800;
+}
+
+#dashboard-stats article,
+.panel,
+.tp-match,
+.tp-perf {
+  background: linear-gradient(145deg, #1b1011, #080808) !important;
+  border: 1px solid #99202a !important;
+  border-radius: 12px;
+}
+
+#dashboard-stats strong {
+  color: #39ff14 !important;
+  text-shadow: 0 0 10px #39ff1433;
+}
+
+.tp-tile {
+  background: linear-gradient(145deg, #350b10, #080808) !important;
+  border: 1px solid #ff2538 !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 0 12px #ff253815,
+              0 0 8px #ff253822;
+}
+
+.tp-tile b {
+  color: #ffffff !important;
+}
+
+.tp-tile small {
+  color: #b8b8b8 !important;
+}
+
+.tp-tile:hover {
+  border-color: #39ff14 !important;
+  box-shadow: 0 0 12px #39ff1444;
+}
+
+.tp-tile.goal {
+  background: linear-gradient(145deg, #12330b, #080808) !important;
+  border-color: #39ff14 !important;
+}
+
+.tp-tile.goal b {
+  color: #39ff14 !important;
+}
+
+.tp-tile.top {
+  background: linear-gradient(145deg, #820d19, #190508) !important;
+}
+
+.tp-back {
+  background: #080808 !important;
+}
+
+.tp-probs span {
+  background: #171717 !important;
+  border: 1px solid #552025;
+}
+
+.tp-probs b {
+  color: #ffffff !important;
+}
+
+input,
+select {
+  background: #111111 !important;
+  border-color: #99202a !important;
+  color: #ffffff !important;
+}
+
+table {
+  color: #f5f5f5 !important;
+}
+
+th {
+  background: #31090e !important;
+  color: #ffffff !important;
+}
+
+td {
+  border-color: #421b20 !important;
+}
+
+.muted,
+.tp-note,
+.tp-home-meta {
+  color: #b8b8b8 !important;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #39ff14;
+  outline-offset: 3px;
+}
+
+#winrate,
+#wins {
+  color: #39ff14 !important;
+}
+
+#losses {
+  color: #ff4555 !important;
+}
+
+footer {
+  color: #aaaaaa !important;
+  border-top: 1px solid #99202a;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 12px !important;
+  }
+
+  .tp-tile {
+    min-height: 75px;
+  }
+
+  #dashboard-intro {
+    padding: 15px;
+  }
+
+  #result-rows tr,
+  #top-archive-rows tr,
+  #lc-current tr,
+  #lc-past tr {
+    background: #140b0c !important;
+    border-color: #99202a !important;
+  }
+}
+
+/* NEON PANEL V19 - END */
