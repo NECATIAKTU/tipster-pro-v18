@@ -112,8 +112,8 @@ def radar(records, now=None):
                 "lig": m.get("lig", ""),
                 "mac": home + " - " + away,
                 "tarih": m["tarih"],
-                "hesaplama_zamani_utc": created.isofoat(),
-                "gol_dagilimi": gol_dagilimi(m.get("
+                "hesaplama_zamani_utc": created.isoformat(),
+                "gol_dagilimi": gol_dagilimi(m.get("gol_gecmisi") or {}),
                 "olasiliklar": {
                     f"{line:.1f}_ust": p
                     for line, p in zip(
