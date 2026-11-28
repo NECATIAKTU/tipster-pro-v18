@@ -295,3 +295,89 @@ footer {
 }
 
 /* V19 - YAN MENU END */
+/* V19 - YESIL BASARI CEMBERI */
+
+#neon-success-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+#neon-success-ring {
+  --rate: 0%;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(
+    #39ff14 var(--rate),
+    #18301a 0
+  );
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 18px #39ff1455;
+}
+
+#neon-success-ring::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle, #142b10, #080808
+  );
+  border: 1px solid #245c19;
+}
+
+#neon-success-value {
+  position: relative;
+  z-index: 1;
+  font-size: 26px;
+  font-weight: 900;
+  color: #39ff14 !important;
+  text-shadow: 0 0 12px #39ff1477;
+}
+
+#neon-success-card small {
+  color: #39ff14 !important;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#dashboard-intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.neon-trophy {
+  background: #100506 !important;
+  border: 1px solid #ff2538 !important;
+  box-shadow: 0 0 12px #ff253855;
+  font-size: 28px !important;
+}
+
+@media (max-width: 480px) {
+  #neon-success-ring {
+    width: 108px;
+    height: 108px;
+  }
+
+  #neon-success-value {
+    font-size: 23px;
+  }
+
+  #neon-success-card {
+    margin: 0 auto;
+  }
+}
+
+/* V19 - BASARI CEMBERI END */
