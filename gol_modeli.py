@@ -95,7 +95,22 @@ def poisson_ust(lam, gol_siniri):
     )
     return max(0.0, min(1.0, 1.0 - alt))
 
+def negatif_binom_ust(lam, varyans, sinir):
+    if lam <= 0:
+        return 0.0
+    if varyans <= lam:
+        return poisson_ust(lam, sinir)
 
+    r = lam * lam / (varyans - lam)
+    p = r / (r + lam)
+    olasilik = p ** r
+    alt = olasilik
+
+    for k in range(1, sinir + 1):
+        olasilik *= (k - 1 + r) / k * (1 - p)
+        alt += olasilik
+
+    return max(0.0, min(1.0, 1.0 - alt))
 def ortalama(toplam, adet, yedek):
     return toplam / adet if adet >= 3 else yedek
 
