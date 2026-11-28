@@ -166,6 +166,25 @@
           );
         }
       }
+            const aslanMenu = document.getElementById("av-menu");
+
+      if (aslanMenu) {
+        const label = document.createElement("h3");
+        label.textContent = "ASLAN MODU V2";
+        content.append(label);
+
+        for (const item of aslanMenu.querySelectorAll("button")) {
+          const name = item.querySelector("b");
+
+          addButton(
+            (name || item).textContent.trim(),
+            () => {
+              window.tpOpen?.("aslan");
+              item.click();
+            }
+          );
+        }
+      } 
       overlay.hidden = false;
       menu.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
