@@ -139,6 +139,33 @@
           );
         }
       }
+            const academy = document.getElementById("akademi-menu");
+
+      if (academy) {
+        const label = document.createElement("h3");
+        label.textContent = "MATEMATIK AKADEMISI";
+        content.append(label);
+
+        for (const module of academy.querySelectorAll("button")) {
+          const name = module.querySelector("b");
+
+          addButton(
+            (name || module).textContent.trim(),
+            () => {
+              window.tpOpen?.("home");
+
+              const center = document.getElementById("akademi-center");
+              const opener = document.getElementById("akademi-open");
+
+              if (center?.hidden && opener) {
+                opener.click();
+              }
+
+              module.click();
+            }
+          );
+        }
+      }
       overlay.hidden = false;
       menu.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
