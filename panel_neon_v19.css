@@ -189,3 +189,109 @@ footer {
 }
 
 /* NEON PANEL V19 - END */
+/* V19 - NEON YAN MENU */
+
+#neon-toggle {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: #140608 !important;
+  color: #ff4555 !important;
+  border: 1px solid #ff2538 !important;
+  border-radius: 10px;
+  font-size: 25px;
+  box-shadow: 0 0 10px #ff253844;
+}
+
+#neon-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 9998;
+}
+
+#neon-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: min(340px, 88vw);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: linear-gradient(
+    160deg, #21090d, #080808 50%
+  );
+  border-right: 2px solid #ff2538;
+  box-shadow: 5px 0 25px #ff253844;
+  padding: 18px;
+  padding-top: max(18px, env(safe-area-inset-top));
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 9999;
+}
+
+#neon-menu h2 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 900;
+  margin: 8px 0 18px;
+}
+
+#neon-menu h3 {
+  color: #ff4555;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 24px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #99202a;
+}
+
+#neon-menu > button {
+  width: 100%;
+  min-height: 44px;
+  background: #31090e !important;
+  border: 1px solid #ff2538 !important;
+  color: #ffffff !important;
+  border-radius: 9px;
+}
+
+#neon-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+#neon-menu .neon-menu-item {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(
+    135deg, #31090e, #101010
+  ) !important;
+  color: #ffffff !important;
+  border: 1px solid #99202a !important;
+  border-radius: 9px;
+}
+
+#neon-menu .neon-menu-item:active,
+#neon-menu .neon-menu-item:focus-visible {
+  color: #39ff14 !important;
+  border-color: #39ff14 !important;
+  box-shadow: 0 0 10px #39ff1433;
+}
+
+#neon-menu[hidden],
+#neon-overlay[hidden] {
+  display: none !important;
+}
+
+/* V19 - YAN MENU END */
