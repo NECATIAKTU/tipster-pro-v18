@@ -284,7 +284,9 @@ jobs:
               'aslan_dogrulanan_sonuclar.json',
               'panel_mobil_v1.css',
               'panel_mobil_v1.js',
-
+              'panel_neon_v19.css',
+              'panel_neon_v19.js',
+              'kupa_v19.svg',
           ):
               shutil.copy2(name, out / name)
           print('PANEL ICIN GUNCEL TAHMIN:', len(records))

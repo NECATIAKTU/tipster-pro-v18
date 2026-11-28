@@ -45,5 +45,16 @@ class Tests(unittest.TestCase):
         self.assertEqual(stats['Home City']['ev_attigi'], 45)
         self.assertEqual(stats['Away United']['dep_yedigi'], 45)
         self.assertEqual(stats['Home City']['son_maclar'][-1], (11, 1))
+    def test_negatif_binom(self):
+        from gol_modeli import negatif_binom_ust, poisson_ust
+        self.assertAlmostEqual(
+            negatif_binom_ust(3, 3, 2),
+            poisson_ust(3, 2)
+        )
+        p = [negatif_binom_ust(3, 6, k)
+             for k in range(1, 7)]
+        self.assertTrue(all(0 <= x <= 1 for x in p))
+        self.assertTrue(all(a >= b for a, b in zip(p, p[1:])))
+        self.assertAlmostEqual(negatif_binom_ust(2, 4, 2), 0.3125)
 if __name__ == '__main__':
     unittest.main()

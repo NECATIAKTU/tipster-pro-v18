@@ -16,13 +16,13 @@ jobs:
     steps:
 
       - name: Gelistirme dalini al
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: tipster-gelistirme
           persist-credentials: false
 
       - name: Python kurulumu
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -67,9 +67,21 @@ jobs:
         run: |
           python gol_merkez_entegrasyon_v1.py \
             --cikti "$RUNNER_TEMP/gol_merkez_test.json"
-
+      - name: Neon Panel V19 kod kontrolu
+        run: |
+          set -euo pipefail
+          node --check panel_neon_v19.js
+          node --check panel_mobil_v1.js
+          node --check panel.js
+          test -s panel_neon_v19.css
+          test -s kupa_v19.svg
+          grep -Fq 'panel_neon_v19.css' index.html
+          grep -Fq 'panel_neon_v19.js' index.html
+          grep -Fq 'kupa_v19.svg' index.html
+          python -c "import xml.etree.ElementTree as ET; ET.parse('kupa_v19.svg')"
+          echo "NEON PANEL V19 KOD KONTROLU OK"
       - name: Test raporunu sakla
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: gol-merkez-test-raporu
           path: ${{ runner.temp }}/gol_merkez_test.json

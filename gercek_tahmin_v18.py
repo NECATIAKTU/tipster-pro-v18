@@ -13,7 +13,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from fikstur_yeni import LIGLER
-from gol_modeli import mac_analizi, bos_takim
+from gol_modeli import mac_analizi, bos_takim, negatif_binom_ust
 from tahmin_motoru import otomatik_eslestir, indeks_olustur, tarih_utc
 
 BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/{}/scoreboard'
@@ -106,6 +106,24 @@ def produce(fixture, now, days=90, fetch=get_json):
                 result = mac_analizi(home, away, teams)
             except (ValueError, ArithmeticError, KeyError, TypeError, ZeroDivisionError):
                 status['MODEL_HATASI'] += 1; continue
+            goller = [
+                sum(m)
+                for takim in (home, away)
+                for m in teams[takim]['son_maclar']
+            ]
+            alternatif = None
+            if len(goller) >= 10:
+                ort = sum(goller) / len(goller)
+                varyans = sum(
+                    (g - ort) ** 2 for g in goller
+                ) / (len(goller) - 1)
+                lam = result['beklenen_gol']
+                alternatif = {
+                    f"{k + 0.5:.1f}_ust": round(
+                        100 * negatif_binom_ust(lam, varyans, k), 1
+                    )
+                    for k in range(1, 7)
+                }
             predictions.append({
                 'id': match.get('id'), 'tarih': match['tarih'], 'lig_kodu': league,
                 'lig': LIGLER[league], 'ev_sahibi': match['ev_sahibi'],
@@ -118,6 +136,7 @@ def produce(fixture, now, days=90, fetch=get_json):
                 'ev': teams[home]['son_maclar'],
                 'dep': teams[away]['son_maclar'],
                 },
+                'alternatif_tahmin': alternatif,
             })
             status['TAHMIN_URETILDI'] += 1
     return {'olusturulma_utc': now.isoformat(), 'model': 'TIPSTER PRO V18',
