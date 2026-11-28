@@ -8,7 +8,28 @@ SURUM = "YUKSEK GOL RADARI V1"
 
 LINES = (1.5, 2.5, 3.5, 4.5, 5.5, 6.5)
 
+def gol_dagilimi(gecmis):
+    sonuc = {}
+    for taraf in ("ev", "dep"):
+        maclar = gecmis.get(taraf, [])
+        if len(maclar) < 5:
+            return None
 
+        goller = [sum(mac) for mac in maclar]
+        sonuc[taraf] = {
+            "mac_sayisi": len(goller),
+            "gol_ortalamasi": round(
+                sum(goller) / len(goller), 2
+            ),
+            "gol_frekanslari": {
+                f"{l:.1f}_ust": round(
+                    100 * sum(g > l for g in goller)
+                    / len(goller), 2
+                )
+                for l in LINES
+            }
+        }
+    return sonuc
 def utc(value):
     d = datetime.fromisoformat(
         value.replace("Z", "+00:00")
@@ -91,7 +112,8 @@ def radar(records, now=None):
                 "lig": m.get("lig", ""),
                 "mac": home + " - " + away,
                 "tarih": m["tarih"],
-                "hesaplama_zamani_utc": created.isoformat(),
+                "hesaplama_zamani_utc": created.isofoat(),
+                "gol_dagilimi": gol_dagilimi(m.get("
                 "olasiliklar": {
                     f"{line:.1f}_ust": p
                     for line, p in zip(
