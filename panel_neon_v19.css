@@ -464,3 +464,99 @@ body > header .brand {
 }
 
 /* V19 - KUPA VE MOBIL BASLIK END */
+/* V19 - ANALIZ MERKEZLERI */
+
+main .panel {
+  background: linear-gradient(
+    145deg, #19090c, #080808
+  ) !important;
+  border: 1px solid #99202a !important;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #ff253818;
+}
+
+main .panel h2,
+main .panel h3,
+#mersin-title,
+.av-gold {
+  color: #ff4555 !important;
+  font-weight: 800;
+}
+
+#aslan-modu,
+#mersin-center,
+#mersin-screen {
+  background: #0c0809 !important;
+  color: #f5f5f5 !important;
+  border-radius: 12px;
+}
+
+#mersin-models button,
+#mersin-back,
+#mersin-refresh,
+#mersin-more,
+#aslan-geri,
+#aslan-ileri,
+.tp-back button {
+  background: linear-gradient(
+    135deg, #350b10, #080808
+  ) !important;
+  border: 1px solid #ff2538 !important;
+  color: #ffffff !important;
+  border-radius: 9px;
+  min-height: 44px;
+}
+
+main button:active {
+  border-color: #39ff14 !important;
+}
+
+main .scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+main table th {
+  background: #350b10 !important;
+  color: #ffffff !important;
+}
+
+main table td {
+  border-bottom-color: #421b20 !important;
+}
+
+main table tr:nth-child(even) {
+  background: #170d0f;
+}
+
+@media (max-width: 480px) {
+  main .panel {
+    padding: 12px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  main .panel h2 {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  main .panel h3 {
+    font-size: 15px;
+  }
+
+  main table {
+    font-size: 12px;
+  }
+
+  #mersin-screen,
+  #mersin-center,
+  #aslan-modu {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* V19 - ANALIZ MERKEZLERI END */
