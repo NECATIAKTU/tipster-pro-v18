@@ -112,7 +112,33 @@
           });
         }
       }
+      const models = document.getElementById("mersin-models");
 
+      if (models) {
+        const label = document.createElement("h3");
+        label.textContent = "MERSIN LAB MODELLERI";
+        content.append(label);
+
+        for (const model of models.querySelectorAll("button")) {
+          const name = model.querySelector("b");
+
+          addButton(
+            (name || model).textContent.trim(),
+            () => {
+              window.tpOpen?.("home");
+
+              const center = document.getElementById("mersin-center");
+              const opener = document.getElementById("mersin-open");
+
+              if (center?.hidden && opener) {
+                opener.click();
+              }
+
+              model.click();
+            }
+          );
+        }
+      }
       overlay.hidden = false;
       menu.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
